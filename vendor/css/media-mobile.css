@@ -1675,7 +1675,7 @@
 
   /* slider */
   .swiper-pagination {
-    display: flex;
+    display: flex !important;
     justify-content: center;
   }
 
@@ -1758,6 +1758,7 @@
     width: fit-content;
     bottom: -6.11vw;
     z-index: 99;
+    display: flex !important;
   }
 
   .swiper-pagination-unique .swiper-pagination-bullet {

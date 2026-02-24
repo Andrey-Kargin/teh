@@ -1602,6 +1602,13 @@ html {
   height: 2.43vw;
 }
 
+.swiper-pagination-unique {
+  display: none !important;
+}
+
+.swiper-pagination {
+  display: none !important;
+}
 
 .mobile {
   display: none !important;
