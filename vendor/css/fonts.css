@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Rooftop';
+  font-weight: 300;
+  src:
+    url('../fonts/Rooftop\ Compact-Light-Web.ttf');
+}
+
+@font-face {
+  font-family: 'Rooftop';
+  font-weight: 400;
+  src:
+    url('../fonts/Rooftop\ Compact-Regular-Web.ttf');
+}
+
+@font-face {
+  font-family: 'Rooftop';
+  font-weight: 500;
+  src:
+    url('../fonts/Rooftop\ Compact-Medium-Web.ttf');
+}
+
+@font-face {
+  font-family: 'Rooftop';
+  font-weight: 700;
+  src:
+    url('../fonts/Rooftop\ Compact-Bold-Web.ttf');
+}
