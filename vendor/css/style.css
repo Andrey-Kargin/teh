@@ -12,9 +12,6 @@ html {
 /*HEADER */
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   padding-top: 0.69vw;
   background: #fff;
@@ -72,7 +69,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.833vw 0;
+  padding: 0.833vw 0;
+  background-color: #fff;
 }
 
 .header__logo {
@@ -307,7 +305,7 @@ html {
 /* PROMO */
 
 .promo {
-  margin-top: 12.15vw;
+  margin-top: 2.22vw;
 }
 
 .promo .container {
@@ -459,7 +457,7 @@ html {
 }
 
 .promo-box:hover svg path {
-  stroke: #BC1622;
+  fill: #BC1622;
 }
 
 .promo-text {

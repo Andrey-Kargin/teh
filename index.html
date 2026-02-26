@@ -1287,40 +1287,136 @@
     });
 
     // HEADER
-    (() => {
-    const info = document.querySelector('.header__info');
-    const nav = document.querySelectorAll('.header__nav');
-    const bottom = document.querySelector('.header__bottom');
+(function() {
+    // Собираем все элементы, которые могут участвовать в логике
+    const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
+    const blocksData = [];
 
-    const toggleHeaderParts = () => {
-      const w = window.innerWidth;
-      const scrolled = window.scrollY > 0;
+    elementsToTrack.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            blocksData.push({
+                element: el,
+                selector: selector,
+                parent: el.parentElement,
+                placeholder: createPlaceholder(el)
+            });
+        });
+    });
 
-      if (w > 1280) {
-        if (info) info.classList.toggle('is-hidden', scrolled);
-        if (nav) nav.forEach((e) => {
-          e.classList.toggle('is-hidden', scrolled);
-        })
-        // на больших экранах header__bottom не трогаем
-        if (bottom) bottom.classList.remove('is-hidden');
-      } else {
-        // на малых экранах скрываем только header__bottom
-        if (bottom) bottom.classList.toggle('is-hidden', scrolled);
-        // на малых экранах header__info и header__nav не трогаем
-        if (info) info.classList.remove('is-hidden');
-        if (nav) nav.forEach((e) => {
-          e.classList.remove('is-hidden');
-        })
-      }
-    };
+    function createPlaceholder(el) {
+        const placeholder = document.createElement('div');
+        placeholder.style.display = 'none';
+        placeholder.style.height = el.offsetHeight + 'px';
+        placeholder.style.width = '100%';
+        return placeholder;
+    }
 
-    // При загрузке/перезагрузке на уже проскролленной странице
-    window.addEventListener('DOMContentLoaded', toggleHeaderParts, { passive: true });
-    // При скролле
-    window.addEventListener('scroll', toggleHeaderParts, { passive: true });
-    // При изменении ширины (поворот/ресайз)
-    window.addEventListener('resize', toggleHeaderParts, { passive: true });
-  })();
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const winWidth = window.innerWidth;
+
+        blocksData.forEach(data => {
+            const { element, parent, placeholder, selector } = data;
+            const parentRect = parent.getBoundingClientRect();
+            const parentRelativeTop = parentRect.top + scrollTop;
+
+            // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
+            if (winWidth >= 1280) {
+                if (selector === '.header__main') {
+                    let offsetPx, fixedStyles, resetStyles;
+
+                    if (winWidth < 1440) {
+                        // Условие 1: 1280px - 1440px
+                        offsetPx = (winWidth * 2.54) / 100;
+                        fixedStyles = {
+                            position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                            padding: '0.833vw 7.75vw'
+                        };
+                        resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
+                    } else {
+                        // Условие 2: Более 1440px
+                        offsetPx = 44;
+                        fixedStyles = {
+                            position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                            padding: `12px calc((100vw - 1457px) / 2)`
+                        };
+                        resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
+                    }
+
+                    if (scrollTop >= (parentRelativeTop + offsetPx)) {
+                        if (!element.classList.contains('is-fixed')) {
+                            element.classList.add('is-fixed');
+                            parent.insertBefore(placeholder, element);
+                            placeholder.style.display = 'block';
+                            Object.assign(element.style, fixedStyles);
+                        }
+                    } else {
+                        if (element.classList.contains('is-fixed')) {
+                            element.classList.remove('is-fixed');
+                            placeholder.style.display = 'none';
+                            Object.assign(element.style, resetStyles);
+                        }
+                    }
+                }
+            } 
+            // --- ЛОГИКА ДЛЯ МОБИЛЬНЫХ/ПЛАНШЕТОВ (МЕНЬШЕ 1280px) ---
+            else {
+                // Обработка header__top и header__search
+                if (selector === '.header__top' || selector === '.header__search') {
+                    let fixedStyles, resetStyles;
+
+                    if (selector === '.header__top') {
+                        fixedStyles = {
+                            position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                            padding: '2.77vw 3.95vw 0 3.95vw'
+                        };
+                        resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '2.77vw 0 0 0' };
+                    } else {
+                        fixedStyles = {
+                            position: 'fixed', top: '11.1vw', left: '0', zIndex: '90', width: '100%', boxSizing: 'border-box',
+                            padding: '2.28vw 4vw'
+                        };
+                        resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '2.22vw 0' };
+                    }
+
+                    if (scrollTop > parentRelativeTop) {
+                        if (!element.classList.contains('is-fixed')) {
+                            element.classList.add('is-fixed');
+                            Object.assign(element.style, fixedStyles);
+                        }
+                    } else {
+                        if (element.classList.contains('is-fixed')) {
+                            element.classList.remove('is-fixed');
+                            Object.assign(element.style, resetStyles);
+                        }
+                    }
+                }
+
+                // Обработка header__bottom (отступ)
+                if (selector === '.header__bottom') {
+                    if (scrollTop > parentRelativeTop) {
+                        element.style.marginTop = '26.41vw';
+                    } else {
+                        element.style.marginTop = '';
+                    }
+                }
+            }
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        blocksData.forEach(data => {
+            // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
+            if (!data.element.classList.contains('is-fixed')) {
+                data.placeholder.style.height = data.element.offsetHeight + 'px';
+            }
+        });
+        handleScroll(); // Пересчитываем положение при ресайзе
+    });
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+})();
   </script>
 </body>
 </html>
