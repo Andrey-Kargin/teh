@@ -19,7 +19,6 @@
   .header .container {
     display: flex;
     flex-direction: column;
-    gap: 2.22vw;
   }
 
   .header__top {
@@ -33,7 +32,7 @@
         cursor: pointer;
         z-index: 10;
         width: 4.44vw;
-        height: 4.44vw;
+        height: 4.84vw;
     }
 
     .burger span {
@@ -41,9 +40,10 @@
         background-color: #333333;
         right: 0px;
         width: 4.44vw;
-        height: 0.16vw;
-        top:7px;
+        height: 0.41vw;
+        top: 1.94vw;
         transition: all 0.3s ease;
+        border-radius: 22.55vw;
     }
 
     .burger::before,
@@ -52,17 +52,18 @@
         background-color: #333333;
         position: absolute;
         width: 4.44vw;
-        height: 0.16vw;
+        height: 0.41vw;
+        border-radius: 22.55vw;
         right: 0px;
         transition: all 0.3s ease;
     }
 
     .burger::before {
-        top: -1px;
+        top: 0.6vw;
     }
 
     .burger::after {
-        top: 15px;
+        top: 3.16vw;
     }
 
     .burger_active span {
@@ -82,8 +83,8 @@
     }
 
   .header__logo {
-    width: 34.44vw;
-    height: 6.69vw;
+    width: 42.77vw;
+    height: 8.33vw;
   }
 
   .desc {
@@ -106,6 +107,7 @@
     border: 1px solid #E2E2E2;
     align-items: center;
     border-radius: 0.27vw;
+    margin: 2.22vw 0;
   }
 
   .search-line svg {
@@ -202,6 +204,7 @@
     display: none;
     flex-direction: column;
     gap: 2.22vw;
+    padding-left: 4.44vw;
   }
 
   .header__nav-fold_active {
@@ -394,7 +397,9 @@
   .promo-list {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 0.69vw;
+    gap: 1.11vw;
     overflow: hidden;
     justify-content: space-between;
   }
@@ -410,11 +415,10 @@
   }
 
   .promo-box {
-    width: 42.22vw !important;
+    width: 43.88vw !important;
     height: 29.44vw;
     background: #F1F1F1;
     border-radius: 1.38vw;
-    margin-right: 1.11vw;
     overflow: hidden;
     display: flex;
     flex-direction: column-reverse;
@@ -424,6 +428,7 @@
     padding: 4.44vw;
     position: relative;
     cursor: pointer;
+    margin-right: 0;
   }
 
   .promo-box:hover .promo-text {
@@ -484,6 +489,7 @@
 .main-cards-box:nth-of-type(1) {
   width: 41.31vw;
   height: 75vw;
+  order: 1;
 }
 
 .main-cards-box:nth-of-type(1).main-cards-box::after {
@@ -503,6 +509,7 @@
 .main-cards-box:nth-of-type(2) {
   width: 41.31vw;
   height: 87.22vw;
+  order: 2;
 }
 
 .main-cards-box:nth-of-type(2).main-cards-box::after {
@@ -522,11 +529,13 @@
 .main-cards-box:nth-of-type(3) {
   width: 20.31vw;
   height: 31.11vw;
+  order: 4;
 }
 
 .main-cards-box:nth-of-type(4) {
   width: 41.31vw;
   height: 90.55vw;
+  order: 3;
 }
 
 .main-cards-box:nth-of-type(4).main-cards-box::after {
@@ -546,6 +555,7 @@
 .main-cards-box:nth-of-type(5) {
   width: 20.31vw;
   height: 40.55vw;
+  order: 5;
 }
 
 .main-cards-box ul {
@@ -575,6 +585,20 @@
   margin: 0;
 }
 
+.main-cards-link:hover svg {
+  transform: scale(1.5)translateX(0.2vw)translateY(-0.2vw);
+  transition: all 0.2s linear;
+}
+
+ul .main-cards-link::after {
+  content: "•";
+  position: absolute;
+  left: -2.99vw;
+  color: #333;
+  font-weight: bold;
+  font-size: 3.33vw;
+}
+
 .main-cards-link:not(.main-cards-list):hover {
   color: #BC1622;
 }
@@ -586,6 +610,8 @@
 .main-cards-link svg {
   width: 2.22vw;
   height: 2.22vw;
+  transform: scale(1)translateX(0)translateY(0);
+  transition: all 0.2s linear;
 }
 
 .main-cards-box:nth-of-type(1) .main-cards-link:nth-of-type(3) svg {
@@ -992,8 +1018,9 @@
 .projects .container {
   display: flex;
   flex-direction: column;
-  gap: 3.33vw;
+  gap: 58.61vw;
   position: relative;
+  height: 77.77vw;
 }
 
 .projects-container {
@@ -1001,6 +1028,7 @@
   display: flex;
   border-radius: 2.77vw;
   overflow: hidden;
+  top: 11.38vw;
 }
 
 .projects-container .swiper-button-prev-unique-projects,
@@ -1015,7 +1043,7 @@
 
 .projects-box {
   width: 43.33vw !important;
-  min-height: 63.05vw !important;
+  min-height: 49.72vw !important;
   display: flex;
   flex-direction: column;
   gap: 2.22vw;
@@ -1046,7 +1074,7 @@
   opacity: 1;
   height: fit-content;
   padding-bottom: 1.11vw;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-link:hover {
@@ -1059,19 +1087,19 @@
 
 .projects-img {
   width: 43.33vw;
-  height: 43.33vw;
+  height: 30vw;
 }
 
 .projects-img img {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-box:hover .projects-img img {
   transform: scale(1.1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-name {
@@ -1149,7 +1177,7 @@
   margin-top: 0;
   height: 0;
   opacity: 0;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .desc {
@@ -1157,12 +1185,12 @@
   max-width: 80vw;
   opacity: 1;
   height: fit-content;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold {
   transform: rotate(180deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold svg path {
@@ -1174,7 +1202,7 @@
   top: 3.33vw;
   right: 4.44vw;
   transform: rotate(0deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-fold svg {
@@ -1648,6 +1676,24 @@
   align-items: center;
   gap: 0.55vw;
   cursor: pointer;
+  position: relative;
+}
+
+.bottom-tab span {
+  position: absolute;
+  top: 4vw;
+  right: -0.4vw;
+  box-sizing: border-box;
+  padding: 0.83vw;
+  border-radius: 277.77vw;
+  background-color: #BC1622;
+  color: #Fff;
+  font-weight: 700;
+  font-size: 2.22vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  height: 3.33vw;
 }
 
 .bottom-tab:hover .desc {

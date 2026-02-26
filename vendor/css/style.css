@@ -24,7 +24,6 @@ html {
 .header .container {
   display: flex;
   flex-direction: column;
-  gap: 0.833vw;
 }
 
 .header__info {
@@ -60,6 +59,8 @@ html {
   border: none;
   outline: none;
   cursor: pointer;
+  box-sizing: border-box;
+  padding-top: 0.4vw;
 }
 
 .header__cons:hover {
@@ -71,6 +72,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0.833vw 0;
 }
 
 .header__logo {
@@ -92,12 +94,30 @@ html {
   gap: 0.69vw;
   border-radius: 0.34vw;
   background: #BC1622;
+
+  cursor: pointer;
+}
+
+.header__catalog p{
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.97vw;
   line-height: 100%;
   letter-spacing: 0%;
-  cursor: pointer;
+  margin: 0;
+  margin-top: 0.21vw;
+}
+
+.header__catalog span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__catalog svg {
+  width: 1.11vw;
+  height: 1.11vw;
+  display: block;
 }
 
 .header__catalog:hover {
@@ -127,6 +147,7 @@ html {
   letter-spacing: 0%;
   color: #333333;
   outline: none;
+  margin-top: 0.2vw;
 }
 
 .search-line__input::placeholder {
@@ -135,6 +156,7 @@ html {
 
 .search-line__submit {
   position: absolute;
+  box-sizing: border-box;
   top: 0;
   right: 0;
   height: 100%;
@@ -149,6 +171,7 @@ html {
   letter-spacing: 0%;
   border-radius: 0.34vw;
   cursor: pointer;
+  padding-top: 0.3vw;
 }
 
 .search-line__submit:hover {
@@ -175,6 +198,11 @@ html {
 
 .header__link:hover svg path {
   stroke: #BC1622;
+}
+
+.header__links .header__link:nth-of-type(3):hover svg path {
+  fill: #BC1622;
+  stroke: none;
 }
 
 .header__link svg {
@@ -234,12 +262,17 @@ html {
   color: #FFFFFF;
   background: linear-gradient(274.32deg, #ED2039 2.3%, #BC1622 94.86%);
   border-radius: 6.9vw;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.header__discount p {
+  margin: 0;
+  margin-top: 0.31vw;
   font-weight: 700;
   font-size: 0.83vw;
   line-height: 100%;
   letter-spacing: 0%;
-  flex-shrink: 0;
-  box-sizing: border-box;
 }
 
 .header__discount:hover {
@@ -560,10 +593,25 @@ html {
   color: #333333;
   text-decoration: none;
   margin: 0;
+  position: relative;
+}
+
+ul .main-cards-link::after {
+  content: "•";
+  position: absolute;
+  left: -0.9vw;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.97vw;
 }
 
 .main-cards-link:not(.main-cards-list):hover {
   color: #BC1622;
+}
+
+.main-cards-link:hover svg {
+  transform: scale(1.5)translateX(0.07vw)translateY(-0.07vw);
+  transition: all 0.2s linear;
 }
 
 .main-cards-link:hover svg path {
@@ -573,6 +621,8 @@ html {
 .main-cards-link svg {
   width: 0.55vw;
   height: 0.55vw;
+  transform: scale(1)translateX(0)translateY(0);
+  transition: all 0.2s linear;
 }
 
 .main-cards-link-red {
@@ -605,7 +655,7 @@ html {
 
 .brands {
   background-color: #F1F1F1;
-  padding: 5.55vw 0;
+  padding: 2.77vw 0;
 }
 
 .brands .container {
@@ -635,20 +685,6 @@ html {
 .swiper-button-next-unique-brands {
   position: absolute;
   top: 7.3vw;
-  left: -0.55vw;
-  color: transparent;
-  background-image: url(../../img/arrow-prev-promo-list.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1.66vw;
-  width: 1.66vw;
-  z-index: 3;
-}
-
-.brands-slider .swiper-button-next-unique,
-.swiper-button-prev-unique-brands {
-  position: absolute;
-  top: 7.3vw;
   right: -0.55vw;
   color: transparent;
   background-image: url(../../img/arrow-next-promo-list.svg);
@@ -657,6 +693,22 @@ html {
   height: 1.66vw;
   width: 1.66vw;
   z-index: 3;
+  cursor: pointer;
+}
+
+.brands-slider .swiper-button-next-unique,
+.swiper-button-prev-unique-brands {
+  position: absolute;
+  top: 7.3vw;
+  left: -0.55vw;
+  color: transparent;
+  background-image: url(../../img/arrow-prev-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1.66vw;
+  width: 1.66vw;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .brands-slide {
@@ -957,15 +1009,16 @@ html {
 /* PROJECTS */
 
 .projects {
-  padding: 5.55vw 0;
+  padding: 2.77vw 0;
   background: #F1F1F1;
 }
 
 .projects .container {
   display: flex;
   flex-direction: column;
-  gap: 1.66vw;
+  gap: 21.73vw;
   position: relative;
+  height: 27.36vw;
 }
 
 .projects-container {
@@ -973,6 +1026,9 @@ html {
   display: flex;
   border-radius: 0.69vw;
   overflow: hidden;
+  position: absolute;
+  top: 4.3vw;
+  left: 0;
 }
 
 .projects-container .swiper-button-prev-unique-projects,
@@ -1005,7 +1061,7 @@ html {
 
 .projects-box {
   width: 16.18vw !important;
-  min-height: 21.31vw !important;
+  min-height: 16.38vw !important;
   display: flex;
   flex-direction: column;
   gap: 1.11vw;
@@ -1025,7 +1081,7 @@ html {
   height: 0;
   color: #BC1622;
   padding-left: 1.38vw;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -1036,7 +1092,7 @@ html {
   opacity: 1;
   height: fit-content;
   padding-bottom: 1.11vw;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-link:hover {
@@ -1049,19 +1105,19 @@ html {
 
 .projects-img {
   width: 16.18vw;
-  height: 16.18vw;
+  height: 11.11vw;
 }
 
 .projects-img img {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-box:hover .projects-img img {
   transform: scale(1.1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-name {
@@ -1087,7 +1143,6 @@ html {
   font-size: 1.11vw;
   line-height: 100%;
   letter-spacing: 0%;
-  margin-top: 2.5vw;
   cursor: pointer;
 }
 
@@ -1138,7 +1193,7 @@ html {
   margin-top: 0;
   height: 0;
   opacity: 0;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .desc {
@@ -1146,12 +1201,12 @@ html {
   max-width: 60.4vw;
   opacity: 1;
   height: fit-content;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold {
   transform: rotate(180deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold svg path {
@@ -1163,7 +1218,7 @@ html {
   top: 1.11vw;
   right: 1.38vw;
   transform: rotate(0deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-fold svg {
@@ -1199,6 +1254,7 @@ html {
   gap: 0.27vw;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 1.25vw;
 }
 
 .about-link:hover {
@@ -1511,7 +1567,8 @@ html {
 }
 
 .footer .undertitle {
-  color: #fff;
+  color: #fff !important;
+  text-decoration: none !important;
   text-align: right;
   margin-bottom: 0.41vw;
 }
@@ -1577,7 +1634,8 @@ html {
 
 .footer-cr {
   margin: 0;
-  color: #fff;
+  color: #fff !important;
+  text-decoration: none !important;
   font-weight: 400;
   font-size: 0.97vw;
   line-height: 140%;
@@ -1614,6 +1672,14 @@ html {
   display: none !important;
 }
 
+.pc-1440 {
+  display: none !important;
+}
+
 .pc {
   display: flex !important;
 }
+
+.is-hidden {
+    display: none !important;
+  }

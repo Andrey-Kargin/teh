@@ -7,7 +7,7 @@ html {
 }
 
 .container {
-  width: 1200px;
+  width: 1440px;
   margin: 0 auto;
 }
 
@@ -62,6 +62,7 @@ html {
   border: none;
   outline: none;
   cursor: pointer;
+  padding-top: 3px;
 }
 
 .header__cons:hover {
@@ -94,12 +95,16 @@ html {
   gap: 10px;
   border-radius: 5px;
   background: #BC1622;
-  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.header__catalog p {
+   color: #FFFFFF;
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-  cursor: pointer;
+  margin-top: 3px;
 }
 
 .header__catalog:hover {
@@ -107,7 +112,7 @@ html {
 }
 
 .search-line {
-  width: 461px;
+  width: 701px;
   height: 32px;
   display: flex;
   position: relative;
@@ -410,7 +415,7 @@ html {
 }
 
 .promo-box {
-  width: 293px !important;
+  width: 351px !important;
   height: 91px;
   background: #F1F1F1;
   border-radius: 10px;
@@ -418,7 +423,7 @@ html {
   overflow: hidden;
   display: flex;
   box-sizing: border-box;
-  padding: 20px 92px 0 32px;
+  padding: 20px 152px 0 32px;
   position: relative;
   cursor: pointer;
 }
@@ -478,7 +483,7 @@ html {
 }
 
 .main-cards-box:nth-of-type(1) {
-  width: 595px;
+  width: 715px;
   height: 186px;
 }
 
@@ -496,7 +501,7 @@ html {
 }
 
 .main-cards-box:nth-of-type(2) {
-  width: 595px;
+  width: 715px;
   height: 186px;
 }
 
@@ -514,7 +519,7 @@ html {
 }
 
 .main-cards-box:nth-of-type(3) {
-  width: 292px;
+  width: 412px;
   height: 246px;
 }
 
@@ -537,13 +542,16 @@ html {
 }
 
 .main-cards-box:nth-of-type(5) {
-  width: 292px;
+  width: 412px;
   height: 246px;
 }
 
 .main-cards-box ul {
   margin: 0;
   padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .main-cards-box .subtitle {
@@ -562,6 +570,21 @@ html {
   color: #333333;
   text-decoration: none;
   margin: 0;
+  position: relative;
+}
+
+.main-cards-link:hover svg {
+  transform: scale(1.5)translateX(1.5px)translateY(-1.5px);
+  transition: all 0.2s linear;
+}
+
+ul .main-cards-link::after {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .main-cards-link:not(.main-cards-list):hover {
@@ -575,6 +598,8 @@ html {
 .main-cards-link svg {
   width: 8px;
   height: 8px;
+  transform: scale(1)translateX(0)translateY(0);
+  transition: all 0.2s linear;
 }
 
 .main-cards-link-red {
@@ -607,7 +632,7 @@ html {
 
 .brands {
   background-color: #F1F1F1;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .brands .container {
@@ -637,9 +662,9 @@ html {
 .swiper-button-next-unique-brands {
   position: absolute;
   top: 105px;
-  left: -8px;
+  right: -8px;
   color: transparent;
-  background-image: url(../../img/arrow-prev-promo-list.svg);
+  background-image: url(../../img/arrow-next-promo-list.svg);
   background-size: contain;
   background-repeat: no-repeat;
   height: 24px;
@@ -651,9 +676,9 @@ html {
 .swiper-button-prev-unique-brands {
   position: absolute;
   top: 105px;
-  right: -8px;
+  left: -8px;
   color: transparent;
-  background-image: url(../../img/arrow-next-promo-list.svg);
+  background-image: url(../../img/arrow-prev-promo-list.svg);
   background-size: contain;
   background-repeat: no-repeat;
   height: 24px;
@@ -670,7 +695,7 @@ html {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 .brands-slide .brands-slide-logo {
@@ -959,15 +984,16 @@ html {
 /* PROJECTS */
 
 .projects {
-  padding: 80px 0;
+  padding: 40px 0;
   background: #F1F1F1;
 }
 
 .projects .container {
   display: flex;
+  gap: 0;
   flex-direction: column;
-  gap: 24px;
   position: relative;
+  height: fit-content;
 }
 
 .projects-container {
@@ -975,6 +1001,7 @@ html {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
+  top: 62px;
 }
 
 .projects-container .swiper-button-prev-unique-projects,
@@ -1027,7 +1054,7 @@ html {
   height: 0;
   color: #BC1622;
   padding-left: 20px;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -1038,7 +1065,7 @@ html {
   opacity: 1;
   height: fit-content;
   padding-bottom: 16px;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-link:hover {
@@ -1058,12 +1085,12 @@ html {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-box:hover .projects-img img {
   transform: scale(1.1);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .projects-name {
@@ -1089,7 +1116,7 @@ html {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  margin-top: 36px;
+  margin-top: 386px;
   cursor: pointer;
 }
 
@@ -1140,7 +1167,7 @@ html {
   margin-top: 0;
   height: 0;
   opacity: 0;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .desc {
@@ -1148,12 +1175,12 @@ html {
   max-width: 870px;
   opacity: 1;
   height: fit-content;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold {
   transform: rotate(180deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-box_opened .faq-fold svg path {
@@ -1165,7 +1192,7 @@ html {
   top: 16px;
   right: 20px;
   transform: rotate(0deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 
 .faq-fold svg {
@@ -1187,7 +1214,7 @@ html {
 .about-info {
   display: flex;
   flex-direction: column;
-  width: 492px;
+  width: 590px;
 }
 
 .about-info .title {
@@ -1201,6 +1228,7 @@ html {
   gap: 4px;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 18px;
 }
 
 .about-link:hover {
@@ -1601,6 +1629,10 @@ html {
 .footer-develop svg { 
   width: 117px;
   height: 35px;
+}
+
+.pc-1440 {
+  display: flex !important;
 }
 
 }
