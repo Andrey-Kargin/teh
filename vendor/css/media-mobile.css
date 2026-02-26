@@ -37,49 +37,18 @@
 
     .burger span {
         position: absolute;
-        background-color: #333333;
+        background-image: url(../../img/burger.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 6.66vw 6.66vw;
         right: 0px;
-        width: 4.44vw;
-        height: 0.41vw;
-        top: 1.94vw;
-        transition: all 0.3s ease;
-        border-radius: 22.55vw;
-    }
-
-    .burger::before,
-    .burger::after {
-        content: '';
-        background-color: #333333;
-        position: absolute;
-        width: 4.44vw;
-        height: 0.41vw;
-        border-radius: 22.55vw;
-        right: 0px;
-        transition: all 0.3s ease;
-    }
-
-    .burger::before {
-        top: 0.6vw;
-    }
-
-    .burger::after {
-        top: 3.16vw;
+        width: 6.66vw;
+        height: 6.66vw;
+        top: -1vw;
     }
 
     .burger_active span {
-        transform: scale(0);
-    }
-
-    .burger_active::before {
-        transform: rotate(45deg);
-        top: 7px;
-        background-color: #333333;
-    }
-
-    .burger_active::after {
-        transform: rotate(-45deg);
-        top: 7px;
-        background-color: #333333;
+      background-image: url(../../img/burger-close.svg);
     }
 
   .header__logo {
@@ -462,7 +431,7 @@
   /* CARDS */
 
 .main-cards {
-  margin-top: 22.22vw;
+  margin-top: 11.11vw;
   margin-bottom: 11.11vw;
 }
 
@@ -585,11 +554,6 @@
   margin: 0;
 }
 
-.main-cards-link:hover svg {
-  transform: scale(1.5)translateX(0.2vw)translateY(-0.2vw);
-  transition: all 0.2s linear;
-}
-
 ul .main-cards-link::after {
   content: "•";
   position: absolute;
@@ -610,8 +574,6 @@ ul .main-cards-link::after {
 .main-cards-link svg {
   width: 2.22vw;
   height: 2.22vw;
-  transform: scale(1)translateX(0)translateY(0);
-  transition: all 0.2s linear;
 }
 
 .main-cards-box:nth-of-type(1) .main-cards-link:nth-of-type(3) svg {
@@ -677,13 +639,6 @@ ul .main-cards-link::after {
   letter-spacing: 0%;
 }
 
-.brands-slider {
-  width: 100%;
-  display: flex;
-  border-radius: 1.38vw;
-  overflow: hidden;
-}
-
 .brands-slider .swiper-button-prev-unique-brands,
 .swiper-button-next-unique-brands {
   display: none;
@@ -693,6 +648,15 @@ ul .main-cards-link::after {
   display: none;
 }
 
+.brands-slider {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.brands-slider::-webkit-scrollbar {
+  display: none !important;
+}
+
 .brands-slide {
   width: 33.33vw !important;
   height: 20.83vw !important;
@@ -700,20 +664,18 @@ ul .main-cards-link::after {
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 0.69vw;
+  border-radius: 1.38vw;
   overflow: hidden;
-  margin-right: 0.69vw;
+  margin-right: 1.11vw;
 }
 
 .brands-slide .brands-slide-logo {
   transform: scale(1);
-  transition: all 0.5s linear;
   cursor: pointer;
 }
 
 .brands-slide:hover .brands-slide-logo {
-  transform: scale(1.1);
-  transition: all 0.5s linear;
+  transform: scale(1);
 }
 
 /* PRODUCTS */
@@ -725,7 +687,17 @@ ul .main-cards-link::after {
 .products .container {
   display: flex;
   flex-direction: column;
-  gap: 3.33vw;  
+  gap: 3.33vw;
+  position: relative;
+}
+
+.swipe-video {
+  position: absolute;
+  top: -1.5vw;
+  right: 0vw;
+  z-index: 2;
+  width: 11.66vw;
+  height: 10.55vw;
 }
 
 .products-container {
@@ -818,7 +790,7 @@ ul .main-cards-link::after {
   box-shadow: 0px 0px 20px 0px #3333331A;
 } 
 
-.products-box:hover .products-name {
+.products-box .products-name:hover {
   color: #BC1622;
 }
 
@@ -1029,6 +1001,11 @@ ul .main-cards-link::after {
   border-radius: 2.77vw;
   overflow: hidden;
   top: 11.38vw;
+  overflow-x: scroll;
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none !important;
 }
 
 .projects-container .swiper-button-prev-unique-projects,
@@ -1093,13 +1070,6 @@ ul .main-cards-link::after {
 .projects-img img {
   width: 100%;
   height: 100%;
-  transform: scale(1);
-  transition: all 0.2s linear;
-}
-
-.projects-box:hover .projects-img img {
-  transform: scale(1.1);
-  transition: all 0.2s linear;
 }
 
 .projects-name {
