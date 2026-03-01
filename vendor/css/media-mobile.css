@@ -654,7 +654,8 @@ ul .main-cards-link::after {
 
 .brands-slider {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: scroll !important;
+  touch-action: auto;
 }
 
 .brands-slider::-webkit-scrollbar {
@@ -1005,7 +1006,8 @@ ul .main-cards-link::after {
   border-radius: 2.77vw;
   overflow: hidden;
   top: 11.38vw;
-  overflow-x: scroll;
+  overflow-x: scroll !important;
+  touch-action: auto;
 }
 
 .projects-container::-webkit-scrollbar {
@@ -1024,7 +1026,7 @@ ul .main-cards-link::after {
 
 .projects-box {
   width: 43.33vw !important;
-  min-height: 49.72vw !important;
+  min-height: 53.33vw !important;
   display: flex;
   flex-direction: column;
   gap: 2.22vw;
@@ -1040,23 +1042,19 @@ ul .main-cards-link::after {
 }
 
 .projects-link {
-  opacity: 0;
-  height: 0;
+  opacity: 1;
+  height: fit-content;
   color: #BC1622;
   padding-left: 2.22vw;
   transition: all 0.5s linear;
   text-decoration: none;
   display: flex;
+  padding-bottom: 1.11vw;
   align-items: center;
   gap: 0.27vw;
+  margin-top: auto;
 }
 
-.projects-box:hover .projects-link {
-  opacity: 1;
-  height: fit-content;
-  padding-bottom: 1.11vw;
-  transition: all 0.2s linear;
-}
 
 .projects-link:hover {
   color: #A0151F;

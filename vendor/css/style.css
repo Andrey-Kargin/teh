@@ -98,7 +98,7 @@ html {
 
 .header__catalog p{
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.97vw;
   line-height: 100%;
   letter-spacing: 0%;
@@ -267,7 +267,7 @@ html {
 .header__discount p {
   margin: 0;
   margin-top: 0.31vw;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.83vw;
   line-height: 100%;
   letter-spacing: 0%;
@@ -1027,20 +1027,6 @@ ul .main-cards-link::after {
 .swiper-button-next-unique-projects {
   position: absolute;
   top: 12.63vw;
-  left: -0.55vw;
-  color: transparent;
-  background-image: url(../../img/arrow-prev-promo-list.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 1.66vw;
-  width: 1.66vw;
-  z-index: 3;
-}
-
-.projects-container .swiper-button-next-unique-projects,
-.swiper-button-prev-unique-projects {
-  position: absolute;
-  top: 12.63vw;
   right: -0.55vw;
   color: transparent;
   background-image: url(../../img/arrow-next-promo-list.svg);
@@ -1049,6 +1035,23 @@ ul .main-cards-link::after {
   height: 1.66vw;
   width: 1.66vw;
   z-index: 3;
+  cursor: pointer;
+  
+}
+
+.projects-container .swiper-button-next-unique-projects,
+.swiper-button-prev-unique-projects {
+  position: absolute;
+  top: 12.63vw;
+  left: -0.55vw;
+  color: transparent;
+  background-image: url(../../img/arrow-prev-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1.66vw;
+  width: 1.66vw;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .projects-box {
@@ -1100,9 +1103,16 @@ ul .main-cards-link::after {
   height: 11.11vw;
 }
 
+.projects-box:hover .projects-img img {
+  transform: scale(1.05);
+  transition: all 0.2s linear;
+}
+
 .projects-img img {
   width: 100%;
   height: 100%;
+  transform: scale(1);
+  transition: all 0.2s linear;
 }
 
 .projects-name {
@@ -1330,6 +1340,10 @@ ul .main-cards-link::after {
   width: 3.33vw;
   height: 3.33vw;
   cursor: pointer;
+}
+
+.main-form-link svg:hover path {
+  fill: #0E0E0E;
 }
 
 .main-form-box {
@@ -1645,14 +1659,117 @@ ul .main-cards-link::after {
   height: 2.43vw;
 }
 
-.swiper-pagination-unique {
-  display: none !important;
-}
+/* slider */
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center;
+  }
 
-.swiper-pagination {
-  display: none !important;
-}
+  .swiper-pagination-bullet {
+    background: #F1F1F1;
+    opacity: 1;
+    border-radius: 50%;
+    margin: 0 4px;
+    transition: width 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+  }
 
+  .swiper-pagination-bullet-active {
+    background-color: #F1F1F1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .swiper-pagination-bullet-active:before {
+    content: '';
+    position: absolute;
+    background-color: #BC1622;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 27.77vw;
+    overflow: hidden;
+    animation: loadingAnimation 6s linear;
+    /* Замените 3s на ваше значение delay из autoplay */
+  }
+
+  .promo-main .swiper-pagination {
+    left: 6.89vw;
+    right: auto;
+    width: fit-content;
+    bottom: 1.13vw;
+  }
+
+  .promo-main .swiper-pagination-bullet {
+    width: 0.5vw !important;
+    height: 0.5vw !important;
+    flex-shrink: 0;
+    margin: 0 0.216vw !important;
+  }
+
+  .promo-main .swiper-pagination-bullet-active {
+    width: 1.44vw !important;
+    height: 0.5vw !important;
+    flex-shrink: 0; 
+    border-radius: 27.77vw;
+  }
+
+  .promo-banner-slider .swiper-pagination {
+    left: 6.89vw;
+    right: auto;
+    width: fit-content;
+    bottom: 1.13vw;
+  }
+
+  .promo-banner-slider .swiper-pagination-bullet {
+    width: 0.5vw !important;
+    height: 0.5vw !important;
+    flex-shrink: 0;
+    margin: 0 0.216vw !important;
+  }
+
+  .promo-banner-slider .swiper-pagination-bullet-active {
+    width: 1.44vw !important;
+    height: 0.5vw !important;
+    flex-shrink: 0; 
+    border-radius: 27.77vw;
+  }
+
+  .swiper-pagination-unique {
+    left: 4.44vw;
+    right: auto;
+    width: fit-content;
+    bottom: -6.11vw;
+    z-index: 99;
+    display: flex !important;
+  }
+
+  .swiper-pagination-unique .swiper-pagination-bullet {
+    width: 1.66vw !important;
+    height: 1.66vw !important;
+    flex-shrink: 0;
+    margin: 0 0.216vw !important;
+  }
+
+  .swiper-pagination-unique .swiper-pagination-bullet-active {
+    width: 6.66vw !important;
+    height: 1.66vw !important;
+    flex-shrink: 0;
+    border-radius: 27.77vw;
+  }
+
+  @keyframes loadingAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 .mobile {
   display: none !important;
 }
