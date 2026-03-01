@@ -1258,15 +1258,33 @@
     const navBtn = document.querySelectorAll('.header__nav-link');
 
     function openBurger() {
-        burger.classList.toggle('burger_active');
-        nav.classList.toggle('header__nav_opened');
-    }
+    const isActive = burger.classList.toggle('burger_active');
+    nav.classList.toggle('header__nav_opened');
 
-    btn.addEventListener('click', openBurger);
-    burger.addEventListener('click', openBurger);
-    // navBtn.forEach(function(el) {
-    //   el.addEventListener('click', openBurger);
-    // })
+    if (isActive) {
+        // Сохраняем текущую позицию прокрутки
+        const scrollY = window.scrollY;
+        
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
+        document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
+    } else {
+        // Извлекаем сохраненную позицию из стиля top
+        const scrollY = document.body.style.top;
+        
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflowY = '';
+        
+        // Возвращаем страницу к прежнему месту
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+}
+
+btn.addEventListener('click', openBurger);
+burger.addEventListener('click', openBurger);
 
     document.addEventListener('DOMContentLoaded', function() {
       const triggers = document.querySelectorAll('[data-tab]');
@@ -1326,18 +1344,18 @@
 
                     if (winWidth < 1440) {
                         // Условие 1: 1280px - 1440px
-                        offsetPx = (winWidth * 2.54) / 100;
+                        offsetPx = (winWidth * 2.35) / 100;
                         fixedStyles = {
                             position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                            padding: '0.833vw 7.75vw'
+                            padding: '0.833vw 7.8vw'
                         };
                         resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
                     } else {
                         // Условие 2: Более 1440px
-                        offsetPx = 44;
+                        offsetPx = 35;
                         fixedStyles = {
                             position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                            padding: `12px calc((100vw - 1457px) / 2)`
+                            padding: `12px calc((100vw - 1454.5px) / 2)`
                         };
                         resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
                     }
@@ -1367,13 +1385,13 @@
                     if (selector === '.header__top') {
                         fixedStyles = {
                             position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                            padding: '2.77vw 3.95vw 0 3.95vw'
+                            padding: '2.77vw 4.1vw 0 4.1vw'
                         };
                         resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '2.77vw 0 0 0' };
                     } else {
                         fixedStyles = {
                             position: 'fixed', top: '11.1vw', left: '0', zIndex: '90', width: '100%', boxSizing: 'border-box',
-                            padding: '2.28vw 4vw'
+                            padding: '2.22vw 4.1vw'
                         };
                         resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '2.22vw 0' };
                     }
@@ -1394,9 +1412,9 @@
                 // Обработка header__bottom (отступ)
                 if (selector === '.header__bottom') {
                     if (scrollTop > parentRelativeTop) {
-                        element.style.marginTop = '26.41vw';
+                        element.style.marginTop = '25.81vw';
                     } else {
-                        element.style.marginTop = '';
+                        element.style.marginTop = '0';
                     }
                 }
             }

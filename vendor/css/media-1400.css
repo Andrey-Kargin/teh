@@ -426,7 +426,7 @@ html {
   height: 91px;
   background: #F1F1F1;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 0;
   overflow: hidden;
   display: flex;
   box-sizing: border-box;
