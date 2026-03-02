@@ -729,7 +729,7 @@ ul .main-cards-link::after {
 .products-box {
   display: flex;
   flex-direction: column;
-  width: 233px;
+  width: 280px;
   height: 465px;
   padding: 20px;
   border-radius: 10px;
@@ -1627,6 +1627,10 @@ ul .main-cards-link::after {
   height: 35px;
 }
 
+.footer__mails {
+  gap: 3px;
+}
+
 /* slider */
   .swiper-pagination {
     display: flex !important;
@@ -1645,7 +1649,7 @@ ul .main-cards-link::after {
   .swiper-pagination-bullet-active {
     background-color: #F1F1F1;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0px;
     overflow: hidden;
     box-sizing: border-box;
   }
@@ -1658,7 +1662,7 @@ ul .main-cards-link::after {
     width: 100%;
     left: 0;
     top: 0;
-    border-radius: 27.77vw;
+    border-radius: 6px;
     overflow: hidden;
     animation: loadingAnimation 6s linear;
     /* Замените 3s на ваше значение delay из autoplay */
@@ -1682,7 +1686,7 @@ ul .main-cards-link::after {
     width: 22px !important;
     height: 6px !important;
     flex-shrink: 0; 
-    border-radius: 27.77vw;
+    border-radius: 6px;
   }
 
   .promo-banner-slider .swiper-pagination {

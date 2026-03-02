@@ -14,6 +14,13 @@
     padding-top: 0;
   }
 
+  .header-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+  }
+
   .header .container {
     display: flex;
     flex-direction: column;
@@ -109,6 +116,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 2.22vw;
+    margin-top: 24.41vw;
   }
 
   .header__links {
@@ -1622,6 +1630,10 @@ ul .main-cards-link::after {
 .footer-develop svg { 
   width: 28.33vw;
   height: 8.33vw;
+}
+
+.footer__mails {
+  gap: 1.2vw;
 }
 
 /* BOTTOM-tabs */

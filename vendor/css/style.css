@@ -1659,6 +1659,10 @@ ul .main-cards-link::after {
   height: 2.43vw;
 }
 
+.footer__mails {
+  gap: 0.2vw;
+}
+
 /* slider */
   .swiper-pagination {
     display: flex !important;
