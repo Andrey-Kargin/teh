@@ -2814,6 +2814,573 @@ ul .main-cards-link::after {
     letter-spacing: 0%;
   }
 
+    /* Personal */
+
+  .personal {
+    margin: 5.55vw 0;
+  }
+
+  .personal .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .personal-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .personal-panel-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 5vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #0E0E0E;
+    padding-bottom: 3.33vw;
+    width: 100%;
+    border-bottom: 1px solid #0000001A;
+  }
+
+  .personal-panel-name {
+    margin: 0;
+    color: #33333399;
+    font-weight: 400;
+    font-size: 3.05vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    padding-top: 3.33vw;
+  }
+
+  .personal-panel-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.11vw;
+    margin-top: 1.11vw;
+  }
+
+  .personal-panel-nav-link {
+    color: #333333;
+    font-weight: 500;
+    font-size: 3.33vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2.22vw 3.33vw;
+    border-radius: 1.38vw;
+    background: #F1F1F1;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .personal-panel-nav-link span {
+    margin-left: auto;
+  }
+
+  .personal-panel-nav-link svg {
+    width: 3.33vw;
+    height: 3.33vw;
+  }
+
+  .personal-panel-nav-link_active::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.2vw;
+    height: 100%;
+    content: '';
+    background: #BC1622;
+  }
+
+  .personal-panel-nav-link:hover {
+    color: #A0151F;
+  }
+
+  .personal-panel-nav-link:hover svg path {
+    stroke: #A0151F;
+  }
+
+  .personal-panel-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5.55vw;
+    padding-top: 5.55vw;
+    border-top: 1px solid #0000001A;
+  }
+
+  .personal-panel-bottom .personal-panel-name {
+    padding-top: 0.5vw;
+  }
+
+  .personal-panel-btn {
+    width: 18.33vw;
+    height: 8.05vw;
+    border-radius: 1.38vw;
+    background: #333333;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 3.05vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding-top: 0.5vw;
+  }
+
+  .personal-panel-btn:hover {
+    background: #0E0E0E;
+  }
+
+  .personal-container {
+    width: 100%;
+    display: none;
+    margin-top: -2.77vw;
+  }
+
+  .personal-container-back {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.11vw;
+    font-weight: 400;
+    font-size: 3.61vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #333333CC;
+  }
+
+  .personal-container-back:hover {
+    color: #A0151F;
+  }
+
+  .personal-container-back:hover svg path {
+    stroke: #A0151F;
+  }
+
+  .personal-container-back svg {
+    width: 4.44vw;
+    height: 4.44vw;
+    margin-top: -0.5vw;
+  }
+
+  .personal-container_active {
+    display: flex;
+  }
+
+  .personal-main {
+    display: none !important;
+    flex-wrap: wrap;
+    gap: 0.69vw;
+  }
+
+  .personal-main-box {
+    display: flex;
+    flex-direction: column;
+    width: 15.9vw;
+    height: 9.99vw;
+    gap: 0.27vw;
+    box-sizing: border-box;
+    background-color: #F1F1F1;
+    border-radius: 0.69vw;
+    padding: 1.38vw;
+    cursor: pointer;
+  }
+
+  .personal-main-box-title {
+    margin: 0;
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.97vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-main-box-title:hover {
+    color: #A0151F;
+  }
+
+  .personal-desc {
+    margin: 0;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-main-box-svg {
+    margin-top: auto;
+    width: 2.77vw;
+    height: 2.77vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.34vw;
+    background: #33333314;
+  }
+
+  .personal-main-box-svg svg {
+    width: 2.22vw;
+    height: 2.22vw;
+  }
+
+  .personal-orders {
+    flex-direction: column;
+    gap: 3.33vw;
+  }
+
+  .personal-container-title {
+    margin: 0;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-size: 5vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    width: 100%;
+    padding-bottom: 3.33vw;
+    border-bottom: 1px solid #0000001A;
+    margin-top: 2.22vw;
+  }
+
+  .personal-orders-widgets {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+    row-gap: 4.44vw;
+  }
+
+  .personal-orders-sort {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 3.33vw;
+  }
+
+  .personal-orders-sort-desc {
+    margin: 0;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 3.05vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-sort-container {
+    display: flex;
+    background-color: #3333330D;
+    border-radius: 27.77vw;
+    overflow: hidden;
+    height: 8.33vw;
+  }
+
+  .personal-orders-sort-option {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 5.55vw;
+    color: #333333;
+    font-weight: 400;
+    font-size: 3.05vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    border-radius: 27.77vw;
+    cursor: pointer;
+    padding-top: 0.5vw;
+  }
+
+  .personal-orders-sort-option:hover {
+    color: #BC1622;
+  }
+
+  .personal-orders-sort-option_active {
+    background-color: #BC1622;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .personal-orders-sort-option_active:hover {
+    color: #fff;
+    background: #A0151F;
+  }
+
+  .personal-search {
+    margin-left: 0;
+  }
+
+  .personal-search-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 77.77vw;
+    border: 1px solid #E2E2E2;
+    border-radius: 1.11vw;
+    height: 9.16vw;
+    box-sizing: border-box;
+    padding: 0 4.44vw;
+  }
+
+  .personal-search-line__input {
+    width: 90%;
+    height: 4.44vw;
+    border: none;
+    outline: none;
+    color: #0E0E0E;
+    font-weight: 400;
+    font-size: 3.05vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    padding-top: 0.5vw;
+  }
+
+  .personal-search-line__input::placeholder {
+    color: #33333380;
+  }
+
+  .personal-search svg {
+    width: 4.44vw;
+    height: 4.44vw;
+  }
+
+  .personal-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw;
+    padding: 0 2.22vw;
+    border-radius: 6.9vw;
+    background: #F1F1F1;
+    height: 8.88vw;
+    margin-left: 2.22vw;
+  }
+
+  .personal-filters-desc {
+    margin: 0;
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    padding-top: 0.2vw;
+    display: none;
+  }
+
+  .personal-filters svg {
+    width: 4.44vw;
+    height: 4.44vw;
+  }
+
+  .personal-orders-container {
+    display: none;
+    flex-direction: column;
+    gap: 3.33vw;
+    width: 100%;
+  }
+
+  .personal-orders-container_opened {
+    display: flex;
+  }
+
+  .personal-orders-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    gap: 3.33vw;
+    padding: 4.44vw;
+    border-radius: 1.38vw;
+    background: #F1F1F1;
+    overflow: hidden;
+  }
+
+  .personal-orders-box-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 3.33vw 0 4.44vw;
+    height: 7.77vw;
+    background: #33333314;
+    border-radius: 1.38vw 1.38vw 0 1.38vw;
+    color: #333333;
+    font-weight: 400;
+    font-size: 2.77vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    overflow: hidden;
+  }
+
+  .personal-orders-box-status-success {
+    background: #00B16114;
+    border-left: 2px solid #00B162;
+  }
+
+  .personal-orders-box-number {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+    gap: 1.11vw;
+  }
+
+  .personal-orders-box-title {
+    margin: 0;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-size: 3.88vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-box-date {
+    margin: 0;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 3.33vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-box-link {
+    display: flex;
+    align-items: center;
+    gap: 1.11vw;
+    color: #BC1622;
+    font-weight: 400;
+    font-size: 3.33vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+    margin-top: 0vw;
+    position: absolute;
+    bottom: 4.44vw;
+    left: 4.44vw;
+  }
+
+  .personal-orders-box-link svg {
+    width: 2.22vw;
+    height: 2.22vw;
+    margin-top: -0.5vw;
+  }
+
+  .personal-orders-box-delivery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+    gap: 0.27vw;
+    order: 1;
+    margin-bottom: 8.05vw;
+  }
+
+  .personal-orders-box-where {
+    display: none;
+    align-items: center;
+    gap: 0.13vw;
+    font-weight: 400;
+    font-size: 0.69vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333333;
+    margin: 0.47vw 0 0.27vw 0;
+  }
+
+  .personal-orders-box-where svg {
+    width: 0.83vw;
+    height: 0.83vw;
+    margin-top: -0.2vw;
+  }
+
+  .personal-orders-box-address {
+    margin: 0;
+    color: #0E0E0E;
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+    display: none;
+  }
+
+  .personal-orders-box-additional {
+    color: #333333CC;
+    margin: 0;
+    margin-top: -0.138vw;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: none;
+  }
+
+  .personal-orders-box-additional span {
+    color: #0E0E0E;
+  }
+
+  .personal-orders-box-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+    gap: 1.11vw;
+  }
+
+  .personal-orders-box-paid {
+    display: flex;
+    align-items: center;
+    gap: 1.11vw;
+  }
+
+  .personal-orders-box-paid svg {
+    width: 3.33vw;
+    height: 3.33vw;
+  }
+
+  .personal-orders-box-paid-desc {
+    margin: 0;
+    font-weight: 400;
+    font-size: 3.33vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+    padding-top: 0.65vw;
+  }
+
+  .personal-orders-box-info-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personal-orders-box-info-text p {
+    margin: 0;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 2.77vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-box-info-text p span {
+    color: #0E0E0E;
+    font-size: 3.33vw;
+  }
+
+  .personal-orders-container-product {
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 2.22vw;
+    row-gap: 5.55vw;
+  }
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
