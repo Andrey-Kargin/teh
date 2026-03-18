@@ -4,6 +4,10 @@ html {
   background-color: #fff;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 83.33vw;
   margin: 0 auto;
