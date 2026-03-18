@@ -3394,6 +3394,34 @@ ul .main-cards-link::after {
     border-radius: 0.34vw;
     background: #F1F1F1;
     flex-shrink: 0;
+    position: relative;
+  }
+
+  .personal-orders-info-edit {
+    position: absolute;
+    top: 1.11vw;
+    right: 1.38vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.27vw;
+  }
+
+  .personal-orders-info-edit-el {
+    display: flex;
+    gap: 0.27vw;
+    align-items: center;
+    color: #333;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-edit-el svg {
+    width: 0.83vw;
+    height: 0.83vw;
+    margin-top: -0.3vw;
   }
 
   .personal-orders-info-status {
@@ -3545,6 +3573,206 @@ ul .main-cards-link::after {
 
   .personal-orders-info-products-box {
     display: flex;
+    box-sizing: border-box;
+    padding: 0.83vw 0 1.17vw 0;
+    border-bottom: 1px solid #0000001A;
+    width: 100%;
+    height: 8.68vw;
+    justify-content: space-between;
+  }
+
+  .personal-orders-info-products-box:last-of-type {
+    border: none;
+  }
+
+  .personal-orders-info-products-img {
+    width: 7.22vw;
+    height: 7.22vw;
+    flex-shrink: 0;
+  }
+
+  .personal-orders-info-products-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .personal-orders-info-products-name {
+    width: 21.11vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55vw;
+  }
+
+  .personal-orders-info-products-title {
+    margin: 0;
+    max-width: 15.83vw;
+    color: #333333;
+    font-weight: 500;
+    font-size: 0.97vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-code {
+    margin: 0;
+    color: #333333;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-info {
+    width: 8.81vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.27vw;
+  }
+
+  .personal-orders-info-products-price {
+    margin: 0;
+    margin-bottom: 0.27vw;
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.11vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-desc {
+    margin: 0;
+    color: #333;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-side {
+    width: 6.25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55vw;
+  }
+
+  .personal-orders-info-products-widgets {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.27vw;
+  }
+
+  .personal-orders-info-products-widget {
+    width: 1.66vw;
+    height: 1.66vw;
+  }
+
+  .personal-orders-info-products-widget svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .personal-orders-info-products-count {
+    display: flex;
+    gap: 0.27vw;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.55vw;
+  }
+
+  .personal-orders-info-products-count button {
+    width: 1.11vw;
+    height: 1.11vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-weight: 400;
+    font-size: 1.38vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-products-btn {
+    width: 100%;
+    height: 2.08vw;
+    background: #BC1622;
+    border-radius: 0.34vw;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.83vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+    padding-top: 0.3vw;
+  }
+
+  .personal-orders-info-products-btn:hover {
+    background: #A0151F;
+  }
+
+  .personal-orders-info-price {
+    width: 15.9vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.69vw;
+    align-items: center;
+  }
+
+  .personal-orders-info-price-box {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 1.11vw 1.38vw;
+    border-radius: 0.34vw;
+    background-color: #F1F1F1;
+  }
+
+  .personal-orders-info-price-box .personal-orders-box-paid {
+    align-items: flex-start;
+    margin: 0.27vw 0;
+  }
+
+  .personal-orders-info-price-btn {
+    border: none;
+    border-radius: 0.34vw;
+    background: #333333;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.97vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    height: 2.84vw;
+    width: 100%;
+    padding-top: 0.3vw;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-price-btn:hover {
+    background: #0E0E0E;
+  }
+
+  .personal-orders-info-price-bill {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.97vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 0.83vw;
+    gap: 0.55vw;
+  }
+
+  .personal-orders-info-price-bill svg {
+    width: 1.11vw;
+    height: 1.11vw;
+    margin-top: -0.3vw;
   }
 
   @keyframes loadingAnimation {
