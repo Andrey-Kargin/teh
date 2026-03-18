@@ -1551,6 +1551,9 @@ burger.addEventListener('click', openBurger);
         
         // Обработчик изменения размера окна
         window.addEventListener('resize', function() {
+          if (window.innerWidth === lastWidth) return;
+
+          lastWidth = window.innerWidth;
           // Если перешли с мобильной на десктопную версию и панель скрыта, показываем её
           if (!isMobile() && personalPanel.style.display === 'none') {
             personalPanel.style.display = 'flex';
