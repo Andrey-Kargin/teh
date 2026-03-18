@@ -3341,6 +3341,212 @@ ul .main-cards-link::after {
     row-gap: 1.38vw;
   }
 
+  /* ПОДРОБНЕЕ ЗАКАЗ*/
+
+  .personal-container-orders-back {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    font-weight: 400;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #333333;
+    cursor: pointer;
+    margin-top: -0.1vw;
+  }
+
+  .personal-container-orders-back:hover {
+    color: #A0151F;
+  }
+
+  .personal-container-orders-back:hover svg path {
+    fill: #A0151F;
+  }
+
+  .personal-container-orders-back svg {
+    width: 0.416vw;
+    height: 1.11vw;
+    margin-top: -0.2vw;
+  }
+
+  .personal-orders-info-main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 1.38vw;
+    border-top: 1px solid #0000001A;
+  }
+
+  .personal-orders-info {
+    display: flex;
+    flex-direction: column;
+    width: 48.4vw;
+    gap: 0.69vw;
+  }
+
+  .personal-orders-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.11vw 1.38vw;
+    border-radius: 0.34vw;
+    background: #F1F1F1;
+    flex-shrink: 0;
+  }
+
+  .personal-orders-info-status {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    font-weight: 400;
+    font-size: 0.69vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333;
+    margin-bottom: 0.55vw;
+  }
+
+  .personal-orders-info-status span {
+    width: 0.27vw;
+    height: 0.27vw;
+    background: #AAAAAA;
+    border-radius: 50%;
+    margin-top: -0.2vw;
+  }
+
+  .personal-orders-info-container .personal-orders-box-date {
+    margin-top: 0.13vw;
+  }
+
+  .personal-orders-info-packed {
+    margin: 0;
+    margin-top: 0.55vw;
+    margin-bottom: 1.66vw;
+    font-weight: 400;
+    font-size: 0.69vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333333CC;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address {
+    display: flex;
+    align-items: center;
+    gap: 1.11vw;
+    margin-top: 0.27vw;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address span {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    font-weight: 400;
+    font-size: 0.69vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333333CC;
+    margin-top: -0.2vw;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address span svg {
+    margin-top: -0.2vw;
+    width: 0.83vw;
+    height: 0.83vw;
+  }
+
+  .personal-orders-info-deliver {
+    margin: 0;
+    margin-top: 0.138vw;
+    margin-bottom: 0.416vw;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-container .personal-orders-box-additional {
+    margin-bottom: 1.66vw;
+  }
+
+  .personal-orders-info-reciever {
+    margin: 0;
+    margin-top: 0.416vw;
+    margin-bottom: 0.27vw;
+    color: #0E0E0E;
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-reciever-phone {
+    margin: 0;
+    margin-bottom: 1.66vw;
+    color: #333333;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-attach {
+    margin: 0;
+    margin-top: 0.4vw;
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    color: #BC1622;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-attach svg {
+    width: 0.83vw;
+    height: 0.83vw;
+  }
+
+  .personal-orders-info-downloads {
+    display: flex;
+    gap: 2.22vw;
+    align-items: center;
+    margin: 1.11vw 0;
+  }
+
+  .personal-orders-info-downloads-link {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    color: #333333;
+    font-weight: 400;
+    font-size: 0.9vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-downloads-link svg {
+    width: 0.83vw;
+    height: 0.83vw;
+    margin-top: -0.2vw;
+  }
+
+  .personal-orders-info-products {
+    display: flex;
+    flex-direction: column;
+    gap: 0.34vw;
+  }
+
+  .personal-orders-info-products-box {
+    display: flex;
+  }
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
