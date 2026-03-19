@@ -106,7 +106,7 @@ html {
 
 .header__catalog p {
    color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -3255,6 +3255,439 @@ ul .main-cards-link::after {
     row-gap: 20px;
   }
 
+  /* ПОДРОБНЕЕ ЗАКАЗ*/
+  .personal-container-orders-back {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      color: #333333;
+      cursor: pointer;
+      margin-top: -1px;
+  }
+
+  .personal-container-orders-back:hover {
+      color: #A0151F;
+  }
+
+  .personal-container-orders-back:hover svg path {
+      fill: #A0151F;
+  }
+
+  .personal-container-orders-back svg {
+      width: 6px;
+      height: 16px;
+      margin-top: -3px;
+  }
+
+  .personal-orders-info-main {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid #0000001A;
+  }
+
+  .personal-orders-info {
+      display: flex;
+      flex-direction: column;
+      width: 937px;
+      gap: 10px;
+  }
+
+  .personal-orders-info-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px 20px;
+      border-radius: 5px;
+      background: #F1F1F1;
+      flex-shrink: 0;
+      position: relative;
+  }
+
+  .personal-orders-info-edit {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+  }
+
+  .personal-orders-info-edit-el {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      color: #333;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-edit-el svg {
+      width: 12px;
+      height: 12px;
+      margin-top: -4px;
+  }
+
+  .personal-orders-info-status {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #333;
+      margin-bottom: 8px;
+  }
+
+  .personal-orders-info-status span {
+      width: 4px;
+      height: 4px;
+      background: #AAAAAA;
+      border-radius: 50%;
+      margin-top: -3px;
+  }
+
+  .personal-orders-info-container .personal-orders-box-date {
+      margin-top: 2px;
+  }
+
+  .personal-orders-info-packed {
+      margin: 0;
+      margin-top: 8px;
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #333333CC;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 4px;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #333333CC;
+      margin-top: -3px;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-container .personal-orders-box-address span svg {
+      margin-top: -3px;
+      width: 12px;
+      height: 12px;
+  }
+
+  .personal-orders-info-deliver {
+      margin: 0;
+      margin-top: 2px;
+      margin-bottom: 6px;
+      color: #0E0E0E;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-container .personal-orders-box-additional {
+      margin-bottom: 24px;
+  }
+
+  .personal-orders-info-reciever {
+      margin: 0;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      color: #0E0E0E;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-reciever-phone {
+      margin: 0;
+      margin-bottom: 24px;
+      color: #333333;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-attach {
+      margin: 0;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #BC1622;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-attach svg {
+      width: 12px;
+      height: 12px;
+  }
+
+  .personal-orders-info-downloads {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      margin: 16px 0;
+  }
+
+  .personal-orders-info-downloads-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #333333;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-downloads-link svg {
+      width: 12px;
+      height: 12px;
+      margin-top: -3px;
+  }
+
+  .personal-orders-info-products {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .personal-orders-info-products-box {
+      display: flex;
+      box-sizing: border-box;
+      padding: 12px 0 17px 0;
+      border-bottom: 1px solid #0000001A;
+      width: 100%;
+      height: 125px;
+      justify-content: space-between;
+  }
+
+  .personal-orders-info-products-box:last-of-type {
+      border: none;
+  }
+
+  .personal-orders-info-products-img {
+      width: 104px;
+      height: 104px;
+      flex-shrink: 0;
+  }
+
+  .personal-orders-info-products-img img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .personal-orders-info-products-name {
+      width: 544px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+  }
+
+  .personal-orders-info-products-title {
+      margin: 0;
+      max-width: 544px;
+      color: #333333;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-code {
+      margin: 0;
+      color: #333333;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-info {
+      width: 127px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+  }
+
+  .personal-orders-info-products-price {
+      margin: 0;
+      margin-bottom: 4px;
+      color: #333333;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-desc {
+      margin: 0;
+      color: #333;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 100%;
+      letter-spacing: 0%;
+  }
+
+  .personal-orders-info-products-side {
+      width: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+  }
+
+  .personal-orders-info-products-widgets {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 4px;
+  }
+
+  .personal-orders-info-products-widget {
+      width: 24px;
+      height: 24px;
+  }
+
+  .personal-orders-info-products-widget svg {
+      width: 100%;
+      height: 100%;
+  }
+
+  .personal-orders-info-products-count {
+      display: flex;
+      gap: 4px;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 8px;
+  }
+
+  .personal-orders-info-products-count button {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+      color: #333;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0%;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-products-btn {
+      width: 100%;
+      height: 30px;
+      background: #BC1622;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      cursor: pointer;
+      padding-top: 4px;
+  }
+
+  .personal-orders-info-products-btn:hover {
+      background: #A0151F;
+  }
+
+  .personal-orders-info-price {
+      width: 229px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  .personal-orders-info-price-box {
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+      padding: 16px 20px;
+      border-radius: 5px;
+      background-color: #F1F1F1;
+  }
+
+  .personal-orders-info-price-box .personal-orders-box-paid {
+      align-items: flex-start;
+      margin: 4px 0;
+  }
+
+  .personal-orders-info-price-btn {
+      border: none;
+      border-radius: 5px;
+      background: #333333;
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      height: 41px;
+      width: 100%;
+      padding-top: 4px;
+      cursor: pointer;
+  }
+
+  .personal-orders-info-price-btn:hover {
+      background: #0E0E0E;
+  }
+
+  .personal-orders-info-price-bill {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-top: 12px;
+      gap: 8px;
+  }
+
+  .personal-orders-info-price-bill svg {
+      width: 16px;
+      height: 16px;
+      margin-top: -4px;
+  }
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
@@ -3263,6 +3696,10 @@ ul .main-cards-link::after {
   to {
     width: 100%;
   }
+}
+
+.pc {
+  display: none !important;
 }
 
 .pc-1440 {

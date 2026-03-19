@@ -270,8 +270,8 @@ body {
 
 .header__discount p {
   margin: 0;
-  margin-top: 0.31vw;
-  font-weight: 500;
+  margin-top: 0.11vw;
+  font-weight: 400;
   font-size: 0.83vw;
   line-height: 100%;
   letter-spacing: 0%;
@@ -285,6 +285,7 @@ body {
   width: 1.11vw;
   height: 1.11vw;
   flex-shrink: 0;
+  margin-top: -0.1vw;
 }
 
 .subtitle {
@@ -3794,6 +3795,10 @@ ul .main-cards-link::after {
 
 .pc {
   display: flex !important;
+}
+
+.personal-orders-info-mobile {
+  display: none;
 }
 
 .is-hidden {
