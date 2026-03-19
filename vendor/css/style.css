@@ -3402,6 +3402,69 @@ ul .main-cards-link::after {
     position: relative;
   }
 
+  .personal-orders-info-container .personal-orders-box-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw;
+  }
+
+  .personal-orders-box-title-delivery {
+    position: relative;
+    width: fit-content;
+  }
+
+  .personal-orders-box-title-delivery svg {
+    width: 1.11vw;
+    height: 1.11vw;
+    margin-top: -0.2vw;
+    cursor: pointer;
+  }
+
+  .tooltiptext {
+    position: absolute;
+    display: none;
+    top: -1.58vw;
+    right: -22.98vw;
+    z-index: 1;
+    width: 22.01vw;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px #0000001F;
+    padding: 1.03vw 0.83vw 0.83vw 0.83vw;
+    border-radius: 0.27vw;
+    font-weight: 400;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+
+  .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; 
+    margin-top: -0.34vw;
+    border-width: 0.34vw;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+
+  .personal-orders-box-title-delivery svg:hover + .tooltiptext {
+    display: flex;
+  }
+
+  .personal-orders-info-container .personal-orders-box-title .copy-icon svg {
+    width: 1.38vw;
+    height: 1.38vw;
+    margin-top: -0.1vw;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-container .personal-orders-box-title .copy-icon:hover path {
+    stroke: #A0151F;
+  }
+
   .personal-orders-info-edit {
     position: absolute;
     top: 1.11vw;
