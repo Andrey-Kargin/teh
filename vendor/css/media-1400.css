@@ -3917,6 +3917,333 @@ ul .main-cards-link::after {
     margin-top: -3px;
   }
 
+  /* HISTORY */
+
+.personal-container-settings {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F1F1F1;
+}
+
+.personal-container-settings-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-container-settings-subdesc {
+  margin: 16px 0 4px 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-container-settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 296px;
+  position: relative;
+}
+
+.personal-container-settings-success {
+  position: absolute;
+  top: 9px;
+  right: -90px;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #00B162;
+}
+
+.personal-container-settings-success_active {
+  display: flex;
+}
+
+.personal-container-settings-success svg {
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+}
+
+.personal-container-settings-gender .personal-container-settings-success {
+  top: 13px;
+}
+
+.personal-container-settings-desc {
+  margin: 0;
+  width: fit-content;
+  color: #0E0E0E;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.personal-container-settings-row span {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #3333330D;
+}
+
+.personal-container-settings-row span svg {
+  width: 12px;
+  height: 12px;
+}
+
+.personal-container-settings-row span:hover svg path {
+  fill: #BA1420;
+}
+
+.personal-container-settings-gender-choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 37px;
+  border-radius: 5px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 20px 0 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.personal-container-settings-gender-choice label {
+  margin: 0;
+  margin-top: 4px;
+  color: #333;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.personal-container-settings-gender-input {
+  opacity: 0;
+  width: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.personal-container-settings-gender-input:checked+ label::before {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border-radius: 50%;
+  border: 5px solid #BC1622;
+  box-sizing: border-box;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.personal-container-settings-gender-choice label::after {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border-radius: 50%;
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.personal-container-settings-gender {
+  gap: 8px;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.personal-container-settings-phone-add {
+  margin: 0;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  cursor: pointer;
+}
+
+.personal-container-settings-phone-add svg {
+  margin-top: -3px;
+  width: 12px;
+  height: 12px;
+}
+
+.select2-container {
+  width: 296px !important;
+}
+
+.select2-container--default .select2-selection--single {
+  height: 32px;
+  border: 1px solid #E2E2E2;
+  border-radius: 4px;
+  padding: 0 16px;
+  width: 296px;
+  display: flex;
+  align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  padding: 0;
+  padding-top: 3px;
+  color: #333;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #33333380;
+}
+
+.select2-container--default .select2-dropdown {
+  border-color: #ced4da;
+  border-radius: 0 0 4px 4px;
+  width: 296px !important;
+  box-sizing: border-box;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #BA1420;
+  width: 296px;
+  box-sizing: border-box;
+}
+
+.select2-results {
+  width: 296px;
+  box-sizing: border-box;
+}
+
+.personal-container-settings-name-change {
+  width: fit-content;
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.personal-container-settings-name-change_active {
+  display: flex;
+}
+
+.personal-container-settings-name-change-input {
+  width: 296px;
+  height: 32px;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: 1px solid #E2E2E2;
+  margin-right: 4px;
+  padding-left: 16px;
+  padding-top: 3px;
+}
+
+.personal-container-settings-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.personal-container-settings-btn:hover svg path {
+  stroke: #BA1420;
+}
+
+.personal-container-settings-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+#additional-phones-container {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.city-wrapper {
+  position: relative;
+  width: 296px;
+}
+
+.city-wrapper .personal-container-settings-success {
+  top: 13px;
+}
+
+/* EDIT */
+
+.personal-container-settings-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.personal-container-settings-edit-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.personal-container-settings-edit-btn:hover {
+  color: #BA1420;
+}
+
+.personal-container-settings-edit-btn:hover svg path {
+  stroke: #BA1420;
+}
+
+.personal-container-settings-edit-btn svg {
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
