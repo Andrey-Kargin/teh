@@ -3167,6 +3167,23 @@ ul .main-cards-link::after {
     overflow: hidden;
   }
 
+  .personal-orders-box-copy-success {
+    display: none;
+    align-items: center;
+    gap: 0.27vw;
+    font-weight: 400;
+    font-size: 0.76vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #00B162;
+  }
+
+  .personal-orders-box-copy-success svg {
+    width: 0.83vw;
+    height: 0.83vw;
+    margin-top: -0.3vw;
+  }
+
   .personal-orders-box-status {
     position: absolute;
     top: 0;
@@ -3627,6 +3644,22 @@ ul .main-cards-link::after {
     cursor: pointer;
   }
 
+  .personal-orders-info-downloads-link:hover {
+    color: #A0151F;
+  }
+
+  .personal-orders-info-downloads-link:hover svg path {
+    stroke: #A0151F;
+  }
+
+  .personal-orders-info-downloads .personal-orders-info-downloads-link:nth-last-of-type(1).personal-orders-info-downloads-link:hover svg path {
+    stroke: transparent;
+  }
+
+  .personal-orders-info-downloads .personal-orders-info-downloads-link:nth-last-of-type(1).personal-orders-info-downloads-link:hover svg path {
+    fill: #A0151F !important;
+  }
+
   .personal-orders-info-downloads-link svg {
     width: 0.83vw;
     height: 0.83vw;
@@ -3733,6 +3766,21 @@ ul .main-cards-link::after {
   .personal-orders-info-products-widget {
     width: 1.66vw;
     height: 1.66vw;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-products-widget:hover svg path {
+    fill: #BC1622;
+    stroke: #BC1622;
+  }
+
+  .personal-orders-info-products-widget:nth-of-type(2).personal-orders-info-products-widget:hover svg path {
+    fill: transparent;
+  }
+
+  .personal-orders-info-products-widget:nth-of-type(3).personal-orders-info-products-widget:hover svg path {
+    fill: #BC1622;
+    stroke: transparent;
   }
 
   .personal-orders-info-products-widget svg {
@@ -3837,10 +3885,168 @@ ul .main-cards-link::after {
     gap: 0.55vw;
   }
 
+  .personal-orders-info-price-bill:hover {
+    color: #BA1420;
+  }
+
+  .personal-orders-info-price-bill:hover svg path {
+    stroke: #BA1420;
+  }
+
   .personal-orders-info-price-bill svg {
     width: 1.11vw;
     height: 1.11vw;
     margin-top: -0.3vw;
+  }
+
+  /* HISTORY */
+
+  .personal-orders-sort-history-container{
+    display: flex;
+    gap: 0.27vw;
+  }
+
+  .personal-orders-sort-history-container .personal-orders-sort-option {
+    padding: 0 0.83vw;
+    border-radius: 0.34vw;
+    height: 2.01vw;
+    background: #F1F1F1;
+    padding-top: 0.2vw;
+  }
+
+  .personal-orders-sort-history-container .personal-orders-sort-option_active {
+    background: #BC1622;
+  }
+
+  .personal-date-sort {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    margin-left: 2.77vw;
+  }
+
+  .personal-date-sort span {
+    font-weight: 400;
+    font-size: 0.97vw;
+    line-height: 140%;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+
+  .personal-date-sort-desc {
+    margin: 0;
+    width: 3.47vw;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-top: 0.2vw;
+  }
+
+  .personal-date-input {
+    width: 8.125vw;
+    height: 2.29vw;
+    border-radius: 0.27vw;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    padding: 0 1.11vw;
+    font-weight: 400;
+    font-size: 0.83vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    padding-top: 0.1vw;
+    outline: none;
+  }
+
+
+  .personal-orders-box-status-cancel {
+    background: #ED203914;
+    border-left: 2px solid #BC1622;
+  }
+
+  .personal-date-input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .personal-date-wrapper {
+    position: relative;
+  }
+
+  .personal-date-wrapper::after {
+    position: absolute;
+    display: flex;
+    top: 0.5vw;
+    right: 1vw;
+    content: '';
+    width: 1.11vw;
+    height: 1.11vw;
+    background-image: url(../../img/date.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.11vw 1.11vw;
+    z-index: 5;
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-status-success {
+    color: #00B162 !important;
+  }
+
+  .personal-orders-info-status-success span {
+    background-color: #00B162 !important;
+  }
+
+  .personal-orders-box-additional-history {
+    margin-top: 0.27vw;
+  }
+
+  .personal-orders-info-place {
+    margin: 0;
+    margin-top: 0.416vw;
+    font-weight: 400;
+    font-size: 0.9vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333;
+  }
+
+  .personal-orders-box-paid-price {
+    margin: 0;
+    margin-bottom: 0.27vw;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-size: 1.11vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-price-bill-download {
+    display: flex;
+    align-items: center;
+    gap: 0.27vw;
+    color: #333;
+    font-weight: 400;
+    font-size: 0.9vw;
+    line-height: 130%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-price-bill-download:hover {
+    color: #A0151F;
+  }
+
+  .personal-orders-info-price-bill-download:hover svg path {
+    stroke: #A0151F;
+  }
+
+  .personal-orders-info-price-bill-download svg {
+    width: 0.83vw;
+    height: 0.83vw;
+    margin-top: -0.2vw;
   }
 
   @keyframes loadingAnimation {

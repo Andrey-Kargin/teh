@@ -3076,6 +3076,23 @@ ul .main-cards-link::after {
     overflow: hidden;
   }
 
+  .personal-orders-box-copy-success {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #00B162;
+  }
+
+  .personal-orders-box-copy-success svg {
+    width: 12px;
+    height: 12px;
+    margin-top: -2.5px;
+  }
+
   .personal-orders-box-status {
     position: absolute;
     top: 0;
@@ -3749,6 +3766,155 @@ ul .main-cards-link::after {
       width: 16px;
       height: 16px;
       margin-top: -4px;
+  }
+
+  /* HISTORY */
+
+  .personal-orders-sort-history-container{
+    display: flex;
+    gap: 4px;
+  }
+
+  .personal-orders-sort-history-container .personal-orders-sort-option {
+    padding: 0 12px;
+    border-radius: 5px;
+    height: 29px;
+    background: #F1F1F1;
+    padding-top: 3px;
+  }
+
+  .personal-orders-sort-history-container .personal-orders-sort-option_active {
+    background: #BC1622;
+  }
+
+  .personal-date-sort {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 40px;
+  }
+
+  .personal-date-sort span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    margin: 0;
+  }
+
+  .personal-date-sort-desc {
+    margin: 0;
+    width: 50px;
+    color: #333333CC;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-top: 3px;
+  }
+
+  .personal-date-input {
+    width: 117px;
+    height: 33px;
+    border-radius: 4px;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    padding-top: 1px;
+    outline: none;
+  }
+
+  .personal-orders-box-status-cancel {
+    background: #ED203914;
+    border-left: 2px solid #BC1622;
+  }
+
+  .personal-date-input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .personal-date-wrapper {
+    position: relative;
+  }
+
+  .personal-date-wrapper::after {
+    position: absolute;
+    display: flex;
+    top: 7px;
+    right: 14px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url(../../img/date.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    z-index: 5;
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-status-success {
+    color: #00B162 !important;
+  }
+
+  .personal-orders-info-status-success span {
+    background-color: #00B162 !important;
+  }
+
+  .personal-orders-box-additional-history {
+    margin-top: 4px;
+  }
+
+  .personal-orders-info-place {
+    margin: 0;
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #333;
+  }
+
+  .personal-orders-box-paid-price {
+    margin: 0;
+    margin-bottom: 4px;
+    color: #0E0E0E;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .personal-orders-info-price-bill-download {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #333;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    cursor: pointer;
+  }
+
+  .personal-orders-info-price-bill-download:hover {
+    color: #A0151F;
+  }
+
+  .personal-orders-info-price-bill-download:hover svg path {
+    stroke: #A0151F;
+  }
+
+  .personal-orders-info-price-bill-download svg {
+    width: 12px;
+    height: 12px;
+    margin-top: -3px;
   }
 
   @keyframes loadingAnimation {
