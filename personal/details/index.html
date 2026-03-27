@@ -536,15 +536,15 @@
           <div class="personal-container-settings">
             <p class="personal-container-settings-title">Дополнительно</p>
             <div class="personal-container-settings-edit">
-              <a class="personal-container-settings-edit-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="personal-container-settings-edit-btn" data-popup="popup-change"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.59573 6.1543L10.25 1.5M8.75 3L9.75 4L8.25 5.5L7.25 4.5M6.25 7.75C6.25 8.99163 5.24257 10 3.99939 10C2.75743 10 1.75 8.99163 1.75 7.75C1.75 6.50837 2.75743 5.5 3.99939 5.5C5.24257 5.5 6.25 6.50837 6.25 7.75Z" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 Изменить пароль</a>
-              <a class="personal-container-settings-edit-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="personal-container-settings-edit-btn" data-popup="popup-exit"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.75 10L2.75 10C2.19772 10 1.75 9.55229 1.75 9L1.75 3C1.75 2.44772 2.19771 2 2.75 2L4.75 2M10.25 6L4.25 6M10.25 6L8.25 8M10.25 6L8.25 4" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 Выход из личного кабинета</a>
-              <a class="personal-container-settings-edit-btn"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="personal-container-settings-edit-btn" data-popup="popup-delete"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 3V9C9 9.55228 8.55228 10 8 10H4C3.44772 10 3 9.55228 3 9V3M7.5 3V2.5C7.5 1.94772 7.05228 1.5 6.5 1.5H5.5C4.94772 1.5 4.5 1.94772 4.5 2.5V3M2 3H10M5 5V8M7 5V8" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 Удалить аккаунт</a>
@@ -822,6 +822,67 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup_details" id="popup-change">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+      <p class="popup-title">Изменить пароль</p>
+      <form class="popup_details-form">
+        <div class="popup_details-form-field">
+          <label class="popup_details-form-label" for="">Старый пароль</label>
+          <input class="popup_details-form-input" type="password" />
+          <span class="popup_details-form-hide"></span>
+        </div>
+        <div class="popup_details-form-field">
+          <label class="popup_details-form-label" for="">Новый пароль</label>
+          <input class="popup_details-form-input" type="password" />
+          <span class="popup_details-form-hide"></span>
+        </div>
+        <div class="popup_details-form-field">
+          <label class="popup_details-form-label" for="">Повторите новый пароль</label>
+          <input class="popup_details-form-input" type="password" />
+          <span class="popup_details-form-hide"></span>
+        </div>
+      </form>
+      <div class="popup_details-row popup_details-row-change">
+        <button class="popup_details-btn popup_details-btn-accept">Сохранить</button>
+        <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup_details" id="popup-exit">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+      <p class="popup-title">Выйти из аккаунта</p>
+      <p class="popup-desc">Вы уверены что хотите выйти из Личного Кабинета?</p>
+      <div class="popup_details-row">
+        <button class="popup_details-btn popup_details-btn-accept">Выйти</button>
+        <button class="popup_details-btn popup_details-btn-cancel">Остаться</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup_details" id="popup-delete">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+      <p class="popup-title">Удалить аккаунт</p>
+      <p class="popup-desc">Вы уверены что хотите удалить свой аккаунт? После удаления вы не сможете просматривать историю заказа.</p>
+      <div class="popup_details-row">
+        <button class="popup_details-btn popup_details-btn-accept">Удалить аккаунт</button>
+        <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
+      </div>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1041,602 +1102,725 @@ $(document).ready(function() {
   </script>
 
   <script>
-// Ждем загрузки DOM
-document.addEventListener('DOMContentLoaded', function() {
-  
-  let phoneCounter = 1; // Счетчик для новых телефонов
-  
-  // Маска для телефона при вводе (формат +7 (___) ___-__-__)
-  function phoneMask(input) {
-    // Сохраняем позицию курсора
-    const cursorPosition = input.selectionStart;
-    const oldValue = input.value;
-    
-    // Получаем только цифры из значения
-    let digits = input.value.replace(/\D/g, '');
-    
-    // Ограничиваем длину до 11 цифр (7 - это код страны, + 10 цифр номера)
-    if (digits.length > 11) {
-      digits = digits.slice(0, 11);
-    }
-    
-    let formattedValue = '';
-    
-    if (digits.length > 0) {
-      // Всегда начинаем с +7
-      formattedValue = '+7';
+    // Ждем загрузки DOM
+    document.addEventListener('DOMContentLoaded', function() {
       
-      if (digits.length > 1) {
-        // Первые три цифры после +7
-        const firstPart = digits.slice(1, 4);
-        if (firstPart) {
-          formattedValue += ' (' + firstPart;
-        }
-      }
+      let phoneCounter = 1; // Счетчик для новых телефонов
       
-      if (digits.length >= 4) {
-        // Следующие три цифры
-        const secondPart = digits.slice(4, 7);
-        if (secondPart) {
-          formattedValue += ') ' + secondPart;
-        }
-      }
-      
-      if (digits.length >= 7) {
-        // Следующие две цифры
-        const thirdPart = digits.slice(7, 9);
-        if (thirdPart) {
-          formattedValue += '-' + thirdPart;
-        }
-      }
-      
-      if (digits.length >= 9) {
-        // Последние две цифры
-        const fourthPart = digits.slice(9, 11);
-        if (fourthPart) {
-          formattedValue += '-' + fourthPart;
-        }
-      }
-    }
-    
-    // Обновляем значение поля
-    input.value = formattedValue;
-    
-    // Восстанавливаем позицию курсора
-    const newCursorPosition = cursorPosition + (formattedValue.length - oldValue.length);
-    if (newCursorPosition >= 0 && newCursorPosition <= formattedValue.length) {
-      input.setSelectionRange(newCursorPosition, newCursorPosition);
-    }
-    
-    return formattedValue;
-  }
-  
-  // Функция для преобразования телефона в формат для сохранения (+7XXXXXXXXXXX)
-  function formatPhoneForSave(phoneWithMask) {
-    if (!phoneWithMask || phoneWithMask === '+7 (___) ___-__-__' || phoneWithMask === '+7') {
-      return '';
-    }
-    
-    // Удаляем все нецифровые символы
-    let digits = phoneWithMask.replace(/\D/g, '');
-    
-    // Если номер начинается с 8, заменяем на 7
-    if (digits.length === 11 && digits.startsWith('8')) {
-      digits = '7' + digits.slice(1);
-    }
-    
-    // Если номер начинается с 7, добавляем +
-    if (digits.length === 11 && digits.startsWith('7')) {
-      return '+' + digits;
-    }
-    
-    // Если номер начинается с 7 и длина 10, добавляем +7
-    if (digits.length === 10 && digits.startsWith('7')) {
-      return '+' + digits;
-    }
-    
-    // Если номер начинается с 7 и длина меньше, возвращаем как есть
-    if (digits.startsWith('7')) {
-      return '+' + digits;
-    }
-    
-    // Если номер не начинается с 7, добавляем +7
-    return '+7' + digits;
-  }
-  
-  // Функция для форматирования номера для отображения
-  function formatPhoneForDisplay(phoneNumber) {
-    if (!phoneNumber || phoneNumber === '+7 (___) ___-__-__') {
-      return '+7 (___) ___-__-__';
-    }
-    
-    // Если номер уже в маске, возвращаем как есть
-    if (phoneNumber.includes('(') && phoneNumber.includes(')')) {
-      return phoneNumber;
-    }
-    
-    // Если номер в формате +7XXXXXXXXXXX
-    const digits = phoneNumber.replace(/\D/g, '');
-    if (digits.length === 11 && digits.startsWith('7')) {
-      return `+7 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7, 9)}-${digits.slice(9, 11)}`;
-    }
-    
-    return phoneNumber;
-  }
-  
-  // Функция для показа сообщения "Сохранено"
-  function showSuccessMessage(successId) {
-    const successElement = document.querySelector(`[data-success="${successId}"]`);
-    if (successElement) {
-      // Очищаем предыдущий таймер если есть
-      if (successElement.timeoutId) {
-        clearTimeout(successElement.timeoutId);
-      }
-      
-      // Убираем предыдущую анимацию
-      successElement.style.animation = 'none';
-      successElement.offsetHeight;
-      successElement.style.animation = null;
-      
-      // Показываем сообщение
-      successElement.classList.add('personal-container-settings-success_active');
-      
-      // Через 3 секунды скрываем
-      successElement.timeoutId = setTimeout(() => {
-        if (successElement) {
-          successElement.style.animation = 'fadeOut 0.3s ease';
-          setTimeout(() => {
-            successElement.classList.remove('personal-container-settings-success_active');
-            successElement.style.animation = '';
-          }, 300);
-        }
-      }, 3000);
-    }
-  }
-  
-  // Функция для активации режима редактирования
-  function activateEditMode(editId) {
-    const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
-    const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
-    const input = document.querySelector(`[data-edit-input="${editId}"]`);
-    
-    if (!displayRow || !editContainer || !input) {
-      console.error('Elements not found for editId:', editId);
-      return;
-    }
-    
-    let currentValue = displayRow.querySelector('.personal-container-settings-desc').textContent;
-    
-    // Для телефона преобразуем сохраненный формат в маску для редактирования
-    if (editId.includes('phone')) {
-      if (currentValue && currentValue !== '+7 (___) ___-__-__') {
-        currentValue = formatPhoneForDisplay(currentValue);
-      } else {
-        currentValue = '+7';
-      }
-    }
-    
-    input.value = currentValue;
-    displayRow.style.display = 'none';
-    editContainer.style.display = 'flex';
-    editContainer.classList.add('personal-container-settings-name_change_active');
-    
-    // Устанавливаем курсор в конец поля
-    input.focus();
-    input.setSelectionRange(input.value.length, input.value.length);
-  }
-  
-  // Функция для сохранения изменений
-  function saveEdit(editId) {
-    const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
-    const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
-    const input = document.querySelector(`[data-edit-input="${editId}"]`);
-    const descElement = displayRow.querySelector('.personal-container-settings-desc');
-    
-    if (!displayRow || !editContainer || !input || !descElement) {
-      console.error('Elements not found for editId:', editId);
-      return;
-    }
-    
-    let newValue = input.value.trim();
-    
-    // Применяем преобразование для телефона
-    if (editId.includes('phone')) {
-      if (newValue && newValue !== '+7' && newValue !== '+7 (___) ___-__-__') {
-        // Преобразуем в формат +7XXXXXXXXXXX для сохранения
-        newValue = formatPhoneForSave(newValue);
-      } else if (!newValue || newValue === '+7' || newValue === '+7 (___) ___-__-__') {
-        newValue = descElement.textContent; // Если поле пустое, оставляем старое значение
-      }
-    }
-    
-    if (newValue && newValue !== '+7 (___) ___-__-__' && newValue !== '+7') {
-      descElement.textContent = newValue;
-    }
-    
-    displayRow.style.display = 'flex';
-    editContainer.style.display = 'none';
-    editContainer.classList.remove('personal-container-settings-name_change_active');
-    
-    // Показываем сообщение об успешном сохранении
-    showSuccessMessage(editId);
-  }
-  
-  // Функция для отмены редактирования
-  function cancelEdit(editId) {
-    const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
-    const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
-    
-    if (!displayRow || !editContainer) {
-      console.error('Elements not found for editId:', editId);
-      return;
-    }
-    
-    displayRow.style.display = 'flex';
-    editContainer.style.display = 'none';
-    editContainer.classList.remove('personal-container-settings-name_change_active');
-  }
-  
-  // Функция для создания нового блока телефона
-  function createPhoneBlock(phoneNumber = '', phoneId = null) {
-    const id = phoneId || `phone_${phoneCounter}`;
-    if (!phoneId) phoneCounter++;
-    
-    const wrapper = document.createElement('div');
-    wrapper.className = 'personal-container-settings-phone-wrapper';
-    wrapper.setAttribute('data-phone-wrapper', id);
-    
-    // Блок отображения
-    const displayRow = document.createElement('div');
-    displayRow.className = 'personal-container-settings-row personal-container-settings-phone';
-    displayRow.setAttribute('data-edit-type', id);
-    displayRow.style.display = 'flex';
-    
-    const desc = document.createElement('p');
-    desc.className = 'personal-container-settings-desc';
-    // Для отображения используем форматированный вид
-    let displayValue = phoneNumber;
-    if (phoneNumber && phoneNumber !== '+7 (___) ___-__-__') {
-      displayValue = formatPhoneForDisplay(phoneNumber);
-    } else {
-      displayValue = '+7 (___) ___-__-__';
-    }
-    desc.textContent = displayValue;
-    
-    const editIcon = document.createElement('span');
-    editIcon.className = 'personal-container-settings-edit-icon';
-    editIcon.setAttribute('data-edit', id);
-    editIcon.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8L1.64645 7.64645C1.55268 7.74021 1.5 7.86739 1.5 8H2ZM8.5 1.5L8.85355 1.14645C8.65829 0.951184 8.34171 0.951184 8.14645 1.14645L8.5 1.5ZM10.5 3.5L10.8536 3.85355C11.0488 3.65829 11.0488 3.34171 10.8536 3.14645L10.5 3.5ZM4 10V10.5C4.13261 10.5 4.25979 10.4473 4.35355 10.3536L4 10ZM2 10H1.5C1.5 10.2761 1.72386 10.5 2 10.5V10ZM6 9.5C5.72386 9.5 5.5 9.72386 5.5 10C5.5 10.2761 5.72386 10.5 6 10.5V10V9.5ZM10.25 10.5C10.5261 10.5 10.75 10.2761 10.75 10C10.75 9.72386 10.5261 9.5 10.25 9.5V10V10.5ZM2 8L2.35355 8.35355L8.85355 1.85355L8.5 1.5L8.14645 1.14645L1.64645 7.64645L2 8ZM8.5 1.5L8.14645 1.85355L10.1464 3.85355L10.5 3.5L10.8536 3.14645L8.85355 1.14645L8.5 1.5ZM10.5 3.5L10.1464 3.14645L3.64645 9.64645L4 10L4.35355 10.3536L10.8536 3.85355L10.5 3.5ZM4 10V9.5H2V10V10.5H4V10ZM2 10H2.5V8H2H1.5V10H2ZM7 3L6.64645 3.35355L8.64645 5.35355L9 5L9.35355 4.64645L7.35355 2.64645L7 3ZM6 10V10.5H10.25V10V9.5H6V10Z" fill="#333333"/></svg>';
-    
-    const successDiv = document.createElement('div');
-    successDiv.className = 'personal-container-settings-success';
-    successDiv.setAttribute('data-success', id);
-    successDiv.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.85355 4.85355C9.04882 4.65829 9.04882 4.34171 8.85355 4.14645C8.65829 3.95118 8.34171 3.95118 8.14645 4.14645L8.5 4.5L8.85355 4.85355ZM4.99999 8.00001L4.64644 8.35356C4.8417 8.54883 5.15828 8.54883 5.35354 8.35356L4.99999 8.00001ZM3.85352 6.14645C3.65826 5.95118 3.34168 5.95119 3.14641 6.14645C2.95115 6.34171 2.95115 6.65829 3.14642 6.85355L3.49997 6.5L3.85352 6.14645ZM8.5 4.5L8.14645 4.14645L4.64644 7.64646L4.99999 8.00001L5.35354 8.35356L8.85355 4.85355L8.5 4.5ZM3.49997 6.5L3.14642 6.85355L4.64644 8.35356L4.99999 8.00001L5.35354 7.64646L3.85352 6.14645L3.49997 6.5ZM10.5 6H10C10 8.20914 8.20914 10 6 10V10.5V11C8.76142 11 11 8.76142 11 6H10.5ZM6 10.5V10C3.79086 10 2 8.20914 2 6H1.5H1C1 8.76142 3.23858 11 6 11V10.5ZM1.5 6H2C2 3.79086 3.79086 2 6 2V1.5V1C3.23858 1 1 3.23858 1 6H1.5ZM6 1.5V2C8.20914 2 10 3.79086 10 6H10.5H11C11 3.23858 8.76142 1 6 1V1.5Z" fill="#00B162"/></svg> Сохранено';
-    
-    displayRow.appendChild(desc);
-    displayRow.appendChild(editIcon);
-    displayRow.appendChild(successDiv);
-    
-    // Блок редактирования
-    const editContainer = document.createElement('div');
-    editContainer.className = 'personal-container-settings-row personal-container-settings-name-change';
-    editContainer.setAttribute('data-edit-container', id);
-    editContainer.style.display = 'none';
-    
-    const input = document.createElement('input');
-    input.className = 'personal-container-settings-name-change-input';
-    input.type = 'tel';
-    input.setAttribute('data-edit-input', id);
-    input.placeholder = '+7 (___) ___-__-__';
-    
-    // Если есть сохраненный номер, преобразуем его в маску для отображения в инпуте
-    if (phoneNumber && phoneNumber !== '+7 (___) ___-__-__') {
-      input.value = formatPhoneForDisplay(phoneNumber);
-    } else {
-      input.value = '+7';
-    }
-    
-    // Добавляем обработчик маски для поля ввода
-    input.addEventListener('input', function(e) {
-      phoneMask(this);
-    });
-    
-    const saveBtn = document.createElement('div');
-    saveBtn.className = 'personal-container-settings-btn personal-container-settings-btn-save';
-    saveBtn.setAttribute('data-save', id);
-    saveBtn.innerHTML = '<p class="mobile">Сохранить</p><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 13.3337V10.0003H6.0013V13.3337M13.3346 6.55261V12.0003C13.3346 12.7367 12.7377 13.3337 12.0013 13.3337H4.0013C3.26492 13.3337 2.66797 12.7367 2.66797 12.0003V4.00033C2.66797 3.26395 3.26492 2.66699 4.0013 2.66699H9.44902C9.80264 2.66699 10.1418 2.80747 10.3918 3.05752L12.9441 5.6098C13.1942 5.85985 13.3346 6.19899 13.3346 6.55261Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    
-    const cancelBtn = document.createElement('div');
-    cancelBtn.className = 'personal-container-settings-btn personal-container-settings-btn-cancel';
-    cancelBtn.setAttribute('data-cancel', id);
-    cancelBtn.innerHTML = '<p class="mobile">Отмена</p><svg class="pc pc-1440" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.6654 3.33301L3.33203 12.6663M3.33204 3.33301L12.6654 12.6663" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    
-    editContainer.appendChild(input);
-    editContainer.appendChild(saveBtn);
-    editContainer.appendChild(cancelBtn);
-    
-    wrapper.appendChild(displayRow);
-    wrapper.appendChild(editContainer);
-    
-    return wrapper;
-  }
-  
-  // Функция для добавления нового телефона
-  function addNewPhone() {
-    const addButton = document.getElementById('add-phone-btn');
-    const container = document.getElementById('additional-phones-container');
-    
-    if (!addButton || !container) return;
-    
-    // Скрываем кнопку
-    addButton.style.display = 'none';
-    
-    // Создаем временный блок для ввода
-    const tempPhoneId = `temp_phone_${phoneCounter}`;
-    const tempWrapper = createPhoneBlock('', tempPhoneId);
-    
-    // Находим поле ввода и блок редактирования
-    const tempInput = tempWrapper.querySelector(`[data-edit-input="${tempPhoneId}"]`);
-    const tempDisplay = tempWrapper.querySelector(`[data-edit-type="${tempPhoneId}"]`);
-    const tempEditContainer = tempWrapper.querySelector(`[data-edit-container="${tempPhoneId}"]`);
-    
-    // Скрываем отображаемый блок и показываем форму редактирования
-    tempDisplay.style.display = 'none';
-    tempEditContainer.style.display = 'flex';
-    tempEditContainer.classList.add('personal-container-settings-name_change_active');
-    
-    // Устанавливаем значение по умолчанию
-    if (tempInput) {
-      tempInput.value = '+7';
-    }
-    
-    // Добавляем обработчики для временного блока
-    const tempSaveBtn = tempWrapper.querySelector(`[data-save="${tempPhoneId}"]`);
-    const tempCancelBtn = tempWrapper.querySelector(`[data-cancel="${tempPhoneId}"]`);
-    
-    // Обработчик сохранения
-    tempSaveBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const input = tempWrapper.querySelector(`[data-edit-input="${tempPhoneId}"]`);
-      let phoneValue = input.value.trim();
-      
-      if (phoneValue && phoneValue !== '+7' && phoneValue !== '+7 (___) ___-__-__') {
-        // ПРИМЕНЯЕМ ФОРМАТИРОВАНИЕ ДЛЯ СОХРАНЕНИЯ (убираем тире и пробелы)
-        const savedValue = formatPhoneForSave(phoneValue);
+      // Маска для телефона при вводе (формат +7 (___) ___-__-__)
+      function phoneMask(input) {
+        // Сохраняем позицию курсора
+        const cursorPosition = input.selectionStart;
+        const oldValue = input.value;
         
-        if (savedValue) {
-          // Создаем постоянный блок с отформатированным номером
-          const permanentPhoneId = `phone_${phoneCounter}`;
-          phoneCounter++;
-          const permanentWrapper = createPhoneBlock(savedValue, permanentPhoneId);
-          
-          // Добавляем в контейнер
-          container.appendChild(permanentWrapper);
-          
-          // Инициализируем обработчики для нового блока
-          initPhoneHandlers(permanentWrapper, permanentPhoneId);
-          
-          // Показываем сообщение об успешном сохранении для нового блока
-          setTimeout(() => {
-            showSuccessMessage(permanentPhoneId);
-          }, 100);
+        // Получаем только цифры из значения
+        let digits = input.value.replace(/\D/g, '');
+        
+        // Ограничиваем длину до 11 цифр (7 - это код страны, + 10 цифр номера)
+        if (digits.length > 11) {
+          digits = digits.slice(0, 11);
         }
         
-        // Удаляем временный блок
-        tempWrapper.remove();
-      } else {
-        // Если поле пустое, просто удаляем временный блок
-        tempWrapper.remove();
-      }
-      
-      // Показываем кнопку
-      addButton.style.display = 'flex';
-    });
-    
-    // Обработчик отмены
-    tempCancelBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Удаляем временный блок
-      tempWrapper.remove();
-      // Показываем кнопку
-      addButton.style.display = 'flex';
-    });
-    
-    container.appendChild(tempWrapper);
-    
-    // Фокусируемся на поле ввода
-    setTimeout(() => {
-      if (tempInput) {
-        tempInput.focus();
-        // Устанавливаем курсор после +7
-        tempInput.setSelectionRange(2, 2);
-      }
-    }, 100);
-  }
-  
-  // Функция инициализации обработчиков для телефона
-  function initPhoneHandlers(wrapper, phoneId) {
-    const editIcon = wrapper.querySelector(`[data-edit="${phoneId}"]`);
-    const saveBtn = wrapper.querySelector(`[data-save="${phoneId}"]`);
-    const cancelBtn = wrapper.querySelector(`[data-cancel="${phoneId}"]`);
-    const input = wrapper.querySelector(`[data-edit-input="${phoneId}"]`);
-    
-    if (editIcon) {
-      // Удаляем старый обработчик, чтобы не дублировать
-      const newEditIcon = editIcon.cloneNode(true);
-      editIcon.parentNode.replaceChild(newEditIcon, editIcon);
-      newEditIcon.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        activateEditMode(phoneId);
-      });
-    }
-    
-    if (saveBtn) {
-      const newSaveBtn = saveBtn.cloneNode(true);
-      saveBtn.parentNode.replaceChild(newSaveBtn, saveBtn);
-      newSaveBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        saveEdit(phoneId);
-      });
-    }
-    
-    if (cancelBtn) {
-      const newCancelBtn = cancelBtn.cloneNode(true);
-      cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
-      newCancelBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        cancelEdit(phoneId);
-      });
-    }
-    
-    if (input) {
-      // Удаляем старый обработчик
-      const newInput = input.cloneNode(true);
-      input.parentNode.replaceChild(newInput, input);
-      newInput.addEventListener('input', function(e) {
-        phoneMask(this);
-      });
-    }
-  }
-  
-  // Инициализация существующего телефона
-  function initExistingPhones() {
-    // Находим все обертки с телефонами
-    const phoneWrappers = document.querySelectorAll('.personal-container-settings-phone-wrapper');
-    
-    phoneWrappers.forEach(wrapper => {
-      const displayRow = wrapper.querySelector('[data-edit-type]');
-      if (displayRow) {
-        const phoneId = displayRow.getAttribute('data-edit-type');
-        if (phoneId && !phoneId.includes('temp')) {
-          // Преобразуем отображаемый номер в формат +7XXXXXXXXXXX для хранения
-          const descElement = wrapper.querySelector('.personal-container-settings-desc');
-          if (descElement) {
-            const currentText = descElement.textContent;
-            // Если текст в маске, преобразуем в формат для хранения
-            if (currentText.includes('(') && currentText.includes(')')) {
-              const formatted = formatPhoneForSave(currentText);
-              if (formatted) {
-                descElement.textContent = formatted;
-              }
+        let formattedValue = '';
+        
+        if (digits.length > 0) {
+          // Всегда начинаем с +7
+          formattedValue = '+7';
+          
+          if (digits.length > 1) {
+            // Первые три цифры после +7
+            const firstPart = digits.slice(1, 4);
+            if (firstPart) {
+              formattedValue += ' (' + firstPart;
             }
           }
           
-          // Добавляем обработчик маски для существующего поля ввода
-          const existingInput = wrapper.querySelector(`[data-edit-input="${phoneId}"]`);
-          if (existingInput) {
-            const newInput = existingInput.cloneNode(true);
-            existingInput.parentNode.replaceChild(newInput, existingInput);
-            newInput.addEventListener('input', function(e) {
-              phoneMask(this);
-            });
+          if (digits.length >= 4) {
+            // Следующие три цифры
+            const secondPart = digits.slice(4, 7);
+            if (secondPart) {
+              formattedValue += ') ' + secondPart;
+            }
           }
-          initPhoneHandlers(wrapper, phoneId);
+          
+          if (digits.length >= 7) {
+            // Следующие две цифры
+            const thirdPart = digits.slice(7, 9);
+            if (thirdPart) {
+              formattedValue += '-' + thirdPart;
+            }
+          }
+          
+          if (digits.length >= 9) {
+            // Последние две цифры
+            const fourthPart = digits.slice(9, 11);
+            if (fourthPart) {
+              formattedValue += '-' + fourthPart;
+            }
+          }
         }
-      }
-    });
-  }
-  
-  // Добавляем обработчик для кнопки "Добавить еще"
-  const addPhoneBtn = document.getElementById('add-phone-btn');
-  if (addPhoneBtn) {
-    // Удаляем старый обработчик
-    const newAddBtn = addPhoneBtn.cloneNode(true);
-    addPhoneBtn.parentNode.replaceChild(newAddBtn, addPhoneBtn);
-    
-    newAddBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      addNewPhone();
-    });
-  }
-  
-  // Инициализация существующих телефонов
-  initExistingPhones();
-  
-  // Функция для валидации email
-  function validateEmail(email) {
-    const re = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
-    return re.test(email);
-  }
-  
-  // Добавляем валидацию для email
-  const emailSaveButton = document.querySelector('[data-save="email"]');
-  if (emailSaveButton) {
-    const newEmailSaveBtn = emailSaveButton.cloneNode(true);
-    emailSaveButton.parentNode.replaceChild(newEmailSaveBtn, emailSaveButton);
-    
-    newEmailSaveBtn.addEventListener('click', function(e) {
-      const emailInput = document.querySelector('[data-edit-input="email"]');
-      if (emailInput) {
-        const emailValue = emailInput.value.trim();
-        if (emailValue && !validateEmail(emailValue)) {
-          e.preventDefault();
-          alert('Пожалуйста, введите корректный email адрес');
-          return false;
+        
+        // Обновляем значение поля
+        input.value = formattedValue;
+        
+        // Восстанавливаем позицию курсора
+        const newCursorPosition = cursorPosition + (formattedValue.length - oldValue.length);
+        if (newCursorPosition >= 0 && newCursorPosition <= formattedValue.length) {
+          input.setSelectionRange(newCursorPosition, newCursorPosition);
         }
+        
+        return formattedValue;
       }
-    });
-  }
-  
-  // Инициализация для существующих полей (name и email)
-  const editFields = ['name', 'email'];
-  editFields.forEach(field => {
-    const editIcon = document.querySelector(`[data-edit="${field}"]`);
-    const saveBtn = document.querySelector(`[data-save="${field}"]`);
-    const cancelBtn = document.querySelector(`[data-cancel="${field}"]`);
-    
-    if (editIcon) {
-      const newEditIcon = editIcon.cloneNode(true);
-      editIcon.parentNode.replaceChild(newEditIcon, editIcon);
-      newEditIcon.addEventListener('click', function(e) {
-        e.preventDefault();
-        activateEditMode(field);
-      });
-    }
-    
-    if (saveBtn) {
-      const newSaveBtn = saveBtn.cloneNode(true);
-      saveBtn.parentNode.replaceChild(newSaveBtn, saveBtn);
-      newSaveBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        saveEdit(field);
-      });
-    }
-    
-    if (cancelBtn) {
-      const newCancelBtn = cancelBtn.cloneNode(true);
-      cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
-      newCancelBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        cancelEdit(field);
-      });
-    }
-  });
-  
-  // Обработчики для пола
-  const genderInputs = document.querySelectorAll('.personal-container-settings-gender-input');
-  if (genderInputs.length) {
-    genderInputs.forEach(input => {
-      const newInput = input.cloneNode(true);
-      input.parentNode.replaceChild(newInput, input);
       
-      newInput.addEventListener('change', function() {
-        if (this.checked) {
-          const allInputs = document.querySelectorAll('.personal-container-settings-gender-input');
-          allInputs.forEach(otherInput => {
-            if (otherInput !== this) {
-              otherInput.checked = false;
+      // Функция для преобразования телефона в формат для сохранения (+7XXXXXXXXXXX)
+      function formatPhoneForSave(phoneWithMask) {
+        if (!phoneWithMask || phoneWithMask === '+7 (___) ___-__-__' || phoneWithMask === '+7') {
+          return '';
+        }
+        
+        // Удаляем все нецифровые символы
+        let digits = phoneWithMask.replace(/\D/g, '');
+        
+        // Если номер начинается с 8, заменяем на 7
+        if (digits.length === 11 && digits.startsWith('8')) {
+          digits = '7' + digits.slice(1);
+        }
+        
+        // Если номер начинается с 7, добавляем +
+        if (digits.length === 11 && digits.startsWith('7')) {
+          return '+' + digits;
+        }
+        
+        // Если номер начинается с 7 и длина 10, добавляем +7
+        if (digits.length === 10 && digits.startsWith('7')) {
+          return '+' + digits;
+        }
+        
+        // Если номер начинается с 7 и длина меньше, возвращаем как есть
+        if (digits.startsWith('7')) {
+          return '+' + digits;
+        }
+        
+        // Если номер не начинается с 7, добавляем +7
+        return '+7' + digits;
+      }
+      
+      // Функция для форматирования номера для отображения
+      function formatPhoneForDisplay(phoneNumber) {
+        if (!phoneNumber || phoneNumber === '+7 (___) ___-__-__') {
+          return '+7 (___) ___-__-__';
+        }
+        
+        // Если номер уже в маске, возвращаем как есть
+        if (phoneNumber.includes('(') && phoneNumber.includes(')')) {
+          return phoneNumber;
+        }
+        
+        // Если номер в формате +7XXXXXXXXXXX
+        const digits = phoneNumber.replace(/\D/g, '');
+        if (digits.length === 11 && digits.startsWith('7')) {
+          return `+7 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7, 9)}-${digits.slice(9, 11)}`;
+        }
+        
+        return phoneNumber;
+      }
+      
+      // Функция для показа сообщения "Сохранено"
+      function showSuccessMessage(successId) {
+        const successElement = document.querySelector(`[data-success="${successId}"]`);
+        if (successElement) {
+          // Очищаем предыдущий таймер если есть
+          if (successElement.timeoutId) {
+            clearTimeout(successElement.timeoutId);
+          }
+          
+          // Убираем предыдущую анимацию
+          successElement.style.animation = 'none';
+          successElement.offsetHeight;
+          successElement.style.animation = null;
+          
+          // Показываем сообщение
+          successElement.classList.add('personal-container-settings-success_active');
+          
+          // Через 3 секунды скрываем
+          successElement.timeoutId = setTimeout(() => {
+            if (successElement) {
+              successElement.style.animation = 'fadeOut 0.3s ease';
+              setTimeout(() => {
+                successElement.classList.remove('personal-container-settings-success_active');
+                successElement.style.animation = '';
+              }, 300);
+            }
+          }, 3000);
+        }
+      }
+      
+      // Функция для активации режима редактирования
+      function activateEditMode(editId) {
+        const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
+        const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
+        const input = document.querySelector(`[data-edit-input="${editId}"]`);
+        
+        if (!displayRow || !editContainer || !input) {
+          console.error('Elements not found for editId:', editId);
+          return;
+        }
+        
+        let currentValue = displayRow.querySelector('.personal-container-settings-desc').textContent;
+        
+        // Для телефона преобразуем сохраненный формат в маску для редактирования
+        if (editId.includes('phone')) {
+          if (currentValue && currentValue !== '+7 (___) ___-__-__') {
+            currentValue = formatPhoneForDisplay(currentValue);
+          } else {
+            currentValue = '+7';
+          }
+        }
+        
+        input.value = currentValue;
+        displayRow.style.display = 'none';
+        editContainer.style.display = 'flex';
+        editContainer.classList.add('personal-container-settings-name_change_active');
+        
+        // Устанавливаем курсор в конец поля
+        input.focus();
+        input.setSelectionRange(input.value.length, input.value.length);
+      }
+      
+      // Функция для сохранения изменений
+      function saveEdit(editId) {
+        const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
+        const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
+        const input = document.querySelector(`[data-edit-input="${editId}"]`);
+        const descElement = displayRow.querySelector('.personal-container-settings-desc');
+        
+        if (!displayRow || !editContainer || !input || !descElement) {
+          console.error('Elements not found for editId:', editId);
+          return;
+        }
+        
+        let newValue = input.value.trim();
+        
+        // Применяем преобразование для телефона
+        if (editId.includes('phone')) {
+          if (newValue && newValue !== '+7' && newValue !== '+7 (___) ___-__-__') {
+            // Преобразуем в формат +7XXXXXXXXXXX для сохранения
+            newValue = formatPhoneForSave(newValue);
+          } else if (!newValue || newValue === '+7' || newValue === '+7 (___) ___-__-__') {
+            newValue = descElement.textContent; // Если поле пустое, оставляем старое значение
+          }
+        }
+        
+        if (newValue && newValue !== '+7 (___) ___-__-__' && newValue !== '+7') {
+          descElement.textContent = newValue;
+        }
+        
+        displayRow.style.display = 'flex';
+        editContainer.style.display = 'none';
+        editContainer.classList.remove('personal-container-settings-name_change_active');
+        
+        // Показываем сообщение об успешном сохранении
+        showSuccessMessage(editId);
+      }
+      
+      // Функция для отмены редактирования
+      function cancelEdit(editId) {
+        const displayRow = document.querySelector(`[data-edit-type="${editId}"]`);
+        const editContainer = document.querySelector(`[data-edit-container="${editId}"]`);
+        
+        if (!displayRow || !editContainer) {
+          console.error('Elements not found for editId:', editId);
+          return;
+        }
+        
+        displayRow.style.display = 'flex';
+        editContainer.style.display = 'none';
+        editContainer.classList.remove('personal-container-settings-name_change_active');
+      }
+      
+      // Функция для создания нового блока телефона
+      function createPhoneBlock(phoneNumber = '', phoneId = null) {
+        const id = phoneId || `phone_${phoneCounter}`;
+        if (!phoneId) phoneCounter++;
+        
+        const wrapper = document.createElement('div');
+        wrapper.className = 'personal-container-settings-phone-wrapper';
+        wrapper.setAttribute('data-phone-wrapper', id);
+        
+        // Блок отображения
+        const displayRow = document.createElement('div');
+        displayRow.className = 'personal-container-settings-row personal-container-settings-phone';
+        displayRow.setAttribute('data-edit-type', id);
+        displayRow.style.display = 'flex';
+        
+        const desc = document.createElement('p');
+        desc.className = 'personal-container-settings-desc';
+        // Для отображения используем форматированный вид
+        let displayValue = phoneNumber;
+        if (phoneNumber && phoneNumber !== '+7 (___) ___-__-__') {
+          displayValue = formatPhoneForDisplay(phoneNumber);
+        } else {
+          displayValue = '+7 (___) ___-__-__';
+        }
+        desc.textContent = displayValue;
+        
+        const editIcon = document.createElement('span');
+        editIcon.className = 'personal-container-settings-edit-icon';
+        editIcon.setAttribute('data-edit', id);
+        editIcon.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8L1.64645 7.64645C1.55268 7.74021 1.5 7.86739 1.5 8H2ZM8.5 1.5L8.85355 1.14645C8.65829 0.951184 8.34171 0.951184 8.14645 1.14645L8.5 1.5ZM10.5 3.5L10.8536 3.85355C11.0488 3.65829 11.0488 3.34171 10.8536 3.14645L10.5 3.5ZM4 10V10.5C4.13261 10.5 4.25979 10.4473 4.35355 10.3536L4 10ZM2 10H1.5C1.5 10.2761 1.72386 10.5 2 10.5V10ZM6 9.5C5.72386 9.5 5.5 9.72386 5.5 10C5.5 10.2761 5.72386 10.5 6 10.5V10V9.5ZM10.25 10.5C10.5261 10.5 10.75 10.2761 10.75 10C10.75 9.72386 10.5261 9.5 10.25 9.5V10V10.5ZM2 8L2.35355 8.35355L8.85355 1.85355L8.5 1.5L8.14645 1.14645L1.64645 7.64645L2 8ZM8.5 1.5L8.14645 1.85355L10.1464 3.85355L10.5 3.5L10.8536 3.14645L8.85355 1.14645L8.5 1.5ZM10.5 3.5L10.1464 3.14645L3.64645 9.64645L4 10L4.35355 10.3536L10.8536 3.85355L10.5 3.5ZM4 10V9.5H2V10V10.5H4V10ZM2 10H2.5V8H2H1.5V10H2ZM7 3L6.64645 3.35355L8.64645 5.35355L9 5L9.35355 4.64645L7.35355 2.64645L7 3ZM6 10V10.5H10.25V10V9.5H6V10Z" fill="#333333"/></svg>';
+        
+        const successDiv = document.createElement('div');
+        successDiv.className = 'personal-container-settings-success';
+        successDiv.setAttribute('data-success', id);
+        successDiv.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.85355 4.85355C9.04882 4.65829 9.04882 4.34171 8.85355 4.14645C8.65829 3.95118 8.34171 3.95118 8.14645 4.14645L8.5 4.5L8.85355 4.85355ZM4.99999 8.00001L4.64644 8.35356C4.8417 8.54883 5.15828 8.54883 5.35354 8.35356L4.99999 8.00001ZM3.85352 6.14645C3.65826 5.95118 3.34168 5.95119 3.14641 6.14645C2.95115 6.34171 2.95115 6.65829 3.14642 6.85355L3.49997 6.5L3.85352 6.14645ZM8.5 4.5L8.14645 4.14645L4.64644 7.64646L4.99999 8.00001L5.35354 8.35356L8.85355 4.85355L8.5 4.5ZM3.49997 6.5L3.14642 6.85355L4.64644 8.35356L4.99999 8.00001L5.35354 7.64646L3.85352 6.14645L3.49997 6.5ZM10.5 6H10C10 8.20914 8.20914 10 6 10V10.5V11C8.76142 11 11 8.76142 11 6H10.5ZM6 10.5V10C3.79086 10 2 8.20914 2 6H1.5H1C1 8.76142 3.23858 11 6 11V10.5ZM1.5 6H2C2 3.79086 3.79086 2 6 2V1.5V1C3.23858 1 1 3.23858 1 6H1.5ZM6 1.5V2C8.20914 2 10 3.79086 10 6H10.5H11C11 3.23858 8.76142 1 6 1V1.5Z" fill="#00B162"/></svg> Сохранено';
+        
+        displayRow.appendChild(desc);
+        displayRow.appendChild(editIcon);
+        displayRow.appendChild(successDiv);
+        
+        // Блок редактирования
+        const editContainer = document.createElement('div');
+        editContainer.className = 'personal-container-settings-row personal-container-settings-name-change';
+        editContainer.setAttribute('data-edit-container', id);
+        editContainer.style.display = 'none';
+        
+        const input = document.createElement('input');
+        input.className = 'personal-container-settings-name-change-input';
+        input.type = 'tel';
+        input.setAttribute('data-edit-input', id);
+        input.placeholder = '+7 (___) ___-__-__';
+        
+        // Если есть сохраненный номер, преобразуем его в маску для отображения в инпуте
+        if (phoneNumber && phoneNumber !== '+7 (___) ___-__-__') {
+          input.value = formatPhoneForDisplay(phoneNumber);
+        } else {
+          input.value = '+7';
+        }
+        
+        // Добавляем обработчик маски для поля ввода
+        input.addEventListener('input', function(e) {
+          phoneMask(this);
+        });
+        
+        const saveBtn = document.createElement('div');
+        saveBtn.className = 'personal-container-settings-btn personal-container-settings-btn-save';
+        saveBtn.setAttribute('data-save', id);
+        saveBtn.innerHTML = '<p class="mobile">Сохранить</p><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0013 13.3337V10.0003H6.0013V13.3337M13.3346 6.55261V12.0003C13.3346 12.7367 12.7377 13.3337 12.0013 13.3337H4.0013C3.26492 13.3337 2.66797 12.7367 2.66797 12.0003V4.00033C2.66797 3.26395 3.26492 2.66699 4.0013 2.66699H9.44902C9.80264 2.66699 10.1418 2.80747 10.3918 3.05752L12.9441 5.6098C13.1942 5.85985 13.3346 6.19899 13.3346 6.55261Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        
+        const cancelBtn = document.createElement('div');
+        cancelBtn.className = 'personal-container-settings-btn personal-container-settings-btn-cancel';
+        cancelBtn.setAttribute('data-cancel', id);
+        cancelBtn.innerHTML = '<p class="mobile">Отмена</p><svg class="pc pc-1440" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.6654 3.33301L3.33203 12.6663M3.33204 3.33301L12.6654 12.6663" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        
+        editContainer.appendChild(input);
+        editContainer.appendChild(saveBtn);
+        editContainer.appendChild(cancelBtn);
+        
+        wrapper.appendChild(displayRow);
+        wrapper.appendChild(editContainer);
+        
+        return wrapper;
+      }
+      
+      // Функция для добавления нового телефона
+      function addNewPhone() {
+        const addButton = document.getElementById('add-phone-btn');
+        const container = document.getElementById('additional-phones-container');
+        
+        if (!addButton || !container) return;
+        
+        // Скрываем кнопку
+        addButton.style.display = 'none';
+        
+        // Создаем временный блок для ввода
+        const tempPhoneId = `temp_phone_${phoneCounter}`;
+        const tempWrapper = createPhoneBlock('', tempPhoneId);
+        
+        // Находим поле ввода и блок редактирования
+        const tempInput = tempWrapper.querySelector(`[data-edit-input="${tempPhoneId}"]`);
+        const tempDisplay = tempWrapper.querySelector(`[data-edit-type="${tempPhoneId}"]`);
+        const tempEditContainer = tempWrapper.querySelector(`[data-edit-container="${tempPhoneId}"]`);
+        
+        // Скрываем отображаемый блок и показываем форму редактирования
+        tempDisplay.style.display = 'none';
+        tempEditContainer.style.display = 'flex';
+        tempEditContainer.classList.add('personal-container-settings-name_change_active');
+        
+        // Устанавливаем значение по умолчанию
+        if (tempInput) {
+          tempInput.value = '+7';
+        }
+        
+        // Добавляем обработчики для временного блока
+        const tempSaveBtn = tempWrapper.querySelector(`[data-save="${tempPhoneId}"]`);
+        const tempCancelBtn = tempWrapper.querySelector(`[data-cancel="${tempPhoneId}"]`);
+        
+        // Обработчик сохранения
+        tempSaveBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const input = tempWrapper.querySelector(`[data-edit-input="${tempPhoneId}"]`);
+          let phoneValue = input.value.trim();
+          
+          if (phoneValue && phoneValue !== '+7' && phoneValue !== '+7 (___) ___-__-__') {
+            // ПРИМЕНЯЕМ ФОРМАТИРОВАНИЕ ДЛЯ СОХРАНЕНИЯ (убираем тире и пробелы)
+            const savedValue = formatPhoneForSave(phoneValue);
+            
+            if (savedValue) {
+              // Создаем постоянный блок с отформатированным номером
+              const permanentPhoneId = `phone_${phoneCounter}`;
+              phoneCounter++;
+              const permanentWrapper = createPhoneBlock(savedValue, permanentPhoneId);
+              
+              // Добавляем в контейнер
+              container.appendChild(permanentWrapper);
+              
+              // Инициализируем обработчики для нового блока
+              initPhoneHandlers(permanentWrapper, permanentPhoneId);
+              
+              // Показываем сообщение об успешном сохранении для нового блока
+              setTimeout(() => {
+                showSuccessMessage(permanentPhoneId);
+              }, 100);
+            }
+            
+            // Удаляем временный блок
+            tempWrapper.remove();
+          } else {
+            // Если поле пустое, просто удаляем временный блок
+            tempWrapper.remove();
+          }
+          
+          // Показываем кнопку
+          addButton.style.display = 'flex';
+        });
+        
+        // Обработчик отмены
+        tempCancelBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Удаляем временный блок
+          tempWrapper.remove();
+          // Показываем кнопку
+          addButton.style.display = 'flex';
+        });
+        
+        container.appendChild(tempWrapper);
+        
+        // Фокусируемся на поле ввода
+        setTimeout(() => {
+          if (tempInput) {
+            tempInput.focus();
+            // Устанавливаем курсор после +7
+            tempInput.setSelectionRange(2, 2);
+          }
+        }, 100);
+      }
+      
+      // Функция инициализации обработчиков для телефона
+      function initPhoneHandlers(wrapper, phoneId) {
+        const editIcon = wrapper.querySelector(`[data-edit="${phoneId}"]`);
+        const saveBtn = wrapper.querySelector(`[data-save="${phoneId}"]`);
+        const cancelBtn = wrapper.querySelector(`[data-cancel="${phoneId}"]`);
+        const input = wrapper.querySelector(`[data-edit-input="${phoneId}"]`);
+        
+        if (editIcon) {
+          // Удаляем старый обработчик, чтобы не дублировать
+          const newEditIcon = editIcon.cloneNode(true);
+          editIcon.parentNode.replaceChild(newEditIcon, editIcon);
+          newEditIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            activateEditMode(phoneId);
+          });
+        }
+        
+        if (saveBtn) {
+          const newSaveBtn = saveBtn.cloneNode(true);
+          saveBtn.parentNode.replaceChild(newSaveBtn, saveBtn);
+          newSaveBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            saveEdit(phoneId);
+          });
+        }
+        
+        if (cancelBtn) {
+          const newCancelBtn = cancelBtn.cloneNode(true);
+          cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
+          newCancelBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            cancelEdit(phoneId);
+          });
+        }
+        
+        if (input) {
+          // Удаляем старый обработчик
+          const newInput = input.cloneNode(true);
+          input.parentNode.replaceChild(newInput, input);
+          newInput.addEventListener('input', function(e) {
+            phoneMask(this);
+          });
+        }
+      }
+      
+      // Инициализация существующего телефона
+      function initExistingPhones() {
+        // Находим все обертки с телефонами
+        const phoneWrappers = document.querySelectorAll('.personal-container-settings-phone-wrapper');
+        
+        phoneWrappers.forEach(wrapper => {
+          const displayRow = wrapper.querySelector('[data-edit-type]');
+          if (displayRow) {
+            const phoneId = displayRow.getAttribute('data-edit-type');
+            if (phoneId && !phoneId.includes('temp')) {
+              // Преобразуем отображаемый номер в формат +7XXXXXXXXXXX для хранения
+              const descElement = wrapper.querySelector('.personal-container-settings-desc');
+              if (descElement) {
+                const currentText = descElement.textContent;
+                // Если текст в маске, преобразуем в формат для хранения
+                if (currentText.includes('(') && currentText.includes(')')) {
+                  const formatted = formatPhoneForSave(currentText);
+                  if (formatted) {
+                    descElement.textContent = formatted;
+                  }
+                }
+              }
+              
+              // Добавляем обработчик маски для существующего поля ввода
+              const existingInput = wrapper.querySelector(`[data-edit-input="${phoneId}"]`);
+              if (existingInput) {
+                const newInput = existingInput.cloneNode(true);
+                existingInput.parentNode.replaceChild(newInput, existingInput);
+                newInput.addEventListener('input', function(e) {
+                  phoneMask(this);
+                });
+              }
+              initPhoneHandlers(wrapper, phoneId);
+            }
+          }
+        });
+      }
+      
+      // Добавляем обработчик для кнопки "Добавить еще"
+      const addPhoneBtn = document.getElementById('add-phone-btn');
+      if (addPhoneBtn) {
+        // Удаляем старый обработчик
+        const newAddBtn = addPhoneBtn.cloneNode(true);
+        addPhoneBtn.parentNode.replaceChild(newAddBtn, addPhoneBtn);
+        
+        newAddBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          addNewPhone();
+        });
+      }
+      
+      // Инициализация существующих телефонов
+      initExistingPhones();
+      
+      // Функция для валидации email
+      function validateEmail(email) {
+        const re = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+        return re.test(email);
+      }
+      
+      // Добавляем валидацию для email
+      const emailSaveButton = document.querySelector('[data-save="email"]');
+      if (emailSaveButton) {
+        const newEmailSaveBtn = emailSaveButton.cloneNode(true);
+        emailSaveButton.parentNode.replaceChild(newEmailSaveBtn, emailSaveButton);
+        
+        newEmailSaveBtn.addEventListener('click', function(e) {
+          const emailInput = document.querySelector('[data-edit-input="email"]');
+          if (emailInput) {
+            const emailValue = emailInput.value.trim();
+            if (emailValue && !validateEmail(emailValue)) {
+              e.preventDefault();
+              alert('Пожалуйста, введите корректный email адрес');
+              return false;
+            }
+          }
+        });
+      }
+      
+      // Инициализация для существующих полей (name и email)
+      const editFields = ['name', 'email'];
+      editFields.forEach(field => {
+        const editIcon = document.querySelector(`[data-edit="${field}"]`);
+        const saveBtn = document.querySelector(`[data-save="${field}"]`);
+        const cancelBtn = document.querySelector(`[data-cancel="${field}"]`);
+        
+        if (editIcon) {
+          const newEditIcon = editIcon.cloneNode(true);
+          editIcon.parentNode.replaceChild(newEditIcon, editIcon);
+          newEditIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            activateEditMode(field);
+          });
+        }
+        
+        if (saveBtn) {
+          const newSaveBtn = saveBtn.cloneNode(true);
+          saveBtn.parentNode.replaceChild(newSaveBtn, saveBtn);
+          newSaveBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            saveEdit(field);
+          });
+        }
+        
+        if (cancelBtn) {
+          const newCancelBtn = cancelBtn.cloneNode(true);
+          cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
+          newCancelBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            cancelEdit(field);
+          });
+        }
+      });
+      
+      // Обработчики для пола
+      const genderInputs = document.querySelectorAll('.personal-container-settings-gender-input');
+      if (genderInputs.length) {
+        genderInputs.forEach(input => {
+          const newInput = input.cloneNode(true);
+          input.parentNode.replaceChild(newInput, input);
+          
+          newInput.addEventListener('change', function() {
+            if (this.checked) {
+              const allInputs = document.querySelectorAll('.personal-container-settings-gender-input');
+              allInputs.forEach(otherInput => {
+                if (otherInput !== this) {
+                  otherInput.checked = false;
+                }
+              });
+              showSuccessMessage('gender');
             }
           });
-          showSuccessMessage('gender');
+        });
+      }
+    });
+  </script>
+
+  <!-- POPUPS -->
+  <script>
+    // Get all elements with data-popup attribute
+    const popupTriggers = document.querySelectorAll('[data-popup]');
+
+    // Function to open popup
+    function openPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.classList.add('popup_details_opened');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+      }
+    }
+
+    // Function to close popup
+    function closePopup(popup) {
+      if (popup) {
+        popup.classList.remove('popup_details_opened');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+    }
+
+    // Add click event listeners to trigger elements
+    popupTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const popupId = trigger.getAttribute('data-popup');
+        openPopup(popupId);
+      });
+    });
+
+    // Get all close buttons and close functionality
+    const popups = document.querySelectorAll('.popup_details');
+
+    popups.forEach(popup => {
+      // Close button inside popup
+      const closeBtn = popup.querySelector('.popup_details-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          closePopup(popup);
+        });
+      }
+      
+      // Cancel buttons (popup_details-btn-cancel)
+      const cancelBtns = popup.querySelectorAll('.popup_details-btn-cancel');
+      cancelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          closePopup(popup);
+        });
+      });
+      
+      // Accept buttons (popup_details-btn-accept)
+      const acceptBtns = popup.querySelectorAll('.popup_details-btn-accept');
+      acceptBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Here you can add your custom logic for accept actions
+          // For now, just close the popup
+          closePopup(popup);
+        });
+      });
+    });
+
+    // Close popup when clicking on the overlay (popup background)
+    popups.forEach(popup => {
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          closePopup(popup);
         }
       });
     });
-  }
-});
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const openPopup = document.querySelector('.popup_details.popup_details_opened');
+        if (openPopup) {
+          closePopup(openPopup);
+        }
+      }
+    });
+
+    // Optional: Prevent form submission if form is inside popup
+    const forms = document.querySelectorAll('.popup_details-form');
+    forms.forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form handling logic here
+        // Close popup after form submission if needed
+        const popup = form.closest('.popup_details');
+        closePopup(popup);
+      });
+    });
+
+    // Get all password toggle elements
+    const toggleButtons = document.querySelectorAll('.popup_details-form-hide');
+
+    // Function to toggle password visibility
+    function togglePasswordVisibility(toggleBtn, input) {
+      // Check current input type and toggle
+      if (input.type === 'password') {
+        input.type = 'text';
+        toggleBtn.classList.add('popup_details-form-hide_shown');
+      } else {
+        input.type = 'password';
+        toggleBtn.classList.remove('popup_details-form-hide_shown');
+      }
+    }
+
+    // Add click event listeners to each toggle button
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Find the parent field and then the input within it
+        const field = button.closest('.popup_details-form-field');
+        const input = field.querySelector('.popup_details-form-input');
+        
+        if (input) {
+          togglePasswordVisibility(button, input);
+        }
+      });
+    });
   </script>
 </body>
 

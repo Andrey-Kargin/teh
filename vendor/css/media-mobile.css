@@ -4082,20 +4082,15 @@ ul .main-cards-link::after {
     position: relative;
   }
 
-  .personal-date-wrapper::after {
+  .date-widget {
     position: absolute;
     display: flex;
-    top: 2.22vw;
+    top: 2.92vw;
     right: 4.44vw;
     content: '';
     width: 4.44vw;
     height: 4.44vw;
-    background-image: url(../../img/date.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 4.44vw 4.44vw;
     z-index: 5;
-    pointer-events: none;
     cursor: pointer;
   }
 
@@ -4564,6 +4559,342 @@ ul .main-cards-link::after {
   width: 3.33vw;
   height: 3.33vw;
   margin-top: -0.5vw;
+}
+
+/* POPUP DETAILS */
+
+.popup_details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #33333399;
+  z-index: 999999;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.popup_details_opened {
+  display: flex;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5.55vw;
+  box-sizing: border-box;
+  padding: 5.55vw;
+  border-radius: 2.77vw 2.77vw 0 0;
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.popup-container::after {
+  position: absolute;
+  content: '';
+  top: 16.52vw;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #F1F1F1;
+}
+
+.popup_details-close {
+  position: absolute;
+  top: 5.55vw;
+  right: 5.55vw;
+  cursor: pointer;
+  width: 5.55vw;
+  height: 5.55vw;
+}
+
+.popup_details-close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.popup_details-close:hover {
+  opacity: 0.7;
+}
+
+.popup-title {
+  margin: 0;
+  width: 100%;
+  padding-bottom: 5.55vw;
+  color: #0E0E0E;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 0.5vw;
+}
+
+.popup-desc {
+  margin: 0;
+  color: #333333CC;
+  width: 100%;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.popup_details-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.33vw;
+}
+
+.popup_details-btn {
+  width: 43.33vw;
+  height: 10.55vw;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 1.38vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 0.5vw;
+  font-weight: 500;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.popup_details-btn-accept {
+  background: #BC1622;
+  color: #fff;
+}
+
+.popup_details-btn-accept:hover {
+  background-color: #A0151F;
+}
+
+.popup_details-btn-cancel:hover {
+  color: #BC1622;
+}
+
+.popup_details-row-change {
+  flex-direction: column;
+  gap: 2.22vw;
+}
+
+.popup_details-row-change button {
+  width: 100%;
+}
+
+.popup_details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+  width: 100%;
+}
+
+.popup_details-form-field {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+}
+
+.popup_details-form-label {
+  margin: 0;
+  color: #333333CC;
+  font-weight: 400;
+  font-size: 3.05vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.popup_details-form-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 11.11vw;
+  border-radius: 1.11vw;
+  border: 1px solid #E2E2E2;
+  padding-left: 4.44vw;
+  padding-top: 0.5vw;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.popup_details-form-hide {
+  position: absolute;
+  content: '';
+  right: 4.44vw;
+  top: 8.33vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  background-image: url(../../img/show.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4.44vw 4.44vw;
+  cursor: pointer;
+}
+
+.popup_details-form-hide_shown {
+  background-image: url(../../img/hide.svg);
+}
+
+.popup_details-form-hide:hover {
+  opacity: 1;
+}
+
+/* Datepicker */
+
+
+/* datepicker styles */
+
+.datepicker-container {
+  position: relative;
+}
+
+.datepicker {
+  position: absolute;
+  top: auto;
+  bottom: 130%;
+  left: 0;
+  margin: auto;
+  z-index: 100;
+  right: 0;
+  background: #fff;
+  border-radius: 0.56vw;
+  width: 77.77vw;
+  height: fit-content;
+  box-shadow: 0px 2px 8px 0px #00000026;
+}
+
+.datepicker-till {
+  left: auto;
+  right: 0;
+}
+
+.datepicker::after {
+  content: "";
+  position: absolute;
+  bottom: auto;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.datepicker-till::after {
+  left: 80%;
+}
+
+.datepicker button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.56vw;
+  background: transparent;
+  font-size: 3.89vw;
+  line-height: 6.11vw;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  padding-top: 1.39vw;
+  width: 6.67vw;
+  height: 6.67vw;
+}
+
+.days,
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 6.67vw);
+  column-gap: 3.61vw;
+  row-gap: 1.94vw;
+  margin: 0 5vw 3.06vw 5vw;
+}
+
+.days {
+  margin: 2.22vw 5vw 0.56vw 5vw;
+}
+
+.days span {
+  font-size: 3.89vw;
+  line-height: 7.78vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+.dates button {
+  color: #0E0E0E;
+  aspect-ratio: 1;
+}
+
+.dates button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dates button:hover {
+  background: #BC1622;
+  color: #fff;
+}
+
+.dates button.today {
+  border: 1px solid #BC1622;
+}
+
+.dates button.selected {
+  background: #BC1622;
+  color: #fff;
+}
+
+.datepicker-header {
+  display: flex;
+  align-items: center;
+  padding: 0 2.22vw;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.datepicker-header button {
+  width: 6.11vw;
+  height: 11.11vw;
+  padding: 0;
+}
+
+.datepicker-header button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.month-year-display {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2.22vw;
+  padding-top: 1.11vw;
+}
+
+.month-year-display span {
+  font-weight: 400;
+  font-size: 3.89vw;
+  line-height: 6.11vw;
+  letter-spacing: 0%;
+}
+
+.date-widget-cancel:hover path {
+  stroke: #BC1622;
 }
 
   @keyframes loadingAnimation {

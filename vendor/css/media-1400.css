@@ -3842,20 +3842,15 @@ ul .main-cards-link::after {
     position: relative;
   }
 
-  .personal-date-wrapper::after {
+  .date-widget {
     position: absolute;
     display: flex;
-    top: 7px;
+    top: 8.8px;
     right: 14px;
     content: '';
     width: 16px;
     height: 16px;
-    background-image: url(../../img/date.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
     z-index: 5;
-    pointer-events: none;
     cursor: pointer;
   }
 
@@ -4242,6 +4237,323 @@ ul .main-cards-link::after {
   width: 12px;
   height: 12px;
   margin-top: -4px;
+}
+
+/* POPUP DETAILS */
+
+.popup_details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #33333399;
+  z-index: 999999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup_details_opened {
+  display: flex;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.39vw;
+  box-sizing: border-box;
+  padding: 1.39vw;
+  border-radius: 0.69vw;
+  width: 38.61vw;
+  background: #fff;
+  position: relative;
+}
+
+.popup-container::after {
+  position: absolute;
+  content: '';
+  top: 4.58vw;
+  left: 0;
+  width: 100%;
+  height: 0.07vw;
+  background: #F1F1F1;
+}
+
+.popup_details-close {
+  position: absolute;
+  top: 1.67vw;
+  right: 1.39vw;
+  cursor: pointer;
+  width: 1.39vw;
+  height: 1.39vw;
+}
+
+.popup_details-close:hover {
+  opacity: 0.7;
+}
+
+.popup-title {
+  margin: 0;
+  width: 100%;
+  padding-bottom: 1.39vw;
+  color: #0E0E0E;
+  font-weight: 700;
+  font-size: 1.67vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 0.21vw;
+}
+
+.popup-desc {
+  margin: 0;
+  color: #333333CC;
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.popup_details-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.11vw;
+}
+
+.popup_details-btn {
+  width: 17.64vw;
+  height: 2.85vw;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 0.21vw;
+  font-weight: 500;
+  font-size: 0.97vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.popup_details-btn-accept {
+  background: #BC1622;
+  color: #fff;
+}
+
+.popup_details-btn-accept:hover {
+  background-color: #A0151F;
+}
+
+.popup_details-btn-cancel:hover {
+  color: #BC1622;
+}
+
+.popup_details-row-change {
+  flex-direction: column;
+  gap: 0.56vw;
+}
+
+.popup_details-row-change button {
+  width: 100%;
+}
+
+.popup_details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+  width: 100%;
+}
+
+.popup_details-form-field {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28vw;
+}
+
+.popup_details-form-label {
+  margin: 0;
+  color: #333333CC;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.popup_details-form-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.78vw;
+  border-radius: 0.28vw;
+  border: 1px solid #E2E2E2;
+  padding-left: 1.11vw;
+  padding-top: 0.21vw;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.popup_details-form-hide {
+  position: absolute;
+  content: '';
+  right: 1.11vw;
+  top: 2.22vw;
+  width: 1.11vw;
+  height: 1.11vw;
+  background-image: url(../../img/show.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.11vw 1.11vw;
+  cursor: pointer;
+}
+
+.popup_details-form-hide_shown {
+  background-image: url(../../img/hide.svg);
+}
+
+.popup_details-form-hide:hover {
+  opacity: 0.7;
+}
+
+/* Datepicker */
+
+
+/* datepicker styles */
+
+.datepicker-container {
+  position: relative;
+}
+
+.datepicker {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  right: 0;
+  margin-top: 11px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 8px 0px #00000026;
+}
+
+.datepicker::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 80%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.datepicker button {
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background: transparent;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  padding-top: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.days,
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 24px);
+  column-gap: 13px;
+  row-gap: 7px;
+  margin: 0 18px 11px 18px;
+}
+
+.days {
+  margin: 8px 18px 2px 18px;
+}
+
+.days span {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.dates button {
+  color: #0E0E0E;
+  aspect-ratio: 1;
+}
+
+.dates button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dates button:hover {
+  background: #BC1622;
+  color: #fff;
+}
+
+.dates button.today {
+  border: 1px solid #BC1622;
+}
+
+.dates button.selected {
+  background: #BC1622;
+  color: #fff;
+}
+
+.datepicker-header {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.datepicker-header button {
+  width: 22px;
+  height: 40px;
+  padding: 0;
+}
+
+.datepicker-header button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.month-year-display {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.month-year-display span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.date-widget-cancel:hover path {
+  stroke: #BC1622;
 }
 
   @keyframes loadingAnimation {
