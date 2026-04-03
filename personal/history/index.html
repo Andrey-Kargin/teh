@@ -368,7 +368,7 @@
           </nav>
           <p class="personal-panel-name">Товары</p>
           <nav class="personal-panel-nav">
-            <a class="personal-panel-nav-link" data-section="estimates">Сметы<span class="mobile"><svg width="12"
+            <a href="../estimate/" class="personal-panel-nav-link" data-section="estimates">Сметы<span class="mobile"><svg width="12"
                   height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -1484,112 +1484,121 @@
   </script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-  // Получаем нужные элементы
-  const ordersMoreLinks = document.querySelectorAll('.personal-orders-box-link');
-  const containers = document.querySelectorAll('.personal-container');
-  const backButton = document.querySelector('.personal-container-orders-back');
+   document.addEventListener('DOMContentLoaded', function () {
+    // Получаем нужные элементы
+    const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
+    const containers = document.querySelectorAll('.personal-container');
+    const backButton = document.querySelector('.personal-container-orders-back');
 
-  // Функция для активации раздела
-  function activateSection(sectionId) {
-    containers.forEach(container => {
-      container.classList.remove('personal-container_active');
-    });
-
-    const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-    if (targetContainer) {
-      targetContainer.classList.add('personal-container_active');
-    }
-  }
-
-  // Функция для скролла вверх
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  // Обработчик для ссылок "Подробнее"
-  ordersMoreLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const sectionId = this.dataset.section; // "orders-info"
-      activateSection(sectionId);
-      scrollToTop();
-    });
-  });
-
-  // Обработчик для кнопки "Назад"
-  if (backButton) {
-    backButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      const sectionId = this.dataset.section; // "orders"
-      activateSection(sectionId);
-      scrollToTop();
-    });
-  }
-});
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // Находим все опции сортировки
-      const sortOptions = document.querySelectorAll('.personal-orders-sort-option');
-
-      // Находим контейнеры
-      const allContainer = document.querySelector('[data-container="all"]');
-      const successContainer = document.querySelector('[data-container="success"]');
-      const cancelContainer = document.querySelector('[data-container="cancel"]');
-
-      // Функция для переключения активного контейнера
-      function switchContainer(sortType) {
-        // Сначала удаляем класс opened у всех контейнеров
-        if (allContainer) {
-          allContainer.classList.remove('personal-orders-container_opened');
-        }
-        if (successContainer) {
-          successContainer.classList.remove('personal-orders-container_opened');
-        }
-        if (cancelContainer) {
-          cancelContainer.classList.remove('personal-orders-container_opened');
-        }
-
-        // Добавляем класс opened только нужному контейнеру
-        if (sortType === 'all' && allContainer) {
-          allContainer.classList.add('personal-orders-container_opened');
-        } else if (sortType === 'success' && successContainer) {
-          successContainer.classList.add('personal-orders-container_opened');
-        } else if (sortType === 'cancel' && cancelContainer) {
-          cancelContainer.classList.add('personal-orders-container_opened');
-        }
-      }
-
-      // Обработчик клика по опциям сортировки
-      sortOptions.forEach(option => {
-        option.addEventListener('click', function () {
-          // Удаляем активный класс у всех опций
-          sortOptions.forEach(opt => {
-            opt.classList.remove('personal-orders-sort-option_active');
-          });
-
-          // Добавляем активный класс текущей опции
-          this.classList.add('personal-orders-sort-option_active');
-
-          // Получаем тип сортировки из data-атрибута
-          const sortType = this.getAttribute('data-sort');
-
-          // Переключаем контейнеры
-          switchContainer(sortType);
-        });
+    // Функция для активации раздела
+    function activateSection(sectionId) {
+      containers.forEach(container => {
+        container.classList.remove('personal-container_active');
       });
 
-      // Проверяем начальное состояние и активируем правильный контейнер
-      // Находим активную опцию при загрузке
-      const activeOption = document.querySelector('.personal-orders-sort-option_active');
-      if (activeOption) {
-        const initialSortType = activeOption.getAttribute('data-sort');
-        switchContainer(initialSortType);
+      const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
+      if (targetContainer) {
+        targetContainer.classList.add('personal-container_active');
       }
+    }
+
+    // Функция для скролла вверх
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Обработчик для всего блока заказа
+    ordersBoxes.forEach(box => {
+      box.addEventListener('click', function (e) {
+        // Находим ссылку "Подробнее" внутри этого блока
+        const link = this.querySelector('.personal-orders-box-link');
+        
+        // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
+        const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
+        
+        if (link && !isWidgetClick) {
+          e.preventDefault();
+          const sectionId = link.dataset.section; // "orders-info"
+          activateSection(sectionId);
+          scrollToTop();
+        }
+      });
     });
+
+    // Обработчик для кнопки "Назад"
+    if (backButton) {
+      backButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const sectionId = this.dataset.section; // "orders"
+        activateSection(sectionId);
+        scrollToTop();
+      });
+    }
+  });
+
+  // Остальной код для сортировки заказов
+  document.addEventListener('DOMContentLoaded', function () {
+    // Находим все опции сортировки
+    const sortOptions = document.querySelectorAll('.personal-orders-sort-option');
+
+    // Находим контейнеры
+    const allContainer = document.querySelector('[data-container="all"]');
+    const successContainer = document.querySelector('[data-container="success"]');
+    const cancelContainer = document.querySelector('[data-container="cancel"]');
+
+    // Функция для переключения активного контейнера
+    function switchContainer(sortType) {
+      // Сначала удаляем класс opened у всех контейнеров
+      if (allContainer) {
+        allContainer.classList.remove('personal-orders-container_opened');
+      }
+      if (successContainer) {
+        successContainer.classList.remove('personal-orders-container_opened');
+      }
+      if (cancelContainer) {
+        cancelContainer.classList.remove('personal-orders-container_opened');
+      }
+
+      // Добавляем класс opened только нужному контейнеру
+      if (sortType === 'all' && allContainer) {
+        allContainer.classList.add('personal-orders-container_opened');
+      } else if (sortType === 'success' && successContainer) {
+        successContainer.classList.add('personal-orders-container_opened');
+      } else if (sortType === 'cancel' && cancelContainer) {
+        cancelContainer.classList.add('personal-orders-container_opened');
+      }
+    }
+
+    // Обработчик клика по опциям сортировки
+    sortOptions.forEach(option => {
+      option.addEventListener('click', function () {
+        // Удаляем активный класс у всех опций
+        sortOptions.forEach(opt => {
+          opt.classList.remove('personal-orders-sort-option_active');
+        });
+
+        // Добавляем активный класс текущей опции
+        this.classList.add('personal-orders-sort-option_active');
+
+        // Получаем тип сортировки из data-атрибута
+        const sortType = this.getAttribute('data-sort');
+
+        // Переключаем контейнеры
+        switchContainer(sortType);
+      });
+    });
+
+    // Проверяем начальное состояние и активируем правильный контейнер
+    // Находим активную опцию при загрузке
+    const activeOption = document.querySelector('.personal-orders-sort-option_active');
+    if (activeOption) {
+      const initialSortType = activeOption.getAttribute('data-sort');
+      switchContainer(initialSortType);
+    }
+  });
 
   </script>
 
