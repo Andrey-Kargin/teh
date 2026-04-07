@@ -3969,6 +3969,7 @@ ul .main-cards-link::after {
   .personal-orders-sort-history-container{
     display: flex;
     gap: 1.11vw;
+    flex-wrap: wrap;
   }
 
   .personal-orders-sort-history-container .personal-orders-sort-option {
@@ -5270,6 +5271,227 @@ ul .main-cards-link::after {
   font-size: 3.33vw;
   line-height: 100%;
   letter-spacing: 0%;
+}
+
+/* COMPARE */
+
+.personal-container-row {
+  display: flex;
+  width: 100%;
+}
+
+.personal-container-delete-all {
+  display: flex;
+  align-items: center;
+  gap: 1.11vw;
+  padding-bottom: 3.33vw;
+  border-bottom: 1px solid #0000001A;
+  flex-shrink: 0;
+  color: #333;
+  font-weight: 500;
+  font-size: 3.05vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.personal-container-delete-all:hover {
+  color: #BA1420;
+}
+
+.personal-container-delete-all:hover path {
+  stroke: #BA1420;
+}
+
+.personal-container-delete-all svg {
+  width: 4.44vw;
+  height: 4.44vw;
+  margin-top: -0.5vw;
+}
+
+.personal-compare-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+  width: 100%;
+}
+
+.personal-orders-sort-checkbox {
+  margin: 0;
+  gap: 3.33vw;
+}
+
+.personal-orders-sort-checkbox .checkbox__input:checked + .checkbox__label::before {
+  top: -1.138vw;
+  left: -8.88vw;
+}
+
+.personal-orders-sort-checkbox .checkbox__label::after {
+  top: -1.138vw;
+  left: -8.88vw;
+}
+
+.personal-compare-container {
+  width: 100%;
+  display: flex;
+  overflow-x: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.personal-panel {
+  z-index: 90;
+}
+
+.personal-compare-container::after {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 2;
+  left: -100%;
+  top: 0;
+  position: absolute;
+  content: '';
+}
+
+.personal-compare-container::before {
+  height: 100%;
+  width: 22.22vw;
+  position: absolute;
+  top: 0;
+  right: calc((100vw - 88.88vw) / -2);
+  content: '';
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 90;
+
+}
+
+.personal-compare-box {
+  width: 48.88vw;
+  margin-right: 1.38vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-compare-box-top {
+  padding: 2.22vw 2.22vw 0 2.22vw;
+}
+
+.personal-compare-box-top .products-name {
+  border: none;
+}
+
+.personal-compare-box-top .products-pricetag {
+  position: relative;
+  border: none;
+  padding: 3.33vw 0;
+  margin-top: 3.33vw;
+  min-height: fit-content;
+}
+
+.personal-compare-box-top .products-name {
+  height: 18.88vw !important;
+}
+
+.personal-compare-box-top .products-pricetag::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -2.22vw;
+  width: 48.88vw;
+  height: 1px;
+  background-color: #0000001A;
+}
+
+.personal-compare-box-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.personal-compare-box-info {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2.22vw;
+  padding-top: 2.72vw;
+  gap: 0.55vw;
+  min-height: 12.22vw;
+}
+
+.personal-compare-box-info:nth-of-type(2n - 1)  {
+  background: #F1F1F180;
+}
+
+.personal-compare-box-info:nth-of-type(2) {
+  min-height: 16.11vw;
+}
+
+.personal-compare-box-info:last-of-type {
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-compare-box-info-title {
+  margin: 0;
+  color: #333333CC;
+  font-weight: 400;
+  font-size:2.77vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  min-height: 3.33vw;
+}
+
+.personal-compare-box-info-data {
+  margin: 0;
+  color: #0E0E0E;
+  font-weight: 500;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.personal-compare-container .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 0;
+  top: 36.94vw;
+  bottom: auto;
+  color: transparent;
+  background-image: url(../../img/arrow-prev-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8.88vw;
+  width: 8.88vw;
+  z-index: 3;
+}
+
+.personal-compare-container .swiper-button-disabled {
+  display: none;
+}
+
+.personal-compare-container .swiper-button-prev:hover,
+.swiper-rtl .swiper-button-next {
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
+  transform: rotate(180deg);
+}
+
+.personal-compare-container .swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0;
+  top: 36.94vw;
+  bottom: auto;
+  color: transparent;
+  background-image: url(../../img/arrow-next-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8.88vw;
+  width: 8.88vw;
+  z-index: 96;
+}
+
+.personal-compare-container .swiper-button-next:hover,
+.swiper-rtl .swiper-button-prev {
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
 }
 
   @keyframes loadingAnimation {

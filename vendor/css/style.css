@@ -5054,6 +5054,221 @@ ul .main-cards-link::after {
   letter-spacing: 0%;
 }
 
+/* COMPARE */
+
+.personal-container-row {
+  display: flex;
+  width: 100%;
+}
+
+.personal-container-delete-all {
+  display: flex;
+  align-items: center;
+  gap: 0.27vw;
+  padding-bottom: 1.11vw;
+  border-bottom: 1px solid #0000001A;
+  flex-shrink: 0;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.83vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.personal-container-delete-all:hover {
+  color: #BA1420;
+}
+
+.personal-container-delete-all:hover path {
+  stroke: #BA1420;
+}
+
+.personal-container-delete-all svg {
+  width: 1.11vw;
+  height: 1.11vw;
+  margin-top: -0.2vw;
+}
+
+.personal-compare-widgets {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.personal-orders-sort-checkbox {
+  margin: 0;
+  gap: 0.83vw;
+}
+
+.personal-orders-sort-checkbox .checkbox__input:checked + .checkbox__label::before {
+  top: -0.438vw;
+  left: -2.5vw;
+}
+
+.personal-orders-sort-checkbox .checkbox__label::after {
+  top: -0.438vw;
+  left: -2.5vw;
+}
+
+.personal-compare-container {
+  width: 100%;
+  display: flex;
+  overflow-x: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.personal-panel {
+  z-index: 90;
+}
+
+.personal-compare-container::after {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 2;
+  left: -100%;
+  top: 0;
+  position: absolute;
+  content: '';
+}
+
+.personal-compare-container::before {
+  height: 100%;
+  width: 9.02vw;
+  position: absolute;
+  top: 0;
+  right: -9.02vw;
+  content: '';
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 90;
+  pointer-events: none;
+}
+
+.personal-compare-box {
+  width: 16.18vw;
+  margin-right: 0.34vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-compare-box-top {
+  padding: 1.38vw 1.38vw 0 1.38vw;
+}
+
+.personal-compare-box-top .products-name {
+  border: none;
+}
+
+.personal-compare-box-top .products-pricetag {
+  position: relative;
+  border: none;
+  padding: 0.83vw 0;
+  margin-top: 0.83vw;
+}
+
+.personal-compare-box-top .products-pricetag::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -1.38vw;
+  width: 16.18vw;
+  height: 1px;
+  background-color: #0000001A;
+}
+
+.personal-compare-box-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.personal-compare-box-info {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0.83vw 1.38vw;
+  padding-top: 1.03vw;
+  gap: 0.138vw;
+  min-height: 3.88vw;
+}
+
+.personal-compare-box-info:nth-of-type(2n - 1)  {
+  background: #F1F1F180;
+}
+
+.personal-compare-box-info:nth-of-type(2) {
+  min-height: 5.06vw;
+}
+
+.personal-compare-box-info:last-of-type {
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-compare-box-info-title {
+  margin: 0;
+  color: #333333CC;
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  min-height: 0.9vw;
+}
+
+.personal-compare-box-info-data {
+  margin: 0;
+  color: #0E0E0E;
+  font-weight: 500;
+  font-size: 0.97vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.personal-compare-container .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 0;
+  top: 11.87vw;
+  bottom: auto;
+  color: transparent;
+  background-image: url(../../img/arrow-prev-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2.22vw;
+  width: 2.22vw;
+  z-index: 96;
+}
+
+.personal-compare-container .swiper-button-disabled {
+  display: none;
+}
+
+.personal-compare-container .swiper-button-prev:hover,
+.swiper-rtl .swiper-button-next {
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
+  transform: rotate(180deg);
+}
+
+.personal-compare-container .swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0;
+  top: 11.87vw;
+  bottom: auto;
+  color: transparent;
+  background-image: url(../../img/arrow-next-promo-list.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 2.22vw;
+  width: 2.22vw;
+  z-index: 96;
+}
+
+.personal-compare-container .swiper-button-next:hover,
+.swiper-rtl .swiper-button-prev {
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
+}
+
 @keyframes loadingAnimation {
   from {
     width: 0%;
