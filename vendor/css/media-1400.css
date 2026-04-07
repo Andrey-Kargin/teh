@@ -5130,6 +5130,397 @@ ul .main-cards-link::after {
   background-image: url(../../img/arrow-next-promo-list-hover.svg);
 }
 
+/* FAVORITE */
+
+.personal-favorite-sort {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.personal-favorite-sort-box {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #F1F1F1;
+  cursor: pointer;
+}
+
+.personal-favorite-sort-box svg {
+  width: 16px;
+  height: 16px;
+}
+
+.personal-favorite-sort-box_active path {
+  fill: #333;
+}
+
+.personal-favorite-sort-box_active rect {
+  fill: #333;
+}
+
+.personal-favorite-sort-box:hover path {
+  fill: #333;
+}
+
+.personal-favorite-sort-box:hover rect {
+  fill: #333;
+}
+
+.products-favorite-container {
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 5px;
+}
+
+.products-favorite-container .products-box {
+  width: 233px;
+}
+
+.products-settings-box_active path {
+  fill: #BA1420;
+  stroke: #BA1420;
+}
+
+.products-favorite-widgets {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.personal-favorite-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.personal-favorite-filter-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-favorite-filter span {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #BC1622;
+  cursor: pointer;
+}
+
+.personal-favorite-filter span:hover {
+  color: #ED2039;
+}
+
+.personal-favorite-filter span:hover path {
+  stroke: #ED2039;
+}
+
+.personal-favorite-filter span svg {
+  margin-top: -4px;
+}
+
+/* СПИСКОМ */
+
+.products-favorite-container_list {
+  row-gap: 4px;
+}
+
+.products-box_list {
+  flex-direction: row;
+  width: 100% !important;
+  height: fit-content;
+  padding: 20px 0;
+  padding-bottom: 25px;
+  gap: 24px;
+  border-bottom: 1px solid #0000001A;
+  border-radius: 0;
+}
+
+.products-box_list .products-img {
+  flex-shrink: 0;
+  width: 193px;
+  height: 193px;
+}
+
+.products-box_list .products-settings {
+  left: auto;
+  right: 0;
+  top: 20px;
+}
+
+.products-box_list .products-promo {
+  right: auto;
+  left: 0;
+  border-radius: 100px 100px 100px 0;
+}
+
+.list-only {
+  display: none;
+}
+
+.img-only {
+  display: none;
+}
+
+.products-box_list:hover {
+  box-shadow: none;
+}
+
+.products-box_list .list-only {
+  display: flex;
+}
+
+.products-box_list .box-only {
+  display: none;
+}
+
+.products-box_list .products-name {
+  display: none;
+}
+
+.products-box_list .products-info-column {
+  display: flex;
+  flex-direction: column;
+  width: 677px;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.products-info-column .desc {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.products-info-column-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.products-info-column-links span {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #AAAAAA;
+}
+
+.products-info-column-desc {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #AAAAAA;
+}
+
+.products-info-column-link-active {
+  color: #333333;
+}
+
+.products-info-column-data {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.products-info-column-data span {
+  font-size: 12px;
+  color: #0E0E0E;
+}
+
+.products-box_list .products-pricetag {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  gap: 4px;
+  padding-top: 3px;
+}
+
+.products-box_list .products-price-row {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #0000001A;
+}
+
+.products-box_list .products-info {
+  padding: 4px 0 18px 0;
+}
+
+.box-only {
+  display: flex;
+}
+
+/* По списку с фото */
+
+.products-favorite-container_list-img {
+  row-gap: 4px;
+}
+
+.products-box_list-img {
+  flex-direction: row;
+  width: 100% !important;
+  height: fit-content;
+  padding: 20px 0;
+  padding-bottom: 25px;
+  gap: 24px;
+  border-bottom: 1px solid #0000001A;
+  border-radius: 0;
+}
+
+.products-box_list-img .products-img {
+  flex-shrink: 0;
+  width: 104px;
+  height: 104px;
+}
+
+.products-box_list-img .box-only {
+  display: none;
+}
+
+.products-box_list-img .products-name {
+  display: none;
+}
+
+.products-box_list-img .img-only {
+  display: flex;
+}
+
+.products-box_list-img .products-pricetag {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 0;
+  border: none;
+}
+
+.products-box_list-img .products-pricetag .products-info {
+  flex-direction: row;
+  gap: 24px;
+  padding: 0;
+  min-height: fit-content;
+}
+
+.products-box_list-img .products-pricetag .desc {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.products-box_list-img .products-buy {
+  flex-direction: column-reverse;
+  height: fit-content;
+  gap: 8px;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.products-box_list-img .products-settings {
+  flex-direction: row;
+  left: auto;
+  right: 0;
+  top: 20px;
+}
+
+.products-box_list-img:hover {
+  box-shadow: none;
+}
+
+.products-box_list-img .products-promo {
+  top: 20px;
+  right: auto;
+  left: 20px;
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 10px;
+}
+
+/* SUPPORT */
+
+.personal-support-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.personal-support-title {
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #0000001A;
+  margin-bottom: 12px;
+}
+
+.personal-support-desc {
+  margin: 0;
+  color: #333333CC;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.personal-support-phone {
+  text-decoration: none;
+  color: #BA1420;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.personal-support-phone:hover {
+  color: #ED2039;
+}
+
+.personal-support-links {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.personal-support-link {
+  width: 24px;
+  height: 24px;
+}
+
+.personal-support-link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.personal-support-desc a {
+  text-decoration: none;
+  color: #BC1622;
+}
+
+.personal-support-desc a:hover {
+  color: #ED2039;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
