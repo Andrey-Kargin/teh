@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../index.css?v=1.6">
   <title>Техресурс - Главная</title>
 </head>
@@ -368,7 +369,7 @@
           </nav>
           <p class="personal-panel-name">Товары</p>
           <nav class="personal-panel-nav">
-            <a href="./" class="personal-panel-nav-link personal-panel-nav-link_active" data-section="estimates">Сметы<span class="mobile"><svg width="12"
+            <a href="../estimate/" class="personal-panel-nav-link" data-section="estimates">Сметы<span class="mobile"><svg width="12"
                   height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -386,7 +387,7 @@
           </nav>
           <p class="personal-panel-name">Служба поддержки</p>
           <nav class="personal-panel-nav">
-            <a href="../refund/" class="personal-panel-nav-link">Возврат, ремонт и другие обращения<span
+            <a href="./" class="personal-panel-nav-link personal-panel-nav-link_active">Возврат, ремонт и другие обращения<span
                 class="mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
@@ -405,7 +406,7 @@
           </div>
         </div>
 
-        <!-- КОНТЕЙНЕР МОИ СМЕТЫ -->
+        <!-- КОНТЕЙНЕР МОИ ОБРАЩЕНИЯ -->
 
         <div class="personal-container personal-orders personal-container_active" data-section="all">
           <a class="mobile personal-container-back" href="../"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -414,273 +415,127 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             Назад</a>
-          <p class="personal-container-title">Сметы</p>
+          <p class="personal-container-title">Возврат, ремонт и другие обращения</p>
           <div class="personal-orders-widgets">
             <div class="personal-orders-history-sort">
-              <a class="personal-orders-estimate-add" data-popup="popup-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.0013 2.66602V13.3327M2.66797 7.99935L13.3346 7.99935" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <div class="personal-orders-sort-history-container">
+                <div class="personal-orders-sort-option personal-orders-sort-option_active" data-sort="refund">Обмен и возврат</div>
+                <div class="personal-orders-sort-option" data-sort="repair">Ремонт</div>
+                <div class="personal-orders-sort-option" data-sort="issue">Претензии</div>
+                <div class="personal-orders-sort-option" data-sort="other">Другие обращения</div>
+              </div>
+            </div>
+
+            <a class="personal-orders-widgets-more"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_811_54138" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="18">
+<path d="M1.25 1.25H18.75V18.75H1.25V1.25Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_811_54138)">
+<path d="M17.139 8.90234L16.5898 8.89964" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.40997 8.90234L2.86084 8.89964" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M15.0241 3.83047L14.6357 4.21875" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.3639 13.5844L4.97559 13.9727" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.97559 3.83047L5.3639 4.21875" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6357 13.5844L15.0241 13.9727" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<mask id="mask1_811_54138" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="18">
+<path d="M1.25 1.25H18.75V18.75H1.25V1.25Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_811_54138)">
+<path d="M12.1969 14.944H7.80371V16.0423C7.80371 16.6489 8.29545 17.1406 8.90201 17.1406H11.0986C11.7052 17.1406 12.1969 16.6489 12.1969 16.0423V14.944Z" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 2.3125V1.76337" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 14.9434V11.6485" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.2383V17.14" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.80356 14.9433C7.80356 13.7631 7.38773 12.6207 6.62911 11.7166C5.99074 10.9549 5.60693 9.97326 5.60693 8.90268C5.60693 6.47801 7.57548 4.50943 10.0002 4.50943C12.4249 4.50943 14.3934 6.47801 14.3934 8.90268C14.3934 9.97326 14.0096 10.9549 13.3723 11.7175C12.6138 12.6213 12.1981 13.7634 12.1981 14.9433L12.1968 14.9434H7.80356V14.9433Z" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>
-Создать смету</a>
-            </div>
-            <div class="personal-search">
-              <form class="personal-search-line">
-                <input class="personal-search-line__input" id="smart-title-search-input"
-                  placeholder="Поиск по названию сметы" type="text">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.803 13.8637C13.0959 14.1566 13.5708 14.1566 13.8637 13.8637C14.1566 13.5708 14.1566 13.0959 13.8637 12.803L13.3333 13.3333L12.803 13.8637ZM12 7H11.25C11.25 9.34721 9.34721 11.25 7 11.25V12V12.75C10.1756 12.75 12.75 10.1756 12.75 7H12ZM7 12V11.25C4.65279 11.25 2.75 9.34721 2.75 7H2H1.25C1.25 10.1756 3.82436 12.75 7 12.75V12ZM2 7H2.75C2.75 4.65279 4.65279 2.75 7 2.75V2V1.25C3.82436 1.25 1.25 3.82436 1.25 7H2ZM7 2V2.75C9.34721 2.75 11.25 4.65279 11.25 7H12H12.75C12.75 3.82436 10.1756 1.25 7 1.25V2ZM13.3333 13.3333L13.8637 12.803L11.0719 10.0113L10.5416 10.5416L10.0113 11.0719L12.803 13.8637L13.3333 13.3333Z"
-                    fill="#333333" />
-                </svg>
-              </form>
-            </div>
-            <div class="mobile personal-date-btn">
-              <img src="../../img/date.svg" alt="date" />
-            </div>
-            <div class="personal-date-overlay"></div>
-            <div class="personal-date-sort">
-              <p class="personal-date-sort-desc personal-date-sort-desc-estimate">Дата <br class="pc pc-1440">создания сметы:</p>
-              <div class="datepicker-container">
-                <div class="personal-date-wrapper">
-                  <input
-                    class="personal-date-input"
-                    placeholder="От"
-                    type="text"
-                    id="start"
-                  />
-                  <span class="date-widget">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-                <div class="datepicker" hidden>
-                  <!-- .datepicker-header -->
-                  <div class="datepicker-header">
-                    <button class="prev-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0607 16.0607L17 15L12 20L17 25L18.0607 23.9393L14.1213 20L18.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-                    <button class="prev">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-
-                    </button>
-
-                    <div class="month-year-display">
-                      <span class="month-display"></span>
-                      <span class="year-display"></span>
-                    </div>
-
-                    <button class="next">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_31000" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_31000)"/>
-                      </svg>
-                    </button>
-                    <button class="next-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_30997" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_30997)"/>
-                        <mask id="path-3-inside-2_609_30997" fill="white">
-                          <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z"/>
-                        </mask>
-                        <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z" fill="white"/>
-                        <path d="M9.93566 20L10.9963 21.0607L12.057 20L10.9963 18.9393L9.93566 20ZM4.93566 15L5.99632 13.9393L4.93566 12.8787L3.875 13.9393L4.93566 15ZM4.93566 25L3.875 26.0607L4.93566 27.1213L5.99632 26.0607L4.93566 25ZM3.875 16.0607L2.81434 15L1.75368 16.0607L2.81434 17.1213L3.875 16.0607ZM3.875 23.9393L2.81434 22.8787L1.75368 23.9393L2.81434 25L3.875 23.9393ZM7.81434 20L8.875 21.0607L9.93566 20L8.875 18.9393L7.81434 20ZM9.93566 20L10.9963 18.9393L5.99632 13.9393L4.93566 15L3.875 16.0607L8.875 21.0607L9.93566 20ZM4.93566 25L5.99632 26.0607L10.9963 21.0607L9.93566 20L8.875 18.9393L3.875 23.9393L4.93566 25ZM4.93566 15L3.875 13.9393L2.81434 15L3.875 16.0607L4.93566 17.1213L5.99632 16.0607L4.93566 15ZM3.875 23.9393L2.81434 25L3.875 26.0607L4.93566 25L5.99632 23.9393L4.93566 22.8787L3.875 23.9393ZM7.81434 20L6.75368 18.9393L2.81434 22.8787L3.875 23.9393L4.93566 25L8.875 21.0607L7.81434 20ZM3.875 16.0607L2.81434 17.1213L6.75368 21.0607L7.81434 20L8.875 18.9393L4.93566 15L3.875 16.0607Z" fill="#AAAAAA" mask="url(#path-3-inside-2_609_30997)"/>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <!-- .days -->
-                  <div class="days">
-                    <span>Пн</span>
-                    <span>Вт</span>
-                    <span>Ср</span>
-                    <span>Чт</span>
-                    <span>Пт</span>
-                    <span>Сб</span>
-                    <span>Вс</span>
-                  </div>
-
-                  <!-- .dates -->
-                  <div class="dates"></div>
-                </div>
-              </div>
-              <span>-</span>
-
-              <div class="datepicker-container">
-                <div class="personal-date-wrapper">
-                  <input
-                    class="personal-date-input"
-                    type="text"
-                    placeholder="До"
-                    id="end"
-                  />
-                  <span class="date-widget">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-                <div class="datepicker datepicker-till" hidden>
-                  <div class="datepicker-header">
-                    <button class="prev-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0607 16.0607L17 15L12 20L17 25L18.0607 23.9393L14.1213 20L18.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-                    <button class="prev">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-
-                    <div class="month-year-display">
-                      <span class="month-display"></span>
-                      <span class="year-display"></span>
-                    </div>
-
-                    <button class="next">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_31000" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_31000)"/>
-                      </svg>
-                    </button>
-                    <button class="next-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_30997" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_30997)"/>
-                        <mask id="path-3-inside-2_609_30997" fill="white">
-                          <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z"/>
-                        </mask>
-                        <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z" fill="white"/>
-                        <path d="M9.93566 20L10.9963 21.0607L12.057 20L10.9963 18.9393L9.93566 20ZM4.93566 15L5.99632 13.9393L4.93566 12.8787L3.875 13.9393L4.93566 15ZM4.93566 25L3.875 26.0607L4.93566 27.1213L5.99632 26.0607L4.93566 25ZM3.875 16.0607L2.81434 15L1.75368 16.0607L2.81434 17.1213L3.875 16.0607ZM3.875 23.9393L2.81434 22.8787L1.75368 23.9393L2.81434 25L3.875 23.9393ZM7.81434 20L8.875 21.0607L9.93566 20L8.875 18.9393L7.81434 20ZM9.93566 20L10.9963 18.9393L5.99632 13.9393L4.93566 15L3.875 16.0607L8.875 21.0607L9.93566 20ZM4.93566 25L5.99632 26.0607L10.9963 21.0607L9.93566 20L8.875 18.9393L3.875 23.9393L4.93566 25ZM4.93566 15L3.875 13.9393L2.81434 15L3.875 16.0607L4.93566 17.1213L5.99632 16.0607L4.93566 15ZM3.875 23.9393L2.81434 25L3.875 26.0607L4.93566 25L5.99632 23.9393L4.93566 22.8787L3.875 23.9393ZM7.81434 20L6.75368 18.9393L2.81434 22.8787L3.875 23.9393L4.93566 25L8.875 21.0607L7.81434 20ZM3.875 16.0607L2.81434 17.1213L6.75368 21.0607L7.81434 20L8.875 18.9393L4.93566 15L3.875 16.0607Z" fill="#AAAAAA" mask="url(#path-3-inside-2_609_30997)"/>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="days">
-                    <span>Пн</span>
-                    <span>Вт</span>
-                    <span>Ср</span>
-                    <span>Чт</span>
-                    <span>Пт</span>
-                    <span>Сб</span>
-                    <span>Вс</span>
-                  </div>
-
-                  <div class="dates"></div>
-                </div>
-              </div>
-
-              <button type="button" class="mobile personal-date-button personal-date-button-confirm">Применить</button>
-              <button type="button" class="mobile personal-date-button personal-date-button-cancel">Отмена</button>
-            </div>
+Информация про обмен и возврат</a>
           </div>
+          <!-- Обмен и возврат -->
+          <div class="personal-orders-container personal-orders-container_opened" data-container="refund">
 
-          <!-- ВСЕ -->
-          <div class="personal-orders-container personal-orders-container_opened" data-container="all">
-
-            <div class="personal-orders-box">
-
-              <div class="personal-orders-box-number">
-                <p class="personal-estimate-desc personal-estimate-box-date">29.01.2026</p>
-                <p class="personal-orders-box-title">Для внутренних работ</p>
-                <a class="personal-orders-box-link" data-section="orders-info">Подробнее<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
+            <div class="personal-refund-box">
+              <div class="personal-refund-top">
+                <p class="personal-refund-title">Ваши обращения</p>
+                <a class="personal-refund-add" data-popup="popup-add"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2V10M2 6L10 6" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/></svg>Создать обращение</a>
               </div>
-
-              <div class="personal-orders-box-delivery">
-                <p class="personal-estimate-desc">Стоимость товаров</p>
-                <p class="personal-orders-box-title personal-orders-box-price">10 650 ₽</p>
-                <p class="personal-estimate-desc">Товаров : <span>3</span></p>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">10.02.2026</p>
+                <p class="personal-refund-title">Возврат денежных средств по заказу №1425</p>
+                <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                <a class="personal-refund-more">Подробнее</a>
               </div>
-
-              <div class="personal-estimate-box-widgets">
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                Удалить</a>
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-                  </svg>
-                Поделится </a>
-              </div>
-            </div>
-
-            <div class="personal-orders-box">
-
-              <div class="personal-orders-box-number">
-                <p class="personal-estimate-desc personal-estimate-box-date">29.01.2026</p>
-                <p class="personal-orders-box-title">Для финишной отделки стен</p>
-                <a class="personal-orders-box-link" data-section="orders-info">Подробнее<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-              </div>
-
-              <div class="personal-orders-box-delivery">
-                <p class="personal-estimate-desc">Стоимость товаров</p>
-                <p class="personal-orders-box-title personal-orders-box-price">25 389 ₽</p>
-                <p class="personal-estimate-desc">Товаров : <span>5</span></p>
-              </div>
-
-              <div class="personal-estimate-box-widgets">
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                Удалить</a>
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-                  </svg>
-                Поделится </a>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">10.02.2026</p>
+                <p class="personal-refund-title">Возврат денежных средств по заказу №1401</p>
+                <p class="personal-refund-status"><span class="closed-case"></span>Закрыто</p>
+                <a class="personal-refund-more">Подробнее</a>
               </div>
             </div>
           </div>
 
+        <!-- Ремонт -->
+          <div class="personal-orders-container" data-container="repair">
+
+            <div class="personal-refund-box">
+              <div class="personal-refund-top">
+                <p class="personal-refund-title">Ваши обращения</p>
+                <a class="personal-refund-add" data-popup="popup-add"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2V10M2 6L10 6" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/></svg>Создать обращение</a>
+              </div>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">10.02.2026</p>
+                <p class="personal-refund-title">Обращение на ремонт №104</p>
+                <p class="personal-refund-item">Товар: Перфоратор электрический Makita HR2470 780 Вт 2,7 Дж SDS-plus</p>
+                <p class="personal-refund-status"><span class="accepted-repair"></span>Принят к ремонту</p>
+                <p class="personal-refund-deadline">Сроки ремонта: до 4.03.2026</p>
+                <a class="personal-refund-more">Подробнее</a>
+              </div>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">23.09.2025</p>
+                <p class="personal-refund-title">Обращение на ремонт №103</p>
+                <p class="personal-refund-item">Товар: Краскопульт аккумуляторный КМ АТОМ 18 В 1 л без АКБ и ЗУ (CSG-181)</p>
+                <p class="personal-refund-status"><span class="closed-case"></span>Закрыто</p>
+                <a class="personal-refund-more">Подробнее</a>
+              </div>
+            </div>
+          </div>
+
+        <!-- Претензии -->
+          <div class="personal-orders-container" data-container="issue">
+
+            <div class="personal-refund-box">
+              <div class="personal-refund-top">
+                <p class="personal-refund-title">Ваши обращения</p>
+                <a class="personal-refund-add" data-popup="popup-add"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2V10M2 6L10 6" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/></svg>Создать обращение</a>
+              </div>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">10.02.2026</p>
+                <p class="personal-refund-title">Обращение в свободной форме  №13</p>
+                <p class="personal-refund-status"><span class="accepted-answer"></span>Получен ответ</p>
+                <a class="personal-refund-more">Подробнее</a>
+              </div>
+            </div>
+          </div>
+
+        <!-- Другие обращения -->
+          <div class="personal-orders-container" data-container="other">
+
+            <div class="personal-refund-box">
+              <div class="personal-refund-top">
+                <p class="personal-refund-title">Ваши обращения</p>
+                <a class="personal-refund-add" data-popup="popup-add"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 2V10M2 6L10 6" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/></svg>Создать обращение</a>
+              </div>
+              <div class="personal-refund-case">
+                <p class="personal-refund-date">10.02.2026</p>
+                <p class="personal-refund-title">Обращение в свободной форме  №65</p>
+                <p class="personal-refund-theme">Тема: Другое</p>
+                <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                <a class="personal-refund-more">Подробнее</a>
+              </div>
+            </div>
+          </div>
       </div>
-        <div class="personal-container personal-orders" data-section="orders-info">
+        <div class="personal-container personal-orders" data-section="refund-info">
           <a class="personal-container-orders-back" data-section="all"><svg width="5" height="5" viewBox="0 0 5 5"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -689,492 +544,38 @@
             </svg>
             Назад</a>
           <div class="personal-orders-info-main">
-            <!-- СРЕДНЯЯ КОЛОНКА -->
-            <div class="personal-orders-info personal-orders-info-estimate">
-              <div class="personal-orders-info-container personal-estimate-info-container">
-                <p class="personal-estimate-box-desc">Смета</p>
-                <p class="personal-orders-box-title">Для внутренних работ <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.33398 13.3333L2.80365 12.803L2.58398 13.0227V13.3333H3.33398ZM14.1673 2.5L14.6976 1.96967C14.4048 1.67678 13.9299 1.67678 13.637 1.96967L14.1673 2.5ZM17.5007 5.83333L18.031 6.36366C18.3239 6.07077 18.3239 5.5959 18.031 5.303L17.5007 5.83333ZM6.66732 16.6667V17.4167H6.97798L7.19765 17.197L6.66732 16.6667ZM3.33398 16.6667H2.58398C2.58398 17.0809 2.91977 17.4167 3.33398 17.4167V16.6667ZM3.33398 13.3333L3.86431 13.8637L14.6976 3.03033L14.1673 2.5L13.637 1.96967L2.80365 12.803L3.33398 13.3333ZM14.1673 2.5L13.637 3.03033L16.9703 6.36366L17.5007 5.83333L18.031 5.303L14.6976 1.96967L14.1673 2.5ZM17.5007 5.83333L16.9703 5.303L6.13699 16.1363L6.66732 16.6667L7.19765 17.197L18.031 6.36366L17.5007 5.83333ZM6.66732 16.6667V15.9167H3.33398V16.6667V17.4167H6.66732V16.6667ZM3.33398 16.6667H4.08398V13.3333H3.33398H2.58398V16.6667H3.33398ZM11.6673 5L11.137 5.53033L14.4703 8.86366L15.0007 8.33333L15.531 7.803L12.1976 4.46967L11.6673 5Z" fill="#333333" fill-opacity="0.8"/>
-</svg></span>
-</p>
-                <p class="personal-orders-box-date">от 29.01.2026</p>
-
-                <div class="personal-orders-info-edit">
-                  <a class="personal-orders-info-edit-el"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.6667 9.33333H12.6667C13.403 9.33333 14 8.73638 14 8V3.33333C14 2.59695 13.403 2 12.6667 2H8C7.26362 2 6.66667 2.59695 6.66667 3.33333V4.33333M3.33333 14H8C8.73638 14 9.33333 13.403 9.33333 12.6667V8C9.33333 7.26362 8.73638 6.66667 8 6.66667H3.33333C2.59695 6.66667 2 7.26362 2 8V12.6667C2 13.403 2.59695 14 3.33333 14Z" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Копировать</a>
-
-                  <a class="personal-orders-info-edit-el"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.33268 12H2.66602V6H13.3327V12H10.666M10.666 6V2.66667C10.666 2.29848 10.3675 2 9.99935 2H5.99935C5.63116 2 5.33268 2.29848 5.33268 2.66667V6M5.33268 10H10.666V14H5.33268V10Z" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Распечатать</a>
-
-                  <a class="personal-orders-info-edit-el"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333"/>
-                    </svg>
-                    Поделиться</a>
-
-                  <a class="personal-orders-info-edit-el"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.3327 9.33333V12C13.3327 12.7364 12.7357 13.3333 11.9993 13.3333H3.99935C3.26297 13.3333 2.66602 12.7364 2.66602 12V9.33333M7.99935 10L7.99935 2M7.99935 10L5.33268 7.33333M7.99935 10L10.666 7.33333" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Скачать</a>
-
-                  <a class="personal-orders-info-edit-el personal-orders-info-edit-el-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9993 4V12C11.9993 12.7364 11.4024 13.3333 10.666 13.3333H5.33268C4.5963 13.3333 3.99935 12.7364 3.99935 12V4M9.99935 4V3.33333C9.99935 2.59695 9.4024 2 8.66602 2H7.33268C6.5963 2 5.99935 2.59695 5.99935 3.33333V4M2.66602 4H13.3327M6.66602 6.66667V10.6667M9.33268 6.66667V10.6667" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Удалить</a>
-                </div>
-
-
-                <p class="personal-orders-box-title">Объект</p>
-                <p class="personal-orders-info-attach">Прикрепить <span><svg width="12" height="12" viewBox="0 0 12 12"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M4 6H8M4.5 4H3.5C2.39543 4 1.5 4.89543 1.5 6C1.5 7.10457 2.39543 8 3.5 8H4.5M7.5 8H8.5C9.60457 8 10.5 7.10457 10.5 6C10.5 4.89543 9.60457 4 8.5 4L7.5 4"
-                        stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg></span></p>
+            <!-- ПОДРОБНЕЕ -->
+            <div class="personal-orders-info personal-refund-info">
+              <div class="personal-orders-info-container personal-refund-info-container">
+                <p class="personal-refund-status"><span class="closed-case"></span>Закрыто</p>
+                <p class="personal-orders-box-title">Возврат денежных средств по заказу №1401</p>
+                <p class="personal-orders-box-date">10.02.2026</p>
+                <p class="personal-orders-info-packed">Обращение создано: Victoria_stroy.shop@mail.ru (менеджер)</p>
+                <p class="personal-refund-info-title">Текст обращения:</p>
+                <p class="personal-refund-info-desc">Здравствуйте. Осталась часть краски, хотел бы вернуть.</p>
               </div>
 
-              <!-- Сортировка -->
-
-              <div class="personal-orders-sort">
-                <p class="personal-orders-sort-desc">Смотреть по:</p>
-                <div class="personal-orders-sort-container">
-                  <div class="personal-estimate-sort-option" data-sort="category">По категориям</div>
-                  <div class="personal-estimate-sort-option personal-estimate-sort-option_active" data-sort="products">По товарам</div>
+              <div class="personal-orders-info-container personal-refund-info-container">
+                <p class="personal-refund-info-subtitle">Ответ</p>
+                <div class="personal-refund-info-box">
+                  <p class="personal-refund-info-desc">Ваше обращение принято к расмотрению</p>
+                  <p class="personal-refund-info-subtitle">11.02.2026</p>
                 </div>
+                <div class="personal-refund-info-box">
+                  <p class="personal-refund-info-desc">Здравствуйте. Для возврата вам необходимо вернуть оставшийся товар в любой официальный магазин на стойку сервисного обслуживания клиента. Денежные средства будут перечислены на ваш счет, с которого вы оплачивали покупку в течении 10 дней. Перечень официальных магазинов вы можете найти на нашем сайте в верхнем меню  нажав на пункт «О компании» → «Контакты».<br>С уважением, менеджер Дарья.</p>
+                  <p class="personal-refund-info-subtitle">11.02.2026</p>
+                </div>
+                <div class="personal-refund-info-box">
+                  <p class="personal-refund-info-desc">Обращение закрыто</p>
+                  <p class="personal-refund-info-subtitle">16.02.2026</p>
+                </div>
+                <p class="personal-refund-info-status">Возврат на сумму  15 469  ₽ подтвержден от 16.02.2026</p>
               </div>
 
-              <!-- Категории -->
-
-              <div class="personal-estimate-sort-container" data-sort="category">
-                <p class="personal-estimate-sort-title">Кисти (15) <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.66602 6L7.99935 11.3333L13.3327 6" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</span></p>
-                <div class="personal-estimate-sort-fold">
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-header">
-                    <p class="personal-estimate-sort-header-text">Номер</p>
-                    <p class="personal-estimate-sort-header-text">Фото</p>
-                    <p class="personal-estimate-sort-header-text">Наименование</p>
-                    <p class="personal-estimate-sort-header-text">Код</p>
-                    <p class="personal-estimate-sort-header-text">Цена</p>
-                    <p class="personal-estimate-sort-header-text">Количество</p>
-                    <p class="personal-estimate-sort-header-text">Сумма</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">1</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate1.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская натуральная щетина пластиковая ручка Wenzo Pro 50х12 мм для эмалей и лаков на алкидной основе</p>
-                    <p class="personal-estimate-sort-desc">5651534</p>
-                    <p class="personal-estimate-sort-desc">71 ₽</p>
-                    <p class="personal-estimate-sort-desc">2 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">142 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">2</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate2.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская натуральная щетина деревянная ручка 100х8 мм для эмалей и лаков на алкидной основе</p>
-                    <p class="personal-estimate-sort-desc">5651701</p>
-                    <p class="personal-estimate-sort-desc">83 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">83 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">3</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate3.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">4</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate4.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка 100х12 мм для красок и антисептиков на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">113 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">113 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">5</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate5.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">6</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate6.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Color Expert 50х15 мм для антисептиков</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">168 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">168 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">7</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate7.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть круглая натуральная щетина пластиковая ручка Wenzo Pro d35 мм для эмалей и лаков на алкидной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">243 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">243 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">8</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate8.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Набор кистей плоских натуральная щетина деревянная ручка Color Expert для всех типов ЛКМ на любой основе (3 шт.)</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">257 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">257 ₽ </p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">9</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate9.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская натуральная щетина деревянная ручка 50х8 мм для эмалей и лаков на алкидной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">10</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate10.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">11</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate11.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">12</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate12.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">13</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate13.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">14</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/personal/estimate14.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Кисть плоская смешанная щетина деревянная ручка Wenzo Wood 50х14 мм для красок на водной основе</p>
-                    <p class="personal-estimate-sort-desc">560078</p>
-                    <p class="personal-estimate-sort-desc">139 ₽</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">139 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-total">
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-bold">Итог по категории</p>
-                    <p class="personal-estimate-sort-desc">15 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">2 150 ₽</p>
-                  </div>
-                </div>
-                <p class="personal-estimate-sort-title">Сопутствующий инструмент для малярных работ (1) <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.66602 6L7.99935 11.3333L13.3327 6" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</span></p>
-                <div class="personal-estimate-sort-fold">
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-header">
-                    <p class="personal-estimate-sort-header-text">Номер</p>
-                    <p class="personal-estimate-sort-header-text">Фото</p>
-                    <p class="personal-estimate-sort-header-text">Наименование</p>
-                    <p class="personal-estimate-sort-header-text">Код</p>
-                    <p class="personal-estimate-sort-header-text">Цена</p>
-                    <p class="personal-estimate-sort-header-text">Количество</p>
-                    <p class="personal-estimate-sort-header-text">Сумма</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-product">
-                    <p class="personal-estimate-sort-desc">1</p>
-                    <div class="personal-estimate-sort-img">
-                      <img src="../../img/products/personal3.png" alt="img" />
-                    </div>
-                    <p class="personal-estimate-sort-desc">Лента малярная Beorol белая 48 мм 50 м (BK4850PT)</p>
-                    <p class="personal-estimate-sort-desc">5651534</p>
-                    <p class="personal-estimate-sort-desc">71 ₽</p>
-                    <p class="personal-estimate-sort-desc">2 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">282 ₽</p>
-                  </div>
-
-                  <div class="personal-estimate-sort-fold-row personal-estimate-sort-total">
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-bold">Итог по категории</p>
-                    <p class="personal-estimate-sort-desc">1 шт</p>
-                    <p class="personal-estimate-sort-desc personal-estimate-sort-price">282 ₽</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Товары -->
-
-              <div class="personal-estimate-sort-container personal-estimate-sort-container_active" data-sort="products">
-                <div class="personal-orders-history-sort">
-                  <div class="personal-orders-sort-history-container">
-                    <div class="personal-orders-sort-option personal-orders-sort-option_active" data-sort="all">Все</div>
-                    <div class="personal-orders-sort-option" data-sort="brush">Кисти</div>
-                    <div class="personal-orders-sort-option" data-sort="instrument">Сопутствующий инструмент для малярных работ</div>
-                  </div>
-                </div>
-
-                <div class="personal-orders-info-products">
-                  <div class="personal-orders-info-products-box" data-sort="brush">
-                    <div class="personal-orders-info-products-img">
-                      <img src="../../img/products/personal1.png" alt="product" />
-                    </div>
-
-                    <div class="personal-orders-info-products-name">
-                      <p class="personal-orders-info-products-title">Кисть плоская натуральная щетина пластиковая ручка
-                        Wenzo Pro 50х12 мм для эмалей <br class="pc">и лаков на алкидной основе</p>
-                      <p class="personal-orders-info-products-code">Код: 5651534</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-info">
-                      <p class="personal-orders-info-products-price">142 ₽</p>
-                      <p class="personal-orders-info-products-desc">71 ₽/шт.</p>
-                      <p class="personal-orders-info-products-desc">0,24кг</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-side">
-                      <div class="personal-orders-info-products-widgets">
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.24855 12.0355L12 18L17.7514 12.0355C18.3908 11.3725 18.75 10.4732 18.75 9.53553C18.75 7.58291 17.2236 6 15.3407 6C14.4365 6 13.5694 6.37249 12.93 7.03553L12 8L11.07 7.03553C10.4306 6.37249 9.56346 6 8.65926 6C6.77638 6 5.25 7.58291 5.25 9.53553C5.25 10.4732 5.60919 11.3725 6.24855 12.0355Z"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M13.5 6.75C13.5 5.92157 12.8284 5.25 12 5.25C11.1716 5.25 10.5 5.92157 10.5 6.75M13.5 6.75C13.5 7.57843 12.8284 8.25 12 8.25C11.1716 8.25 10.5 7.57843 10.5 6.75M13.5 6.75H18M10.5 6.75L6 6.75M15 12C15 12.8284 15.6716 13.5 16.5 13.5C17.3284 13.5 18 12.8284 18 12C18 11.1716 17.3284 10.5 16.5 10.5C15.6716 10.5 15 11.1716 15 12ZM15 12H6M9 17.25C9 16.4216 8.32843 15.75 7.5 15.75C6.67157 15.75 6 16.4216 6 17.25C6 18.0784 6.67157 18.75 7.5 18.75C8.32843 18.75 9 18.0784 9 17.25ZM9 17.25H18"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.75 5.25V4.5C6.33579 4.5 6 4.83579 6 5.25H6.75ZM17.25 18.75V19.5C17.6642 19.5 18 19.1642 18 18.75H17.25ZM6.75 18.75H6C6 19.1642 6.33579 19.5 6.75 19.5V18.75ZM13.5 5.25L14.0303 4.71967C13.8897 4.57902 13.6989 4.5 13.5 4.5V5.25ZM17.25 9H18C18 8.80109 17.921 8.61032 17.7803 8.46967L17.25 9ZM9 15C8.58579 15 8.25 15.3358 8.25 15.75C8.25 16.1642 8.58579 16.5 9 16.5V15.75V15ZM15 16.5C15.4142 16.5 15.75 16.1642 15.75 15.75C15.75 15.3358 15.4142 15 15 15V15.75V16.5ZM9 12C8.58579 12 8.25 12.3358 8.25 12.75C8.25 13.1642 8.58579 13.5 9 13.5V12.75V12ZM13.5 13.5C13.9142 13.5 14.25 13.1642 14.25 12.75C14.25 12.3358 13.9142 12 13.5 12V12.75V13.5ZM17.25 18.75V18H6.75V18.75V19.5H17.25V18.75ZM6.75 18.75H7.5V5.25H6.75H6V18.75H6.75ZM6.75 5.25V6H13.5V5.25V4.5H6.75V5.25ZM17.25 9H16.5V18.75H17.25H18V9H17.25ZM13.5 5.25L12.9697 5.78033L16.7197 9.53033L17.25 9L17.7803 8.46967L14.0303 4.71967L13.5 5.25ZM12.75 5.25H12V8.25H12.75H13.5V5.25H12.75ZM14.25 9.75V10.5H17.25V9.75V9H14.25V9.75ZM12.75 8.25H12C12 9.49264 13.0074 10.5 14.25 10.5V9.75V9C13.8358 9 13.5 8.66421 13.5 8.25H12.75ZM9 15.75V16.5H15V15.75V15H9V15.75ZM9 12.75V13.5H13.5V12.75V12H9V12.75Z"
-                              fill="#AAAAAA" />
-                          </svg>
-                        </a>
-                      </div>
-
-                      <div class="personal-orders-info-products-count">
-                        <button class="btn__minus">-</button>
-                        <input class="count-size-input" type="text" value="2" />
-                        <button class="btn__plus">+</button>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="personal-orders-info-products-box" data-sort="brush">
-                    <div class="personal-orders-info-products-img">
-                      <img src="../../img/products/personal2.png" alt="product" />
-                    </div>
-
-                    <div class="personal-orders-info-products-name">
-                      <p class="personal-orders-info-products-title">Кисть плоская натуральная щетина деревянная ручка
-                        100х8 мм для эмалей и лаков <br class="pc mobile">на алкидной основе</p>
-                      <p class="personal-orders-info-products-code">Код: 5651534</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-info">
-                      <p class="personal-orders-info-products-price">83 ₽</p>
-                      <p class="personal-orders-info-products-desc">83 ₽/шт.</p>
-                      <p class="personal-orders-info-products-desc">0,08кг</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-side">
-                      <div class="personal-orders-info-products-widgets">
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.24855 12.0355L12 18L17.7514 12.0355C18.3908 11.3725 18.75 10.4732 18.75 9.53553C18.75 7.58291 17.2236 6 15.3407 6C14.4365 6 13.5694 6.37249 12.93 7.03553L12 8L11.07 7.03553C10.4306 6.37249 9.56346 6 8.65926 6C6.77638 6 5.25 7.58291 5.25 9.53553C5.25 10.4732 5.60919 11.3725 6.24855 12.0355Z"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M13.5 6.75C13.5 5.92157 12.8284 5.25 12 5.25C11.1716 5.25 10.5 5.92157 10.5 6.75M13.5 6.75C13.5 7.57843 12.8284 8.25 12 8.25C11.1716 8.25 10.5 7.57843 10.5 6.75M13.5 6.75H18M10.5 6.75L6 6.75M15 12C15 12.8284 15.6716 13.5 16.5 13.5C17.3284 13.5 18 12.8284 18 12C18 11.1716 17.3284 10.5 16.5 10.5C15.6716 10.5 15 11.1716 15 12ZM15 12H6M9 17.25C9 16.4216 8.32843 15.75 7.5 15.75C6.67157 15.75 6 16.4216 6 17.25C6 18.0784 6.67157 18.75 7.5 18.75C8.32843 18.75 9 18.0784 9 17.25ZM9 17.25H18"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.75 5.25V4.5C6.33579 4.5 6 4.83579 6 5.25H6.75ZM17.25 18.75V19.5C17.6642 19.5 18 19.1642 18 18.75H17.25ZM6.75 18.75H6C6 19.1642 6.33579 19.5 6.75 19.5V18.75ZM13.5 5.25L14.0303 4.71967C13.8897 4.57902 13.6989 4.5 13.5 4.5V5.25ZM17.25 9H18C18 8.80109 17.921 8.61032 17.7803 8.46967L17.25 9ZM9 15C8.58579 15 8.25 15.3358 8.25 15.75C8.25 16.1642 8.58579 16.5 9 16.5V15.75V15ZM15 16.5C15.4142 16.5 15.75 16.1642 15.75 15.75C15.75 15.3358 15.4142 15 15 15V15.75V16.5ZM9 12C8.58579 12 8.25 12.3358 8.25 12.75C8.25 13.1642 8.58579 13.5 9 13.5V12.75V12ZM13.5 13.5C13.9142 13.5 14.25 13.1642 14.25 12.75C14.25 12.3358 13.9142 12 13.5 12V12.75V13.5ZM17.25 18.75V18H6.75V18.75V19.5H17.25V18.75ZM6.75 18.75H7.5V5.25H6.75H6V18.75H6.75ZM6.75 5.25V6H13.5V5.25V4.5H6.75V5.25ZM17.25 9H16.5V18.75H17.25H18V9H17.25ZM13.5 5.25L12.9697 5.78033L16.7197 9.53033L17.25 9L17.7803 8.46967L14.0303 4.71967L13.5 5.25ZM12.75 5.25H12V8.25H12.75H13.5V5.25H12.75ZM14.25 9.75V10.5H17.25V9.75V9H14.25V9.75ZM12.75 8.25H12C12 9.49264 13.0074 10.5 14.25 10.5V9.75V9C13.8358 9 13.5 8.66421 13.5 8.25H12.75ZM9 15.75V16.5H15V15.75V15H9V15.75ZM9 12.75V13.5H13.5V12.75V12H9V12.75Z"
-                              fill="#AAAAAA" />
-                          </svg>
-                        </a>
-                      </div>
-
-                      <div class="personal-orders-info-products-count">
-                        <button class="btn__minus">-</button>
-                        <input class="count-size-input" type="text" value="1" />
-                        <button class="btn__plus">+</button>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="personal-orders-info-products-box" data-sort="instrument">
-                    <div class="personal-orders-info-products-img">
-                      <img src="../../img/products/personal3.png" alt="product" />
-                    </div>
-
-                    <div class="personal-orders-info-products-name">
-                      <p class="personal-orders-info-products-title">Лента малярная Beorol белая <br class="mobile">48 мм
-                        50 м (BK4850PT)</p>
-                      <p class="personal-orders-info-products-code">Код: 5651534</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-info">
-                      <p class="personal-orders-info-products-price">282 ₽</p>
-                      <p class="personal-orders-info-products-desc">83 ₽/шт.</p>
-                      <p class="personal-orders-info-products-desc">0,16кг</p>
-                    </div>
-
-                    <div class="personal-orders-info-products-side">
-                      <div class="personal-orders-info-products-widgets">
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.24855 12.0355L12 18L17.7514 12.0355C18.3908 11.3725 18.75 10.4732 18.75 9.53553C18.75 7.58291 17.2236 6 15.3407 6C14.4365 6 13.5694 6.37249 12.93 7.03553L12 8L11.07 7.03553C10.4306 6.37249 9.56346 6 8.65926 6C6.77638 6 5.25 7.58291 5.25 9.53553C5.25 10.4732 5.60919 11.3725 6.24855 12.0355Z"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M13.5 6.75C13.5 5.92157 12.8284 5.25 12 5.25C11.1716 5.25 10.5 5.92157 10.5 6.75M13.5 6.75C13.5 7.57843 12.8284 8.25 12 8.25C11.1716 8.25 10.5 7.57843 10.5 6.75M13.5 6.75H18M10.5 6.75L6 6.75M15 12C15 12.8284 15.6716 13.5 16.5 13.5C17.3284 13.5 18 12.8284 18 12C18 11.1716 17.3284 10.5 16.5 10.5C15.6716 10.5 15 11.1716 15 12ZM15 12H6M9 17.25C9 16.4216 8.32843 15.75 7.5 15.75C6.67157 15.75 6 16.4216 6 17.25C6 18.0784 6.67157 18.75 7.5 18.75C8.32843 18.75 9 18.0784 9 17.25ZM9 17.25H18"
-                              stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" />
-                          </svg>
-                        </a>
-                        <a class="personal-orders-info-products-widget"><svg width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="4" fill="#F1F1F1" />
-                            <path
-                              d="M6.75 5.25V4.5C6.33579 4.5 6 4.83579 6 5.25H6.75ZM17.25 18.75V19.5C17.6642 19.5 18 19.1642 18 18.75H17.25ZM6.75 18.75H6C6 19.1642 6.33579 19.5 6.75 19.5V18.75ZM13.5 5.25L14.0303 4.71967C13.8897 4.57902 13.6989 4.5 13.5 4.5V5.25ZM17.25 9H18C18 8.80109 17.921 8.61032 17.7803 8.46967L17.25 9ZM9 15C8.58579 15 8.25 15.3358 8.25 15.75C8.25 16.1642 8.58579 16.5 9 16.5V15.75V15ZM15 16.5C15.4142 16.5 15.75 16.1642 15.75 15.75C15.75 15.3358 15.4142 15 15 15V15.75V16.5ZM9 12C8.58579 12 8.25 12.3358 8.25 12.75C8.25 13.1642 8.58579 13.5 9 13.5V12.75V12ZM13.5 13.5C13.9142 13.5 14.25 13.1642 14.25 12.75C14.25 12.3358 13.9142 12 13.5 12V12.75V13.5ZM17.25 18.75V18H6.75V18.75V19.5H17.25V18.75ZM6.75 18.75H7.5V5.25H6.75H6V18.75H6.75ZM6.75 5.25V6H13.5V5.25V4.5H6.75V5.25ZM17.25 9H16.5V18.75H17.25H18V9H17.25ZM13.5 5.25L12.9697 5.78033L16.7197 9.53033L17.25 9L17.7803 8.46967L14.0303 4.71967L13.5 5.25ZM12.75 5.25H12V8.25H12.75H13.5V5.25H12.75ZM14.25 9.75V10.5H17.25V9.75V9H14.25V9.75ZM12.75 8.25H12C12 9.49264 13.0074 10.5 14.25 10.5V9.75V9C13.8358 9 13.5 8.66421 13.5 8.25H12.75ZM9 15.75V16.5H15V15.75V15H9V15.75ZM9 12.75V13.5H13.5V12.75V12H9V12.75Z"
-                              fill="#AAAAAA" />
-                          </svg>
-                        </a>
-                      </div>
-
-                      <div class="personal-orders-info-products-count">
-                        <button class="btn__minus">-</button>
-                        <input class="count-size-input" type="text" value="1" />
-                        <button class="btn__plus">+</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
             </div>
 
-            <!-- ЦЕНА И ОПЛАТА -->
-            <div class="personal-orders-info-price">
-              <div class="personal-orders-info-price-box">
-                <p class="personal-estimate-box-paid-title">О смете</p>
-                <div class="personal-orders-box-info-text">
-                  <p>Количество товаров: <span>16 шт</span></p>
-                  <p>Общий вес товаров: <span>8,3 кг</span></p>
-                </div>
-                <div class="personal-estimate-box-paid-price">Стоимость товаров: <p class="personal-orders-box-paid-price">2 543 ₽</p></div>
-              </div>
-              <button type="button" class="personal-estimate-box-paid-btn">Получить счет</button>
-            </div>
           </div>
-<!-- МОБИЛЬНЫЙ ТАБ СНИЗУ -->
-          <div class="personal-orders-info-mobile">
-            <div class="container">
-              <div class="personal-orders-info-mobile-box">
-                <p class="personal-orders-box-paid-desc-mobile">Стоимость товаров:</p>
-                <p class="personal-orders-box-title personal-orders-box-price">10 650 ₽</p>
-              </div>
-              <button type="button" class="personal-estimate-box-paid-btn">Получить счет</button>
-            </div>
-          </div>
+
 
         </div>
         </div>
@@ -1202,11 +603,8 @@
                   d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM23.5098 17.6035C22.1366 17.59 20.975 17.6082 20.3164 17.9238C19.8782 18.134 19.5397 18.6037 19.7461 18.6309C20.0003 18.664 20.5763 18.7834 20.8818 19.1914C21.2728 19.7144 21.2629 20.8812 21.2627 20.9004C21.2627 20.9004 21.4887 24.1601 20.7324 24.5645C20.2141 24.8417 19.503 24.275 17.9746 21.6836C17.192 20.3562 16.6006 18.8887 16.6006 18.8887C16.5977 18.8819 16.4847 18.6124 16.2832 18.4668C16.0414 18.2921 15.7055 18.2356 15.6924 18.2334L12.0342 18.2568C12.0177 18.2573 11.4817 18.2757 11.2832 18.5068C11.1054 18.7137 11.268 19.1414 11.2695 19.1455C11.2695 19.1455 14.133 25.7224 17.376 29.0371C20.3497 32.0753 23.7256 31.876 23.7256 31.876H25.2559C25.2712 31.8742 25.7215 31.8214 25.9541 31.5762C26.1707 31.3476 26.1631 30.916 26.1631 30.916C26.1628 30.8945 26.1396 28.9007 27.0869 28.6045C28.026 28.312 29.2321 30.5525 30.5117 31.4141C31.469 32.0592 32.1979 31.9255 32.2119 31.9229L35.6318 31.876C35.6561 31.8744 37.4139 31.7583 36.5723 30.3877C36.5022 30.2746 36.0773 29.3665 34.0303 27.501C31.8855 25.5481 32.1734 25.8636 34.7549 22.4854C36.3275 20.4279 36.9563 19.1709 36.7598 18.6338C36.5728 18.1205 35.416 18.2568 35.416 18.2568L31.5674 18.2803C31.5674 18.2803 31.2819 18.2422 31.0703 18.3662C30.8675 18.4856 30.7343 18.7613 30.7295 18.7715C30.7295 18.7715 30.1212 20.3634 29.3086 21.7178C27.5947 24.5738 26.9094 24.7257 26.6289 24.5488C25.9766 24.1347 26.1396 22.8871 26.1396 22.001C26.1396 19.2319 26.5675 18.078 25.3066 17.7793C24.8885 17.6797 24.5803 17.6146 23.5098 17.6035Z"
                   fill="#333333" />
               </svg></a>
-              
           </div>
-          
         </div>
-        
         <form class="main-form-box">
           <p class="main-form-title">Вы можете оставить заявку на консультацию</p>
           <p class="main-form-subtitle">Менеджер свяжется с вами в ближайшее рабочее время</p>
@@ -1452,39 +850,66 @@
       </div>
     </div>
   </footer>
-  <!-- POPUPS -->
-  <div class="popup_details" id="popup-delete">
+  <!-- POPUP -->
+  <div class="popup_details popup_refund-add" id="popup-add">
     <div class="popup-container">
       <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       </div>
-      <p class="popup-title">Удалить смету</p>
-      <p class="popup-desc">Вы уверены, что хотите удалить смету «Для финишной отделки стен»? Все товары из сметы будут удалены.</p>
-      <div class="popup_details-row">
-        <button class="popup_details-btn popup_details-btn-accept">Удалить </button>
-        <button class="popup_details-btn popup_details-btn-cancel">Остаться</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="popup_details" id="popup-add">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Создать смету</p>
-      <input class="popup-input" type="text" placeholder="Название сметы" />
+      <p class="popup-title">Создать обращение</p>
+      <select class="popup-choice" id="case-choice">
+        <option value=""></option>
+        <option>Обмен и возврат</option>
+        <option>Ремонт</option>
+        <option>Претензии</option>
+        <option>Другие обращения</option>
+      </select>
+      <select class="popup-choice hidden" id="case-number">
+        <option value=""></option>
+        <option>№1427</option>
+        <option>№1426</option>
+        <option>№1403</option>
+        <option>№1302</option>
+      </select>
+      <textarea class="popup-textarea hidden" placeholder="Текст обращения"></textarea>
       <div class="popup_details-row">
         <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
-        <button class="popup_details-btn popup_details-btn-accept">Сохранить</button>
+        <button class="popup_details-btn popup_details-btn-accept disabled">Сохранить</button>
       </div>
     </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.case-choice').select2({
+        placeholder: "Тип обращения",
+        allowClear: false, // не показывать кнопку очистки
+        minimumResultsForSearch: Infinity, // отключает поиск
+        language: {
+          noResults: function() {
+            return "Тип обращения";
+          }
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      $('.case-number').select2({
+        placeholder: "Выберите заказ",
+        allowClear: false, // не показывать кнопку очистки
+        minimumResultsForSearch: Infinity, // отключает поиск
+        language: {
+          noResults: function() {
+            return "Выберите заказ";
+          }
+        }
+      });
+    });
+  </script>
   <script>
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.header__nav');
@@ -1630,1110 +1055,125 @@
   </script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Получаем нужные элементы
-      const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
-      const containers = document.querySelectorAll('.personal-container');
-      const backButton = document.querySelector('.personal-container-orders-back');
+    // Находим контейнер с кнопками сортировки
+    const sortContainer = document.querySelector('.personal-orders-sort-history-container');
 
-      // Функция для активации раздела
-      function activateSection(sectionId) {
-        containers.forEach(container => {
-          container.classList.remove('personal-container_active');
+    // Добавляем обработчик через делегирование
+    if (sortContainer) {
+        sortContainer.addEventListener('click', function(e) {
+            // Находим ближайший элемент с классом personal-orders-sort-option
+            const sortOption = e.target.closest('.personal-orders-sort-option');
+            
+            if (sortOption) {
+                const sortValue = sortOption.getAttribute('data-sort');
+                
+                // Удаляем класс active у всех кнопок
+                document.querySelectorAll('.personal-orders-sort-option').forEach(option => {
+                    option.classList.remove('personal-orders-sort-option_active');
+                });
+                
+                // Добавляем класс active текущей кнопке
+                sortOption.classList.add('personal-orders-sort-option_active');
+                
+                // Скрываем все контейнеры
+                document.querySelectorAll('.personal-orders-container').forEach(container => {
+                    container.classList.remove('personal-orders-container_opened');
+                });
+                
+                // Показываем выбранный контейнер
+                const activeContainer = document.querySelector(`.personal-orders-container[data-container="${sortValue}"]`);
+                if (activeContainer) {
+                    activeContainer.classList.add('personal-orders-container_opened');
+                }
+            }
         });
-
-        const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-        if (targetContainer) {
-          targetContainer.classList.add('personal-container_active');
-        }
-      }
-
-      // Функция для скролла вверх
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-
-      // Обработчик для всего блока заказа
-      ordersBoxes.forEach(box => {
-        box.addEventListener('click', function (e) {
-          // Находим ссылку "Подробнее" внутри этого блока
-          const link = this.querySelector('.personal-orders-box-link');
-          
-          // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
-          const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
-          
-          if (link && !isWidgetClick) {
-            e.preventDefault();
-            const sectionId = link.dataset.section; // "orders-info"
-            activateSection(sectionId);
-            scrollToTop();
-          }
-        });
-      });
-
-      // Обработчик для кнопки "Назад"
-      if (backButton) {
-        backButton.addEventListener('click', function (e) {
-          e.preventDefault();
-          const sectionId = this.dataset.section; // "orders"
-          activateSection(sectionId);
-          scrollToTop();
-        });
-      }
-    });
-
-
+    }
   </script>
 
-   <script>
-        // КОПИРОВАНИЕ НОМЕРА ЗАКАЗА
-        function copyOrderNumber(element) {
-            // Find the parent container
-            const parentContainer = element.closest('.personal-orders-box-title');
-            
-            // Extract order number
-            const fullText = parentContainer.textContent.trim();
-            const match = fullText.match(/Заказ №(\d+)/);
-            const orderNumber = match ? match[1] : '';
-            
-            if (!orderNumber) return;
-            
-            // Method to show success message
-            const showSuccessMessage = () => {
-                const successMessage = parentContainer.querySelector('.personal-orders-box-copy-success');
-                if (successMessage) {
-                    successMessage.style.display = 'flex';
-                    setTimeout(() => {
-                        successMessage.style.display = 'none';
-                    }, 3000);
-                }
-            };
-            
-            // Modern clipboard API
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(orderNumber)
-                    .then(showSuccessMessage)
-                    .catch(err => console.error('Failed to copy: ', err));
-            } else {
-                // Fallback for older browsers
-                const textarea = document.createElement('textarea');
-                textarea.value = orderNumber;
-                textarea.style.position = 'fixed';
-                textarea.style.opacity = '0';
-                document.body.appendChild(textarea);
-                textarea.select();
-                
-                try {
-                    const successful = document.execCommand('copy');
-                    if (successful) {
-                        showSuccessMessage();
-                    }
-                } catch (err) {
-                    console.error('Fallback: Could not copy text: ', err);
-                }
-                
-                document.body.removeChild(textarea);
-            }
-        }
-    </script>
-
-    <script>
-      // ==================== КАЛЕНДАРЬ ====================
-function initDatepicker(container) {
-  const datepicker = container.querySelector(".datepicker");
-  const dateInput = container.querySelector(".personal-date-input");
-  const nextBtn = datepicker.querySelector(".next");
-  const prevBtn = datepicker.querySelector(".prev");
-  const nextYearBtn = datepicker.querySelector(".next-year");
-  const prevYearBtn = datepicker.querySelector(".prev-year");
-  const dates = datepicker.querySelector(".dates");
-  const monthDisplay = datepicker.querySelector(".month-display");
-  const yearDisplay = datepicker.querySelector(".year-display");
-  const dateWidget = container.querySelector(".date-widget");
-
-  const monthNames = [
-    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-  ];
-
-  let currentDate = new Date();
-  let year = currentDate.getFullYear();
-  let month = currentDate.getMonth();
-  let selectedDate = null;
-
-  // Функция для закрытия всех календарей
-  function closeAllDatepickers() {
-    const allDatepickers = document.querySelectorAll('.datepicker');
-    allDatepickers.forEach(dp => {
-      dp.hidden = true;
-    });
-  }
-
-  // Форматирование даты в дд.мм.гггг
-  function formatDate(date) {
-    const day = date.getDate().toString().padStart(2, '0');
-    const monthNum = (date.getMonth() + 1).toString().padStart(2, '0');
-    const yearNum = date.getFullYear();
-    return `${day}.${monthNum}.${yearNum}`;
-  }
-
-  // Парсинг даты из строки дд.мм.гггг
-  function parseDate(dateStr) {
-    if (!dateStr) return null;
-    const parts = dateStr.split('.');
-    if (parts.length === 3) {
-      const day = parseInt(parts[0]);
-      const month = parseInt(parts[1]) - 1;
-      const year = parseInt(parts[2]);
-      return new Date(year, month, day);
-    }
-    return null;
-  }
-
-  // show datepicker
-  const showDatepicker = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
+  <!-- РЕАЛИЗАЦИЯ ПОПАПА ДОБАВЛЕНИЯ НОВОГО ОБРАЩЕНИЯ -->
+  <script>
+    // Ждем полной загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
     
-    // Закрываем все другие календари
-    closeAllDatepickers();
-    
-    // Сбрасываем год и месяц на текущую выбранную дату или сегодня
-    if (dateInput.value) {
-      const parsed = parseDate(dateInput.value);
-      if (parsed) {
-        year = parsed.getFullYear();
-        month = parsed.getMonth();
-        selectedDate = parsed;
-      } else {
-        year = currentDate.getFullYear();
-        month = currentDate.getMonth();
-        selectedDate = currentDate;
-      }
-    } else {
-      year = currentDate.getFullYear();
-      month = currentDate.getMonth();
-      selectedDate = currentDate;
-    }
-    
-    displayDates();
-    datepicker.hidden = false;
-  };
-
-  // Обработчик выбора даты
-  const handleDateClick = (e) => {
-    const button = e.target;
-    if (button.disabled) return;
-    
-    // remove the 'selected' class from other buttons
-    const selected = dates.querySelector(".selected");
-    if (selected) selected.classList.remove("selected");
-    
-    // add the 'selected' class to current button
-    button.classList.add("selected");
-    
-    // set the selected date
-    selectedDate = new Date(year, month, parseInt(button.textContent));
-    
-    // format date as dd.mm.yyyy
-    const formattedDate = formatDate(selectedDate);
-    
-    // set the selected date to date input
-    dateInput.value = formattedDate;
-    
-    // update date widget icon
-    updateDateWidgetIcon(container, formattedDate);
-    
-    // hide datepicker
-    datepicker.hidden = true;
-    
-    // trigger filter
-    filterEstimates();
-  };
-
-  // render the dates in the calendar interface
-  const displayDates = () => {
-    // Обновляем заголовок
-    monthDisplay.textContent = monthNames[month];
-    yearDisplay.textContent = year;
-    
-    dates.innerHTML = "";
-    
-    const firstDayOfMonth = new Date(year, month, 1);
-    let firstDayIndex = firstDayOfMonth.getDay();
-    let startDay = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
-    
-    const lastOfPrevMonth = new Date(year, month, 0);
-    const lastDayPrevMonth = lastOfPrevMonth.getDate();
-    
-    // Дни предыдущего месяца
-    for (let i = startDay - 1; i >= 0; i--) {
-      const day = lastDayPrevMonth - i;
-      const button = createButton(day, true);
-      dates.appendChild(button);
-    }
-    
-    // Дни текущего месяца
-    const lastOfMonth = new Date(year, month + 1, 0);
-    for (let i = 1; i <= lastOfMonth.getDate(); i++) {
-      const button = createButton(i, false);
-      button.addEventListener("click", handleDateClick);
-      dates.appendChild(button);
-    }
-    
-    // Дни следующего месяца
-    const totalDaysDisplayed = startDay + lastOfMonth.getDate();
-    const remainingCells = 42 - totalDaysDisplayed;
-    
-    for (let i = 1; i <= remainingCells; i++) {
-      const button = createButton(i, true);
-      dates.appendChild(button);
-    }
-  };
-  
-  const createButton = (text, isDisabled = false) => {
-    const button = document.createElement("button");
-    button.textContent = text;
-    button.disabled = isDisabled;
-    
-    if (!isDisabled) {
-      const buttonDate = new Date(year, month, text);
-      const today = buttonDate.toDateString() === new Date().toDateString();
-      
-      // Проверяем, совпадает ли с выбранной датой
-      let isSelected = false;
-      if (dateInput.value) {
-        const selectedDateFromInput = parseDate(dateInput.value);
-        if (selectedDateFromInput && 
-            selectedDateFromInput.getFullYear() === year &&
-            selectedDateFromInput.getMonth() === month &&
-            selectedDateFromInput.getDate() === text) {
-          isSelected = true;
-        }
-      }
-      
-      button.classList.toggle("today", today);
-      button.classList.toggle("selected", isSelected);
-    }
-    return button;
-  };
-  
-  // Добавляем обработчики событий
-  dateInput.addEventListener("click", showDatepicker);
-  
-  if (dateWidget) {
-    dateWidget.addEventListener("click", showDatepicker);
-  }
-  
-  // Навигация
-  nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (month === 11) year++;
-    month = (month + 1) % 12;
-    displayDates();
-  });
-
-  prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (month === 0) year--;
-    month = (month - 1 + 12) % 12;
-    displayDates();
-  });
-
-  nextYearBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    year++;
-    displayDates();
-  });
-
-  prevYearBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    year--;
-    displayDates();
-  });
-  
-  // Закрытие при клике вне календаря
-  document.addEventListener("click", (e) => {
-    if (!container.contains(e.target)) {
-      datepicker.hidden = true;
-    }
-  });
-  
-  // Если в инпуте уже есть значение, обновляем иконку
-  if (dateInput.value) {
-    updateDateWidgetIcon(container, dateInput.value);
-  }
-  
-  displayDates();
-}
-
-// ==================== ФУНКЦИИ ДЛЯ РАБОТЫ С ДАТАМИ ====================
-function parseDateFromString(dateStr) {
-  if (!dateStr) return null;
-  const parts = dateStr.split('.');
-  if (parts.length === 3) {
-    const day = parseInt(parts[0]);
-    const month = parseInt(parts[1]) - 1;
-    const year = parseInt(parts[2]);
-    return new Date(year, month, day);
-  }
-  return null;
-}
-
-function filterEstimates() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  const startDateValue = startDateInput ? startDateInput.value : '';
-  const endDateValue = endDateInput ? endDateInput.value : '';
-  
-  const startDate = startDateValue ? parseDateFromString(startDateValue) : null;
-  const endDate = endDateValue ? parseDateFromString(endDateValue) : null;
-  
-  // Находим активный контейнер со сметами
-  const activeContainer = document.querySelector('.personal-orders-container_opened');
-  if (!activeContainer) return;
-  
-  const estimates = activeContainer.querySelectorAll('.personal-orders-box');
-  let hasVisibleEstimates = false;
-  
-  estimates.forEach(estimate => {
-    const dateElement = estimate.querySelector('.personal-estimate-box-date');
-    if (!dateElement) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-      return;
-    }
-    
-    const dateText = dateElement.textContent.trim();
-    const estimateDate = parseDateFromString(dateText);
-    
-    // Если не удалось распарсить дату, показываем элемент
-    if (!estimateDate) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-      return;
-    }
-    
-    let isVisible = true;
-    
-    // Фильтр "От" - показываем если дата сметы >= startDate
-    if (startDate) {
-      if (estimateDate < startDate) {
-        isVisible = false;
-      }
-    }
-    
-    // Фильтр "До" - показываем если дата сметы <= endDate
-    if (endDate && isVisible) {
-      if (estimateDate > endDate) {
-        isVisible = false;
-      }
-    }
-    
-    if (isVisible) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-    } else {
-      estimate.style.display = 'none';
-    }
-  });
-  
-  // Показываем сообщение "нет результатов"
-  let noResultsMsg = activeContainer.querySelector('.no-results');
-  if (!hasVisibleEstimates && estimates.length > 0) {
-    if (!noResultsMsg) {
-      noResultsMsg = document.createElement('div');
-      noResultsMsg.className = 'no-results';
-      noResultsMsg.textContent = 'Смет в выбранном периоде не найдено';
-      activeContainer.appendChild(noResultsMsg);
-    } else {
-      noResultsMsg.style.display = '';
-    }
-  } else if (noResultsMsg) {
-    noResultsMsg.style.display = 'none';
-  }
-}
-
-function resetFilter() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  if (startDateInput) {
-    startDateInput.value = '';
-    updateDateWidgetIcon(startDateInput.closest('.datepicker-container'), '');
-  }
-  if (endDateInput) {
-    endDateInput.value = '';
-    updateDateWidgetIcon(endDateInput.closest('.datepicker-container'), '');
-  }
-  
-  // Показываем все сметы во всех контейнерах
-  const allContainers = document.querySelectorAll('.personal-orders-container');
-  allContainers.forEach(container => {
-    const estimates = container.querySelectorAll('.personal-orders-box');
-    estimates.forEach(estimate => {
-      estimate.style.display = '';
-    });
-    
-    const noResultsMsg = container.querySelector('.no-results');
-    if (noResultsMsg) {
-      noResultsMsg.style.display = 'none';
-    }
-  });
-}
-
-function updateDateWidgetIcon(container, inputValue) {
-  if (!container) return;
-  
-  const dateWidget = container.querySelector('.date-widget');
-  if (!dateWidget) return;
-  
-  if (inputValue && inputValue.trim() !== '') {
-    // Меняем на иконку крестика
-    dateWidget.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.0807 2.91666L2.91406 11.0833M2.91407 2.91666L11.0807 11.0833" stroke="#495A64" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-    dateWidget.classList.add('date-widget-cancel');
-    
-    // Добавляем обработчик для очистки
-    const newWidget = dateWidget.cloneNode(true);
-    dateWidget.parentNode.replaceChild(newWidget, dateWidget);
-    
-    const updatedWidget = container.querySelector('.date-widget');
-    const dateInput = container.querySelector('.personal-date-input');
-    
-    updatedWidget.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dateInput.value = '';
-      updateDateWidgetIcon(container, '');
-      filterEstimates();
-    });
-  } else {
-    // Возвращаем иконку календаря
-    dateWidget.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-    dateWidget.classList.remove('date-widget-cancel');
-  }
-}
-
-// ==================== МОБИЛЬНЫЕ ФИЛЬТРЫ ====================
-function openFilterModal() {
-  const filterSort = document.querySelector('.personal-date-sort');
-  const overlay = document.querySelector('.personal-date-overlay');
-  
-  if (filterSort) filterSort.classList.add('personal-date-sort_opened');
-  if (overlay) overlay.classList.add('personal-date-overlay_active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeFilterModal() {
-  const filterSort = document.querySelector('.personal-date-sort');
-  const overlay = document.querySelector('.personal-date-overlay');
-  
-  if (filterSort) filterSort.classList.remove('personal-date-sort_opened');
-  if (overlay) overlay.classList.remove('personal-date-overlay_active');
-  document.body.style.overflow = '';
-}
-
-function applyFilterAndClose() {
-  filterEstimates();
-  closeFilterModal();
-}
-
-function cancelFilterAndClose() {
-  resetFilter();
-  closeFilterModal();
-}
-
-function initMobileFilters() {
-  const dateBtn = document.querySelector('.personal-date-btn');
-  const overlay = document.querySelector('.personal-date-overlay');
-  const confirmBtn = document.querySelector('.personal-date-button-confirm');
-  const cancelBtn = document.querySelector('.personal-date-button-cancel');
-  
-  if (dateBtn) {
-    dateBtn.removeEventListener('click', openFilterModal);
-    dateBtn.addEventListener('click', openFilterModal);
-  }
-  
-  if (overlay) {
-    overlay.removeEventListener('click', cancelFilterAndClose);
-    overlay.addEventListener('click', cancelFilterAndClose);
-  }
-  
-  if (confirmBtn) {
-    confirmBtn.removeEventListener('click', applyFilterAndClose);
-    confirmBtn.addEventListener('click', applyFilterAndClose);
-  }
-  
-  if (cancelBtn) {
-    cancelBtn.removeEventListener('click', cancelFilterAndClose);
-    cancelBtn.addEventListener('click', cancelFilterAndClose);
-  }
-  
-  document.removeEventListener('keydown', handleEscapeKey);
-  document.addEventListener('keydown', handleEscapeKey);
-  
-  function handleEscapeKey(e) {
-    const filterSortEl = document.querySelector('.personal-date-sort');
-    if (e.key === 'Escape' && filterSortEl && filterSortEl.classList.contains('personal-date-sort_opened')) {
-      cancelFilterAndClose();
-    }
-  }
-}
-
-function initDesktopFilters() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  const handleDateChange = () => {
-    filterEstimates();
-  };
-  
-  if (startDateInput) {
-    startDateInput.removeEventListener('change', handleDateChange);
-    startDateInput.addEventListener('change', handleDateChange);
-  }
-  
-  if (endDateInput) {
-    endDateInput.removeEventListener('change', handleDateChange);
-    endDateInput.addEventListener('change', handleDateChange);
-  }
-}
-
-// ==================== ПЕРЕКЛЮЧЕНИЕ РАЗДЕЛОВ ====================
-function initSectionSwitcher() {
-  const ordersMoreLinks = document.querySelectorAll('.personal-orders-box-link');
-  const containers = document.querySelectorAll('.personal-container');
-  const backButton = document.querySelector('.personal-container-back');
-
-  function activateSection(sectionId) {
-    containers.forEach(container => {
-      container.classList.remove('personal-container_active');
-    });
-
-    const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-    if (targetContainer) {
-      targetContainer.classList.add('personal-container_active');
-    }
-  }
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  ordersMoreLinks.forEach(link => {
-    link.removeEventListener('click', link._handler);
-    const handler = function (e) {
-      e.preventDefault();
-      const sectionId = this.dataset.section;
-      activateSection(sectionId);
-      scrollToTop();
-    };
-    link._handler = handler;
-    link.addEventListener('click', handler);
-  });
-
-}
-
-// ==================== ПОИСК СМЕТ ====================
-function initSearchFilter() {
-  const searchInput = document.querySelector('.personal-search-line__input');
-  
-  if (!searchInput) return;
-  
-  const handleSearch = () => {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const activeContainer = document.querySelector('.personal-orders-container_opened');
-    
-    if (!activeContainer) return;
-    
-    const estimates = activeContainer.querySelectorAll('.personal-orders-box');
-    let hasVisibleEstimates = false;
-    
-    estimates.forEach(estimate => {
-      const titleElement = estimate.querySelector('.personal-orders-box-title');
-      if (!titleElement) return;
-      
-      const title = titleElement.textContent.toLowerCase();
-      
-      if (searchTerm === '' || title.includes(searchTerm)) {
-        estimate.style.display = '';
-        hasVisibleEstimates = true;
-      } else {
-        estimate.style.display = 'none';
-      }
-    });
-    
-    let noResultsMsg = activeContainer.querySelector('.no-results-search');
-    if (!hasVisibleEstimates && estimates.length > 0 && searchTerm !== '') {
-      if (!noResultsMsg) {
-        noResultsMsg = document.createElement('div');
-        noResultsMsg.className = 'no-results no-results-search';
-        noResultsMsg.textContent = 'Сметы по вашему запросу не найдены';
-        activeContainer.appendChild(noResultsMsg);
-      } else {
-        noResultsMsg.style.display = '';
-      }
-    } else if (noResultsMsg) {
-      noResultsMsg.style.display = 'none';
-    }
-  };
-  
-  searchInput.removeEventListener('input', handleSearch);
-  searchInput.addEventListener('input', handleSearch);
-}
-
-// ==================== СОЗДАНИЕ СМЕТЫ ====================
-function initCreateEstimate() {
-  const createBtn = document.querySelector('.personal-orders-estimate-add');
-  
-  if (createBtn && createBtn.dataset.popup === 'popup-add') {
-    createBtn.removeEventListener('click', createBtn._handler);
-    const handler = function(e) {
-      e.preventDefault();
-      console.log('Открыть попап создания сметы');
-    };
-    createBtn._handler = handler;
-    createBtn.addEventListener('click', handler);
-  }
-}
-
-// ==================== УДАЛЕНИЕ И ШАРИНГ СМЕТ ====================
-function initEstimateActions() {
-  // Удаление сметы
-  const deleteButtons = document.querySelectorAll('.personal-estimate-box-widget-delete');
-  
-  deleteButtons.forEach(btn => {
-    btn.removeEventListener('click', btn._deleteHandler);
-    const handler = function(e) {
-      e.preventDefault();
-      const popupId = this.dataset.popup;
-      if (popupId === 'popup-delete') {
-        console.log('Открыть попап удаления сметы');
-      }
-    };
-    btn._deleteHandler = handler;
-    btn.addEventListener('click', handler);
-  });
-  
-  // Шаринг сметы
-  const shareButtons = document.querySelectorAll('.personal-estimate-box-widget-share');
-  
-  shareButtons.forEach(btn => {
-    btn.removeEventListener('click', btn._shareHandler);
-    const handler = function(e) {
-      e.preventDefault();
-      console.log('Поделиться сметой');
-    };
-    btn._shareHandler = handler;
-    btn.addEventListener('click', handler);
-  });
-}
-
-// ==================== ИНИЦИАЛИЗАЦИЯ ====================
-function init() {
-  // Инициализируем календари
-  const containers = document.querySelectorAll('.datepicker-container');
-  containers.forEach(container => {
-    initDatepicker(container);
-  });
-  
-  // Инициализируем фильтры в зависимости от устройства
-  const isMobile = window.innerWidth < 1200;
-  
-  if (isMobile) {
-    initMobileFilters();
-  } else {
-    initDesktopFilters();
-  }
-  
-  // Инициализируем переключение разделов
-  initSectionSwitcher();
-  
-  // Инициализируем поиск смет
-  initSearchFilter();
-  
-  // Инициализируем создание сметы
-  initCreateEstimate();
-  
-  // Инициализируем действия со сметами
-  initEstimateActions();
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
-}
-    </script>
-
-    <script>
-      document.querySelectorAll('.personal-estimate-sort-option').forEach(btn => {
-          btn.addEventListener('click', () => {
-              const sortVal = btn.dataset.sort;
-              
-              // Переключаем классы на кнопках
-              document.querySelectorAll('.personal-estimate-sort-option').forEach(b => 
-                  b.classList.toggle('personal-estimate-sort-option_active', b === btn));
-              
-              // Переключаем классы на контейнерах
-              document.querySelectorAll('.personal-estimate-sort-container').forEach(c => 
-                  c.classList.toggle('personal-estimate-sort-container_active', c.dataset.sort === sortVal));
-          });
-      });
-
-      document.querySelectorAll('.personal-estimate-sort-title').forEach(title => {
-          // Ищем родительский контейнер
-          const container = title.closest('.personal-estimate-sort-container');
-          
-          if (container) {
-              // Ищем соответствующий fold (можно по позиции или другим атрибутам)
-              const folds = container.querySelectorAll('.personal-estimate-sort-fold');
-              const titleIndex = Array.from(container.children).indexOf(title);
-              
-              // Находим ближайший fold после title
-              let targetFold = null;
-              for (let i = titleIndex + 1; i < container.children.length; i++) {
-                  if (container.children[i].classList.contains('personal-estimate-sort-fold')) {
-                      targetFold = container.children[i];
-                      break;
-                  }
-              }
-              
-              if (targetFold) {
-                  title.addEventListener('click', function() {
-                      this.classList.toggle('personal-estimate-sort-title_opened');
-                      targetFold.classList.toggle('personal-estimate-sort-fold_opened');
-                  });
-              }
-          }
-      });
-
-      const sortOptions = document.querySelectorAll('.personal-orders-sort-option');
-      const products = document.querySelectorAll('.personal-orders-info-products-box');
-
-      sortOptions.forEach(option => {
-          option.addEventListener('click', function() {
-              const sortValue = this.dataset.sort;
-              
-              // Обновляем активный класс
-              sortOptions.forEach(opt => opt.classList.toggle('personal-orders-sort-option_active', opt === this));
-              
-              // Фильтруем товары
-              products.forEach(product => {
-                  product.style.display = (sortValue === 'all' || product.dataset.sort === sortValue) ? 'flex' : 'none';
-              });
-          });
-      });
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    // === ПОПАПЫ ===
-    // Get all elements with data-popup attribute
-    const popupTriggers = document.querySelectorAll('[data-popup]');
-
-    // Function to open popup
-    function openPopup(popupId) {
-        const popup = document.getElementById(popupId);
-        if (popup) {
-            popup.classList.add('popup_details_opened');
-            document.body.style.overflow = 'hidden';
-            
-            // Очищаем инпут в попапе добавления
-            if (popupId === 'popup-add') {
-                const input = popup.querySelector('.popup-input');
-                if (input) {
-                    input.value = '';
-                    // Убираем возможную подсветку ошибки
-                    input.style.borderColor = '';
-                }
-            }
-        }
-    }
-
-    // Function to close popup
-    function closePopup(popup) {
-        if (popup) {
-            popup.classList.remove('popup_details_opened');
-            document.body.style.overflow = '';
-        }
-    }
-
-    // Add click event listeners to trigger elements
-    popupTriggers.forEach(trigger => {
+    // Открытие попапа
+    document.querySelectorAll('[data-popup]').forEach(trigger => {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
             const popupId = trigger.getAttribute('data-popup');
-            openPopup(popupId);
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.classList.add('popup_details_opened');
+                resetPopupForm(popup);
+            }
         });
     });
 
-    // === ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ТЕКУЩЕЙ ДАТЫ ===
-    function getCurrentDate() {
-        const today = new Date();
-        const day = String(today.getDate()).padStart(2, '0');
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const year = today.getFullYear();
-        return `${day}.${month}.${year}`;
-    }
-
-    // === ФУНКЦИЯ ДЛЯ ГЕНЕРАЦИИ УНИКАЛЬНОГО ID ===
-    function generateUniqueId() {
-        return 'order_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-
-    // === ФУНКЦИЯ ДЛЯ ЭСКЕЙПА HTML ===
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;');
-    }
-
-    // === ФУНКЦИЯ ДЛЯ СОЗДАНИЯ НОВОГО ЭЛЕМЕНТА personal-orders-box ===
-    function createNewOrderBox(title) {
-        const currentDate = getCurrentDate();
+    // Функция сброса формы попапа
+    function resetPopupForm(popup) {
+        const caseChoice = popup.querySelector('#case-choice');
+        const caseNumber = popup.querySelector('#case-number');
+        const textarea = popup.querySelector('.popup-textarea');
+        const acceptBtn = popup.querySelector('.popup_details-btn-accept');
         
-        const orderBox = document.createElement('div');
-        orderBox.className = 'personal-orders-box';
-        
-        orderBox.innerHTML = `
-            <div class="personal-orders-box-number">
-                <p class="personal-estimate-desc personal-estimate-box-date">${currentDate}</p>
-                <p class="personal-orders-box-title">${escapeHtml(title)}</p>
-                <a class="personal-orders-box-link" data-section="orders-info">Подробнее
-                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_212_2981)">
-                            <path d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z" fill="#BC1622" />
-                            <path d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z" fill="#BC1622" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_212_2981">
-                                <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </a>
-            </div>
-            <div class="personal-orders-box-delivery">
-                <p class="personal-estimate-desc">Стоимость товаров</p>
-                <p class="personal-orders-box-title personal-orders-box-price">-</p>
-                <p class="personal-estimate-desc">Товаров : <span>-</span></p>
-            </div>
-            <div class="personal-estimate-box-widgets">
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Удалить
-                </a>
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-share">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-                    </svg>
-                    Поделится
-                </a>
-            </div>
-        `;
-        
-        return orderBox;
-    }
-
-    // === ОБНОВЛЕНИЕ ОБРАБОТЧИКОВ ДЛЯ КНОПОК УДАЛЕНИЯ ===
-    function updateDeleteHandlers() {
-        const deleteButtons = document.querySelectorAll('.personal-estimate-box-widget-delete[data-popup="popup-delete"]');
-        deleteButtons.forEach(btn => {
-            // Удаляем старые обработчики, клонируя элемент
-            const newBtn = btn.cloneNode(true);
-            btn.parentNode.replaceChild(newBtn, btn);
-            
-            newBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const orderBox = newBtn.closest('.personal-orders-box');
-                if (orderBox) {
-                    // Сохраняем элемент для удаления в глобальную переменную или data-атрибут
-                    window.elementToDelete = orderBox;
-                    openPopup('popup-delete');
-                }
-            });
-        });
-    }
-
-    // === ДОБАВЛЕНИЕ НОВОЙ СМЕТЫ ===
-    const popupAdd = document.getElementById('popup-add');
-    if (popupAdd) {
-        const acceptBtn = popupAdd.querySelector('.popup_details-btn-accept');
-        const cancelBtn = popupAdd.querySelector('.popup_details-btn-cancel');
-        const input = popupAdd.querySelector('.popup-input');
-        
-        // Функция добавления сметы
-        function addNewEstimate() {
-            console.log('addNewEstimate called'); // Отладка
-            console.log('Input value:', input ? input.value : 'input not found'); // Отладка
-            
-            if (input && input.value.trim()) {
-                const title = input.value.trim();
-                console.log('Title:', title); // Отладка
-                
-                const newOrderBox = createNewOrderBox(title);
-                console.log('New order box created:', newOrderBox); // Отладка
-                
-                // Пробуем разные варианты поиска контейнера
-                let container = document.querySelector('.personal-orders-container[data-container="all"]');
-                
-                // Если не нашли по атрибуту, ищем по классу
-                if (!container) {
-                    container = document.querySelector('.personal-orders-container');
-                    console.log('Container found by class:', container); // Отладка
-                }
-                
-                // Если всё еще не нашли, ищем любой div с классом personal-orders-container
-                if (!container) {
-                    const containers = document.querySelectorAll('.personal-orders-container');
-                    if (containers.length > 0) {
-                        container = containers[0];
-                    }
-                    console.log('Container found by any class:', container); // Отладка
-                }
-                
-                if (container) {
-                    container.appendChild(newOrderBox);
-                    console.log('New order box appended to container'); // Отладка
-                    
-                    // Обновляем обработчики для новых кнопок удаления
-                    updateDeleteHandlers();
-                    
-                    // Очищаем инпут
-                    input.value = '';
-                    
-                    // Закрываем попап
-                    closePopup(popupAdd);
-                } else {
-                    console.error('Container not found!'); // Отладка
-                    alert('Ошибка: контейнер для добавления не найден');
-                }
-            } else {
-                console.log('Input is empty or not found'); // Отладка
-                if (input) {
-                    input.style.borderColor = 'red';
-                    setTimeout(() => {
-                        input.style.borderColor = '';
-                    }, 2000);
-                }
+        // Сбрасываем значения
+        if (caseChoice) {
+            caseChoice.value = '';
+            // Сброс Select2
+            if (window.jQuery && $(caseChoice).hasClass('select2-hidden-accessible')) {
+                $(caseChoice).val('').trigger('change');
             }
         }
         
-        if (acceptBtn) {
-            // Удаляем старые обработчики, клонируя кнопку
-            const newAcceptBtn = acceptBtn.cloneNode(true);
-            acceptBtn.parentNode.replaceChild(newAcceptBtn, acceptBtn);
+        // Скрываем поля и сбрасываем значения
+        if (caseNumber) {
+            caseNumber.value = '';
+            // Скрываем контейнер Select2
+            const select2Container = caseNumber.nextElementSibling;
+            if (select2Container && select2Container.classList.contains('select2-container')) {
+                select2Container.classList.add('hidden');
+                select2Container.css('display', 'none');
+            } else {
+                caseNumber.classList.add('hidden');
+            }
             
-            newAcceptBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('Accept button clicked'); // Отладка
-                addNewEstimate();
-            });
-        } else {
-            console.log('Accept button not found in popup-add'); // Отладка
+            if (window.jQuery && $(caseNumber).hasClass('select2-hidden-accessible')) {
+                $(caseNumber).val('').trigger('change');
+            }
         }
         
-        if (cancelBtn) {
-            const newCancelBtn = cancelBtn.cloneNode(true);
-            cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
-            
-            newCancelBtn.addEventListener('click', () => {
-                if (input) {
-                    input.value = '';
-                }
-                closePopup(popupAdd);
-            });
+        if (textarea) {
+            textarea.value = '';
+            textarea.classList.add('hidden');
         }
         
-        // Добавляем возможность отправки по Enter
-        if (input) {
-            input.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    addNewEstimate();
-                }
-            });
-        }
-    } else {
-        console.log('Popup-add not found on page'); // Отладка
+        if (acceptBtn) acceptBtn.classList.add('disabled');
     }
 
-    // === УДАЛЕНИЕ СМЕТЫ ===
-    const popupDelete = document.getElementById('popup-delete');
-    if (popupDelete) {
-        const acceptBtn = popupDelete.querySelector('.popup_details-btn-accept');
-        const cancelBtn = popupDelete.querySelector('.popup_details-btn-cancel');
-        
-        if (acceptBtn) {
-            const newAcceptBtn = acceptBtn.cloneNode(true);
-            acceptBtn.parentNode.replaceChild(newAcceptBtn, acceptBtn);
-            
-            newAcceptBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (window.elementToDelete) {
-                    // Анимация удаления
-                    window.elementToDelete.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    window.elementToDelete.style.opacity = '0';
-                    window.elementToDelete.style.transform = 'scale(0.95)';
-                    
-                    setTimeout(() => {
-                        if (window.elementToDelete && window.elementToDelete.remove) {
-                            window.elementToDelete.remove();
-                        }
-                        window.elementToDelete = null;
-                        closePopup(popupDelete);
-                    }, 300);
-                } else {
-                    closePopup(popupDelete);
-                }
-            });
-        }
-        
-        if (cancelBtn) {
-            const newCancelBtn = cancelBtn.cloneNode(true);
-            cancelBtn.parentNode.replaceChild(newCancelBtn, cancelBtn);
-            
-            newCancelBtn.addEventListener('click', () => {
-                window.elementToDelete = null;
-                closePopup(popupDelete);
-            });
+    // Закрытие попапа
+    function closePopup(popup) {
+        if (popup) {
+            popup.classList.remove('popup_details_opened');
         }
     }
 
-    // === ОБРАБОТКА ЗАКРЫТИЯ ПОПАПОВ ===
-    const popups = document.querySelectorAll('.popup_details');
+    // Закрытие по крестику
+    document.querySelectorAll('.popup_details-close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            const popup = closeBtn.closest('.popup_details');
+            closePopup(popup);
+        });
+    });
 
-    popups.forEach(popup => {
-        // Close button inside popup
-        const closeBtn = popup.querySelector('.popup_details-close');
-        if (closeBtn) {
-            const newCloseBtn = closeBtn.cloneNode(true);
-            closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
-            
-            newCloseBtn.addEventListener('click', () => {
-                closePopup(popup);
-            });
-        }
-        
-        // Close popup when clicking on the overlay
+    // Закрытие по кнопке Отмена
+    document.querySelectorAll('.popup_details-btn-cancel').forEach(cancelBtn => {
+        cancelBtn.addEventListener('click', () => {
+            const popup = cancelBtn.closest('.popup_details');
+            closePopup(popup);
+        });
+    });
+
+    // Закрытие по клику вне контейнера
+    document.querySelectorAll('.popup_details').forEach(popup => {
         popup.addEventListener('click', (e) => {
             if (e.target === popup) {
                 closePopup(popup);
@@ -2741,7 +1181,7 @@ if (document.readyState === 'loading') {
         });
     });
 
-    // Close popup with Escape key
+    // Закрытие по Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             const openPopup = document.querySelector('.popup_details.popup_details_opened');
@@ -2751,77 +1191,458 @@ if (document.readyState === 'loading') {
         }
     });
 
-    // Предотвращаем отправку форм
-    const forms = document.querySelectorAll('.popup_details-form');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-        });
-    });
+    // Получаем элементы
+    const caseChoice = document.getElementById('case-choice');
+    const caseNumber = document.getElementById('case-number');
+    const textarea = document.querySelector('.popup-textarea');
+    const acceptBtn = document.querySelector('.popup_details-btn-accept');
 
-    // Обработка переключения видимости пароля
-    const toggleButtons = document.querySelectorAll('.popup_details-form-hide');
-    function togglePasswordVisibility(toggleBtn, input) {
-        if (input.type === 'password') {
-            input.type = 'text';
-            toggleBtn.classList.add('popup_details-form-hide_shown');
+    // Функция для получения контейнера Select2
+    function getSelect2Container(element) {
+        if (!element) return null;
+        const container = element.nextElementSibling;
+        if (container && container.classList.contains('select2-container')) {
+            return container;
+        }
+        return null;
+    }
+
+    // Функция проверки валидности формы
+    function checkFormValidity() {
+        if (!caseChoice || !acceptBtn) return;
+        
+        const selectedType = caseChoice.value;
+        const isRefund = selectedType === 'Обмен и возврат';
+        
+        let isNumberSelected = true;
+        let isTextareaFilled = false;
+        
+        // Проверка номера заказа для возврата
+        if (isRefund) {
+            let numberValue = '';
+            if (window.jQuery && $(caseNumber).hasClass('select2-hidden-accessible')) {
+                numberValue = $(caseNumber).val();
+            } else if (caseNumber) {
+                numberValue = caseNumber.value;
+            }
+            isNumberSelected = numberValue !== '' && numberValue !== null;
+        }
+        
+        // Проверка textarea (всегда требуется для всех типов)
+        if (textarea && !textarea.classList.contains('hidden')) {
+            isTextareaFilled = textarea.value.trim() !== '';
+        }
+        
+        // Кнопка активна только если выбран тип, заполнен textarea и для возврата заполнен номер заказа
+        if (selectedType !== '' && isTextareaFilled && isNumberSelected) {
+            acceptBtn.classList.remove('disabled');
         } else {
-            input.type = 'password';
-            toggleBtn.classList.remove('popup_details-form-hide_shown');
+            acceptBtn.classList.add('disabled');
         }
     }
 
-    toggleButtons.forEach(button => {
-        const newButton = button.cloneNode(true);
-        button.parentNode.replaceChild(newButton, button);
+    // Функция обновления видимости полей
+    function updateFieldsVisibility() {
+        if (!caseChoice) return;
         
-        newButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            const field = newButton.closest('.popup_details-form-field');
-            const input = field.querySelector('.popup-input');
-            if (input) {
-                togglePasswordVisibility(newButton, input);
+        const selectedType = caseChoice.value;
+        
+        console.log('Выбран тип:', selectedType); // Для отладки
+        
+        // Получаем контейнер Select2 для case-number
+        const select2Container = getSelect2Container(caseNumber);
+        
+        if (selectedType === 'Обмен и возврат') {
+            // Показываем поле выбора заказа
+            if (caseNumber) {
+                if (select2Container) {
+                    select2Container.classList.remove('hidden');
+                    select2Container.style.display = '';
+                } else {
+                    caseNumber.classList.remove('hidden');
+                }
+            }
+            // Показываем textarea
+            if (textarea) {
+                textarea.classList.remove('hidden');
+            }
+        } else if (selectedType === 'Ремонт' || selectedType === 'Претензии' || selectedType === 'Другие обращения') {
+            // Скрываем поле выбора заказа
+            if (caseNumber) {
+                if (select2Container) {
+                    select2Container.classList.add('hidden');
+                    select2Container.style.display = 'none';
+                } else {
+                    caseNumber.classList.add('hidden');
+                }
+                // Сбрасываем значение
+                if (window.jQuery && $(caseNumber).hasClass('select2-hidden-accessible')) {
+                    $(caseNumber).val('').trigger('change');
+                } else {
+                    caseNumber.value = '';
+                }
+            }
+            // Показываем textarea
+            if (textarea) {
+                textarea.classList.remove('hidden');
+            }
+        } else {
+            // Если ничего не выбрано - скрываем оба поля
+            if (caseNumber) {
+                if (select2Container) {
+                    select2Container.classList.add('hidden');
+                    select2Container.style.display = 'none';
+                } else {
+                    caseNumber.classList.add('hidden');
+                }
+            }
+            if (textarea) {
+                textarea.classList.add('hidden');
+            }
+        }
+        
+        checkFormValidity();
+    }
+
+    // Обработчики событий для case-choice
+    if (caseChoice) {
+        caseChoice.addEventListener('change', function() {
+            updateFieldsVisibility();
+        });
+        
+        // Для Select2
+        if (window.jQuery) {
+            $(caseChoice).on('change', function() {
+                updateFieldsVisibility();
+            });
+        }
+    }
+
+    // Обработчики для case-number
+    if (caseNumber) {
+        caseNumber.addEventListener('change', checkFormValidity);
+        
+        // Для Select2
+        if (window.jQuery) {
+            $(caseNumber).on('change', function() {
+                checkFormValidity();
+            });
+        }
+    }
+
+    // Обработчик для textarea
+    if (textarea) {
+        textarea.addEventListener('input', checkFormValidity);
+    }
+
+    // Инициализация Select2
+    if (window.jQuery) {
+        // Ждем загрузки Select2
+        $(document).ready(function() {
+            // Уничтожаем предыдущие экземпляры Select2 если есть
+            if ($('#case-choice').hasClass('select2-hidden-accessible')) {
+                $('#case-choice').select2('destroy');
+            }
+            if ($('#case-number').hasClass('select2-hidden-accessible')) {
+                $('#case-number').select2('destroy');
+            }
+            
+            // Инициализируем Select2
+            $('#case-choice').select2({
+                placeholder: "Тип обращения",
+                allowClear: false,
+                minimumResultsForSearch: Infinity,
+                dropdownParent: $('#popup-add')
+            });
+            
+            $('#case-number').select2({
+                placeholder: "Выберите заказ",
+                allowClear: false,
+                minimumResultsForSearch: Infinity,
+                dropdownParent: $('#popup-add')
+            });
+            
+            // После инициализации скрываем case-number и textarea
+            const caseNumberSelect2 = $('#case-number').next('.select2-container');
+            if (caseNumberSelect2.length) {
+                caseNumberSelect2.addClass('hidden');
+                caseNumberSelect2.css('display', 'none');
+            }
+            $('.popup-textarea').addClass('hidden');
+            
+            // Добавляем дополнительный обработчик для Select2
+            $('#case-choice').on('select2:select', function(e) {
+                updateFieldsVisibility();
+            });
+        });
+    }
+
+    // Функция получения следующего номера для обращений
+    function getNextNumber(containerSelector, pattern) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return 1;
+        
+        const cases = container.querySelectorAll('.personal-refund-case');
+        let maxNumber = 0;
+        
+        cases.forEach(caseElement => {
+            const title = caseElement.querySelector('.personal-refund-title');
+            if (title) {
+                const match = title.textContent.match(pattern);
+                if (match) {
+                    const num = parseInt(match[1]);
+                    if (!isNaN(num) && num > maxNumber) {
+                        maxNumber = num;
+                    }
+                }
             }
         });
+        
+        return maxNumber + 1;
+    }
+
+    // Форматирование даты
+    function getTodayDate() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        return `${day}.${month}.${year}`;
+    }
+
+    // Функция добавления обращения
+    function addAppealToContainer(type, appealData) {
+        let containerSelector;
+        let newCaseHtml = '';
+        const todayDate = getTodayDate();
+        
+        switch(type) {
+            case 'Обмен и возврат':
+                containerSelector = '.personal-orders-container[data-container="refund"] .personal-refund-box';
+                newCaseHtml = `
+                    <div class="personal-refund-case">
+                        <p class="personal-refund-date">${todayDate}</p>
+                        <p class="personal-refund-title">Возврат денежных средств по заказу ${appealData.orderNumber}</p>
+                        <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                        <a class="personal-refund-more">Подробнее</a>
+                    </div>
+                `;
+                break;
+                
+            case 'Ремонт':
+                containerSelector = '.personal-orders-container[data-container="repair"] .personal-refund-box';
+                const repairNumber = getNextNumber('.personal-orders-container[data-container="repair"]', /Обращение на ремонт №(\d+)/);
+                newCaseHtml = `
+                    <div class="personal-refund-case">
+                        <p class="personal-refund-date">${todayDate}</p>
+                        <p class="personal-refund-title">Обращение на ремонт №${repairNumber}</p>
+                        <p class="personal-refund-item">Товар: ${appealData.product || 'Перфоратор электрический Makita HR2470 780 Вт 2,7 Дж SDS-plus'}</p>
+                        <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                        <a class="personal-refund-more">Подробнее</a>
+                    </div>
+                `;
+                break;
+                
+            case 'Претензии':
+                containerSelector = '.personal-orders-container[data-container="issue"] .personal-refund-box';
+                const issueNumber = getNextNumber('.personal-orders-container[data-container="issue"]', /Обращение в свободной форме №(\d+)/);
+                newCaseHtml = `
+                    <div class="personal-refund-case">
+                        <p class="personal-refund-date">${todayDate}</p>
+                        <p class="personal-refund-title">Обращение в свободной форме №${issueNumber}</p>
+                        <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                        <a class="personal-refund-more">Подробнее</a>
+                    </div>
+                `;
+                break;
+                
+            case 'Другие обращения':
+                containerSelector = '.personal-orders-container[data-container="other"] .personal-refund-box';
+                const otherNumber = getNextNumber('.personal-orders-container[data-container="other"]', /Обращение в свободной форме №(\d+)/);
+                newCaseHtml = `
+                    <div class="personal-refund-case">
+                        <p class="personal-refund-date">${todayDate}</p>
+                        <p class="personal-refund-title">Обращение в свободной форме №${otherNumber}</p>
+                        <p class="personal-refund-theme">Тема: Другое</p>
+                        <p class="personal-refund-status"><span class="accepted-case"></span>Принят к рассмотрению</p>
+                        <a class="personal-refund-more">Подробнее</a>
+                    </div>
+                `;
+                break;
+        }
+        
+        const container = document.querySelector(containerSelector);
+        if (container) {
+            const topDiv = container.querySelector('.personal-refund-top');
+            if (topDiv) {
+                topDiv.insertAdjacentHTML('afterend', newCaseHtml);
+            } else {
+                container.insertAdjacentHTML('beforeend', newCaseHtml);
+            }
+        }
+    }
+
+    // Обработка сохранения
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            if (acceptBtn.classList.contains('disabled')) return;
+            
+            const selectedType = caseChoice.value;
+            const appealText = textarea.value.trim();
+            
+            // Получаем номер заказа из Select2 если нужно
+            let orderNumber = '';
+            if (selectedType === 'Обмен и возврат') {
+                if (window.jQuery && $(caseNumber).hasClass('select2-hidden-accessible')) {
+                    orderNumber = $(caseNumber).val();
+                } else if (caseNumber) {
+                    orderNumber = caseNumber.value;
+                }
+            }
+            
+            const appealData = {
+                orderNumber: orderNumber,
+                appealText: appealText,
+                product: 'Перфоратор электрический Makita HR2470 780 Вт 2,7 Дж SDS-plus'
+            };
+            
+            // Добавляем обращение
+            addAppealToContainer(selectedType, appealData);
+            
+            // Закрываем попап
+            const popup = document.getElementById('popup-add');
+            closePopup(popup);
+            
+            // Показываем уведомление
+            showNotification('Обращение успешно создано');
+        });
+    }
+
+    // Функция показа уведомления
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            z-index: 10000;
+            animation: fadeInOut 3s ease-in-out;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        `;
+        
+        if (!document.querySelector('#notification-styles')) {
+            const style = document.createElement('style');
+            style.id = 'notification-styles';
+            style.textContent = `
+                @keyframes fadeInOut {
+                    0% { opacity: 0; transform: translateY(20px); }
+                    10% { opacity: 1; transform: translateY(0); }
+                    90% { opacity: 1; transform: translateY(0); }
+                    100% { opacity: 0; transform: translateY(20px); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+    
+    // Переключение вкладок обращений
+    const sortContainer = document.querySelector('.personal-orders-sort-history-container');
+    if (sortContainer) {
+        sortContainer.addEventListener('click', (e) => {
+            const btn = e.target.closest('.personal-orders-sort-option');
+            if (!btn) return;
+            
+            const sort = btn.dataset.sort;
+            
+            document.querySelectorAll('.personal-orders-sort-option').forEach(opt => 
+                opt.classList.toggle('personal-orders-sort-option_active', opt === btn)
+            );
+            
+            document.querySelectorAll('.personal-orders-container').forEach(container => 
+                container.classList.toggle('personal-orders-container_opened', container.dataset.container === sort)
+            );
+        });
+    }
+});
+  </script>
+
+  <!-- Переход в подробнее -->
+   <script>
+    // Функция для переключения между разделами
+function switchSection(sectionToShow) {
+    // Получаем все секции
+    const allSections = document.querySelectorAll('.personal-container');
+    
+    // Скрываем все секции (удаляем класс personal-container_active)
+    allSections.forEach(section => {
+        section.classList.remove('personal-container_active');
     });
     
-    // Инициализируем обработчики удаления для существующих элементов
-    updateDeleteHandlers();
-    
-    console.log('Script initialized'); // Отладка
+    // Показываем нужную секцию (добавляем класс personal-container_active)
+    const targetSection = document.querySelector(`.personal-container[data-section="${sectionToShow}"]`);
+    if (targetSection) {
+        targetSection.classList.add('personal-container_active');
+    }
+}
+
+// Добавляем обработчики на все кнопки "Подробнее"
+document.querySelectorAll('.personal-refund-more').forEach(moreBtn => {
+    moreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Получаем родительский контейнер с классом personal-orders-container
+        const parentContainer = this.closest('.personal-orders-container');
+        
+        if (parentContainer) {
+            // Получаем значение data-container (refund, repair, issue, other)
+            const containerType = parentContainer.getAttribute('data-container');
+            
+            // Здесь можно сохранить информацию о том, какое именно обращение открыто
+            // Например, в localStorage или data-атрибут
+            const caseElement = this.closest('.personal-refund-case');
+            if (caseElement) {
+                // Сохраняем информацию об открытом обращении
+                const caseTitle = caseElement.querySelector('.personal-refund-title')?.innerText || '';
+                const caseDate = caseElement.querySelector('.personal-refund-date')?.innerText || '';
+                
+                // Можно сохранить в localStorage для использования в детальной странице
+                localStorage.setItem('currentAppeal', JSON.stringify({
+                    type: containerType,
+                    title: caseTitle,
+                    date: caseDate
+                }));
+            }
+        }
+        
+        // Переключаем на секцию refund-info
+        switchSection('refund-info');
+    });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-      const desktopBlock = document.querySelector('.personal-orders-info-price');
-      const mobileBlock = document.querySelector('.personal-orders-info-mobile');
-
-      if (!desktopBlock || !mobileBlock) {
-        console.warn('Блоки personal-orders-info-price или personal-orders-info-mobile не найдены');
-        return;
-      }
-
-      function checkScroll() {
-        const desktopRect = desktopBlock.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Если нижняя граница блока достигла или пересекла нижнюю границу окна
-        if (desktopRect.bottom <= windowHeight) {
-          // Доскроллили до конца - скрываем мобильный блок
-          mobileBlock.style.display = 'none';
-        } else {
-          // Выше конца - показываем мобильный блок
-          mobileBlock.style.display = 'flex';
-        }
-      }
-
-      // Запускаем проверку при скролле
-      window.addEventListener('scroll', checkScroll);
-      // Запускаем проверку при изменении размера окна
-      window.addEventListener('resize', checkScroll);
-      // Проверяем сразу при загрузке страницы
-      checkScroll();
+// Обработчик на кнопку "Назад" в секции refund-info
+const backButton = document.querySelector('.personal-container-orders-back[data-section="all"]');
+if (backButton) {
+    backButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Возвращаемся к секции all
+        switchSection('all');
     });
-    </script>
+}
+   </script>
+
 </body>
 
 </html>
