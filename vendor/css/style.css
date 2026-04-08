@@ -6036,6 +6036,212 @@ ul .main-cards-link::after {
   width: 7.77vw;
 }
 
+/* STAFF */
+
+.personal-staff-more {
+  margin-left: 2.22vw;
+}
+
+.personal-staff-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.38vw;
+  border-radius: 0.69vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+  background: #F1F1F1;
+}
+
+.personal-staff-title {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.11vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  padding-bottom: 1.11vw;
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-staff-container {
+  width: 100%;
+  display: flex;
+  gap: 0.69vw;
+  padding-bottom: 1.38vw;
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-staff-container:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.personal-staff-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.69vw;
+  width: 25vw;
+}
+
+.personal-staff-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.11vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.personal-staff-subdesc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-staff-subdesc a {
+  text-decoration: none;
+  color: #BC1622;
+}
+
+.personal-staff-subdesc-widget {
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 0.27vw;
+  cursor: pointer;
+}
+
+.personal-staff-subdesc-widget:hover {
+  color: #ED2039;
+}
+
+.personal-staff-subdesc-widget:hover path {
+  stroke: #ED2039;
+}
+
+.personal-staff-subdesc-widget svg {
+  width: 0.83vw;
+  height: 0.83vw;
+  margin-top: -0.3vw;
+}
+
+.personal-staff-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.27vw;
+  width: 24.93vw;
+}
+
+.personal-staff-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-staff-desc span {
+  color: #0E0E0E;
+}
+
+.personal-staff-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.27vw;
+}
+
+.personal-staff-access {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.11vw;
+}
+
+.personal-staff-access-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  width: 6.59vw;
+  margin-top: 0.5vw;
+}
+
+.personal-staff-access-popup {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.11vw;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.88vw;
+  height: 2.22vw;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C9C9C966;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.66vw;
+  width: 1.66vw;
+  left: 0.27vw;
+  bottom: 0.27vw;
+  background-color: #C9C9C9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #BC1622;
+}
+
+input:checked + .slider::before {
+  background-color: #fff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.66vw);
+  -ms-transform: translateX(1.66vw);
+  transform: translateX(1.66vw);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 6.9vw;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 @keyframes loadingAnimation {
   from {
     width: 0%;

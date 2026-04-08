@@ -354,13 +354,13 @@
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span></a>
-            <a href="../staff" class="personal-panel-nav-link">Сотрудники<span
+            <a href="./" class="personal-panel-nav-link personal-panel-nav-link_active">Сотрудники<span
                 class="mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg></span></a>
-            <a href="./" class="personal-panel-nav-link personal-panel-nav-link_active">Объекты<span
+            <a href="../projects/" class="personal-panel-nav-link">Объекты<span
                 class="mobile"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 10L8.5 6L4.5 2" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
@@ -417,7 +417,7 @@
           </div>
         </div>
 
-        <!-- КОНТЕЙНЕР МОИ ОБЪЕКТЫ -->
+        <!-- КОНТЕЙНЕР МОИ СОТРУДНИКИ -->
 
         <div class="personal-container personal-orders personal-container_active" data-section="all">
           <a class="mobile personal-container-back" href="../"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -426,18 +426,18 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             Назад</a>
-          <p class="personal-container-title">Объекты</p>
+          <p class="personal-container-title">Сотрудники</p>
           <div class="personal-orders-widgets">
             <div class="personal-orders-history-sort">
               <a class="personal-orders-estimate-add" data-popup="popup-add"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.0013 2.66602V13.3327M2.66797 7.99935L13.3346 7.99935" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-Добавить объект</a>
+Добавить сотрудника</a>
             </div>
-            <div class="personal-search">
+            <div class="personal-search personal-search-staff">
               <form class="personal-search-line">
                 <input class="personal-search-line__input" id="smart-title-search-input"
-                  placeholder="Поиск по названию объекта" type="text">
+                  placeholder="Поиск по Email" type="text">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.803 13.8637C13.0959 14.1566 13.5708 14.1566 13.8637 13.8637C14.1566 13.5708 14.1566 13.0959 13.8637 12.803L13.3333 13.3333L12.803 13.8637ZM12 7H11.25C11.25 9.34721 9.34721 11.25 7 11.25V12V12.75C10.1756 12.75 12.75 10.1756 12.75 7H12ZM7 12V11.25C4.65279 11.25 2.75 9.34721 2.75 7H2H1.25C1.25 10.1756 3.82436 12.75 7 12.75V12ZM2 7H2.75C2.75 4.65279 4.65279 2.75 7 2.75V2V1.25C3.82436 1.25 1.25 3.82436 1.25 7H2ZM7 2V2.75C9.34721 2.75 11.25 4.65279 11.25 7H12H12.75C12.75 3.82436 10.1756 1.25 7 1.25V2ZM13.3333 13.3333L13.8637 12.803L11.0719 10.0113L10.5416 10.5416L10.0113 11.0719L12.803 13.8637L13.3333 13.3333Z"
@@ -445,351 +445,110 @@
                 </svg>
               </form>
             </div>
-            <div class="mobile personal-date-btn">
-              <img src="../../img/date.svg" alt="date" />
-            </div>
-            <div class="personal-date-overlay"></div>
-            <div class="personal-date-sort">
-              <p class="personal-date-sort-desc personal-date-sort-desc-projects">Дата <br class="pc pc-1440">создания объекта:</p>
-              <div class="datepicker-container">
-                <div class="personal-date-wrapper">
-                  <input
-                    class="personal-date-input"
-                    placeholder="От"
-                    type="text"
-                    id="start"
-                  />
-                  <span class="date-widget">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-                <div class="datepicker" hidden>
-                  <!-- .datepicker-header -->
-                  <div class="datepicker-header">
-                    <button class="prev-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0607 16.0607L17 15L12 20L17 25L18.0607 23.9393L14.1213 20L18.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-                    <button class="prev">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
 
-                    </button>
-
-                    <div class="month-year-display">
-                      <span class="month-display"></span>
-                      <span class="year-display"></span>
-                    </div>
-
-                    <button class="next">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_31000" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_31000)"/>
-                      </svg>
-                    </button>
-                    <button class="next-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_30997" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_30997)"/>
-                        <mask id="path-3-inside-2_609_30997" fill="white">
-                          <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z"/>
-                        </mask>
-                        <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z" fill="white"/>
-                        <path d="M9.93566 20L10.9963 21.0607L12.057 20L10.9963 18.9393L9.93566 20ZM4.93566 15L5.99632 13.9393L4.93566 12.8787L3.875 13.9393L4.93566 15ZM4.93566 25L3.875 26.0607L4.93566 27.1213L5.99632 26.0607L4.93566 25ZM3.875 16.0607L2.81434 15L1.75368 16.0607L2.81434 17.1213L3.875 16.0607ZM3.875 23.9393L2.81434 22.8787L1.75368 23.9393L2.81434 25L3.875 23.9393ZM7.81434 20L8.875 21.0607L9.93566 20L8.875 18.9393L7.81434 20ZM9.93566 20L10.9963 18.9393L5.99632 13.9393L4.93566 15L3.875 16.0607L8.875 21.0607L9.93566 20ZM4.93566 25L5.99632 26.0607L10.9963 21.0607L9.93566 20L8.875 18.9393L3.875 23.9393L4.93566 25ZM4.93566 15L3.875 13.9393L2.81434 15L3.875 16.0607L4.93566 17.1213L5.99632 16.0607L4.93566 15ZM3.875 23.9393L2.81434 25L3.875 26.0607L4.93566 25L5.99632 23.9393L4.93566 22.8787L3.875 23.9393ZM7.81434 20L6.75368 18.9393L2.81434 22.8787L3.875 23.9393L4.93566 25L8.875 21.0607L7.81434 20ZM3.875 16.0607L2.81434 17.1213L6.75368 21.0607L7.81434 20L8.875 18.9393L4.93566 15L3.875 16.0607Z" fill="#AAAAAA" mask="url(#path-3-inside-2_609_30997)"/>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <!-- .days -->
-                  <div class="days">
-                    <span>Пн</span>
-                    <span>Вт</span>
-                    <span>Ср</span>
-                    <span>Чт</span>
-                    <span>Пт</span>
-                    <span>Сб</span>
-                    <span>Вс</span>
-                  </div>
-
-                  <!-- .dates -->
-                  <div class="dates"></div>
-                </div>
-              </div>
-              <span>-</span>
-
-              <div class="datepicker-container">
-                <div class="personal-date-wrapper">
-                  <input
-                    class="personal-date-input"
-                    type="text"
-                    placeholder="До"
-                    id="end"
-                  />
-                  <span class="date-widget">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                </div>
-                <div class="datepicker datepicker-till" hidden>
-                  <div class="datepicker-header">
-                    <button class="prev-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0607 16.0607L17 15L12 20L17 25L18.0607 23.9393L14.1213 20L18.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-                    <button class="prev">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0607 16.0607L11 15L6 20L11 25L12.0607 23.9393L8.12132 20L12.0607 16.0607Z" fill="#AAAAAA"/>
-                      </svg>
-                    </button>
-
-                    <div class="month-year-display">
-                      <span class="month-display"></span>
-                      <span class="year-display"></span>
-                    </div>
-
-                    <button class="next">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_31000" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_31000)"/>
-                      </svg>
-                    </button>
-                    <button class="next-year">
-                      <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1_609_30997" fill="white">
-                          <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z"/>
-                        </mask>
-                        <path d="M10.9982 15L15.9982 20L10.9982 25L9.9375 23.9393L13.8768 20L9.9375 16.0607L10.9982 15Z" fill="white"/>
-                        <path d="M15.9982 20L17.0588 21.0607L18.1195 20L17.0588 18.9393L15.9982 20ZM10.9982 15L12.0588 13.9393L10.9982 12.8787L9.9375 13.9393L10.9982 15ZM10.9982 25L9.9375 26.0607L10.9982 27.1213L12.0588 26.0607L10.9982 25ZM9.9375 16.0607L8.87684 15L7.81618 16.0607L8.87684 17.1213L9.9375 16.0607ZM9.9375 23.9393L8.87684 22.8787L7.81618 23.9393L8.87684 25L9.9375 23.9393ZM13.8768 20L14.9375 21.0607L15.9982 20L14.9375 18.9393L13.8768 20ZM15.9982 20L17.0588 18.9393L12.0588 13.9393L10.9982 15L9.9375 16.0607L14.9375 21.0607L15.9982 20ZM10.9982 25L12.0588 26.0607L17.0588 21.0607L15.9982 20L14.9375 18.9393L9.9375 23.9393L10.9982 25ZM10.9982 15L9.9375 13.9393L8.87684 15L9.9375 16.0607L10.9982 17.1213L12.0588 16.0607L10.9982 15ZM9.9375 23.9393L8.87684 25L9.9375 26.0607L10.9982 25L12.0588 23.9393L10.9982 22.8787L9.9375 23.9393ZM13.8768 20L12.8162 18.9393L8.87684 22.8787L9.9375 23.9393L10.9982 25L14.9375 21.0607L13.8768 20ZM9.9375 16.0607L8.87684 17.1213L12.8162 21.0607L13.8768 20L14.9375 18.9393L10.9982 15L9.9375 16.0607Z" fill="#AAAAAA" mask="url(#path-1-inside-1_609_30997)"/>
-                        <mask id="path-3-inside-2_609_30997" fill="white">
-                          <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z"/>
-                        </mask>
-                        <path d="M4.93566 15L9.93566 20L4.93566 25L3.875 23.9393L7.81434 20L3.875 16.0607L4.93566 15Z" fill="white"/>
-                        <path d="M9.93566 20L10.9963 21.0607L12.057 20L10.9963 18.9393L9.93566 20ZM4.93566 15L5.99632 13.9393L4.93566 12.8787L3.875 13.9393L4.93566 15ZM4.93566 25L3.875 26.0607L4.93566 27.1213L5.99632 26.0607L4.93566 25ZM3.875 16.0607L2.81434 15L1.75368 16.0607L2.81434 17.1213L3.875 16.0607ZM3.875 23.9393L2.81434 22.8787L1.75368 23.9393L2.81434 25L3.875 23.9393ZM7.81434 20L8.875 21.0607L9.93566 20L8.875 18.9393L7.81434 20ZM9.93566 20L10.9963 18.9393L5.99632 13.9393L4.93566 15L3.875 16.0607L8.875 21.0607L9.93566 20ZM4.93566 25L5.99632 26.0607L10.9963 21.0607L9.93566 20L8.875 18.9393L3.875 23.9393L4.93566 25ZM4.93566 15L3.875 13.9393L2.81434 15L3.875 16.0607L4.93566 17.1213L5.99632 16.0607L4.93566 15ZM3.875 23.9393L2.81434 25L3.875 26.0607L4.93566 25L5.99632 23.9393L4.93566 22.8787L3.875 23.9393ZM7.81434 20L6.75368 18.9393L2.81434 22.8787L3.875 23.9393L4.93566 25L8.875 21.0607L7.81434 20ZM3.875 16.0607L2.81434 17.1213L6.75368 21.0607L7.81434 20L8.875 18.9393L4.93566 15L3.875 16.0607Z" fill="#AAAAAA" mask="url(#path-3-inside-2_609_30997)"/>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="days">
-                    <span>Пн</span>
-                    <span>Вт</span>
-                    <span>Ср</span>
-                    <span>Чт</span>
-                    <span>Пт</span>
-                    <span>Сб</span>
-                    <span>Вс</span>
-                  </div>
-
-                  <div class="dates"></div>
-                </div>
-              </div>
-
-              <button type="button" class="mobile personal-date-button personal-date-button-confirm">Применить</button>
-              <button type="button" class="mobile personal-date-button personal-date-button-cancel">Отмена</button>
-            </div>
+            <a class="personal-orders-widgets-more personal-staff-more"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_822_78510" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="18">
+<path d="M1.25 1.25H18.75V18.75H1.25V1.25Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_822_78510)">
+<path d="M17.139 8.90234L16.5898 8.89964" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.40851 8.90234L2.85938 8.89964" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M15.025 3.83047L14.6367 4.21875" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.36488 13.5844L4.97656 13.9727" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.97656 3.83047L5.36488 4.21875" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.6367 13.5844L15.025 13.9727" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<mask id="mask1_822_78510" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="18">
+<path d="M1.25 1.25H18.75V18.75H1.25V1.25Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_822_78510)">
+<path d="M12.194 14.944H7.80078V16.0423C7.80078 16.6489 8.29252 17.1406 8.89908 17.1406H11.0957C11.7023 17.1406 12.194 16.6489 12.194 16.0423V14.944Z" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 2.3125V1.76337" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 14.9434V11.6485" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 18.2383V17.14" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.80209 14.9433C7.80209 13.7631 7.38626 12.6207 6.62765 11.7166C5.98927 10.9549 5.60547 9.97326 5.60547 8.90268C5.60547 6.47801 7.57401 4.50943 9.99872 4.50943C12.4234 4.50943 14.3919 6.47801 14.3919 8.90268C14.3919 9.97326 14.0081 10.9549 13.3708 11.7175C12.6124 12.6213 12.1966 13.7634 12.1966 14.9433L12.1953 14.9434H7.80209V14.9433Z" stroke="#BC1622" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+Подробнее о разделе «Сотрудники»</a>
+            
           </div>
 
           <!-- ВСЕ -->
           <div class="personal-orders-container personal-orders-container_opened" data-container="all">
+            
+            <div class="personal-staff-box">
+              <p class="personal-staff-title">Все сотрудники</p>
 
-            <div class="personal-orders-box">
-
-              <div class="personal-orders-box-number personal-projects-box-number">
-                <p class="personal-estimate-desc personal-estimate-box-date">29.01.2026</p>
-                <p class="personal-orders-box-title">ЖК Dream Towers</p>
-                <p class="personal-estimate-desc pc pc-1440">Сметы</p>
-                <a class="personal-orders-box-link pc pc-1440">Черновые работы Dream Towers<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-                  <a class="personal-orders-box-link pc pc-1440">Коммуникации Dream Towers<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
+              <div class="personal-staff-container">
+                <div class="personal-staff-main">
+                  <p class="personal-staff-name">Калинин Иван Андреевич</p>
+                  <p class="personal-staff-subdesc">Для редактирования перейдите в раздел <a href="../details/">«Данные аккаунта»</a></p>
+                </div>
+                <div class="personal-staff-info">
+                  <p class="personal-staff-desc">Должность:<span> владелец</span></p>
+                  <p class="personal-staff-desc">Email:<span> stroy.shop@mail.ru</span></p>
+                  <p class="personal-staff-desc">Телефон:<span> +7 (960) 809-01-30</span></p>
+                </div>
               </div>
 
-              <div class="personal-orders-box-delivery personal-projects-box-delivery">
-                <p class="personal-estimate-desc">Адрес</p>
-                <p class="personal-orders-box-title personal-projects-box-address">Москва, проспект Андропова, 18, кв 9</p>
-                <p class="personal-estimate-desc mobile">Сметы</p>
-                <a class="personal-orders-box-link mobile">Черновые работы Dream Towers<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-                  <a class="personal-orders-box-link mobile">Коммуникации Dream Towers<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
+              <div class="personal-staff-container">
+                <div class="personal-staff-main">
+                  <p class="personal-staff-name">Иванова Виктория Дмитриевна</p>
+                  <div class="personal-staff-widgets">
+                    <a class="personal-staff-subdesc personal-staff-subdesc-widget"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8L1.64645 7.64645L1.5 7.79289V8H2ZM8.5 1.5L8.85355 1.14645C8.65829 0.951184 8.34171 0.951184 8.14645 1.14645L8.5 1.5ZM10.5 3.5L10.8536 3.85355C11.0488 3.65829 11.0488 3.34171 10.8536 3.14645L10.5 3.5ZM4 10V10.5H4.20711L4.35355 10.3536L4 10ZM2 10H1.5C1.5 10.2761 1.72386 10.5 2 10.5V10ZM2 8L2.35355 8.35355L8.85355 1.85355L8.5 1.5L8.14645 1.14645L1.64645 7.64645L2 8ZM8.5 1.5L8.14645 1.85355L10.1464 3.85355L10.5 3.5L10.8536 3.14645L8.85355 1.14645L8.5 1.5ZM10.5 3.5L10.1464 3.14645L3.64645 9.64645L4 10L4.35355 10.3536L10.8536 3.85355L10.5 3.5ZM4 10V9.5H2V10V10.5H4V10ZM2 10H2.5V8H2H1.5V10H2ZM7 3L6.64645 3.35355L8.64645 5.35355L9 5L9.35355 4.64645L7.35355 2.64645L7 3Z" fill="#BC1622"/>
+</svg>
+Редактировать данные</a>
+                    <a class="personal-staff-subdesc personal-staff-subdesc-widget personal-staff-delete"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 3V9C9 9.55228 8.55228 10 8 10H4C3.44772 10 3 9.55228 3 9V3M7.5 3V2.5C7.5 1.94772 7.05228 1.5 6.5 1.5H5.5C4.94772 1.5 4.5 1.94772 4.5 2.5V3M2 3H10M5 5V8M7 5V8" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Удалить сотрудника</a>
+                  </div>
+                </div>
+                <div class="personal-staff-info">
+                  <p class="personal-staff-desc">Должность:<span> старший менеджер</span></p>
+                  <p class="personal-staff-desc">Email:<span> Victoria_stroy.shop@mail.ru</span></p>
+                  <p class="personal-staff-desc">Телефон:<span> +7 (960) 809-26-26</span></p>
+                </div>
+                <div class="personal-staff-access">
+                  <p class="personal-staff-access-text">Дать доступ <br>в Личный кабинет</p>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
               </div>
-              
 
-              <div class="personal-estimate-box-widgets">
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                Удалить</a>
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-                  </svg>
-                Поделится </a>
+              <div class="personal-staff-container">
+                <div class="personal-staff-main">
+                  <p class="personal-staff-name">Савенкова Татьяна Сергеевна</p>
+                  <div class="personal-staff-widgets">
+                    <a class="personal-staff-subdesc personal-staff-subdesc-widget"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8L1.64645 7.64645L1.5 7.79289V8H2ZM8.5 1.5L8.85355 1.14645C8.65829 0.951184 8.34171 0.951184 8.14645 1.14645L8.5 1.5ZM10.5 3.5L10.8536 3.85355C11.0488 3.65829 11.0488 3.34171 10.8536 3.14645L10.5 3.5ZM4 10V10.5H4.20711L4.35355 10.3536L4 10ZM2 10H1.5C1.5 10.2761 1.72386 10.5 2 10.5V10ZM2 8L2.35355 8.35355L8.85355 1.85355L8.5 1.5L8.14645 1.14645L1.64645 7.64645L2 8ZM8.5 1.5L8.14645 1.85355L10.1464 3.85355L10.5 3.5L10.8536 3.14645L8.85355 1.14645L8.5 1.5ZM10.5 3.5L10.1464 3.14645L3.64645 9.64645L4 10L4.35355 10.3536L10.8536 3.85355L10.5 3.5ZM4 10V9.5H2V10V10.5H4V10ZM2 10H2.5V8H2H1.5V10H2ZM7 3L6.64645 3.35355L8.64645 5.35355L9 5L9.35355 4.64645L7.35355 2.64645L7 3Z" fill="#BC1622"/>
+</svg>
+Редактировать данные</a>
+                    <a class="personal-staff-subdesc personal-staff-subdesc-widget personal-staff-delete"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 3V9C9 9.55228 8.55228 10 8 10H4C3.44772 10 3 9.55228 3 9V3M7.5 3V2.5C7.5 1.94772 7.05228 1.5 6.5 1.5H5.5C4.94772 1.5 4.5 1.94772 4.5 2.5V3M2 3H10M5 5V8M7 5V8" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Удалить сотрудника</a>
+                  </div>
+                </div>
+                <div class="personal-staff-info">
+                  <p class="personal-staff-desc">Должность:<span> менеджер</span></p>
+                  <p class="personal-staff-desc">Email:<span> Savenkova_stroy.shop@mail.ru</span></p>
+                  <p class="personal-staff-desc">Телефон:<span> +7 (937) 101-96-20</span></p>
+                </div>
+                <div class="personal-staff-access">
+                  <p class="personal-staff-access-text">Дать доступ <br>в Личный кабинет</p>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
               </div>
             </div>
 
-            <div class="personal-orders-box">
-
-              <div class="personal-orders-box-number personal-projects-box-number">
-                <p class="personal-estimate-desc personal-estimate-box-date">29.01.2026</p>
-                <p class="personal-orders-box-title">Частный дом в Покровском</p>
-                <p class="personal-estimate-desc pc pc-1440">Сметы</p>
-                <a class="personal-orders-box-link pc pc-1440">Отделочные работы Покровское 351<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-                  <a class="personal-orders-box-link pc pc-1440">Коммуникации Покровское 351<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-              </div>
-
-              <div class="personal-orders-box-delivery personal-projects-box-delivery">
-                <p class="personal-estimate-desc">Адрес</p>
-                <p class="personal-orders-box-title personal-projects-box-address">КП Новорижский, 351, деревня Покровское, муниципальный округ Истра, Московская область</p>
-                <p class="personal-estimate-desc mobile">Сметы</p>
-                <a class="personal-orders-box-link mobile">Отделочные работы Покровское 351<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-                  <a class="personal-orders-box-link mobile">Коммуникации Покровское 351<svg width="8" height="8"
-                    viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_212_2981)">
-                      <path
-                        d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-                        fill="#BC1622" />
-                      <path
-                        d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-                        fill="#BC1622" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_212_2981">
-                        <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-                      </clipPath>
-                    </defs>
-                  </svg></a>
-              </div>
-
-              <div class="personal-estimate-box-widgets">
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                Удалить</a>
-                <a class="personal-estimate-box-widget personal-estimate-box-widget-share"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-                  </svg>
-                Поделится </a>
-              </div>
-            </div>
           </div>
-
       </div>
         </div>
       </div>
@@ -1073,11 +832,11 @@
       <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       </div>
-      <p class="popup-title">Удалить объект</p>
-      <p class="popup-desc">Вы уверены, что хотите удалить объект «Частный дом в Покровском»? </p>
+      <p class="popup-title">Удалить сотрудника</p>
+      <p class="popup-desc">Вы уверены, что хотите удалить сотрудника «Савенкова Татьяна Сергеевна»?</p>
       <div class="popup_details-row">
         <button class="popup_details-btn popup_details-btn-accept">Удалить </button>
-        <button class="popup_details-btn popup_details-btn-cancel">Остаться</button>
+        <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
       </div>
     </div>
   </div>
@@ -1088,9 +847,18 @@
       <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       </div>
-      <p class="popup-title"> Добавить объект</p>
-      <input class="popup-input" type="text" placeholder="Название объекта" />
-      <input class="popup-input" type="text" placeholder="Адрес" />
+      <p class="popup-title">Добавить сотрудника</p>
+      <input class="popup-input" type="text" placeholder="ФИО" />
+      <input class="popup-input" type="text" placeholder="Должность" />
+      <input class="popup-input" type="text" placeholder="+7 (___) ___-__-__" />
+      <input class="popup-input" type="text" placeholder="Email" />
+      <div class="personal-staff-access-popup">              
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        <p class="personal-staff-access-text">Дать доступ <br>в Личный кабинет</p>
+      </div>
       <div class="popup_details-row">
         <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
         <button class="popup_details-btn popup_details-btn-accept">Сохранить</button>
@@ -1356,567 +1124,7 @@
     </script>
 
     <script>
-      // ==================== КАЛЕНДАРЬ ====================
-function initDatepicker(container) {
-  const datepicker = container.querySelector(".datepicker");
-  const dateInput = container.querySelector(".personal-date-input");
-  const nextBtn = datepicker.querySelector(".next");
-  const prevBtn = datepicker.querySelector(".prev");
-  const nextYearBtn = datepicker.querySelector(".next-year");
-  const prevYearBtn = datepicker.querySelector(".prev-year");
-  const dates = datepicker.querySelector(".dates");
-  const monthDisplay = datepicker.querySelector(".month-display");
-  const yearDisplay = datepicker.querySelector(".year-display");
-  const dateWidget = container.querySelector(".date-widget");
-
-  const monthNames = [
-    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-  ];
-
-  let currentDate = new Date();
-  let year = currentDate.getFullYear();
-  let month = currentDate.getMonth();
-  let selectedDate = null;
-
-  // Функция для закрытия всех календарей
-  function closeAllDatepickers() {
-    const allDatepickers = document.querySelectorAll('.datepicker');
-    allDatepickers.forEach(dp => {
-      dp.hidden = true;
-    });
-  }
-
-  // Форматирование даты в дд.мм.гггг
-  function formatDate(date) {
-    const day = date.getDate().toString().padStart(2, '0');
-    const monthNum = (date.getMonth() + 1).toString().padStart(2, '0');
-    const yearNum = date.getFullYear();
-    return `${day}.${monthNum}.${yearNum}`;
-  }
-
-  // Парсинг даты из строки дд.мм.гггг
-  function parseDate(dateStr) {
-    if (!dateStr) return null;
-    const parts = dateStr.split('.');
-    if (parts.length === 3) {
-      const day = parseInt(parts[0]);
-      const month = parseInt(parts[1]) - 1;
-      const year = parseInt(parts[2]);
-      return new Date(year, month, day);
-    }
-    return null;
-  }
-
-  // show datepicker
-  const showDatepicker = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    
-    // Закрываем все другие календари
-    closeAllDatepickers();
-    
-    // Сбрасываем год и месяц на текущую выбранную дату или сегодня
-    if (dateInput.value) {
-      const parsed = parseDate(dateInput.value);
-      if (parsed) {
-        year = parsed.getFullYear();
-        month = parsed.getMonth();
-        selectedDate = parsed;
-      } else {
-        year = currentDate.getFullYear();
-        month = currentDate.getMonth();
-        selectedDate = currentDate;
-      }
-    } else {
-      year = currentDate.getFullYear();
-      month = currentDate.getMonth();
-      selectedDate = currentDate;
-    }
-    
-    displayDates();
-    datepicker.hidden = false;
-  };
-
-  // Обработчик выбора даты
-  const handleDateClick = (e) => {
-    const button = e.target;
-    if (button.disabled) return;
-    
-    // remove the 'selected' class from other buttons
-    const selected = dates.querySelector(".selected");
-    if (selected) selected.classList.remove("selected");
-    
-    // add the 'selected' class to current button
-    button.classList.add("selected");
-    
-    // set the selected date
-    selectedDate = new Date(year, month, parseInt(button.textContent));
-    
-    // format date as dd.mm.yyyy
-    const formattedDate = formatDate(selectedDate);
-    
-    // set the selected date to date input
-    dateInput.value = formattedDate;
-    
-    // update date widget icon
-    updateDateWidgetIcon(container, formattedDate);
-    
-    // hide datepicker
-    datepicker.hidden = true;
-    
-    // trigger filter
-    filterEstimates();
-  };
-
-  // render the dates in the calendar interface
-  const displayDates = () => {
-    // Обновляем заголовок
-    monthDisplay.textContent = monthNames[month];
-    yearDisplay.textContent = year;
-    
-    dates.innerHTML = "";
-    
-    const firstDayOfMonth = new Date(year, month, 1);
-    let firstDayIndex = firstDayOfMonth.getDay();
-    let startDay = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
-    
-    const lastOfPrevMonth = new Date(year, month, 0);
-    const lastDayPrevMonth = lastOfPrevMonth.getDate();
-    
-    // Дни предыдущего месяца
-    for (let i = startDay - 1; i >= 0; i--) {
-      const day = lastDayPrevMonth - i;
-      const button = createButton(day, true);
-      dates.appendChild(button);
-    }
-    
-    // Дни текущего месяца
-    const lastOfMonth = new Date(year, month + 1, 0);
-    for (let i = 1; i <= lastOfMonth.getDate(); i++) {
-      const button = createButton(i, false);
-      button.addEventListener("click", handleDateClick);
-      dates.appendChild(button);
-    }
-    
-    // Дни следующего месяца
-    const totalDaysDisplayed = startDay + lastOfMonth.getDate();
-    const remainingCells = 42 - totalDaysDisplayed;
-    
-    for (let i = 1; i <= remainingCells; i++) {
-      const button = createButton(i, true);
-      dates.appendChild(button);
-    }
-  };
-  
-  const createButton = (text, isDisabled = false) => {
-    const button = document.createElement("button");
-    button.textContent = text;
-    button.disabled = isDisabled;
-    
-    if (!isDisabled) {
-      const buttonDate = new Date(year, month, text);
-      const today = buttonDate.toDateString() === new Date().toDateString();
-      
-      // Проверяем, совпадает ли с выбранной датой
-      let isSelected = false;
-      if (dateInput.value) {
-        const selectedDateFromInput = parseDate(dateInput.value);
-        if (selectedDateFromInput && 
-            selectedDateFromInput.getFullYear() === year &&
-            selectedDateFromInput.getMonth() === month &&
-            selectedDateFromInput.getDate() === text) {
-          isSelected = true;
-        }
-      }
-      
-      button.classList.toggle("today", today);
-      button.classList.toggle("selected", isSelected);
-    }
-    return button;
-  };
-  
-  // Добавляем обработчики событий
-  dateInput.addEventListener("click", showDatepicker);
-  
-  if (dateWidget) {
-    dateWidget.addEventListener("click", showDatepicker);
-  }
-  
-  // Навигация
-  nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (month === 11) year++;
-    month = (month + 1) % 12;
-    displayDates();
-  });
-
-  prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (month === 0) year--;
-    month = (month - 1 + 12) % 12;
-    displayDates();
-  });
-
-  nextYearBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    year++;
-    displayDates();
-  });
-
-  prevYearBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    year--;
-    displayDates();
-  });
-  
-  // Закрытие при клике вне календаря
-  document.addEventListener("click", (e) => {
-    if (!container.contains(e.target)) {
-      datepicker.hidden = true;
-    }
-  });
-  
-  // Если в инпуте уже есть значение, обновляем иконку
-  if (dateInput.value) {
-    updateDateWidgetIcon(container, dateInput.value);
-  }
-  
-  displayDates();
-}
-
-// ==================== ФУНКЦИИ ДЛЯ РАБОТЫ С ДАТАМИ ====================
-function parseDateFromString(dateStr) {
-  if (!dateStr) return null;
-  const parts = dateStr.split('.');
-  if (parts.length === 3) {
-    const day = parseInt(parts[0]);
-    const month = parseInt(parts[1]) - 1;
-    const year = parseInt(parts[2]);
-    return new Date(year, month, day);
-  }
-  return null;
-}
-
-function filterEstimates() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  const startDateValue = startDateInput ? startDateInput.value : '';
-  const endDateValue = endDateInput ? endDateInput.value : '';
-  
-  const startDate = startDateValue ? parseDateFromString(startDateValue) : null;
-  const endDate = endDateValue ? parseDateFromString(endDateValue) : null;
-  
-  // Находим активный контейнер со сметами
-  const activeContainer = document.querySelector('.personal-orders-container_opened');
-  if (!activeContainer) return;
-  
-  const estimates = activeContainer.querySelectorAll('.personal-orders-box');
-  let hasVisibleEstimates = false;
-  
-  estimates.forEach(estimate => {
-    const dateElement = estimate.querySelector('.personal-estimate-box-date');
-    if (!dateElement) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-      return;
-    }
-    
-    const dateText = dateElement.textContent.trim();
-    const estimateDate = parseDateFromString(dateText);
-    
-    // Если не удалось распарсить дату, показываем элемент
-    if (!estimateDate) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-      return;
-    }
-    
-    let isVisible = true;
-    
-    // Фильтр "От" - показываем если дата сметы >= startDate
-    if (startDate) {
-      if (estimateDate < startDate) {
-        isVisible = false;
-      }
-    }
-    
-    // Фильтр "До" - показываем если дата сметы <= endDate
-    if (endDate && isVisible) {
-      if (estimateDate > endDate) {
-        isVisible = false;
-      }
-    }
-    
-    if (isVisible) {
-      estimate.style.display = '';
-      hasVisibleEstimates = true;
-    } else {
-      estimate.style.display = 'none';
-    }
-  });
-  
-  // Показываем сообщение "нет результатов"
-  let noResultsMsg = activeContainer.querySelector('.no-results');
-  if (!hasVisibleEstimates && estimates.length > 0) {
-    if (!noResultsMsg) {
-      noResultsMsg = document.createElement('div');
-      noResultsMsg.className = 'no-results';
-      noResultsMsg.textContent = 'Объектов в выбранном периоде не найдено';
-      activeContainer.appendChild(noResultsMsg);
-    } else {
-      noResultsMsg.style.display = '';
-    }
-  } else if (noResultsMsg) {
-    noResultsMsg.style.display = 'none';
-  }
-}
-
-function resetFilter() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  if (startDateInput) {
-    startDateInput.value = '';
-    updateDateWidgetIcon(startDateInput.closest('.datepicker-container'), '');
-  }
-  if (endDateInput) {
-    endDateInput.value = '';
-    updateDateWidgetIcon(endDateInput.closest('.datepicker-container'), '');
-  }
-  
-  // Показываем все сметы во всех контейнерах
-  const allContainers = document.querySelectorAll('.personal-orders-container');
-  allContainers.forEach(container => {
-    const estimates = container.querySelectorAll('.personal-orders-box');
-    estimates.forEach(estimate => {
-      estimate.style.display = '';
-    });
-    
-    const noResultsMsg = container.querySelector('.no-results');
-    if (noResultsMsg) {
-      noResultsMsg.style.display = 'none';
-    }
-  });
-}
-
-function updateDateWidgetIcon(container, inputValue) {
-  if (!container) return;
-  
-  const dateWidget = container.querySelector('.date-widget');
-  if (!dateWidget) return;
-  
-  if (inputValue && inputValue.trim() !== '') {
-    // Меняем на иконку крестика
-    dateWidget.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.0807 2.91666L2.91406 11.0833M2.91407 2.91666L11.0807 11.0833" stroke="#495A64" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-    dateWidget.classList.add('date-widget-cancel');
-    
-    // Добавляем обработчик для очистки
-    const newWidget = dateWidget.cloneNode(true);
-    dateWidget.parentNode.replaceChild(newWidget, dateWidget);
-    
-    const updatedWidget = container.querySelector('.date-widget');
-    const dateInput = container.querySelector('.personal-date-input');
-    
-    updatedWidget.addEventListener('click', (e) => {
-      e.stopPropagation();
-      dateInput.value = '';
-      updateDateWidgetIcon(container, '');
-      filterEstimates();
-    });
-  } else {
-    // Возвращаем иконку календаря
-    dateWidget.innerHTML = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.7526 1.75V4.08333M5.2526 1.75V4.08333M2.33594 6.41667H11.6693M11.6693 6.41667V11.0833C11.6693 11.7277 11.1469 12.25 10.5026 12.25H3.5026C2.85827 12.25 2.33594 11.7277 2.33594 11.0833V4.08333C2.33594 3.439 2.85827 2.91667 3.5026 2.91667H10.5026C11.1469 2.91667 11.6693 3.439 11.6693 4.08333V6.41667Z" stroke="#AAAAAA" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-    dateWidget.classList.remove('date-widget-cancel');
-  }
-}
-
-// ==================== МОБИЛЬНЫЕ ФИЛЬТРЫ ====================
-function openFilterModal() {
-  const filterSort = document.querySelector('.personal-date-sort');
-  const overlay = document.querySelector('.personal-date-overlay');
-  
-  if (filterSort) filterSort.classList.add('personal-date-sort_opened');
-  if (overlay) overlay.classList.add('personal-date-overlay_active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeFilterModal() {
-  const filterSort = document.querySelector('.personal-date-sort');
-  const overlay = document.querySelector('.personal-date-overlay');
-  
-  if (filterSort) filterSort.classList.remove('personal-date-sort_opened');
-  if (overlay) overlay.classList.remove('personal-date-overlay_active');
-  document.body.style.overflow = '';
-}
-
-function applyFilterAndClose() {
-  filterEstimates();
-  closeFilterModal();
-}
-
-function cancelFilterAndClose() {
-  resetFilter();
-  closeFilterModal();
-}
-
-function initMobileFilters() {
-  const dateBtn = document.querySelector('.personal-date-btn');
-  const overlay = document.querySelector('.personal-date-overlay');
-  const confirmBtn = document.querySelector('.personal-date-button-confirm');
-  const cancelBtn = document.querySelector('.personal-date-button-cancel');
-  
-  if (dateBtn) {
-    dateBtn.removeEventListener('click', openFilterModal);
-    dateBtn.addEventListener('click', openFilterModal);
-  }
-  
-  if (overlay) {
-    overlay.removeEventListener('click', cancelFilterAndClose);
-    overlay.addEventListener('click', cancelFilterAndClose);
-  }
-  
-  if (confirmBtn) {
-    confirmBtn.removeEventListener('click', applyFilterAndClose);
-    confirmBtn.addEventListener('click', applyFilterAndClose);
-  }
-  
-  if (cancelBtn) {
-    cancelBtn.removeEventListener('click', cancelFilterAndClose);
-    cancelBtn.addEventListener('click', cancelFilterAndClose);
-  }
-  
-  document.removeEventListener('keydown', handleEscapeKey);
-  document.addEventListener('keydown', handleEscapeKey);
-  
-  function handleEscapeKey(e) {
-    const filterSortEl = document.querySelector('.personal-date-sort');
-    if (e.key === 'Escape' && filterSortEl && filterSortEl.classList.contains('personal-date-sort_opened')) {
-      cancelFilterAndClose();
-    }
-  }
-}
-
-function initDesktopFilters() {
-  const startDateInput = document.getElementById('start');
-  const endDateInput = document.getElementById('end');
-  
-  const handleDateChange = () => {
-    filterEstimates();
-  };
-  
-  if (startDateInput) {
-    startDateInput.removeEventListener('change', handleDateChange);
-    startDateInput.addEventListener('change', handleDateChange);
-  }
-  
-  if (endDateInput) {
-    endDateInput.removeEventListener('change', handleDateChange);
-    endDateInput.addEventListener('change', handleDateChange);
-  }
-}
-
-// ==================== ПЕРЕКЛЮЧЕНИЕ РАЗДЕЛОВ ====================
-function initSectionSwitcher() {
-  const ordersMoreLinks = document.querySelectorAll('.personal-orders-box-link');
-  const containers = document.querySelectorAll('.personal-container');
-  const backButton = document.querySelector('.personal-container-back');
-
-  function activateSection(sectionId) {
-    containers.forEach(container => {
-      container.classList.remove('personal-container_active');
-    });
-
-    const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-    if (targetContainer) {
-      targetContainer.classList.add('personal-container_active');
-    }
-  }
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  ordersMoreLinks.forEach(link => {
-    link.removeEventListener('click', link._handler);
-    const handler = function (e) {
-      e.preventDefault();
-      const sectionId = this.dataset.section;
-      activateSection(sectionId);
-      scrollToTop();
-    };
-    link._handler = handler;
-    link.addEventListener('click', handler);
-  });
-
-}
-
-// ==================== ПОИСК СМЕТ ====================
-function initSearchFilter() {
-  const searchInput = document.querySelector('.personal-search-line__input');
-  
-  if (!searchInput) return;
-  
-  const handleSearch = () => {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const activeContainer = document.querySelector('.personal-orders-container_opened');
-    
-    if (!activeContainer) return;
-    
-    const estimates = activeContainer.querySelectorAll('.personal-orders-box');
-    let hasVisibleEstimates = false;
-    
-    estimates.forEach(estimate => {
-      const titleElement = estimate.querySelector('.personal-orders-box-title');
-      if (!titleElement) return;
-      
-      const title = titleElement.textContent.toLowerCase();
-      
-      if (searchTerm === '' || title.includes(searchTerm)) {
-        estimate.style.display = '';
-        hasVisibleEstimates = true;
-      } else {
-        estimate.style.display = 'none';
-      }
-    });
-    
-    let noResultsMsg = activeContainer.querySelector('.no-results-search');
-    if (!hasVisibleEstimates && estimates.length > 0 && searchTerm !== '') {
-      if (!noResultsMsg) {
-        noResultsMsg = document.createElement('div');
-        noResultsMsg.className = 'no-results no-results-search';
-        noResultsMsg.textContent = 'Объектов по вашему запросу не найдены';
-        activeContainer.appendChild(noResultsMsg);
-      } else {
-        noResultsMsg.style.display = '';
-      }
-    } else if (noResultsMsg) {
-      noResultsMsg.style.display = 'none';
-    }
-  };
-  
-  searchInput.removeEventListener('input', handleSearch);
-  searchInput.addEventListener('input', handleSearch);
-}
-
-// ==================== ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ТЕКУЩЕЙ ДАТЫ ====================
-function getCurrentDate() {
-  const today = new Date();
-  const day = String(today.getDate()).padStart(2, '0');
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const year = today.getFullYear();
-  return `${day}.${month}.${year}`;
-}
-
-// ==================== ФУНКЦИЯ ДЛЯ ЭСКЕЙПА HTML ====================
+      // ==================== ФУНКЦИЯ ДЛЯ ЭСКЕЙПА HTML ====================
 function escapeHtml(str) {
   if (!str) return '';
   return str
@@ -1927,128 +1135,87 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// ==================== ФУНКЦИЯ ДЛЯ СОЗДАНИЯ НОВОГО ОБЪЕКТА ====================
-function createNewProject(projectName, projectAddress) {
-  const currentDate = getCurrentDate();
-  const escapedName = escapeHtml(projectName);
-  const escapedAddress = escapeHtml(projectAddress);
+// ==================== МАСКА ДЛЯ ТЕЛЕФОНА ====================
+function initPhoneMask() {
+  const phoneInputs = document.querySelectorAll('.popup-input[placeholder="+7 (___) ___-__-__"]');
   
-  const projectBox = document.createElement('div');
-  projectBox.className = 'personal-orders-box';
-  
-  projectBox.innerHTML = `
-    <div class="personal-orders-box-number personal-projects-box-number">
-      <p class="personal-estimate-desc personal-estimate-box-date">${currentDate}</p>
-      <p class="personal-orders-box-title">${escapedName}</p>
-      <p class="personal-estimate-desc pc pc-1440">Сметы</p>
-      <a class="personal-orders-box-link pc pc-1440">Черновые работы ${escapedName}<svg width="8" height="8"
-          viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_212_2981)">
-            <path
-              d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-              fill="#BC1622" />
-            <path
-              d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-              fill="#BC1622" />
-          </g>
-          <defs>
-            <clipPath id="clip0_212_2981">
-              <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-            </clipPath>
-          </defs>
-        </svg></a>
-        <a class="personal-orders-box-link pc pc-1440">Коммуникации ${escapedName}<svg width="8" height="8"
-          viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_212_2981)">
-            <path
-              d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-              fill="#BC1622" />
-            <path
-              d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-              fill="#BC1622" />
-          </g>
-          <defs>
-            <clipPath id="clip0_212_2981">
-              <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-            </clipPath>
-          </defs>
-        </svg></a>
-    </div>
-
-    <div class="personal-orders-box-delivery personal-projects-box-delivery">
-      <p class="personal-estimate-desc">Адрес</p>
-      <p class="personal-orders-box-title personal-projects-box-address">${escapedAddress}</p>
-      <p class="personal-estimate-desc mobile">Сметы</p>
-      <a class="personal-orders-box-link mobile">Черновые работы ${escapedName}<svg width="8" height="8"
-          viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_212_2981)">
-            <path
-              d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-              fill="#BC1622" />
-            <path
-              d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-              fill="#BC1622" />
-          </g>
-          <defs>
-            <clipPath id="clip0_212_2981">
-              <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-            </clipPath>
-          </defs>
-        </svg></a>
-        <a class="personal-orders-box-link mobile">Коммуникации ${escapedName}<svg width="8" height="8"
-          viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_212_2981)">
-            <path
-              d="M7.33163 0.00176334H1.98303C1.61379 0.00176334 1.31445 0.301102 1.31445 0.670344C1.31445 1.03959 1.61379 1.33892 1.98303 1.33892H6.66305V6.01892C6.66305 6.38816 6.96239 6.6875 7.33163 6.6875C7.70087 6.6875 8.00021 6.38816 8.00021 6.01892V0.670344C8.00019 0.30108 7.70087 0.00176334 7.33163 0.00176334Z"
-              fill="#BC1622" />
-            <path
-              d="M7.29133 0.0414963C7.11267 0.0422449 6.94171 0.11446 6.81665 0.242069L0.197757 6.85425C-0.0643959 7.11426 -0.0661352 7.53758 0.193882 7.79975C0.195159 7.80105 0.196458 7.80235 0.197757 7.80363C0.458522 8.06285 0.879679 8.06285 1.14044 7.80363L7.75932 1.18476C8.02149 0.924739 8.02323 0.501425 7.76321 0.239251C7.63836 0.113359 7.46863 0.042223 7.29133 0.0414963Z"
-              fill="#BC1622" />
-          </g>
-          <defs>
-            <clipPath id="clip0_212_2981">
-              <rect width="8" height="8" fill="white" transform="matrix(1 0 0 -1 0 8)" />
-            </clipPath>
-          </defs>
-        </svg></a>
-    </div>
+  phoneInputs.forEach(input => {
+    // Удаляем старый обработчик, если есть
+    const newInput = input.cloneNode(true);
+    input.parentNode.replaceChild(newInput, input);
     
-
-    <div class="personal-estimate-box-widgets">
-      <a class="personal-estimate-box-widget personal-estimate-box-widget-delete" data-popup="popup-delete">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.0013 4V12C12.0013 12.7364 11.4043 13.3333 10.668 13.3333H5.33464C4.59826 13.3333 4.0013 12.7364 4.0013 12V4M10.0013 4V3.33333C10.0013 2.59695 9.40435 2 8.66797 2H7.33464C6.59826 2 6.0013 2.59695 6.0013 3.33333V4M2.66797 4H13.3346M6.66797 6.66667V10.6667M9.33464 6.66667V10.6667" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Удалить
-      </a>
-      <a class="personal-estimate-box-widget personal-estimate-box-widget-share">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10.2104 11.1052L5.79587 8.89793M5.7896 7.1052L10.2083 4.89585M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4ZM6 8C6 9.10457 5.10457 10 4 10C2.89543 10 2 9.10457 2 8C2 6.89543 2.89543 6 4 6C5.10457 6 6 6.89543 6 8Z" stroke="#333333" stroke-opacity="0.8" stroke-width="1.5"/>
-        </svg>
-        Поделится
-      </a>
-    </div>
-  `;
-  
-  return projectBox;
-}
-
-// ==================== ОБНОВЛЕНИЕ ОБРАБОТЧИКОВ ДЛЯ КНОПОК УДАЛЕНИЯ ====================
-function updateDeleteHandlers() {
-  const deleteButtons = document.querySelectorAll('.personal-estimate-box-widget-delete[data-popup="popup-delete"]');
-  deleteButtons.forEach(btn => {
-    // Удаляем старые обработчики, клонируя элемент
-    const newBtn = btn.cloneNode(true);
-    btn.parentNode.replaceChild(newBtn, btn);
+    newInput.addEventListener('input', function(e) {
+      let value = this.value.replace(/\D/g, ''); // Удаляем все нецифровые символы
+      
+      // Ограничиваем длину (11 цифр: 7 + 10 цифр номера)
+      if (value.length > 11) {
+        value = value.slice(0, 11);
+      }
+      
+      let formattedValue = '';
+      
+      // Форматируем номер
+      if (value.length > 0) {
+        // Первая цифра должна быть 7
+        if (value[0] !== '7') {
+          value = '7' + value;
+          if (value.length > 11) {
+            value = value.slice(0, 11);
+          }
+        }
+        
+        formattedValue = '+7';
+        
+        if (value.length > 1) {
+          formattedValue += ' (' + value.slice(1, 4);
+        }
+        if (value.length > 4) {
+          formattedValue += ') ' + value.slice(4, 7);
+        }
+        if (value.length > 7) {
+          formattedValue += '-' + value.slice(7, 9);
+        }
+        if (value.length > 9) {
+          formattedValue += '-' + value.slice(9, 11);
+        }
+      }
+      
+      this.value = formattedValue;
+    });
     
-    newBtn.addEventListener('click', (e) => {
+    // Обработка вставки из буфера обмена
+    newInput.addEventListener('paste', function(e) {
       e.preventDefault();
-      e.stopPropagation();
-      const orderBox = newBtn.closest('.personal-orders-box');
-      if (orderBox) {
-        // Сохраняем элемент для удаления в глобальную переменную или data-атрибут
-        window.elementToDelete = orderBox;
-        openPopup('popup-delete');
+      const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+      const digits = pastedText.replace(/\D/g, '');
+      if (digits) {
+        let value = digits;
+        if (value[0] !== '7' && value[0] !== '8') {
+          value = '7' + value;
+        } else if (value[0] === '8') {
+          value = '7' + value.slice(1);
+        }
+        
+        if (value.length > 11) {
+          value = value.slice(0, 11);
+        }
+        
+        let formattedValue = '+7';
+        
+        if (value.length > 1) {
+          formattedValue += ' (' + value.slice(1, 4);
+        }
+        if (value.length > 4) {
+          formattedValue += ') ' + value.slice(4, 7);
+        }
+        if (value.length > 7) {
+          formattedValue += '-' + value.slice(7, 9);
+        }
+        if (value.length > 9) {
+          formattedValue += '-' + value.slice(9, 11);
+        }
+        
+        newInput.value = formattedValue;
       }
     });
   });
@@ -2068,6 +1235,11 @@ function openPopup(popupId) {
         input.value = '';
         input.style.borderColor = '';
       });
+      // Сбрасываем чекбокс в положение "checked" по умолчанию
+      const checkbox = popup.querySelector('.switch input');
+      if (checkbox) {
+        checkbox.checked = true;
+      }
     }
   }
 }
@@ -2079,28 +1251,54 @@ function closePopup(popup) {
   }
 }
 
-// ==================== ОБРАБОТЧИК КНОПКИ ДОБАВИТЬ ОБЪЕКТ ====================
-function initAddButton() {
-  const addButton = document.querySelector('.personal-orders-estimate-add');
+// ==================== ФУНКЦИЯ ДЛЯ СОЗДАНИЯ НОВОГО СОТРУДНИКА ====================
+function createNewStaff(fullName, position, phone, email, hasAccess) {
+  const escapedName = escapeHtml(fullName);
+  const escapedPosition = escapeHtml(position);
+  const escapedPhone = escapeHtml(phone);
+  const escapedEmail = escapeHtml(email);
+  const checkedAttr = hasAccess ? 'checked' : '';
   
-  if (addButton) {
-    // Удаляем старый обработчик, если есть
-    const newAddButton = addButton.cloneNode(true);
-    addButton.parentNode.replaceChild(newAddButton, addButton);
-    
-    newAddButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log('Add button clicked'); // Для отладки
-      openPopup('popup-add');
-    });
-  } else {
-    console.log('Add button not found');
-  }
+  const staffContainer = document.createElement('div');
+  staffContainer.className = 'personal-staff-container';
+  
+  staffContainer.innerHTML = `
+    <div class="personal-staff-main">
+      <p class="personal-staff-name">${escapedName}</p>
+      <div class="personal-staff-widgets">
+        <a class="personal-staff-subdesc personal-staff-subdesc-widget personal-staff-edit" data-popup="popup-edit">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 8L1.64645 7.64645L1.5 7.79289V8H2ZM8.5 1.5L8.85355 1.14645C8.65829 0.951184 8.34171 0.951184 8.14645 1.14645L8.5 1.5ZM10.5 3.5L10.8536 3.85355C11.0488 3.65829 11.0488 3.34171 10.8536 3.14645L10.5 3.5ZM4 10V10.5H4.20711L4.35355 10.3536L4 10ZM2 10H1.5C1.5 10.2761 1.72386 10.5 2 10.5V10ZM2 8L2.35355 8.35355L8.85355 1.85355L8.5 1.5L8.14645 1.14645L1.64645 7.64645L2 8ZM8.5 1.5L8.14645 1.85355L10.1464 3.85355L10.5 3.5L10.8536 3.14645L8.85355 1.14645L8.5 1.5ZM10.5 3.5L10.1464 3.14645L3.64645 9.64645L4 10L4.35355 10.3536L10.8536 3.85355L10.5 3.5ZM4 10V9.5H2V10V10.5H4V10ZM2 10H2.5V8H2H1.5V10H2ZM7 3L6.64645 3.35355L8.64645 5.35355L9 5L9.35355 4.64645L7.35355 2.64645L7 3Z" fill="#BC1622"/>
+          </svg>
+          Редактировать данные
+        </a>
+        <a class="personal-staff-subdesc personal-staff-subdesc-widget personal-staff-delete" data-popup="popup-delete">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 3V9C9 9.55228 8.55228 10 8 10H4C3.44772 10 3 9.55228 3 9V3M7.5 3V2.5C7.5 1.94772 7.05228 1.5 6.5 1.5H5.5C4.94772 1.5 4.5 1.94772 4.5 2.5V3M2 3H10M5 5V8M7 5V8" stroke="#BC1622" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Удалить сотрудника
+        </a>
+      </div>
+    </div>
+    <div class="personal-staff-info">
+      <p class="personal-staff-desc">Должность:<span> ${escapedPosition}</span></p>
+      <p class="personal-staff-desc">Email:<span> ${escapedEmail}</span></p>
+      <p class="personal-staff-desc">Телефон:<span> ${escapedPhone}</span></p>
+    </div>
+    <div class="personal-staff-access">
+      <p class="personal-staff-access-text">Дать доступ <br>в Личный кабинет</p>
+      <label class="switch">
+        <input type="checkbox" ${checkedAttr}>
+        <span class="slider round"></span>
+      </label>
+    </div>
+  `;
+  
+  return staffContainer;
 }
 
-// ==================== ИНИЦИАЛИЗАЦИЯ ПОПАПА ДОБАВЛЕНИЯ ====================
-function initAddProjectPopup() {
+// ==================== ИНИЦИАЛИЗАЦИЯ ПОПАПА ДОБАВЛЕНИЯ СОТРУДНИКА ====================
+function initAddStaffPopup() {
   const popupAdd = document.getElementById('popup-add');
   if (!popupAdd) {
     console.log('Popup-add not found on page');
@@ -2109,15 +1307,25 @@ function initAddProjectPopup() {
   
   const acceptBtn = popupAdd.querySelector('.popup_details-btn-accept');
   const cancelBtn = popupAdd.querySelector('.popup_details-btn-cancel');
-  const nameInput = popupAdd.querySelector('.popup-input:first-of-type');
-  const addressInput = popupAdd.querySelector('.popup-input:last-of-type');
   
-  // Функция добавления объекта
-  function addNewProject() {
-    const projectName = nameInput ? nameInput.value.trim() : '';
-    const projectAddress = addressInput ? addressInput.value.trim() : '';
+  // Получаем инпуты в правильном порядке
+  const inputs = popupAdd.querySelectorAll('.popup-input');
+  const nameInput = inputs[0];      // ФИО
+  const positionInput = inputs[1];  // Должность
+  const phoneInput = inputs[2];     // Телефон
+  const emailInput = inputs[3];     // Email
+  const accessCheckbox = popupAdd.querySelector('.switch input');
+  
+  // Функция добавления сотрудника
+  function addNewStaff() {
+    const fullName = nameInput ? nameInput.value.trim() : '';
+    const position = positionInput ? positionInput.value.trim() : '';
+    let phone = phoneInput ? phoneInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const hasAccess = accessCheckbox ? accessCheckbox.checked : false;
     
-    if (!projectName) {
+    // Валидация
+    if (!fullName) {
       if (nameInput) {
         nameInput.style.borderColor = 'red';
         setTimeout(() => {
@@ -2127,46 +1335,64 @@ function initAddProjectPopup() {
       return;
     }
     
-    if (!projectAddress) {
-      if (addressInput) {
-        addressInput.style.borderColor = 'red';
+    if (!position) {
+      if (positionInput) {
+        positionInput.style.borderColor = 'red';
         setTimeout(() => {
-          addressInput.style.borderColor = '';
+          positionInput.style.borderColor = '';
         }, 2000);
       }
       return;
     }
     
-    const newProject = createNewProject(projectName, projectAddress);
+    // Проверка телефона (должен содержать 11 цифр)
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (!phone || phoneDigits.length !== 11) {
+      if (phoneInput) {
+        phoneInput.style.borderColor = 'red';
+        setTimeout(() => {
+          phoneInput.style.borderColor = '';
+        }, 2000);
+      }
+      return;
+    }
+    
+    if (!email) {
+      if (emailInput) {
+        emailInput.style.borderColor = 'red';
+        setTimeout(() => {
+          emailInput.style.borderColor = '';
+        }, 2000);
+      }
+      return;
+    }
+    
+    // Создаем нового сотрудника (телефон уже в отформатированном виде)
+    const newStaff = createNewStaff(fullName, position, phone, email, hasAccess);
     
     // Находим контейнер для добавления
-    let container = document.querySelector('.personal-orders-container[data-container="all"]');
-    
-    if (!container) {
-      container = document.querySelector('.personal-orders-container');
-    }
-    
-    if (!container) {
-      const containers = document.querySelectorAll('.personal-orders-container');
-      if (containers.length > 0) {
-        container = containers[0];
-      }
-    }
+    const container = document.querySelector('.personal-staff-box');
     
     if (container) {
-      container.appendChild(newProject);
+      // Вставляем перед последним элементом (перед закрывающим div)
+      container.appendChild(newStaff);
       
-      // Обновляем обработчики для новых кнопок удаления
-      updateDeleteHandlers();
+      // Обновляем обработчики для новых кнопок удаления и редактирования
+      updateStaffDeleteHandlers();
+      updateStaffEditHandlers();
+      initToggleHandlers();
       
       // Очищаем инпуты
       if (nameInput) nameInput.value = '';
-      if (addressInput) addressInput.value = '';
+      if (positionInput) positionInput.value = '';
+      if (phoneInput) phoneInput.value = '';
+      if (emailInput) emailInput.value = '';
+      if (accessCheckbox) accessCheckbox.checked = true;
       
       // Закрываем попап
       closePopup(popupAdd);
     } else {
-      console.error('Container not found!');
+      console.error('Container .personal-staff-box not found!');
       alert('Ошибка: контейнер для добавления не найден');
     }
   }
@@ -2177,7 +1403,7 @@ function initAddProjectPopup() {
     
     newAcceptBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      addNewProject();
+      addNewStaff();
     });
   }
   
@@ -2187,38 +1413,36 @@ function initAddProjectPopup() {
     
     newCancelBtn.addEventListener('click', () => {
       if (nameInput) nameInput.value = '';
-      if (addressInput) addressInput.value = '';
+      if (positionInput) positionInput.value = '';
+      if (phoneInput) phoneInput.value = '';
+      if (emailInput) emailInput.value = '';
+      if (accessCheckbox) accessCheckbox.checked = true;
       closePopup(popupAdd);
     });
   }
   
-  // Добавляем возможность отправки по Enter на любом инпуте
-  if (nameInput) {
-    nameInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        addNewProject();
-      }
-    });
-  }
-  
-  if (addressInput) {
-    addressInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        addNewProject();
-      }
-    });
-  }
+  // Добавляем возможность отправки по Enter
+  const allInputs = [nameInput, positionInput, phoneInput, emailInput];
+  allInputs.forEach(input => {
+    if (input) {
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          addNewStaff();
+        }
+      });
+    }
+  });
 }
 
-// ==================== ИНИЦИАЛИЗАЦИЯ ПОПАПА УДАЛЕНИЯ ====================
-function initDeletePopup() {
+// ==================== ИНИЦИАЛИЗАЦИЯ ПОПАПА УДАЛЕНИЯ СОТРУДНИКА ====================
+function initDeleteStaffPopup() {
   const popupDelete = document.getElementById('popup-delete');
   if (!popupDelete) return;
   
   const acceptBtn = popupDelete.querySelector('.popup_details-btn-accept');
   const cancelBtn = popupDelete.querySelector('.popup_details-btn-cancel');
+  const popupDesc = popupDelete.querySelector('.popup-desc');
   
   if (acceptBtn) {
     const newAcceptBtn = acceptBtn.cloneNode(true);
@@ -2256,6 +1480,119 @@ function initDeletePopup() {
   }
 }
 
+// ==================== ОБНОВЛЕНИЕ ОБРАБОТЧИКОВ ДЛЯ КНОПОК УДАЛЕНИЯ ====================
+function updateStaffDeleteHandlers() {
+  const deleteButtons = document.querySelectorAll('.personal-staff-delete');
+  
+  deleteButtons.forEach(btn => {
+    // Удаляем старые обработчики, клонируя элемент
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+    
+    newBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const staffContainer = newBtn.closest('.personal-staff-container');
+      if (staffContainer) {
+        // Сохраняем элемент для удаления
+        window.elementToDelete = staffContainer;
+        
+        // Обновляем текст в попапе удаления
+        const staffName = staffContainer.querySelector('.personal-staff-name');
+        const popupDelete = document.getElementById('popup-delete');
+        if (popupDelete && staffName) {
+          const desc = popupDelete.querySelector('.popup-desc');
+          if (desc) {
+            desc.textContent = `Вы уверены, что хотите удалить сотрудника «${staffName.textContent}»?`;
+          }
+        }
+        
+        openPopup('popup-delete');
+      }
+    });
+  });
+}
+
+// ==================== ОБНОВЛЕНИЕ ОБРАБОТЧИКОВ ДЛЯ КНОПОК РЕДАКТИРОВАНИЯ ====================
+function updateStaffEditHandlers() {
+  const editButtons = document.querySelectorAll('.personal-staff-edit');
+  
+  editButtons.forEach(btn => {
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+    
+    newBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // TODO: Открыть попап редактирования, если потребуется
+      console.log('Редактирование сотрудника');
+    });
+  });
+}
+
+// ==================== ОБРАБОТЧИК КНОПКИ ДОБАВИТЬ СОТРУДНИКА ====================
+function initAddButton() {
+  const addButton = document.querySelector('.personal-orders-estimate-add');
+  
+  if (addButton) {
+    const newAddButton = addButton.cloneNode(true);
+    addButton.parentNode.replaceChild(newAddButton, addButton);
+    
+    newAddButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openPopup('popup-add');
+    });
+  }
+}
+
+// ==================== ПОИСК СОТРУДНИКОВ ПО EMAIL ====================
+function initSearchFilter() {
+  const searchInput = document.querySelector('.personal-search-line__input');
+  
+  if (!searchInput) return;
+  
+  const handleSearch = () => {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const staffContainers = document.querySelectorAll('.personal-staff-container');
+    let hasVisibleStaff = false;
+    
+    staffContainers.forEach(container => {
+      const emailElement = container.querySelector('.personal-staff-desc:nth-child(2) span');
+      if (!emailElement) return;
+      
+      const email = emailElement.textContent.toLowerCase();
+      
+      if (searchTerm === '' || email.includes(searchTerm)) {
+        container.style.display = 'flex';
+        hasVisibleStaff = true;
+      } else {
+        container.style.display = 'none';
+      }
+    });
+    
+    // Показываем сообщение "нет результатов"
+    const staffBox = document.querySelector('.personal-staff-box');
+    let noResultsMsg = staffBox ? staffBox.querySelector('.no-results-search') : null;
+    
+    if (!hasVisibleStaff && staffContainers.length > 0 && searchTerm !== '') {
+      if (!noResultsMsg && staffBox) {
+        noResultsMsg = document.createElement('div');
+        noResultsMsg.className = 'no-results no-results-search';
+        noResultsMsg.textContent = 'Сотрудников по вашему запросу не найдено';
+        staffBox.appendChild(noResultsMsg);
+      } else if (noResultsMsg) {
+        noResultsMsg.style.display = '';
+      }
+    } else if (noResultsMsg) {
+      noResultsMsg.style.display = 'none';
+    }
+  };
+  
+  searchInput.removeEventListener('input', handleSearch);
+  searchInput.addEventListener('input', handleSearch);
+}
+
 // ==================== ОБРАБОТКА ЗАКРЫТИЯ ПОПАПОВ ====================
 function initPopupsCloseHandlers() {
   const popups = document.querySelectorAll('.popup_details');
@@ -2283,130 +1620,59 @@ function initPopupsCloseHandlers() {
   // Close popup with Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      const openPopup = document.querySelector('.popup_details.popup_details_opened');
-      if (openPopup) {
-        closePopup(openPopup);
+      const openPopupEl = document.querySelector('.popup_details.popup_details_opened');
+      if (openPopupEl) {
+        closePopup(openPopupEl);
       }
     }
   });
 }
 
-// ==================== ОБРАБОТКА ПЕРЕКЛЮЧЕНИЯ ВИДИМОСТИ ПАРОЛЯ ====================
-function initPasswordToggle() {
-  const toggleButtons = document.querySelectorAll('.popup_details-form-hide');
-  
-  function togglePasswordVisibility(toggleBtn, input) {
-    if (input.type === 'password') {
-      input.type = 'text';
-      toggleBtn.classList.add('popup_details-form-hide_shown');
-    } else {
-      input.type = 'password';
-      toggleBtn.classList.remove('popup_details-form-hide_shown');
-    }
-  }
-  
-  toggleButtons.forEach(button => {
-    const newButton = button.cloneNode(true);
-    button.parentNode.replaceChild(newButton, button);
+// ==================== ОБРАБОТКА ПЕРЕКЛЮЧЕНИЯ ТОГГЛОВ ====================
+function initToggleHandlers() {
+  // Обработчики для переключателей доступа уже работают через стандартные события
+  // Дополнительная логика при переключении может быть добавлена здесь
+  const switches = document.querySelectorAll('.switch input');
+  switches.forEach(switchInput => {
+    // Удаляем старый обработчик, чтобы не дублировать
+    const newSwitch = switchInput.cloneNode(true);
+    switchInput.parentNode.replaceChild(newSwitch, switchInput);
     
-    newButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const field = newButton.closest('.popup_details-form-field');
-      const input = field.querySelector('.popup-input');
-      if (input) {
-        togglePasswordVisibility(newButton, input);
+    newSwitch.addEventListener('change', (e) => {
+      const isChecked = e.target.checked;
+      const staffContainer = e.target.closest('.personal-staff-container');
+      if (staffContainer) {
+        const staffName = staffContainer.querySelector('.personal-staff-name');
+        console.log(`Доступ для ${staffName ? staffName.textContent : 'сотрудника'} ${isChecked ? 'предоставлен' : 'отозван'}`);
       }
     });
   });
-}
-
-// ==================== ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК ====================
-function initTabs() {
-  const sortOptions = document.querySelectorAll('.personal-orders-sort-option');
-  const products = document.querySelectorAll('.personal-orders-info-products-box');
-
-  sortOptions.forEach(option => {
-    option.addEventListener('click', function() {
-      const sortValue = this.dataset.sort;
-      
-      // Обновляем активный класс
-      sortOptions.forEach(opt => opt.classList.toggle('personal-orders-sort-option_active', opt === this));
-      
-      // Фильтруем товары
-      products.forEach(product => {
-        product.style.display = (sortValue === 'all' || product.dataset.sort === sortValue) ? 'flex' : 'none';
-      });
-    });
-  });
-}
-
-// ==================== ПРОВЕРКА СКРОЛЛА ДЛЯ МОБИЛЬНОГО БЛОКА ====================
-function initScrollCheck() {
-  const desktopBlock = document.querySelector('.personal-orders-info-price');
-  const mobileBlock = document.querySelector('.personal-orders-info-mobile');
-
-  if (!desktopBlock || !mobileBlock) {
-    return;
-  }
-
-  function checkScroll() {
-    const desktopRect = desktopBlock.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (desktopRect.bottom <= windowHeight) {
-      mobileBlock.style.display = 'none';
-    } else {
-      mobileBlock.style.display = 'flex';
-    }
-  }
-
-  window.addEventListener('scroll', checkScroll);
-  window.addEventListener('resize', checkScroll);
-  checkScroll();
 }
 
 // ==================== ИНИЦИАЛИЗАЦИЯ ====================
 function init() {
-  // Инициализируем календари
-  const containers = document.querySelectorAll('.datepicker-container');
-  containers.forEach(container => {
-    initDatepicker(container);
-  });
+  // Инициализируем маску телефона
+  initPhoneMask();
   
-  // Инициализируем фильтры в зависимости от устройства
-  const isMobile = window.innerWidth < 1200;
-  
-  if (isMobile) {
-    initMobileFilters();
-  } else {
-    initDesktopFilters();
-  }
-  
-  // Инициализируем переключение разделов
-  initSectionSwitcher();
-  
-  // Инициализируем поиск смет
-  initSearchFilter();
-  
-  // Инициализируем кнопку добавления объекта
-  initAddButton(); // <-- ДОБАВЬТЕ ЭТУ СТРОКУ
+  // Инициализируем кнопку добавления сотрудника
+  initAddButton();
   
   // Инициализируем попапы
-  initAddProjectPopup();
-  initDeletePopup();
+  initAddStaffPopup();
+  initDeleteStaffPopup();
   initPopupsCloseHandlers();
-  initPasswordToggle();
   
-  // Инициализируем вкладки
-  initTabs();
+  // Инициализируем поиск
+  initSearchFilter();
   
-  // Инициализируем обработчики удаления для существующих элементов
-  updateDeleteHandlers();
+  // Инициализируем обработчики для кнопок удаления и редактирования
+  updateStaffDeleteHandlers();
+  updateStaffEditHandlers();
   
-  // Инициализируем проверку скролла
-  initScrollCheck();
+  // Инициализируем обработчики для переключателей
+  initToggleHandlers();
   
-  console.log('Script initialized');
+  console.log('Staff page script initialized');
 }
 
 // Запускаем инициализацию

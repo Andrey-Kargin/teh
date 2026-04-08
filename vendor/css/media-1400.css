@@ -5897,6 +5897,211 @@ ul .main-cards-link::after {
   width: 112px;
 }
 
+/* STAFF */
+
+.personal-staff-more {
+  margin-left: 32px;
+}
+
+.personal-staff-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #F1F1F1;
+}
+
+.personal-staff-title {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-staff-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0000001A;
+}
+
+.personal-staff-container:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.personal-staff-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 360px;
+}
+
+.personal-staff-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.personal-staff-subdesc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-staff-subdesc a {
+  text-decoration: none;
+  color: #BC1622;
+}
+
+.personal-staff-subdesc-widget {
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.personal-staff-subdesc-widget:hover {
+  color: #ED2039;
+}
+
+.personal-staff-subdesc-widget:hover path {
+  stroke: #ED2039;
+}
+
+.personal-staff-subdesc-widget svg {
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+}
+
+.personal-staff-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 599px;
+}
+
+.personal-staff-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.personal-staff-desc span {
+  color: #0E0E0E;
+}
+
+.personal-staff-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.personal-staff-access {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.personal-staff-access-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  width: 95px;
+  margin-top: 7px;
+}
+
+.personal-staff-access-popup {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C9C9C966;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #C9C9C9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #BC1622;
+}
+
+input:checked + .slider::before {
+  background-color: #fff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 100px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
   @keyframes loadingAnimation {
   from {
     width: 0%;
