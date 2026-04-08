@@ -6015,6 +6015,27 @@ ul .main-cards-link::after {
   margin-top: -0.2vw;
 }
 
+/* ОБЪЕКТЫ */
+
+.personal-projects-box-number .personal-orders-box-link {
+  margin-top: 0;
+}
+
+.personal-projects-box-number .personal-estimate-desc {
+  margin-top: 0.83vw;
+}
+
+.personal-projects-box-address {
+  font-weight: 400;
+  font-size: 0.9vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.personal-date-sort-desc-projects {
+  width: 7.77vw;
+}
+
 @keyframes loadingAnimation {
   from {
     width: 0%;

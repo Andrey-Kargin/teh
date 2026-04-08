@@ -6277,6 +6277,33 @@ ul .main-cards-link::after {
   border-top: 1px solid #0000001A;
 }
 
+/* ОБЪЕКТЫ */
+
+.personal-projects-box-delivery {
+  margin-bottom: 0;
+}
+
+.personal-projects-box-delivery .personal-orders-box-link {
+  position: relative;
+  bottom: auto;
+  left: auto;
+}
+
+.personal-projects-box-delivery .personal-estimate-desc {
+  margin-top: 2.77vw;
+}
+
+.personal-projects-box-address {
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.personal-date-sort-desc-projects {
+  width: 7.77vw;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
