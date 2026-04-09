@@ -6445,6 +6445,7 @@ input:checked + .slider:before {
   margin-top: -0.3vw;
 }
 
+
 @keyframes loadingAnimation {
   from {
     width: 0%;
