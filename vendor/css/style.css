@@ -5833,7 +5833,7 @@ ul .main-cards-link::after {
 
 .disabled {
   pointer-events: none;
-  background: #AAAAAAAA;
+  background: #AAAAAAAA !important;
 
 }
 
@@ -5910,7 +5910,7 @@ ul .main-cards-link::after {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .select2-container.hidden {
@@ -6240,6 +6240,195 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* AUTH */
+
+.popup_login .popup-container {
+  width: 27.77vw;
+}
+
+.popup-login-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 0.34vw;
+  background: #F1F1F1;
+  box-sizing: border-box;
+  padding: 0.416vw;
+}
+
+.popup-login-nav-link {
+  width: 11.8vw;
+  height: 2.22vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333333CC;
+  box-sizing: border-box;
+  padding-top: 0.2vw;
+  border-radius: 0.34vw;
+  cursor: pointer;
+}
+
+.popup-login-nav-link:hover {
+  color: #BC1622;
+}
+
+.popup-login-nav-link_active {
+  color: #0E0E0E;
+  font-weight: 500;
+  background-color: #fff;
+  cursor: default;
+}
+
+.popup-login-nav-link_active:hover {
+  color: #0E0E0E;
+}
+
+.popop-phone-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55vw;
+}
+
+.popup_login .popup-input {
+  width: 100%;
+}
+
+.popup_login-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55vw;
+  margin-top: 1.66vw;
+}
+
+.popup_login .popup_details-btn {
+  width: 100%;
+}
+
+.popup-btn-get-code {
+  background-color: #BC1622;
+  color: #fff;
+}
+
+.popup-btn-get-code:hover {
+  background: #A0151F;
+}
+
+.popup-btn-register:hover {
+  color: #BC1622;
+}
+
+.popup-email-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55vw;
+}
+
+.popup-forgot-pass {
+  font-weight: 400;
+  font-size: 0.9vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #333333CC;
+}
+
+.popup-forgot-pass:hover {
+  cursor: pointer;
+  color: #BC1622;
+}
+
+.popup-btn-login {
+  background-color: #BC1622;
+  color: #fff;
+  width: 100%;
+}
+
+.popup-btn-login:hover {
+  background: #A0151F;
+}
+
+.popup-login-pass {
+  position: relative;
+}
+
+.popup-login-pass .popup_details-form-hide {
+  top: 0.83vw;
+}
+
+#popup-code .popup-desc {
+  color: #2C3439;
+}
+
+.popup-phone-edit {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  margin-top: -1.11vw;
+  cursor: pointer;
+}
+
+.popup-phone-edit:hover {
+  color: #ED2039;
+}
+
+.popup-code-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.popup-code {
+  width: 8.54vw;
+  height: 4.02vw;
+  border-radius: 0.34vw;
+  box-sizing: border-box;
+  border: 1px solid ;
+  padding-top: 0.3vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.25vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+#popup-code .popup-code-timer {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+#popup-code .popup-code-send-again {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  background: linear-gradient(274.32deg, #ED2039 2.3%, #BC1622 94.86%);
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+
+#popup-code .popup-code-send-again:hover {
+  color: #ED2039;
 }
 
 @keyframes loadingAnimation {
