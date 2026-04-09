@@ -6292,6 +6292,16 @@ input:checked + .slider:before {
   color: #ED2039;
 }
 
+#popup-change-confirm .popup_details-btn {
+  gap: 10px;
+}
+
+#popup-change-confirm .popup_details-btn svg {
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
