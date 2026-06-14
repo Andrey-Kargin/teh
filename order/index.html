@@ -447,7 +447,7 @@
                   </div>
 
                   <select class="date-choice" id="date-choice">
-                    <option value=""></option>
+                    <option value="">Выбрать другую дату</option>
                     <option>07.04.2026</option>
                     <option>08.04.2026</option>
                     <option>09.04.2026</option>
@@ -460,7 +460,7 @@
                 <p class="order-main-delivery-subdesc">Время получения</p>
                 <div class="order-main-delivery-step-pickup-time-select">
                   <select class="time-choice" id="time-choice">
-                    <option value=""></option>
+                    <option value="">Выберите интервал времени</option>
                     <option>08:00-12:00</option>
                     <option>12:00-14:00</option>
                     <option>14:00-16:00</option>
@@ -689,7 +689,7 @@
                     <label for="date-6">Завтра<span>время не выбрано</span></label>
                   </div>
                   <select class="get-call-choice" id="get-call-choice">
-                    <option value=""></option>
+                    <option value="">Выбрать время</option>
                     <option>08:00-12:00</option>
                     <option>12:00-14:00</option>
                     <option>14:00-16:00</option>
@@ -721,7 +721,7 @@
                 </svg>
               </a>
 
-              <div class="about-map-container" id="map" style="display: none;"></div>
+              <div class="about-map-container" id="map1" style="display: none;"></div>
 
               <div class="order-main-delivery-step-address-row">
                 <input type="text" class="order-main-delivery-step-floor" placeholder="Этаж" />
@@ -980,7 +980,7 @@
                     <label for="date-9">Завтра<span>время не выбрано</span></label>
                   </div>
                   <select class="get-call-choice" id="get-call-choice">
-                    <option value=""></option>
+                    <option value="">Выбрать время</option>
                     <option>08:00-12:00</option>
                     <option>12:00-14:00</option>
                     <option>14:00-16:00</option>
@@ -1001,7 +1001,7 @@
               <p class="order-main-delivery-step-subtitle">Выберите пункт самовывоза</p>
               
               <select class="order-city-choice" id="order-city-choice">
-                    <option value=""></option>
+                    <option value="">Выберите свой город</option>
                     <option>Москва</option>
                     <option>Санкт-Петербург</option>
                     <option>Сочи</option>
@@ -1012,7 +1012,109 @@
                 </svg>
               </a>
 
-              <div class="about-map-container" id="map" style="display: none;"></div>
+              <div class="about-map-container" id="map2" style="display: none;"></div>
+
+              <div class="order-main-delivery-step-city">
+                <div class="order-main-delivery-step-city-top">
+                  <p class="order-main-delivery-step-city-title">Список доступных пунктов выдачи</p>
+                </div>
+                <div class="order-main-delivery-step-city-row">
+                  <div class="order-main-delivery-step-city-name">
+                    <input type="checkbox" id="city1" checked />
+                    <label for="city1">Академия Тушино 1 <br><a>Проложить маршрут на карте</a></label>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-info">
+                    <p class="desc">г. Москва, Волоколамское шоссе д.116, павильон Ф-10 "Мастерская Цвета - Краски.ру"</p>
+                    <p class="order-main-delivery-step-city-time">График работы: ежедневно с 9:00 - 21:00</p>
+                    <p class="order-main-delivery-step-city-phone">+7 (926) 295-7728</p>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-av">
+                    <p class="order-main-delivery-step-city-av-text">Все товары доступны</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 7.21207 13.8448 6.43185 13.5433 5.7039C13.2417 4.97595 12.7998 4.31451 12.2426 3.75736C11.6855 3.20021 11.0241 2.75825 10.2961 2.45672C9.56815 2.15519 8.78793 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM11.1787 6.42667C11.2372 6.35976 11.2818 6.28183 11.3097 6.19745C11.3377 6.11306 11.3485 6.02394 11.3415 5.93532C11.3345 5.8467 11.3099 5.76038 11.2691 5.68142C11.2282 5.60246 11.172 5.53247 11.1037 5.47556C11.0354 5.41865 10.9564 5.37598 10.8714 5.35004C10.7864 5.32411 10.697 5.31544 10.6086 5.32455C10.5202 5.33366 10.4345 5.36036 10.3565 5.40309C10.2785 5.44581 10.2099 5.5037 10.1547 5.57333L7.756 8.45133C7.52467 8.72867 7.39467 8.88267 7.29133 8.97667L7.28733 8.98067L7.28267 8.97733C7.17067 8.89267 7.02733 8.75133 6.77267 8.496L5.80467 7.52867C5.67893 7.40723 5.51053 7.34003 5.33573 7.34155C5.16093 7.34307 4.99373 7.41318 4.87012 7.53679C4.74652 7.66039 4.6764 7.8276 4.67488 8.0024C4.67336 8.1772 4.74056 8.3456 4.862 8.47133L5.82933 9.43867L5.85667 9.466C6.07467 9.684 6.28333 9.89333 6.47867 10.0407C6.69667 10.206 6.98267 10.3607 7.34867 10.3447C7.71533 10.328 7.986 10.1473 8.18867 9.96333C8.36867 9.79867 8.55867 9.57133 8.75533 9.33467L8.78 9.30533L11.1787 6.42667Z" fill="#00B162"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="order-main-delivery-step-city-row">
+                  <div class="order-main-delivery-step-city-name">
+                    <input type="checkbox" id="city2" />
+                    <label for="city2">ИЦ Водный 1</label>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-info">
+                    <p class="desc">Москва г, ш Ленинградское, д. 58, стр. 7, помещ. Интерьер-Центр "Водный", 1-й этаж, секция 116</p>
+                    <p class="order-main-delivery-step-city-time">График работы: ежедневно с 9:00 - 21:00</p>
+                    <p class="order-main-delivery-step-city-phone">+7 (926) 295-7728</p>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-av">
+                    <p class="order-main-delivery-step-city-av-text">Все товары доступны</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 7.21207 13.8448 6.43185 13.5433 5.7039C13.2417 4.97595 12.7998 4.31451 12.2426 3.75736C11.6855 3.20021 11.0241 2.75825 10.2961 2.45672C9.56815 2.15519 8.78793 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM11.1787 6.42667C11.2372 6.35976 11.2818 6.28183 11.3097 6.19745C11.3377 6.11306 11.3485 6.02394 11.3415 5.93532C11.3345 5.8467 11.3099 5.76038 11.2691 5.68142C11.2282 5.60246 11.172 5.53247 11.1037 5.47556C11.0354 5.41865 10.9564 5.37598 10.8714 5.35004C10.7864 5.32411 10.697 5.31544 10.6086 5.32455C10.5202 5.33366 10.4345 5.36036 10.3565 5.40309C10.2785 5.44581 10.2099 5.5037 10.1547 5.57333L7.756 8.45133C7.52467 8.72867 7.39467 8.88267 7.29133 8.97667L7.28733 8.98067L7.28267 8.97733C7.17067 8.89267 7.02733 8.75133 6.77267 8.496L5.80467 7.52867C5.67893 7.40723 5.51053 7.34003 5.33573 7.34155C5.16093 7.34307 4.99373 7.41318 4.87012 7.53679C4.74652 7.66039 4.6764 7.8276 4.67488 8.0024C4.67336 8.1772 4.74056 8.3456 4.862 8.47133L5.82933 9.43867L5.85667 9.466C6.07467 9.684 6.28333 9.89333 6.47867 10.0407C6.69667 10.206 6.98267 10.3607 7.34867 10.3447C7.71533 10.328 7.986 10.1473 8.18867 9.96333C8.36867 9.79867 8.55867 9.57133 8.75533 9.33467L8.78 9.30533L11.1787 6.42667Z" fill="#00B162"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="order-main-delivery-step-city-row">
+                  <div class="order-main-delivery-step-city-name">
+                    <input type="checkbox" id="city3" />
+                    <label for="city3">Каширский двор № 1, пав. 2-C89</label>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-info">
+                    <p class="desc">г. Москва, Каширское шоссе 19 корпус 1, ТК "Каширский Двор", павильон 2-C89</p>
+                    <p class="order-main-delivery-step-city-time">График работы: ежедневно с 9:00 - 21:00</p>
+                    <p class="order-main-delivery-step-city-phone">+7 (926) 295-7728</p>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-av">
+                    <p class="order-main-delivery-step-city-av-text">Все товары доступны</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 7.21207 13.8448 6.43185 13.5433 5.7039C13.2417 4.97595 12.7998 4.31451 12.2426 3.75736C11.6855 3.20021 11.0241 2.75825 10.2961 2.45672C9.56815 2.15519 8.78793 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM11.1787 6.42667C11.2372 6.35976 11.2818 6.28183 11.3097 6.19745C11.3377 6.11306 11.3485 6.02394 11.3415 5.93532C11.3345 5.8467 11.3099 5.76038 11.2691 5.68142C11.2282 5.60246 11.172 5.53247 11.1037 5.47556C11.0354 5.41865 10.9564 5.37598 10.8714 5.35004C10.7864 5.32411 10.697 5.31544 10.6086 5.32455C10.5202 5.33366 10.4345 5.36036 10.3565 5.40309C10.2785 5.44581 10.2099 5.5037 10.1547 5.57333L7.756 8.45133C7.52467 8.72867 7.39467 8.88267 7.29133 8.97667L7.28733 8.98067L7.28267 8.97733C7.17067 8.89267 7.02733 8.75133 6.77267 8.496L5.80467 7.52867C5.67893 7.40723 5.51053 7.34003 5.33573 7.34155C5.16093 7.34307 4.99373 7.41318 4.87012 7.53679C4.74652 7.66039 4.6764 7.8276 4.67488 8.0024C4.67336 8.1772 4.74056 8.3456 4.862 8.47133L5.82933 9.43867L5.85667 9.466C6.07467 9.684 6.28333 9.89333 6.47867 10.0407C6.69667 10.206 6.98267 10.3607 7.34867 10.3447C7.71533 10.328 7.986 10.1473 8.18867 9.96333C8.36867 9.79867 8.55867 9.57133 8.75533 9.33467L8.78 9.30533L11.1787 6.42667Z" fill="#00B162"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="order-main-delivery-step-city-row">
+                  <div class="order-main-delivery-step-city-name">
+                    <input type="checkbox" id="city4" />
+                    <label for="city4">Лефортово Краски.ру</label>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-info">
+                    <p class="desc">г. Москва, Волоколамское шоссе д.116, павильон Ф-10 "Мастерская Цвета - Краски.ру"</p>
+                    <p class="order-main-delivery-step-city-time">График работы: ежедневно с 9:00 - 21:00</p>
+                    <p class="order-main-delivery-step-city-phone">+7 (926) 295-7728</p>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-av">
+                    <p class="order-main-delivery-step-city-av-text">Все товары доступны</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 7.21207 13.8448 6.43185 13.5433 5.7039C13.2417 4.97595 12.7998 4.31451 12.2426 3.75736C11.6855 3.20021 11.0241 2.75825 10.2961 2.45672C9.56815 2.15519 8.78793 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14ZM11.1787 6.42667C11.2372 6.35976 11.2818 6.28183 11.3097 6.19745C11.3377 6.11306 11.3485 6.02394 11.3415 5.93532C11.3345 5.8467 11.3099 5.76038 11.2691 5.68142C11.2282 5.60246 11.172 5.53247 11.1037 5.47556C11.0354 5.41865 10.9564 5.37598 10.8714 5.35004C10.7864 5.32411 10.697 5.31544 10.6086 5.32455C10.5202 5.33366 10.4345 5.36036 10.3565 5.40309C10.2785 5.44581 10.2099 5.5037 10.1547 5.57333L7.756 8.45133C7.52467 8.72867 7.39467 8.88267 7.29133 8.97667L7.28733 8.98067L7.28267 8.97733C7.17067 8.89267 7.02733 8.75133 6.77267 8.496L5.80467 7.52867C5.67893 7.40723 5.51053 7.34003 5.33573 7.34155C5.16093 7.34307 4.99373 7.41318 4.87012 7.53679C4.74652 7.66039 4.6764 7.8276 4.67488 8.0024C4.67336 8.1772 4.74056 8.3456 4.862 8.47133L5.82933 9.43867L5.85667 9.466C6.07467 9.684 6.28333 9.89333 6.47867 10.0407C6.69667 10.206 6.98267 10.3607 7.34867 10.3447C7.71533 10.328 7.986 10.1473 8.18867 9.96333C8.36867 9.79867 8.55867 9.57133 8.75533 9.33467L8.78 9.30533L11.1787 6.42667Z" fill="#00B162"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="order-main-delivery-step-city-row">
+                  <div class="order-main-delivery-step-city-name">
+                    <input type="checkbox" id="city5" />
+                    <label for="city5">Москва - Ленинский проспект 78</label>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-info">
+                    <p class="desc">г. Москва, Волоколамское шоссе д.116, павильон Ф-10 "Мастерская Цвета - Краски.ру"</p>
+                    <p class="order-main-delivery-step-city-time">График работы: ежедневно с 9:00 - 21:00</p>
+                    <p class="order-main-delivery-step-city-phone">+7 (926) 295-7728</p>
+                  </div>
+
+                  <div class="order-main-delivery-step-city-av">
+                    <p class="order-main-delivery-step-city-av-text">Привезём 06.04 в 11:00 <br><span>при заказе до 06.04 (пн) 04:15</span></p>
+                  </div>
+                </div>
+              </div>
 
 
               <div class="order-main-delivery-step-pickup">
@@ -1762,6 +1864,58 @@
 
                 myMap.geoObjects.add(myPlacemark);
               }
+
+              ymaps.ready(init1);
+
+              function init1() {
+                // Создание карты.
+                var myMap = new ymaps.Map("map1", {
+                  // Координаты центра карты.
+                  // Порядок по умолчанию: «широта, долгота».
+                  // Чтобы не определять координаты центра карты вручную,
+                  // воспользуйтесь инструментом Определение координат.
+                  center: [55.739481928230354, 37.652685317504854],
+                  // Уровень масштабирования. Допустимые значения:
+                  // от 0 (весь мир) до 19.
+                  zoom: 13,
+                  controls: []
+                });
+
+                var myPlacemark = new ymaps.Placemark([55.739481928230354, 37.652685317504854], {}, {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../../img/about/icons/pin.svg',
+                  iconImageSize: [33, 42],
+                  iconImageOffset: [0, -42]
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+              }
+
+              ymaps.ready(init2);
+
+              function init2() {
+                // Создание карты.
+                var myMap = new ymaps.Map("map2", {
+                  // Координаты центра карты.
+                  // Порядок по умолчанию: «широта, долгота».
+                  // Чтобы не определять координаты центра карты вручную,
+                  // воспользуйтесь инструментом Определение координат.
+                  center: [55.739481928230354, 37.652685317504854],
+                  // Уровень масштабирования. Допустимые значения:
+                  // от 0 (весь мир) до 19.
+                  zoom: 13,
+                  controls: []
+                });
+
+                var myPlacemark = new ymaps.Placemark([55.739481928230354, 37.652685317504854], {}, {
+                  iconLayout: 'default#image',
+                  iconImageHref: '../../img/about/icons/pin.svg',
+                  iconImageSize: [33, 42],
+                  iconImageOffset: [0, -42]
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+              }
   </script>
 
   <script>
@@ -1793,115 +1947,293 @@
           );
         });
 
+        // Сбрасываем состояние при переключении табов
+        setTimeout(() => {
+          resetMapButtons();
+          resetGetCallBoxes();
+          resetPaymentCheckboxes(); // Добавляем сброс для оплаты
+        }, 50);
+
       });
     });
 
   });
 
 
-  // 3. Показ / скрытие карты
-  document.querySelectorAll(".order-main-delivery-step-show-map").forEach(button => {
-
-    const defaultText = button.innerHTML;
-
-    const activeText = `
-      Скрыть карту 
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 7.5L6 3.5L2 7.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    `;
-
-    button.addEventListener("click", function () {
-
-      const parent = this.closest(".order-main-container");
-      const map = parent.querySelector(".about-map-container");
-
-      if (!map) return;
-
-      if (map.style.display === "flex") {
-        map.style.display = "none";
-        this.innerHTML = defaultText;
-      } else {
-        map.style.display = "flex";
-        this.innerHTML = activeText;
+  // Функция для сброса состояния кнопок карты
+  function resetMapButtons() {
+    document.querySelectorAll(".order-main-delivery-step-show-map").forEach(button => {
+      const defaultText = `Показать карту<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 4.5L6 8.5L2 4.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
+      
+      button.innerHTML = defaultText;
+      
+      const activeContainer = button.closest(".order-main-container").querySelector(".order-main-delivery-container_active");
+      if (activeContainer) {
+        const map = activeContainer.querySelector(".about-map-container");
+        if (map) {
+          map.style.display = "none";
+        }
       }
-
     });
+  }
 
-  });
-
-
-  // 4. Получатель другой человек
-  document.querySelectorAll(".order-main-delivery-step-pickup").forEach(block => {
-
-    const checkbox = block.querySelector("input[type='checkbox']");
-    const parent = block.closest(".order-main-container");
-    const otherBox = parent.querySelector(".order-main-delivery-step-pickup-other");
-
-    if (!checkbox || !otherBox) return;
-
-    checkbox.addEventListener("change", function () {
-      otherBox.style.display = this.checked ? "flex" : "none";
+  // Функция для сброса состояния get-call-box
+  function resetGetCallBoxes() {
+    document.querySelectorAll(".order-main-delivery-step-get-call-box").forEach(box => {
+      box.style.display = "none";
     });
-
-  });
-
-
-  // 5. Получить звонок оператора
-  document.querySelectorAll(".order-main-delivery-step-get-call").forEach(block => {
-
-    const checkbox = block.querySelector("input[type='checkbox']");
-    const parent = block.closest(".order-main-container");
-    const callBox = parent.querySelector(".order-main-delivery-step-get-call-box");
-
-    if (!checkbox || !callBox) return;
-
-    checkbox.addEventListener("change", function () {
-      callBox.style.display = this.checked ? "flex" : "none";
+    
+    document.querySelectorAll(".order-main-delivery-step-get-call input[type='checkbox']").forEach(checkbox => {
+      checkbox.checked = false;
     });
+  }
 
-  });
-
-
-  // 6. Только один checkbox в группе
-  function singleCheckboxSelection(selector) {
-
-    document.querySelectorAll(selector).forEach(group => {
-
-      const checkboxes = group.querySelectorAll("input[type='checkbox']");
-
-      checkboxes.forEach(checkbox => {
-
-        checkbox.addEventListener("change", function () {
-
-          if (this.checked) {
-
-            checkboxes.forEach(item => {
-              if (item !== this) {
-                item.checked = false;
-              }
-            });
-
-          }
-
-        });
-
-      });
-
+  // Функция для сброса чекбоксов оплаты (оставляем первый выбранным)
+  function resetPaymentCheckboxes() {
+    document.querySelectorAll(".order-main-delivery-step-payment").forEach(group => {
+      const checkboxes = group.querySelectorAll(".order-main-delivery-step-payment-box input[type='checkbox']");
+      if (checkboxes.length > 0) {
+        // Убираем все галочки
+        checkboxes.forEach(cb => cb.checked = false);
+        // Ставим галочку на первый
+        if (checkboxes[0]) checkboxes[0].checked = true;
+      }
     });
-
   }
 
 
-  // Курьерская служба
-  singleCheckboxSelection(".order-main-delivery-options");
+  // 3. Показ / скрытие карты
+  function initMapToggle() {
+    document.querySelectorAll(".order-main-delivery-step-show-map").forEach(button => {
+      button.removeEventListener("click", handleMapClick);
+      button.addEventListener("click", handleMapClick);
+    });
+  }
 
-  // Дата доставки
-  singleCheckboxSelection(".order-main-delivery-step-pickup-date-row");
+  function handleMapClick(e) {
+    const button = e.currentTarget;
+    
+    const showText = `Показать карту<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 4.5L6 8.5L2 4.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
+    
+    const hideText = `Скрыть карту 
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 7.5L6 3.5L2 7.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
 
-  // Способ оплаты
-  singleCheckboxSelection(".order-main-delivery-step-payment");
+    const activeContainer = button.closest(".order-main-container").querySelector(".order-main-delivery-container_active");
+    
+    if (!activeContainer) return;
 
+    const map = activeContainer.querySelector(".about-map-container");
+
+    if (!map) return;
+
+    if (map.style.display === "flex") {
+      map.style.display = "none";
+      button.innerHTML = showText;
+    } else {
+      map.style.display = "flex";
+      button.innerHTML = hideText;
+    }
+  }
+
+
+  // 4. Получатель другой человек
+  function initReceiverToggle() {
+    document.querySelectorAll(".order-main-delivery-step-pickup").forEach(block => {
+
+      const checkbox = block.querySelector("input[type='checkbox']");
+      
+      if (checkbox) {
+        checkbox.removeEventListener("change", handleReceiverChange);
+        checkbox.addEventListener("change", handleReceiverChange);
+      }
+
+    });
+  }
+
+  function handleReceiverChange(e) {
+    const checkbox = e.currentTarget;
+    const parentContainer = checkbox.closest(".order-main-container");
+    const activeContainer = parentContainer.querySelector(".order-main-delivery-container_active");
+    
+    if (!activeContainer) return;
+    
+    const otherBox = activeContainer.querySelector(".order-main-delivery-step-pickup-other");
+    
+    if (otherBox) {
+      otherBox.style.display = checkbox.checked ? "flex" : "none";
+    }
+  }
+
+
+  // 5. Получить звонок оператора
+  function initCallToggle() {
+    document.querySelectorAll(".order-main-delivery-step-get-call").forEach(block => {
+
+      const checkbox = block.querySelector("input[type='checkbox']");
+      
+      if (checkbox) {
+        checkbox.removeEventListener("change", handleCallChange);
+        checkbox.addEventListener("change", handleCallChange);
+      }
+
+    });
+  }
+
+  function handleCallChange(e) {
+    const checkbox = e.currentTarget;
+    const parentContainer = checkbox.closest(".order-main-container");
+    const activeContainer = parentContainer.querySelector(".order-main-delivery-container_active");
+    
+    if (!activeContainer) return;
+    
+    const callBox = activeContainer.querySelector(".order-main-delivery-step-get-call-box");
+    
+    if (callBox) {
+      callBox.style.display = checkbox.checked ? "flex" : "none";
+    }
+  }
+
+
+  // 6. Только один checkbox в группе
+  function initSingleCheckbox() {
+    // Курьерская служба
+    document.querySelectorAll(".order-main-delivery-options").forEach(group => {
+      setupSingleCheckboxGroup(group.querySelectorAll("input[type='checkbox']"));
+    });
+
+    // Дата доставки (основная)
+    document.querySelectorAll(".order-main-delivery-step-pickup-date-row").forEach(group => {
+      setupSingleCheckboxGroup(group.querySelectorAll(".order-main-delivery-step-pickup-date-box input[type='checkbox']"));
+    });
+
+    // Get-call-row (для выбора дня звонка)
+    document.querySelectorAll(".order-main-delivery-step-get-call-row").forEach(group => {
+      setupSingleCheckboxGroup(group.querySelectorAll(".order-main-delivery-step-pickup-date-box input[type='checkbox']"));
+    });
+
+    // Способ оплаты (исправлено!)
+    document.querySelectorAll(".order-main-delivery-step-payment").forEach(group => {
+      setupSingleCheckboxGroup(group.querySelectorAll(".order-main-delivery-step-payment-box input[type='checkbox']"));
+    });
+  }
+
+  function setupSingleCheckboxGroup(checkboxes) {
+    if (!checkboxes.length) return;
+    
+    checkboxes.forEach(checkbox => {
+      // Удаляем старый обработчик
+      const oldHandler = checkbox._singleHandler;
+      if (oldHandler) {
+        checkbox.removeEventListener("change", oldHandler);
+      }
+      
+      // Создаем новый обработчик
+      const handler = function() {
+        if (this.checked) {
+          checkboxes.forEach(item => {
+            if (item !== this) {
+              item.checked = false;
+            }
+          });
+        }
+      };
+      
+      // Сохраняем обработчик для возможного удаления
+      checkbox._singleHandler = handler;
+      checkbox.addEventListener("change", handler);
+    });
+  }
+
+
+  // Инициализация всех функций
+  function initAll() {
+    initMapToggle();
+    initReceiverToggle();
+    initCallToggle();
+    initSingleCheckbox();
+    resetMapButtons();
+    resetGetCallBoxes();
+    resetPaymentCheckboxes(); // Сбрасываем состояние оплаты
+  }
+
+  initAll();
+
+  // Переинициализация при переключении табов
+  document.querySelectorAll(".order-main-delivery-nav-link").forEach(link => {
+    link.addEventListener("click", function() {
+      setTimeout(() => {
+        initAll();
+      }, 50);
+    });
+  });
+
+});
+  </script>
+
+  <script>
+    // Ждём загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все чекбоксы
+    const checkboxes = document.querySelectorAll('.order-main-delivery-step-city-name input[type="checkbox"]');
+    
+    // Функция для обновления ссылки внутри label
+    function updateRouteLink(checkbox) {
+        const label = checkbox.nextElementSibling;
+        if (!label || label.tagName !== 'LABEL') return;
+        
+        // Получаем оригинальный текст без ссылки
+        let originalText = label.getAttribute('data-original-text');
+        
+        // Если атрибута нет - сохраняем текущий текст (очищаем от возможной ссылки)
+        if (!originalText) {
+            originalText = label.childNodes[0]?.nodeValue?.trim() || label.innerText.split('Проложить маршрут')[0].trim();
+            label.setAttribute('data-original-text', originalText);
+        }
+        
+        // Если чекбокс выбран - добавляем ссылку
+        if (checkbox.checked) {
+            // Проверяем, нет ли уже ссылки
+            const existingLink = label.querySelector('a');
+            if (!existingLink) {
+                label.innerHTML = originalText + '<br><a href="#" class="route-link">Проложить маршрут на карте</a>';
+            }
+        } else {
+            // Удаляем ссылку, оставляем только текст
+            label.innerHTML = originalText;
+        }
+    }
+    
+    // Функция для обработки выбора (радио-логика)
+    function handleCheckboxChange(clickedCheckbox) {
+        if (clickedCheckbox.checked) {
+            // Снимаем выделение со всех остальных чекбоксов
+            checkboxes.forEach(cb => {
+                if (cb !== clickedCheckbox && cb.checked) {
+                    cb.checked = false;
+                    updateRouteLink(cb);
+                }
+            });
+        }
+        // Обновляем ссылку у текущего чекбокса
+        updateRouteLink(clickedCheckbox);
+    }
+    
+    // Навешиваем обработчики на все чекбоксы
+    checkboxes.forEach(checkbox => {
+        // Инициализация: устанавливаем правильное состояние ссылок при загрузке
+        updateRouteLink(checkbox);
+        
+        // Обработчик изменения
+        checkbox.addEventListener('change', function() {
+            handleCheckboxChange(this);
+        });
+    });
 });
   </script>
 </body>
