@@ -367,12 +367,19 @@
                 <p class="desc">Сохранить в смету</p>
               </div>
 
-              <div class="product-main-info-widget">
+              <div class="product-main-info-widget" id="fav">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.8876 8.03154L8 13.3333L13.1124 8.03155C13.6807 7.44218 14 6.64282 14 5.80932C14 4.07366 12.6432 2.66663 10.9695 2.66663C10.1658 2.66663 9.39501 2.99773 8.82669 3.5871L8 4.4444L7.17331 3.5871C6.60499 2.99773 5.83418 2.66663 5.03046 2.66663C3.35678 2.66663 2 4.07366 2 5.80932C2 6.64282 2.31928 7.44217 2.8876 8.03154Z" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <p class="desc">В избранное</p>
               </div>
+
+              <span class="product-main-fav-success">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 11.3333L8 6.66667M8 4.67331V4.66665M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#00B162" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                Товар добавлен в сравнение
+              </span>
             </div>
 
             <p class="product-main-info-code">Код: 5651534</p>
@@ -706,8 +713,8 @@
             </div>
 
             <div class="product-main-side-btns">
-              <a href="../basket/" class="product-main-side-btn">В корзину</a>
-              <button class="product-main-side-btn product-main-side-btn-qb">Купить в один клик</button>
+              <a class="product-main-side-btn">В корзину</a>
+              <button data-popup="popup-buy" class="product-main-side-btn product-main-side-btn-qb">Купить в один клик</button>
             </div>
           </div>
 
@@ -1073,6 +1080,46 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup_details" id="popup-buy">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+            stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <p class="popup-title">Купить в один клик</p>
+      <form class="popup_details-form">
+        <div class="popup_details-form-field">
+          <input class="popup_details-form-input" type="text" placeholder="Ваше имя" />
+        </div>
+        <div class="popup_details-form-field">
+          <input class="popup_details-form-input" type="text" placeholder="Номер телефона" />
+        </div>
+      </form>
+      <div class="popup_buy-box">
+        <div class="popup_buy-box-img">
+          <img src="../img/products/product9.png" alt="img" />
+        </div>
+
+        <div class="popup_buy-box-info">
+          <p class="popup_buy-box-name">Dulux Professional Bindo 7 / Дюлакс Профешнл Биндо 7 Краска для стен и потолков латексная экстрапрочная матовая</p>
+          <p class="popup_buy-box-price">141 ₽/шт</p>
+          <div class="popup_buy-box-quantity">
+              <button class="btn__minus">-</button>
+              <input class="count-size-input" type="text" value="2" />
+              <button class="btn__plus">+</button>
+            </div>
+        </div>
+      </div>
+      <p class="popup_buy-box-total">Общая сумма товаров: <span>282 ₽</span></p>
+      <div class="popup_details-row">
+        <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
+        <a href="../basket/" class="popup_details-btn popup_details-btn-accept disabled">Отправить</a>
+      </div>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -1318,6 +1365,173 @@ if (quantityBox) {
     updateMinus();
   });
 }
+
+// Избранное
+const favBtn = document.getElementById("fav");
+const favSuccess = document.querySelector(".product-main-fav-success");
+
+if (favBtn && favSuccess) {
+  favBtn.addEventListener("click", () => {
+    favSuccess.style.display = "flex";
+
+    setTimeout(() => {
+      favSuccess.style.display = "none";
+    }, 3000);
+  });
+}
+
+
+// В корзину
+const basketBtn = document.querySelector(".product-main-side-btn");
+
+if (basketBtn) {
+  basketBtn.addEventListener("click", () => {
+    basketBtn.style.background = "transparent";
+    basketBtn.style.border = "1px solid #AAAAAA";
+    basketBtn.style.color = "#333333";
+    basketBtn.textContent = "В корзине";
+  });
+}
+  </script>
+
+  <script>
+    // Get all elements with data-popup attribute
+    const popupTriggers = document.querySelectorAll('[data-popup]');
+
+    // Function to open popup
+    function openPopup(popupId) {
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.classList.add('popup_details_opened');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+      }
+    }
+
+    // Function to close popup
+    function closePopup(popup) {
+      if (popup) {
+        popup.classList.remove('popup_details_opened');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+    }
+
+    // Add click event listeners to trigger elements
+    popupTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const popupId = trigger.getAttribute('data-popup');
+        openPopup(popupId);
+      });
+    });
+
+    // Get all close buttons and close functionality
+    const popups = document.querySelectorAll('.popup_details');
+
+    popups.forEach(popup => {
+      // Close button inside popup
+      const closeBtn = popup.querySelector('.popup_details-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          closePopup(popup);
+        });
+      }
+
+      // Cancel buttons (popup_details-btn-cancel)
+      const cancelBtns = popup.querySelectorAll('.popup_details-btn-cancel');
+      cancelBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          closePopup(popup);
+        });
+      });
+
+      // Accept buttons (popup_details-btn-accept)
+      const acceptBtns = popup.querySelectorAll('.popup_details-btn-accept');
+      acceptBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Here you can add your custom logic for accept actions
+          // For now, just close the popup
+          closePopup(popup);
+        });
+      });
+    });
+
+    // Close popup when clicking on the overlay (popup background)
+    popups.forEach(popup => {
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          closePopup(popup);
+        }
+      });
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const openPopup = document.querySelector('.popup_details.popup_details_opened');
+        if (openPopup) {
+          closePopup(openPopup);
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Счетчик количества в попапе
+const popupQuantity = document.querySelector(".popup_buy-box-quantity");
+
+if (popupQuantity) {
+  const minus = popupQuantity.querySelector(".btn__minus");
+  const plus = popupQuantity.querySelector(".btn__plus");
+  const input = popupQuantity.querySelector(".count-size-input");
+  const priceElement = document.querySelector(".popup_buy-box-price");
+  const totalElement = document.querySelector(".popup_buy-box-total span");
+
+  const pricePerItem = Number(
+    priceElement.textContent.replace(/[^\d]/g, "")
+  );
+
+  function updatePopupQuantity() {
+    const count = Number(input.value);
+    
+    minus.disabled = count <= 1;
+
+    const total = count * pricePerItem;
+    totalElement.textContent = `${total} ₽`;
+  }
+
+  updatePopupQuantity();
+
+  minus.addEventListener("click", () => {
+    if (Number(input.value) > 1) {
+      input.value = Number(input.value) - 1;
+      updatePopupQuantity();
+    }
+  });
+
+  plus.addEventListener("click", () => {
+    input.value = Number(input.value) + 1;
+    updatePopupQuantity();
+  });
+}
+
+
+// Активация кнопки отправки формы
+const popupInputs = document.querySelectorAll(".popup_details-form-input");
+const submitBtn = document.querySelector(".popup_details-btn-accept");
+
+function checkPopupForm() {
+  const isFilled = [...popupInputs].every(input => 
+    input.value.trim() !== ""
+  );
+
+  submitBtn.classList.toggle("disabled", !isFilled);
+}
+
+popupInputs.forEach(input => {
+  input.addEventListener("input", checkPopupForm);
+});
+
+checkPopupForm();
   </script>
 </body>
 
