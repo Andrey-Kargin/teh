@@ -1960,17 +1960,6 @@ ul .main-cards-link::after {
     overflow: hidden;
   }
 
-  .retail-hero .container::after {
-    position: absolute;
-    content: '';
-    top: -62px;
-    right: -76px;
-    width: 958px;
-    height: 400px;
-    background: linear-gradient(89.74deg, #333333 8.86%, rgba(72, 72, 72, 0.673077) 48.11%, rgba(51, 51, 51, 0) 99.8%);
-    z-index: -1;
-  }
-
   .retail-hero-img {
     position: absolute;
     top: -62px;
@@ -1979,6 +1968,17 @@ ul .main-cards-link::after {
     width: 958px;
     height: 399px;
     z-index: -1;
+  }
+
+  .retail-hero-img::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 958px;
+    height: 400px;
+    background: linear-gradient(89.74deg, #333333 8.86%, rgba(72, 72, 72, 0.673077) 48.11%, rgba(51, 51, 51, 0) 99.8%);
+    z-index: 1;
   }
 
   .retail-hero-img img {
@@ -7034,15 +7034,6 @@ input:checked + .slider:before {
   gap: 8px;
 }
 
-.legal-hero .hero-title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #fff;
-}
-
 .legal-hero .hero-desc {
   margin: 0;
   font-weight: 400;
@@ -9159,15 +9150,6 @@ input:checked + .slider:before {
   flex-direction: column;
   position: relative;
   gap: 8px;
-}
-
-.prof-hero .hero-title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #fff;
 }
 
 .prof-hero .hero-desc {

@@ -2056,17 +2056,6 @@ ul .main-cards-link::after {
   overflow: hidden;
 }
 
-.retail-hero .container::after {
-  position: absolute;
-  content: '';
-  top: -4.3vw;
-  right: calc((100vw - 83.33vw) / -2);
-  width: 66.52vw;
-  height: 27.77vw;
-  background: linear-gradient(89.74deg, #333333 8.86%, rgba(72, 72, 72, 0.673077) 48.11%, rgba(51, 51, 51, 0) 99.8%);
-  z-index: -1;
-}
-
 .retail-hero-img {
   position: absolute;
   top: -4.3vw;
@@ -2076,6 +2065,8 @@ ul .main-cards-link::after {
   height: 27.7vw;
   z-index: -1;
 }
+
+
 
 .retail-hero-img img {
   width: 100%;
