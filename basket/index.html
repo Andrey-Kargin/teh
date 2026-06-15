@@ -1179,7 +1179,7 @@
 
   <script>
     const selectAll = document.querySelector(".basket-info-select-all input");
-const cardCheckboxes = document.querySelectorAll(".basket-card-checkbox").length;
+let cardCheckboxes = document.querySelectorAll(".basket-card-checkbox");
 const deleteBtn = document.querySelector(".basket-info-delete");
 const deleteDesc = document.querySelector(".basket-info-delete-desc");
 const countInputs = document.querySelectorAll(".count-size-input");
@@ -1188,25 +1188,40 @@ const checkoutOptions = document.querySelectorAll(".basket-checkout-checkbox");
 const bonusSwitch = document.querySelector(".switch input");
 const bonusFold = document.querySelector(".basket-checkout-bonus-fold");
 
-// Обновление текста удаления
+// Функция для обновления списка чекбоксов (после удаления товаров)
+function updateCheckboxesList() {
+  cardCheckboxes = document.querySelectorAll(".basket-card-checkbox");
+}
+
+// Обновление текста удаления и стиля
 function updateDeleteText() {
   const checked = document.querySelectorAll(".basket-card-checkbox:checked").length;
+  const deleteSpan = deleteDesc.querySelector("span");
 
   if (checked > 0) {
-    deleteDesc.textContent = `Удалить выбранные (${checked})`;
+    if (deleteSpan) {
+      deleteSpan.textContent = `(${checked})`;
+    } else {
+      deleteDesc.innerHTML = `Удалить выбранные <span>(${checked})</span>`;
+    }
+    deleteDesc.style.fontWeight = "500";
   } else {
-    deleteDesc.textContent = "Удалить выбранные";
+    if (deleteSpan) {
+      deleteSpan.remove();
+    }
+    deleteDesc.style.fontWeight = "400";
   }
 }
 
 // Обновление select all
 function updateSelectAll() {
   const checked = document.querySelectorAll(".basket-card-checkbox:checked").length;
+  const total = document.querySelectorAll(".basket-card-checkbox").length;
 
-  if (checked !== cardCheckboxes.length) {
-    selectAll.checked = false;
-  } else {
+  if (checked === total && total > 0) {
     selectAll.checked = true;
+  } else {
+    selectAll.checked = false;
   }
 
   updateDeleteText();
@@ -1217,17 +1232,21 @@ selectAll.addEventListener("change", () => {
   cardCheckboxes.forEach(item => {
     item.checked = selectAll.checked;
   });
-
   updateDeleteText();
 });
 
 // Выбор отдельного товара
-document.querySelectorAll(".basket-card-checkbox").forEach(item => {
-  item.addEventListener("change", () => {
-    updateSelectAll();
+function bindCardCheckboxEvents() {
+  document.querySelectorAll(".basket-card-checkbox").forEach(item => {
+    // Убираем старый обработчик, чтобы не дублировать
+    item.removeEventListener("change", handleCardCheckboxChange);
+    item.addEventListener("change", handleCardCheckboxChange);
   });
-});
+}
 
+function handleCardCheckboxChange() {
+  updateSelectAll();
+}
 
 // Удаление выбранных товаров
 deleteBtn.addEventListener("click", () => {
@@ -1235,10 +1254,11 @@ deleteBtn.addEventListener("click", () => {
     item.closest(".basket-card").remove();
   });
 
-  updateDeleteText();
+  updateCheckboxesList();
+  bindCardCheckboxEvents();
+  updateSelectAll();
   updateBasket();
 });
-
 
 // Удаление одной карточки
 document.querySelectorAll(".personal-orders-info-products-btn-delete")
@@ -1246,11 +1266,12 @@ document.querySelectorAll(".personal-orders-info-products-btn-delete")
   btn.addEventListener("click", () => {
     btn.closest(".basket-card").remove();
 
-    updateDeleteText();
+    updateCheckboxesList();
+    bindCardCheckboxEvents();
+    updateSelectAll();
     updateBasket();
   });
 });
-
 
 // Изменение количества
 countBtns.forEach(box => {
@@ -1281,7 +1302,6 @@ countBtns.forEach(box => {
   });
 });
 
-
 // Только одна доставка
 checkoutOptions.forEach(option => {
   option.addEventListener("change", () => {
@@ -1292,7 +1312,6 @@ checkoutOptions.forEach(option => {
     });
   });
 });
-
 
 // Бонусы
 function updateBonus() {
@@ -1339,65 +1358,58 @@ function updateBasket() {
     totalCount += count;
     totalWeight += weightPerItem * count;
     totalPrice += cardPrice;
-    totalWeight.toFixed(1).replace(".", ",")
   });
 
+  totalWeight = totalWeight.toFixed(2).replace(".", ",");
 
   // Вес заказа
   document.querySelector(
     ".basket-checkout-weight-info .desc"
-  ).textContent = `${totalWeight.toFixed(2).replace(".", ",")} кг`;
+  ).textContent = `${totalWeight} кг`;
 
+  // Блок товары
+  const productsInfo = document.querySelectorAll(
+    ".basket-checkout-weight-info"
+  )[1];
 
-  /// Блок товары
-const productsInfo = document.querySelectorAll(
-  ".basket-checkout-weight-info"
-)[1];
+  productsInfo.querySelector(
+    ".basket-checkout-weight-desc"
+  ).textContent = `Товары (${totalCount}):`;
 
-productsInfo.querySelector(
-  ".basket-checkout-weight-desc"
-).textContent = `Товары (${totalCount}):`;
+  productsInfo.querySelector(
+    ".desc"
+  ).textContent = `${totalPrice} ₽`;
 
-productsInfo.querySelector(
-  ".desc"
-).textContent = `${totalPrice} ₽`;
+  // Расчет скидок
+  let totalDiscount = 0;
 
+  document.querySelectorAll(".basket-checkout-discount").forEach(discount => {
+    const percentElement = discount.querySelector(".basket-checkout-discount-numbers .desc");
+    const priceElement = discount.querySelector(".basket-checkout-discount-numbers span");
 
-// Расчет скидок
-let totalDiscount = 0;
+    const percent = Number(
+      percentElement.textContent.replace(/[^\d.,]/g, "").replace(",", ".")
+    );
 
-document.querySelectorAll(".basket-checkout-discount").forEach(discount => {
-  const percentElement = discount.querySelector(".basket-checkout-discount-numbers .desc");
-  const priceElement = discount.querySelector(".basket-checkout-discount-numbers span");
+    const discountPrice = Math.round(totalPrice * percent / 100);
 
-  const percent = Number(
-    percentElement.textContent.replace(/[^\d.,]/g, "").replace(",", ".")
-  );
+    priceElement.textContent = `– ${discountPrice} ₽`;
 
-  const discountPrice = Math.round(totalPrice * percent / 100);
+    totalDiscount += discountPrice;
+  });
 
-  priceElement.textContent = `– ${discountPrice} ₽`;
+  // Итоговая сумма с учетом скидок
+  const finalPrice = Math.max(0, totalPrice - totalDiscount);
 
-  totalDiscount += discountPrice;
-});
-
-
-// Итоговая сумма с учетом скидок
-const finalPrice = Math.max(0, totalPrice - totalDiscount);
-
-document.querySelector(
-  ".basket-checkout-total span"
-).textContent = `${finalPrice} ₽`;
-
-  
+  document.querySelector(
+    ".basket-checkout-total span"
+  ).textContent = `${finalPrice} ₽`;
 }
 
-
 // Инициализация
-updateDeleteText();
+bindCardCheckboxEvents();
 updateSelectAll();
 updateBasket();
-
 
   </script>
 </body>
