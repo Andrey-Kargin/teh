@@ -10403,6 +10403,11 @@ input:checked + .slider:before {
   margin-bottom: 17px;
 }
 
+.offers-page-form .form-desc {
+  margin-top: -17px;
+}
+
+
 /* PAYMENT */
 
 .payment__main {
@@ -11738,6 +11743,27 @@ input:checked + .slider:before {
 
 .service-more .service-catalog-box .service-catalog-img {
   width: 163px;
+}
+
+.service-gift-conditions-row {
+  gap: 0;
+}
+
+.service-gift-steps-container {
+  gap: 0;
+}
+
+.service-main .offers-banner-img {
+  height: 126px;
+}
+
+.service-main .project-banner {
+  height: 126px;
+}
+
+.service-main .project-banner .desc {
+  font-size: 12px;
+  max-width: 468px;
 }
 
 /* MANAGER */
@@ -14342,6 +14368,8 @@ input:checked + .slider:before {
 
 .order-main-delivery-step-city-av svg {
   margin-top: -3px;
+  width: 16px;
+  height: 16px;
 }
 
 .order-main-delivery-step-city-av-text {
@@ -14355,6 +14383,36 @@ input:checked + .slider:before {
 .order-main-delivery-step-city-av span {
   font-size: 10px;
   color: #33333399;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(1) svg {
+  width: 82px;
+  height: 14px;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(2) svg {
+  width: 41px;
+  height: 21px;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(3) svg {
+  width: 41px;
+  height: 21px;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(4) svg {
+  width: 76px;
+  height: 16px;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(5) svg {
+  width: 58px;
+  height: 17px;
+}
+
+.order-main-delivery-step-payment-box:nth-of-type(6) svg {
+  width: 58px;
+  height: 17px;
 }
 
 }
