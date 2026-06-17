@@ -7462,7 +7462,7 @@ input:checked + .slider:before {
 
   .form-desc {
     margin: 0;
-    margin-top: -16px;
+    margin-top: 12px;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
@@ -9403,23 +9403,23 @@ input:checked + .slider:before {
 
 .prof-select-box {
   width: 280px;
-  height: 136px;
+  height: 174px;
   display: flex;
   position: relative;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 23px 20px 0 54px;
-  gap: 7px;
+  padding: 20px;
+  gap: 4px;
   border-radius: 10px;
   background: #F1F1F1;
 }
 
 .prof-select-box svg {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 24px;
-  height: 24px;
+  bottom: 16px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
 }
 
 .prof-manager {
