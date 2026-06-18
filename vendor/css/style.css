@@ -10719,6 +10719,8 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
+/* PROJECT */
+
 .projects-page {
   margin: 2.78vw 0;
 }
