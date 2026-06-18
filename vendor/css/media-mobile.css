@@ -14633,6 +14633,252 @@ input:checked + .slider:before {
   height: 4.72vw;
 }
 
+/* PROJECT */
+
+.projects-page {
+  margin: 5.55vw 0;
+}
+
+.projects-page .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+}
+
+.projects-page-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3.33vw;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projects-page-box {
+  width: 100%;
+  height: 84.44vw;
+  box-sizing: border-box;
+  position: relative;
+  padding: 58.88vw 3.33vw 3.33vw 3.33vw;
+  border-radius: 2.77vw;
+  background: #F0F0F0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+}
+
+.projects-page-box:nth-of-type(1) {
+  height: 88.05vw;
+}
+
+.projects-page-img {
+  width: 100%;
+  height: 55.55vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projects-page-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-page-box h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+}
+
+.projects-page-box p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.77vw;
+  line-height: 130%;
+  color: #333333CC;
+}
+
+.projects-page-box a {
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 140%;
+  color: #BC1622;
+  gap: 1.11vw;
+}
+
+.projects-page-box a svg {
+  margin-top: -2px;
+  width: 2.22vw;
+  height: 2.22vw;
+}
+
+.projects-page-btn {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 11.38vw;
+  padding: 0 5.55vw;
+  border-radius: 1.38vw;
+  background: #333333;
+  color: #fff;
+  margin: 0;
+  margin-top: 2.22vw;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 3.88vw;
+  line-height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.offers-tasks-hero .offers-tasks-btn {
+  padding: 0;
+  width: 100%;
+}
+
+.projects-page-btn:hover {
+  background-color: #0E0E0E;
+}
+
+
+.projects-page-hero {
+  padding: 5.55vw 0;
+  background-color: #333333;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+.projects-page-hero-img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 130vw;
+  background: linear-gradient(135.14deg, #333333 17.91%, rgba(72, 72, 72, 0.673077) 42.67%, rgba(51, 51, 51, 0) 74.21%);
+  z-index: 1;
+}
+
+.projects-page-hero-img {
+  position: absolute;
+  top: -5.55vw;
+  right: calc((100vw - 88.88vw) / -2);
+  z-index: 1;
+  width: 100vw;
+  height: 130vw;
+  z-index: -1;
+}
+
+.projects-page-hero-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-page-hero .container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2.22vw;
+}
+
+.projects-page-hero .hero-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 6.66vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fff;
+}
+
+.projects-page-hero .hero-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.projects-page-hero .hero-subdesc {
+  max-width: 81.38vw;
+}
+
+
+.projects-page-hero-text {
+  display: flex;
+  flex-direction: column;
+  width: 64.44vw;
+  gap: 63.88vw;
+  margin-top: 2.22vw;
+  font-weight: 500;
+  font-size: 0.97vw;
+  line-height: 100%;
+}
+
+.projects-page-hero-btn {
+  width: fit-content;
+  padding: 0 8.88vw;
+  height: 11.38vw;
+  display: flex;
+  align-items: center;
+  border-radius: 1.38vw;
+  border: none;
+  outline: none;
+  background-color: #bc1622;
+  color: #fff;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  margin-top: 0.56vw;
+}   
+
+.projects-page-hero-btn:hover {
+  background: #A0151F;
+}
+
+.projects-tasks-hero .offers-tasks-desc {
+  max-width: 36.32vw;
+}
+
+.projects-gift-steps-box {
+  height: 34.44vw;
+}
+
+.projects-gift-steps-box svg {
+  position: absolute;
+  width: 8.88vw;
+  height: 8.88vw;
+  right: 4.44vw;
+  bottom: 4.44vw;
+}
+
+.projects-banner {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5.55vw;
+  gap: 2.22vw;
+}
+
+.projects-banner .title {
+  max-width: 100%;
+  font-size: 5.55vw;
+}
+
+.projects-banner .desc {
+  font-size: 3.33vw;
+  color: #fff;
+  max-width: 63.88vw;
+  z-index: 1;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
