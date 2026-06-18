@@ -13418,6 +13418,26 @@ input:checked + .slider:before {
   color: #33333399;
 }
 
+.product-main-fav-success {
+  display: none;
+  align-items: center;
+  gap: 0.27vw;
+  box-sizing: border-box;
+  height: 2.22vw;
+  padding: 0.2vw 1.11vw 0 0.83vw;
+  border-radius: 0.27vw;
+  font-weight: 400;
+  font-size: 0.69vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: #E6F8F0;
+  margin-top: -0.2vw;
+}
+
+.product-main-fav-success svg {
+  margin-top: -0.27vw;
+}
+
 /* ORDER */
 
 .order-main {
