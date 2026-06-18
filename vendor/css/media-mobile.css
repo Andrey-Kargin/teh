@@ -13820,6 +13820,385 @@ input:checked + .slider:before {
   font-size: 3.33vw;
 }
 
+/* PRESS */
+
+.press-page-hero {
+  padding: 5.55vw 0;
+  background-color: #333333;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+.press-page-hero-img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 130vw;
+  background: linear-gradient(89.74deg, #333333 8.86%, rgba(72, 72, 72, 0.673077) 48.11%, rgba(51, 51, 51, 0) 99.8%);
+  z-index: 1;
+}
+
+.press-page-hero-img {
+  position: absolute;
+  top: -5.55vw;
+  right: calc((100vw - 88.88vw) / -2);
+  z-index: 1;
+  width: 100vw;
+  height: 130vw;
+  z-index: -1;
+}
+
+.press-page-hero-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.press-page-hero .container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2.22vw;
+}
+
+.press-page-hero .hero-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 6.66vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fff;
+}
+
+.press-page-hero .hero-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.press-page-hero .hero-subdesc {
+  max-width: 100%;
+}
+
+
+.press-page-hero-text {
+  display: flex;
+  flex-direction: column;
+  width: 71.94vw;
+  gap: 76.38vw;
+  margin-top: 0.83vw;
+  font-weight: 500;
+  font-size: 0.97vw;
+  line-height: 100%;
+}
+
+.press-page-hero-btn {
+  width: fit-content;
+  padding: 0 8.88vw;
+  height: 11.38vw;
+  display: flex;
+  align-items: center;
+  border-radius: 1.38vw;
+  border: none;
+  outline: none;
+  background-color: #bc1622;
+  color: #fff;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  margin-top: 0vw;
+}   
+
+.press-page-hero-btn:hover {
+  background: #A0151F;
+}
+
+.press-gift-steps-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.press-gift-steps-box {
+  height: 26.66vw;
+  width: 37.77vw;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  padding: 3.33vw;
+}
+
+.press-gift-steps-box svg {
+  position: relative;
+  width: 8.88vw;
+  height: 8.88vw;
+  right: auto;
+  top: auto;
+}
+
+.press-banner .title {
+  max-width: 60.55vw;
+}
+
+.press-catalog {
+  margin-top: 2.78vw;
+}
+
+.press-catalog .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+}
+
+.press-catalog-nav {
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 8.88vw;
+  display: flex;
+  width: fit-content;
+  padding-right: 3.33vw;
+  border-radius: 27.77vw;
+  background-color: #3333330D;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.press-catalog-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.press-catalog-nav-link {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 5.55vw;
+  color: #333333;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 130%;
+  border-radius: 27.77vw;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.press-catalog-nav-link_active {
+  background-color: #BC1622;
+  color: #fff;
+  font-weight: 500;
+}
+
+.press-catalog-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.77vw;
+}
+
+.press-catalog-box {
+  width: 100%;
+  height: 49.16vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 4.44vw;
+  border-radius: 2.77vw;
+  background-color: #F1F1F1;
+  gap: 2.22vw;
+  padding-right: 46.66vw;
+}
+
+.press-catalog-widget {
+  position: absolute;
+  top: 2.22vw;
+  right: 2.22vw;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 5.55vw;
+  padding: 0 3.33vw;
+  padding-top: 0.17vw;
+  color: #333333;
+  font-weight: 400;
+  font-size: 2.22vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: #FFFFFF;
+  border-radius: 27.77vw;
+}
+
+.press-catalog-date {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.22vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.press-catalog-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  max-width: 37.77vw;
+  z-index: 1;
+}
+
+.press-catalog-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.77vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333333CC;
+  max-width: 37.77vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.press-catalog-link {
+  display: flex;
+  align-items: center;
+  gap: 1.11vw;
+  margin-top: auto;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  cursor: pointer;
+}
+
+.press-catalog-link svg {
+  margin-top: -2.5px;
+  width: 2.22vw;
+  height: 2.22vw;
+}
+
+.press-catalog-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 42.22vw;
+}
+
+.press-catalog-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.press-catalog-box-offer {
+  background: #333333;
+}
+
+.press-catalog-box-offer p {
+  color: #fff;
+}
+
+.press-catalog-box-offer .press-catalog-img {
+  width: 53.88vw;
+}
+
+.press-catalog-box-offer:nth-of-type(6) {
+  padding-right: 0;
+}
+
+.press-catalog-box-offer:nth-of-type(6).press-catalog-box-offer p {
+  max-width: 100%;
+}
+
+.press-catalog-box-offer-row {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 1.11vw;
+  border-radius: 27.77vw;
+  background-color: #fff;
+  gap: 2.22vw;
+  margin-top: 2.77vw;
+  z-index: 1;
+}
+
+.press-page-hero-discount-percent {
+  margin: 0;
+  display: flex;
+  gap: 1.11vw;
+  align-items: center;
+  font-weight: 500;
+  font-size: 3.33vw;
+  line-height: 100%;
+  color: #BC1622 !important;
+}
+
+.press-page-hero-discount-percent svg {
+  margin-top: -2px;
+  width: 3.33vw;
+  height: 3.33vw;
+}
+
+.press-page-hero-discount-date {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 6.11vw;
+  padding: 0 3.33vw;
+  border-radius: 6.94vw;
+  background: #333333;
+  color: #fff;
+  font-weight: 400;
+  font-size: 2.22vw;
+  line-height: 100%;
+}
+
+.press-catalog-link-offer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 7.77vw;
+  padding: 0 4.44vw;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.77vw;
+  line-height: 100%;
+  background: #BC1622;
+  border-radius: 1.38vw;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.press-catalog-btn {
+  margin: auto;
+  width: fit-content;
+  box-sizing: border-box;
+  height: 7.77vw;
+  padding: 0 4.44vw;
+  background: #333;
+  font-weight: 700;
+  font-size: 2.77vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fff;
+  border: none;
+  border-radius: 1.38vw;
+  cursor: pointer;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
