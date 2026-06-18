@@ -13512,6 +13512,314 @@ input:checked + .slider:before {
   color: #33333399;
 }
 
+/* OFFERS PAGE */
+
+.offers-page-hero {
+  padding: 5.55vw 0;
+  background-color: #333333;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+.offers-page-hero-img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 130.83vw;
+  background: linear-gradient(89.74deg, #333333 8.86%, rgba(72, 72, 72, 0.673077) 48.11%, rgba(51, 51, 51, 0) 99.8%);
+  z-index: 1;
+}
+
+.offers-page-hero-img {
+  position: absolute;
+  top: -5.55vw;
+  right: calc((100vw - 88.88vw) / -2);
+  z-index: 1;
+  width: 100vw;
+  height: 130.83vw;
+  z-index: -1;
+}
+
+.offers-page-hero-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.offers-page-hero .container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2.22vw;
+}
+
+.offers-page-hero .hero-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 6.66vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #fff;
+}
+
+.offers-page-hero .hero-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.offers-page-hero-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.56vw;
+  margin-top: 0.83vw;
+  max-width: 100%;
+}
+
+.offers-page-hero-box {
+  display: flex;
+  align-items: center;
+  gap: 0.56vw;
+  padding: 0.69vw 1.11vw 0.69vw 0.83vw;
+  background-color: #f1f1f1;
+  border-radius: 0.35vw;
+  color: #333333;
+  font-weight: 700;
+  font-size: 0.9vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+
+.offers-page-hero-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4.44vw;
+  margin-top: 2.22vw;
+  font-weight: 500;
+  font-size: 0.97vw;
+  line-height: 100%;
+}
+
+.offer-page-hero-discount {
+  display: flex;
+  gap: 3.33vw;
+  box-sizing: border-box;
+  height: 10vw;
+  align-items: center;
+  border-radius: 27.77vw;
+  padding: 0 1.11vw 0 2.22vw;
+  background: #FFFFFF;
+  width: fit-content;
+}
+
+.offers-page-hero-discount-percent {
+  margin: 0;
+  display: flex;
+  gap: 1.11vw;
+  align-items: center;
+  font-weight: 500;
+  font-size: 4.44vw;
+  line-height: 100%;
+  background: linear-gradient(132.33deg, #333333 24.26%, rgba(72, 72, 72, 0.673077) 63.95%, rgba(51, 51, 51, 0) 95.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.offers-page-hero-discount-percent svg {
+  margin-top: -3px;
+  width: 4.44vw;
+  height: 4.44vw;
+}
+
+.offers-page-hero-discount-date {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 7.77vw;
+  padding: 0 4.44vw;
+  border-radius: 27.77vw;
+  background: #333333;
+  color: #fff;
+  font-weight: 400;
+  font-size: 2.77vw;
+  line-height: 100%;
+}
+
+.offers-page-hero-btn {
+  width: fit-content;
+  padding: 0 8.88vw;
+  height: 11.38vw;
+  display: flex;
+  align-items: center;
+  border-radius: 1.38vw;
+  border: none;
+  outline: none;
+  background-color: #bc1622;
+  color: #fff;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  margin-top: 44.72vw;
+}   
+
+.offers-page-hero-btn:hover {
+  background: #A0151F;
+}
+
+.offers-page-include {
+  margin-top: 8.33vw;
+}
+
+.offers-page-include .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.33vw;
+}
+
+.offers-page-include-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.22vw;
+  justify-content: flex-start;
+}
+
+.offers-page-include-box {
+  width: 43.33vw;
+  height: 28.88vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  gap: 2.22vw;
+  box-sizing: border-box;
+  padding: 3.33vw;
+  justify-content: flex-end;
+  border-radius: 2.77vw;
+  background-color: #F1F1F1;
+}
+
+.offers-page-include-box p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.61vw;
+  line-height: 100%;
+  color: #0E0E0E;
+}
+
+.offers-page-include-box svg {
+  width: 11.11vw;
+  height: 11.11vw;
+}
+
+.offers-page-suits {
+  margin-top: 8.33vw;
+}
+
+.offers-page-gift-includes {
+    display: flex;
+    flex-direction: column;
+    gap: 3.33vw;
+    z-index: 1;
+}
+
+.offers-page-gift-includes-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2.22vw;
+}
+
+.offers-page-gift-includes-box {
+    width: 100%;
+    height: 12.22vw;
+    box-sizing: border-box;
+    padding: 3.33vw;
+    display: flex;
+    align-items: center;
+    gap: 2.22vw;
+    border-radius: 2.77vw;
+    background: #F1F1F1;
+}
+
+.offers-page-gift-includes-box p {
+  font-size: 3.33vw;
+  margin: 0;
+  margin-top: 0.1vw;
+}
+
+.offers-page-gift-includes-box svg {
+    width: 5.55vw;
+    height: 5.55vw;
+    flex-shrink: 0;
+    margin-top: -0.5vw;
+}
+
+.offers-page-apply {
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+  margin-top: 1.38vw;
+}
+
+.offers-page-apply-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 140%;
+  color: #333;
+  max-width: 100%;
+}
+
+.offers-page-apply-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.22vw;
+  justify-content: flex-start;
+  margin-top: 0.56vw;
+}
+
+.offers-page-apply-img {
+  width: 37.77vw;
+  height: 28.61vw;
+  border-radius: 2.77vw;
+  overflow: hidden;
+}
+
+.offers-page-apply-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.offers-page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.38vw;
+}
+
+.offers-page-form .contacts-form-phone {
+  margin: auto;
+  margin-top: 6.66vw;
+  font-size: 4.44vw;
+}
+
+.offers-page-form .form-desc {
+  margin: auto;
+  margin-top: 2vw;
+  font-size: 3.33vw;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
