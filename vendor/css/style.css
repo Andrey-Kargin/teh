@@ -8405,16 +8405,25 @@ input:checked + .slider:before {
   align-items: center;
   background-color: #fff;
   border: none;
-  border-radius: .75rem;
+  border-radius: 0.69vw;
   color: #333;
   display: flex;
-  gap: 0.69vw;
+  gap: 0.27vw;
   justify-content: flex-start;
   letter-spacing: 0;
   line-height: 130%;
-  min-height: 3.33vw;
-  padding: 0.83vw 1.11vw;
+  min-height: 10.48vw;
+  padding: 1.11vw;
   box-sizing: border-box;
+  position: relative;
+}
+
+.about-information-box svg {
+  width: 4.16vw;
+  height: 4.16vw;
+  position: absolute;
+  bottom: 0.83vw;
+  right: 1.11vw;
 }
 
 .about-information-box-content {
