@@ -9031,11 +9031,11 @@ input:checked + .slider:before {
 }
 
 .about-steps-grid-5 {
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(1,1fr);
 }
 
 .about-steps-grid-5 .about-step {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .about-requisites {
@@ -9834,7 +9834,7 @@ input:checked + .slider:before {
   justify-content: center;
   letter-spacing: 0;
   line-height: 100%;
-  padding: 0 8.88vw;
+  padding: 0;
   transition: background-color .2s ease;
   width: 62.5vw;
 }
@@ -9848,9 +9848,9 @@ input:checked + .slider:before {
 }
 
 .about-hero__container .about-hero__inner {
-  padding-bottom: 54px;
+  padding-bottom: 5.55vw;
   padding-left: 0;
-  padding-top: 54px;
+  padding-top: 11.11vw;
 }
 
 .about-help {
@@ -15597,6 +15597,111 @@ input:checked + .slider:before {
 
 .manager-banner .offers-banner-img::after {
   display: none;
+}
+
+/* WINDOWS */
+
+.about-windows {
+  background-color: #f1f1f1;
+  padding-bottom: 8.33vw;
+  padding-top: 8.33vw;
+}
+
+.about-windows-inner {
+  background-color: #fff;
+  border-radius: 2.77vw;
+  overflow: hidden;
+  padding: 5.55vw;
+}
+
+.about-windows-head {
+  margin-right: -56px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.about-windows-head-content {
+  max-width: 540px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-windows-head-title {
+  margin: 0 0 2.22vw;
+}
+
+.about-windows-head-subtitle {
+  font-size: 3.88vw;
+  font-weight: 500;
+  margin: 0 0 4.44vw;
+}
+
+.about-windows-head-desc {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1ex;
+}
+
+.about-windows-head-desc>* {
+  margin: 0;
+}
+
+.about-windows-head-picture {
+  bottom: 0;
+  pointer-events: none;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin-left: -5.55vw;
+  height: 91.38vw;
+}
+
+.about-windows-head-picture,.about-windows-head-picture>img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.about-windows-head-picture>img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: right;
+  object-position: right;
+}
+
+.about-windows-suitable {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+  padding-bottom: 11.11vw;
+}
+
+.about-windows-suitable-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 2.22vw;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.about-windows-suitable-box {
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 3.61vw;
+  font-weight: 500;
+  gap: 2.22vw;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.about-windows-suitable-box-icon {
+  flex-shrink: 0;
+  height: 11.11vw;
+  width: 11.11vw;
 }
 
   @keyframes loadingAnimation {
