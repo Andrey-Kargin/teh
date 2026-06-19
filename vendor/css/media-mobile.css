@@ -9520,15 +9520,15 @@ input:checked + .slider:before {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  -o-object-position: top right;
-  object-position: top right;
+  -o-object-position: bottom right;
+  object-position: bottom right;
   width: 100%;
 }
 
 .about-information-list {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(1,1fr);
   position: relative;
   z-index: 2;
 }
@@ -9541,15 +9541,15 @@ input:checked + .slider:before {
   align-items: center;
   background-color: #fff;
   border: none;
-  border-radius: .75rem;
+  border-radius: 2.77vw;
   color: #333;
   display: flex;
-  gap: 10px;
+  gap: 2.22vw;
   justify-content: flex-start;
   letter-spacing: 0;
   line-height: 130%;
-  min-height: 48px;
-  padding: 12px 16px;
+  min-height: 11.11vw;
+  padding: 3.33vw 4.44vw;
   box-sizing: border-box;
 }
 
@@ -9561,7 +9561,7 @@ input:checked + .slider:before {
 }
 
 .about-information-box-title {
-  font-size: 12px;
+  font-size: 2.77vw;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -9574,8 +9574,12 @@ input:checked + .slider:before {
 .about-information-box-icon {
   display: block;
   flex-shrink: 0;
-  height: 24px;
-  width: 24px;
+  height: 4.44vw;
+  width: 4.44vw;
+}
+
+.contacts-information {
+  height: 183vw;
 }
 
 .about-information-box-icon>img {
@@ -9620,7 +9624,7 @@ input:checked + .slider:before {
 }
 
 .about-how-grid--3 {
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(1,1fr);
 }
 
 .about-how-desc {
@@ -9647,6 +9651,19 @@ input:checked + .slider:before {
 .main-form--inner-white {
   background: #fff;
   padding: 0;
+}
+
+.main-form--inner-white .contacts-form-phone {
+  font-size: 4.44vw;
+}
+
+.main-form--inner-white .contacts-form-links {
+  gap: 2.22vw;
+}
+
+.main-form--inner-white .main-form-link svg {
+  width: 8.88vw;
+  height: 8.88vw;
 }
 
 .main-form--inner-white .container {
@@ -10120,24 +10137,24 @@ input:checked + .slider:before {
 
 .about-contacts-cards {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3,1fr);
+  gap: 2.22vw;
+  grid-template-columns: repeat(1,1fr);
 }
 
 .about-contacts-card {
   background-color: #f1f1f1;
-  border-radius: .75rem;
+  border-radius: 2.77vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  min-height: 92px;
-  padding: 16px;
+  gap: 1.11vw;
+  min-height: 18.61vw;
+  padding: 4.44vw;
 }
 
 .about-contacts-card-label {
   color: #333;
-  font-size: 13px;
+  font-size: 3.05vw;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 120%;
@@ -10146,7 +10163,7 @@ input:checked + .slider:before {
 
 .about-contacts-card-value {
   color: #333;
-  font-size: 16px;
+  font-size: 3.88vw;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 120%;
@@ -10157,7 +10174,7 @@ input:checked + .slider:before {
 
 .about-contacts-card-extra {
   color: #333;
-  font-size: 12px;
+  font-size: 2.77vw;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 120%;
