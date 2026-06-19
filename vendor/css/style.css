@@ -8461,6 +8461,18 @@ input:checked + .slider:before {
   align-self: flex-start;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.75vw;
+  height: 3.19vw;
+  border-radius: 5px;
+  background-color: #BC1622;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .about-information-box--ais {
@@ -8887,6 +8899,17 @@ input:checked + .slider:before {
   gap: 0.83vw;
   padding: 1.11vw;
   text-decoration: none;
+  height: 15.13vw;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.about-decisions-box svg:not(.icon-arrow-top-right) {
+  width: 4.16vw;
+  height: 4.16vw;
+  position: absolute;
+  bottom: 1.11vw;
+  right: 1.11vw;
 }
 
 .about-decisions-box-head {
