@@ -15057,6 +15057,269 @@ input:checked + .slider:before {
   box-sizing: border-box;
 }
 
+/* SERVICE */
+
+.service-catalog {
+  margin-top: 2.78vw;
+}
+
+.service-catalog .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+}
+
+.service-catalog-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3.33vw;
+}
+
+.service-catalog-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44.16vw;
+  position: relative;
+  border-radius: 2.77vw;
+  overflow: hidden;
+  background: #F1F1F1;
+  padding: 4.44vw;
+  padding-right: 49.72vw;
+}
+
+.service-catalog-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.service-catalog-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.77vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #333333CC;
+}
+
+.service-catalog-link {
+  display: flex;
+  align-items: center;
+  gap: 1.11vw;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.service-catalog-link svg {
+  margin-top: -2.5px;
+  width: 2.22vw;
+  height: 2.22vw;
+}
+
+.service-catalog-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45.27vw;
+  height: 100%;
+}
+
+.service-catalog-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-catalog-btn {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.21vw;
+  box-sizing: border-box;
+  width: 40.55vw;
+  height: 11.94vw;
+  border-radius: 1.38vw;
+  background: #333333;
+  color: #fff;
+  font-weight: 700;
+  font-size: 4.44vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.service-gift-steps-box {
+  width: 100%;
+  height: 17.77vw;
+  padding-right: 4.44vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5.35vw;
+}
+
+.service-gift-steps-box svg {
+  position: absolute;
+  top: 4.44vw;
+  right: 4.44vw;
+  width: 8.88vw;
+  height: 8.88vw;
+}
+
+.service-gift-steps-box p {
+  max-width: 100%;
+}
+
+.service-banner {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5.55vw;
+  height: 56.94vw;
+  gap:  2.22vw;
+}
+
+.service-banner .offers-banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-banner .offers-banner-img::after {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120.74deg, #333333 12.77%, rgba(115, 115, 115, 0) 106.34%);
+}
+
+.service-banner .title {
+  max-width: 100%;
+  font-size: 5.55vw;
+}
+
+.service-banner .desc {
+  font-size: 3.33vw;
+  color: #fff;
+  max-width: 63.88vw;
+  z-index: 1;
+}
+
+.service-page .projects-tasks-hero .offers-tasks-desc {
+  max-width: 100%;
+}
+
+.service-page-hero {
+  margin-top: 1.11vw;
+}
+
+.service-page-hero .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28vw;
+  border-radius: 0.69vw;
+  background: #333333;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 2.22vw 3.06vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-subdesc {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.service-desc {
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0.83vw 0;
+  max-width: 47.08vw;
+}
+
+.service-gift-conditions-row {
+  flex-wrap: wrap;
+  gap: 0.69vw;
+}
+
+.service-gift-steps-container {
+  flex-wrap: wrap;
+  gap: 0.69vw;
+}
+
+.service-gift-conditions-row .legal-gift-conditions-box {
+  width: 24.72vw;
+  height: 9.93vw;
+}
+
+.service-gift-conditions-row .legal-gift-conditions-box svg {
+  width: 2.78vw;
+  height: 2.78vw;
+}
+
+.service-gift-steps-container .legal-gift-steps-box {
+  width: 24.72vw;
+  height: 7.91vw;
+  padding: 1.11vw;
+  padding-bottom: 0.83vw;
+}
+
+.service-more .service-catalog-box {
+  width: 100%;
+  height: 9.03vw;
+}
+
+.service-more .service-catalog-box p {
+  max-width: 13.75vw;
+}
+
+.service-more .service-catalog-box .service-catalog-title {
+  font-size: 0.97vw;
+}
+
+.service-more .service-catalog-box .service-catalog-desc {
+  font-size: 0.69vw;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.service-more .service-catalog-box .service-catalog-link {
+  font-size: 0.83vw;
+}
+
+.service-more .service-catalog-box .service-catalog-img {
+  width: 11.32vw;
+}
+
+.service-main .offers-banner-img {
+  height: 8.75vw;
+}
+
+.service-main .project-banner {
+  height: 8.75vw;
+}
+
+.service-main .project-banner .desc {
+  font-size: 0.83vw;
+  max-width: 32.5vw;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
