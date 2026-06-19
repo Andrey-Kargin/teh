@@ -8804,6 +8804,7 @@ input:checked + .slider:before {
   border-top: 1px solid #0000001A;
 }
 
+
 .brands-products .about-products-more {
   align-self: flex-start;
   box-sizing: border-box;
@@ -9696,6 +9697,11 @@ input:checked + .slider:before {
 
 .main-form--inner-white .container {
   width: 100%;
+}
+
+.dufa-hero .about-hero__inner {
+  justify-content: flex-start;
+  gap: 4.44vw;
 }
 
 .about-how-icon {
