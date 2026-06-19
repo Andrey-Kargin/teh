@@ -15260,7 +15260,7 @@ input:checked + .slider:before {
 
 .service-gift-steps-container {
   flex-wrap: wrap;
-  gap: 0.69vw;
+  gap: 2.22vw;
 }
 
 .service-gift-conditions-row .legal-gift-conditions-box {
@@ -15322,6 +15322,178 @@ input:checked + .slider:before {
 .service-main .project-banner .desc {
   font-size: 2.77vw;
   max-width: 71.11vw;
+}
+
+/* MANAGER */
+
+.manager-hero {
+  padding: 5.55vw 0;
+}
+
+.manager-hero .prof-hero-img {
+  top: -5.55vw;
+}
+
+.manager-hero .prof-hero-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135.14deg, #333333 17.91%, rgba(72, 72, 72, 0.673077) 42.67%, rgba(51, 51, 51, 0) 74.21%);
+}
+
+.manager-hero .hero-subdesc {
+  max-width: 100%;
+}
+
+.prof-manager-main {
+  padding: 8.33vw 0;
+}
+
+.prof-manager-main .container {
+  padding-right: 5.55vw;
+}
+
+.manager-adv-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.22vw;
+  margin-top: 1.11vw;
+}
+
+.manager-adv-box {
+  display: flex;
+  box-sizing: border-box;
+  width: 37.22vw;
+  height: 13.88vw;
+  padding: 3.33vw;
+  position: relative;
+  border-radius: 2.77vw;
+  background: #F1F1F1;
+}
+
+.manager-adv-box:last-of-type {
+  width: 100%;
+}
+
+.manager-adv-box svg {
+  position: absolute;
+  top: 3.33vw;
+  right: 3.33vw;
+  width: 6.66vw;
+  height: 6.66vw;
+}
+
+.manager-adv-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.77vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0E0E0E;
+}
+
+.manager-what {
+  margin: 8.33vw 0;
+}
+
+.manager-what .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+}
+
+.manager-what .legal-gift-conditions-box {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 15.55vw;
+}
+
+.manager-what .legal-gift-conditions-box svg {
+  width: 11.11vw;
+  height: 11.11vw;
+}
+
+.manager-how {
+  margin-bottom: 8.33vw;
+}
+
+.manager-how .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+}
+
+.manager-how .legal-gift-steps-box {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 4.44vw;
+}
+
+.manager-who {
+  margin: 8.33vw 0;
+}
+
+.manager-who .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44vw;
+}
+
+.manager-who .legal-gift-conditions-box {
+  width: 100%;
+  height: 30.83vw;
+}
+
+.manager-who .legal-gift-conditions-box svg {
+  width: 11.11vw;
+  height: 11.11 vw;
+}
+
+.manager-banner {
+  margin-bottom: 8.33vw;
+}
+
+.manager-banner .offers-banner {
+  height: 146.11vw;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5.55vw;
+  color: #fff;
+  gap: 2.22vw;
+}
+
+.manager-banner ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.56vw;
+}
+
+.manager-banner-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.manager-banner .desc {
+  color: #fff;
+  font-size: 3.33vw;
+  max-width: 100%;
+}
+
+.manager-banner .offers-banner-img {
+  width: 100%;
+  height: 68.61vw;
+  top: auto;
+  bottom: 0;
+}
+
+.manager-banner .offers-banner-img::after {
+  display: none;
 }
 
   @keyframes loadingAnimation {
