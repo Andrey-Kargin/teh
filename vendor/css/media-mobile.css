@@ -15704,6 +15704,131 @@ input:checked + .slider:before {
   width: 11.11vw;
 }
 
+/* CHECKOUT MOBILE */
+
+.basket-bottom-mobile {
+  position: fixed;
+  bottom: 19.72vw;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 2.22vw 0;
+  z-index: 9999;
+}
+
+.basket-bottom-mobile .container {
+  box-sizing: border-box;
+  padding: 3.33vw 4.44vw;
+  border-radius: 1.38vw;
+  background: #F1F1F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-bottom-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket-bottom-text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3.05vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0E0E0E;
+}
+
+.basket-bottom-text p:nth-of-type(1) {
+  color: #333333CC;
+  font-weight: 400;
+}
+
+.basket-bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27.77vw;
+  height: 8.33vw;
+  border-radius: 1.38vw;
+  border: none;
+  color: #fff;
+  background: #BC1622;
+  font-weight: 500;
+  font-size: 3.33vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.product-bottom-mobile {
+  position: fixed;
+  bottom: 19.72vw;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 2.22vw 0;
+  z-index: 9999;
+}
+
+.product-bottom-mobile .container {
+  box-sizing: border-box;
+  padding: 3.33vw 4.44vw;
+  border-radius: 1.38vw;
+  background: #F1F1F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-bottom-text {
+  display: flex;
+  gap: 2.22vw;
+  align-items: center;
+}
+
+.product-bottom-text span {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3.05vw;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-decoration: line-through;
+  color: #333333CC;
+}
+
+.product-bottom-text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 4.44vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.product-bottom-mobile .product-main-side-quantity {
+  margin: 0;
+  padding: 0;
+  border: none;
+  gap: 0.55vw;
+  width: fit-content;
+}
+
+.product-bottom-mobile button {
+
+}
+
+.product-bottom-mobile .count-size-input {
+  width: 22.77vw;
+}
+
+.hide {
+  display: none !important;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;

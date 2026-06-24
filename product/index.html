@@ -329,6 +329,20 @@
     </div>
   </header>
   <main class="product-page">
+    <div class="mobile product-bottom-mobile">
+      <div class="container">
+        <div class="product-bottom-text">
+          <span class="">340 ₽</span>
+          <p class="">282 ₽</p>
+        </div>
+        <div class="product-main-side-quantity">
+          <button class="btn__minus">-</button>
+          <input class="count-size-input" type="text" value="1" />
+          <button class="btn__plus">+</button>
+        </div>
+      </div>
+    </div>
+
     <section class="breadcrumbs-top">
       <div class="container">
         <div class="breadcrumbs pc pc-1440">
@@ -1532,6 +1546,31 @@ popupInputs.forEach(input => {
 });
 
 checkPopupForm();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkoutTotal = document.querySelector('.product-main-side-price');
+      const mobileBlock = document.querySelector('.product-bottom-mobile');
+
+      if (!checkoutTotal || !mobileBlock) return;
+
+      function checkScroll() {
+        const checkoutRect = checkoutTotal.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (checkoutRect.bottom <= windowHeight) {
+          mobileBlock.classList.add('hide');
+        } else {
+          mobileBlock.classList.remove('hide');
+        }
+      }
+
+      window.addEventListener('scroll', checkScroll);
+      window.addEventListener('resize', checkScroll);
+
+      checkScroll();
+    });
   </script>
 </body>
 
