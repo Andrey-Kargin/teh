@@ -333,7 +333,7 @@
       <div class="container">
 
         <nav class="about__nav">
-          <a class="about__nav-link about__nav-link_active">О нас</a>
+          <a href="./" class="about__nav-link about__nav-link_active">О нас</a>
           <a href="./partners/" class="about__nav-link">Партнеры</a>
           <a href="./brands/" class="about__nav-link">Бренды</a>
           <a href="./certificates/" class="about__nav-link">Сертификаты</a>
@@ -1055,6 +1055,21 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
       handleScroll();
     })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const backBtn = document.querySelector('.about-link-back');
+      const mainText = document.querySelector('.about__main-text');
+      const nav = document.querySelector('.about__nav');
+
+      if (!backBtn || !mainText || !nav) return;
+
+      backBtn.addEventListener('click', function () {
+        mainText.style.display = 'none';
+        nav.style.display = 'flex';
+      });
+    });
   </script>
 </body>
 

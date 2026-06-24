@@ -1222,6 +1222,20 @@
       </div>
     </footer>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const backBtn = document.querySelector('.about-link-back');
+      const mainText = document.querySelector('.about-pages__content');
+      const nav = document.querySelector('.about__nav');
+
+      if (!backBtn || !mainText || !nav) return;
+
+      backBtn.addEventListener('click', function () {
+        mainText.style.display = 'none';
+        nav.style.display = 'flex';
+      });
+    });
+  </script>
 </body>
 
 </html>
