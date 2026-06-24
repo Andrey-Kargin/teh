@@ -15862,6 +15862,240 @@ input:checked + .slider:before {
   display: none !important;
 }
 
+/* CHECKLIST */
+
+.check-list-page {
+  padding-bottom: 5.6vw;
+}
+
+.check-list {
+  padding: 1.1vw 0 0;
+}
+
+.check-list .container {
+  display: flex;
+  flex-direction: column;
+  gap: 6.66vw;
+}
+
+.check-list .title {
+  max-width: 100%;
+  margin: 0;
+  font-size: 6.66vw;
+  line-height: 98%;
+}
+
+.check-list-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+}
+
+.check-list-form .order-main-delivery-step {
+  margin-top: 0;
+  padding: 4.44vw;
+  border-radius: 2.77vw;
+  gap: 1.11vw;
+  background: #F1F1F1;
+}
+
+.check-list .order-main-delivery-step-title {
+  font-size: 3.05vw;
+}
+
+.check-list .order-main-delivery-step-subtitle {
+  font-size: 4.16vw;
+  line-height: 100%;
+}
+
+.check-list .order-main-delivery-step-address-row {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.11vw;
+  margin-top: 2.22vw;
+}
+
+.check-list .order-main-delivery-step-address-row input {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.check-list .order-main-delivery-subdesc {
+  margin-top: 4.44vw;
+  margin-bottom: 1.11vw;
+  font-size: 3.33vw;
+  line-height: 130%;
+}
+
+.check-list-input {
+  width: 100%;
+  height: 10.27vw;
+  border: 1px solid #E2E2E2;
+  border-radius: 1.11vw;
+  box-sizing: border-box;
+  padding: 0 4.44vw;
+  font-weight: 400;
+  font-size: 3.05vw;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #333333;
+  background: #fff;
+  margin-top: 2.22vw;
+}
+
+.check-list-input::placeholder {
+  color: #33333366;
+}
+
+.check-list-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.77vw 4.44vw;
+}
+
+.check-list-square-row {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.11vw;
+}
+
+.check-list-square-row input {
+  margin: 0;
+}
+
+.check-list-option {
+  display: flex;
+  align-items: center;
+  min-height: 4.44vw;
+}
+
+.check-list-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.check-list-option label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 6.66vw;
+  font-weight: 400;
+  font-size: 3.05vw;
+  line-height: 100%;
+  color: #2C3439;
+}
+
+.check-list-option label::after {
+  position: absolute;
+  top: -1.2vw;
+  left: 0;
+  width: 4.44vw;
+  height: 4.44vw;
+  border: 1px solid #C9C9C9;
+  border-radius: 50%;
+  content: "";
+  box-sizing: border-box;
+}
+
+.check-list-option input:checked + label::before {
+  position: absolute;
+  top: -1.2vw;
+  left: 0;
+  width: 4.44vw;
+  height: 4.44vw;
+  border: 1.38vw solid #BC1622;
+  border-radius: 50%;
+  content: "";
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.check-list-policy {
+  margin-top: 3.33vw;
+}
+
+.check-list-policy .checkbox-policy {
+  margin-bottom: 5.55vw;
+  gap: 3.33vw;
+}
+
+.check-list-policy .checkbox__input {
+  width: 4.44vw;
+}
+
+.check-list-policy .checkbox__label {
+  font-size: 3.05vw;
+  line-height: 120%;
+}
+
+.check-list-policy .checkbox__label::after {
+  top: -0.1vw;
+  left: -7.66vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  border-color: #BC1622;
+}
+
+.check-list-policy .checkbox__input:checked + .checkbox__label::before {
+  top: -0.1vw;
+  left: -7.66vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  border-radius: 1.11vw;
+  background-size: 3.33vw 2.22vw;
+}
+
+.check-list-policy .checkbox__label a {
+  color: #BC1622;
+}
+
+.check-list-row_sections .check-list-option label::after {
+  top: -1.2vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  border-radius: 1.11vw;
+  border-color: #C9C9C9;
+}
+
+.check-list-row_sections .check-list-option input:checked + label::before {
+  top: -1.2vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  border: none;
+  border-radius: 1.11vw;
+  background-color: #BC1622;
+  background-image: url(../../img/tick.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 3.33vw 2.22vw;
+}
+
+.check-list-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.check-list-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 3.75vw;
+  height: 11.38vw;
+  padding: 0 8.88vw;
+  border-radius: 1.38vw;
+  background: #BC1622;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 3.88vw;
+  line-height: 100%;
+}
+
+.check-list-submit:hover {
+  background: #A0151F;
+}
+
   @keyframes loadingAnimation {
   from {
     width: 0%;
