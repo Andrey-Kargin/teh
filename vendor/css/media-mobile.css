@@ -6785,6 +6785,223 @@ input:checked + .slider:before {
   margin-top: -0.5vw;
 }
 
+.popup_register.popup_details {
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 5.56vw;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup_register .popup-container {
+  width: 94.44vw;
+  max-width: 100%;
+  max-height: calc(100dvh - 11.11vw);
+  margin-bottom: 5.56vw;
+  overflow-y: auto;
+  border-radius: 2.77vw;
+  gap: 4.44vw;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup_register .popup-container::-webkit-scrollbar {
+  display: none;
+}
+
+.popup_register .popup-container::after {
+  top: 16.67vw;
+}
+
+.popup-register-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.11vw;
+  box-sizing: border-box;
+}
+
+.popup-register-type {
+  display: flex;
+  align-items: center;
+  gap: 2.22vw;
+  height: 8.88vw;
+  padding: 0 4.44vw 0 3.33vw;
+  border-radius: 1.39vw;
+  background-color: #F1F1F1;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.popup-register-type:nth-child(3) {
+  flex: 0 0 auto;
+  max-width: fit-content;
+}
+
+.popup-register-type input {
+  opacity: 0;
+  width: 4.44vw;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.popup-register-type span {
+  position: relative;
+  font-weight: 400;
+  font-size: 3.05vw;
+  line-height: 130%;
+  color: #2C3439;
+  margin-top: 0.83vw;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.popup-register-type span::after {
+  position: absolute;
+  top: -0.42vw;
+  left: -6.67vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  content: '';
+  border: 1px solid #C9C9C9;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.popup-register-type input:checked + span::before {
+  position: absolute;
+  top: -0.42vw;
+  left: -6.67vw;
+  width: 4.44vw;
+  height: 4.44vw;
+  border-radius: 50%;
+  content: '';
+  border: 1.39vw solid #BC1622;
+  z-index: 2;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.popup-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.22vw;
+  width: 100%;
+}
+
+.popup-register-form .popup-input {
+  width: 100%;
+  margin-top: 0;
+}
+
+.popup-register-policy {
+  margin-top: 4.44vw;
+}
+
+.popup-register-policy .checkbox-policy {
+  margin-bottom: 3.33vw;
+  gap: 4.44vw;
+}
+
+.popup-register-policy .checkbox__input {
+  width: 6.67vw;
+}
+
+.popup-register-policy .checkbox__label {
+  font-size: 3.89vw;
+  line-height: 140%;
+}
+
+.popup-register-policy .checkbox__label::after {
+  top: -1.11vw;
+  left: -11.11vw;
+  width: 6.67vw;
+  height: 6.67vw;
+  border-color: #BC1622;
+}
+
+.popup-register-policy .checkbox__input:checked + .checkbox__label::before {
+  top: -1.11vw;
+  left: -11.11vw;
+  width: 6.67vw;
+  height: 6.67vw;
+  border-radius: 0.83vw;
+  background-size: 1.94vw 1.67vw;
+}
+
+.popup-register-policy .checkbox__label a {
+  color: #BC1622;
+  text-decoration: underline;
+}
+
+.popup-register-required {
+  margin: 0 0 2.22vw;
+  font-weight: 400;
+  font-size: 3.61vw;
+  line-height: 100%;
+  color: #33333399;
+}
+
+.popup-register-required span {
+  color: #BC1622;
+}
+
+.popup-btn-register-submit {
+  width: 100%;
+  margin-top: 2.22vw;
+  background-color: #BC1622;
+  color: #fff;
+}
+
+.popup-btn-register-submit:hover {
+  background: #A0151F;
+}
+
+.popup-register-login-link {
+  display: block;
+  width: 100%;
+  margin: 2.22vw 0 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 3.89vw;
+  line-height: 130%;
+  text-align: center;
+  color: #2C3439;
+  cursor: pointer;
+}
+
+.popup-register-login-link:hover {
+  color: #BC1622;
+}
+
+.popup-register-phone-field {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.popup-register-phone-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 4.44vw;
+  transform: translateY(calc(-50% + 0.42vw));
+  font-weight: 400;
+  font-size: 3.61vw;
+  line-height: 100%;
+  color: #33333366;
+  pointer-events: none;
+}
+
+.popup-register-phone-required {
+  color: #BC1622;
+}
+
+.popup-register-phone:not(:placeholder-shown) + .popup-register-phone-placeholder {
+  opacity: 0;
+}
+
 /* CATALOG */
 
 .catalog__main .container {
@@ -16371,7 +16588,6 @@ input:checked + .slider:before {
   width: 4.44vw;
   height: 4.44vw;
 }
-
 
   @keyframes loadingAnimation {
   from {

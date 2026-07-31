@@ -400,6 +400,56 @@
     </div>
   </div>
 
+  <div class="popup_details popup_login popup_register" id="popup-register">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </div>
+      <p class="popup-title">Регистрация</p>
+
+      <div class="popup-register-types">
+        <label class="popup-register-type">
+          <input type="radio" name="register-type" value="physical" checked />
+          <span>Физическое лицо</span>
+        </label>
+        <label class="popup-register-type">
+          <input type="radio" name="register-type" value="legal" />
+          <span>Юридическое лицо</span>
+        </label>
+        <label class="popup-register-type">
+          <input type="radio" name="register-type" value="professional" />
+          <span>Профессионал</span>
+        </label>
+      </div>
+
+      <div class="popup-register-form">
+        <label class="popup-register-phone-field">
+          <input class="popup-input popup-register-phone" type="text" placeholder="" />
+          <span class="popup-register-phone-placeholder">Номер телефона <span class="popup-register-phone-required">*</span></span>
+        </label>
+        <input class="popup-input" type="text" placeholder="Email" />
+        <input class="popup-input" type="text" placeholder="ФИО" />
+
+        <div class="popup-register-policy">
+          <div class="checkbox-policy">
+            <input class="checkbox__input" type="checkbox" checked />
+            <label class="checkbox__label desc">Я ознакомлен(а) <a href="../">с политикой конфиденциальности</a></label>
+          </div>
+          <div class="checkbox-policy">
+            <input class="checkbox__input" type="checkbox" checked />
+            <label class="checkbox__label desc">Я даю согласие на <a href="../">обработку персональных данных</a></label>
+          </div>
+        </div>
+
+        <p class="popup-register-required"><span>*</span> – обязательное поле</p>
+
+        <button class="popup_details-btn popup-btn-register-submit disabled" type="button">Зарегистрироваться</button>
+        <button class="popup-register-login-link" type="button">Уже есть аккаунт</button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script>
     const burger = document.querySelector('.burger');
@@ -946,10 +996,72 @@
     const registerBtns = document.querySelectorAll('.popup-btn-register');
     registerBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Add your registration logic here
-            console.log('Registration clicked');
+            showPopup('popup-register');
         });
     });
+
+    // ======================== Registration Popup ========================
+    const registerPhoneInput = document.querySelector('.popup-register-phone');
+    const registerSubmitBtn = document.querySelector('.popup-btn-register-submit');
+    const registerLoginLink = document.querySelector('.popup-register-login-link');
+
+    function formatPhoneInput(input) {
+        let value = input.value.replace(/\D/g, '');
+        let formattedValue = '';
+
+        if (value.length > 0) {
+            formattedValue = '+7 ';
+            if (value.length > 1) {
+                formattedValue += '(' + value.substring(1, 4);
+                if (value.length >= 4) formattedValue += ') ';
+                if (value.length > 4) {
+                    formattedValue += value.substring(4, 7);
+                    if (value.length >= 7) formattedValue += '-';
+                    if (value.length > 7) {
+                        formattedValue += value.substring(7, 9);
+                        if (value.length >= 9) formattedValue += '-';
+                        if (value.length > 9) {
+                            formattedValue += value.substring(9, 11);
+                        }
+                    }
+                }
+            }
+        }
+
+        input.value = formattedValue;
+    }
+
+    function validateRegisterPhone() {
+        if (!registerPhoneInput || !registerSubmitBtn) return;
+
+        const digitsCount = registerPhoneInput.value.replace(/\D/g, '').length;
+        if (digitsCount === 11) {
+            registerSubmitBtn.classList.remove('disabled');
+        } else {
+            registerSubmitBtn.classList.add('disabled');
+        }
+    }
+
+    if (registerPhoneInput) {
+        registerPhoneInput.addEventListener('input', function() {
+            formatPhoneInput(this);
+            validateRegisterPhone();
+        });
+    }
+
+    if (registerSubmitBtn) {
+        registerSubmitBtn.addEventListener('click', function() {
+            if (!this.classList.contains('disabled')) {
+                hideCurrentPopup();
+            }
+        });
+    }
+
+    if (registerLoginLink) {
+        registerLoginLink.addEventListener('click', function() {
+            showPopup('popup-login');
+        });
+    }
 
     // ======================== Close Popups ========================
     const closeButtons = document.querySelectorAll('.popup_details-close');
@@ -957,7 +1069,11 @@
         btn.addEventListener('click', function() {
             const popup = this.closest('.popup_details');
             if (popup) {
-                popup.classList.remove('popup_details_opened');
+                if (popup.id === 'popup-register') {
+                    showPopup('popup-login');
+                } else {
+                    popup.classList.remove('popup_details_opened');
+                }
             }
         });
     });

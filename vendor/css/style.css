@@ -6447,6 +6447,191 @@ input:checked + .slider:before {
   margin-top: -0.3vw;
 }
 
+.popup_register .popup-container {
+  width: 38.61vw;
+}
+
+.popup-register-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.56vw;
+  box-sizing: border-box;
+}
+
+.popup-register-type {
+  display: flex;
+  align-items: center;
+  gap: 0.56vw;
+  height: 2.85vw;
+  padding: 0 1.39vw 0 1.11vw;
+  border-radius: 0.35vw;
+  background-color: #F1F1F1;
+  cursor: pointer;
+}
+
+.popup-register-type input {
+  opacity: 0;
+  width: 1.11vw;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.popup-register-type span {
+  position: relative;
+  font-weight: 400;
+  font-size: 0.9vw;
+  line-height: 130%;
+  color: #2C3439;
+  margin-top: 0.21vw;
+  cursor: pointer;
+}
+
+.popup-register-type span::after {
+  position: absolute;
+  top: -0.1vw;
+  left: -1.67vw;
+  width: 1.11vw;
+  height: 1.11vw;
+  content: '';
+  border: 1px solid #C9C9C9;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.popup-register-type input:checked + span::before {
+  position: absolute;
+  top: -0.1vw;
+  left: -1.67vw;
+  width: 1.11vw;
+  height: 1.11vw;
+  border-radius: 50%;
+  content: '';
+  border: 0.35vw solid #BC1622;
+  z-index: 2;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.popup-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.56vw;
+  width: 100%;
+}
+
+.popup-register-form .popup-input {
+  width: 100%;
+}
+
+.popup-register-policy {
+  margin-top: 1.11vw;
+}
+
+.popup-register-policy .checkbox-policy {
+  margin-bottom: 0.83vw;
+  gap: 1.11vw;
+}
+
+.popup-register-policy .checkbox__input {
+  width: 1.67vw;
+}
+
+.popup-register-policy .checkbox__label {
+  font-size: 0.97vw;
+  line-height: 140%;
+}
+
+.popup-register-policy .checkbox__label::after {
+  top: -0.28vw;
+  left: -2.78vw;
+  width: 1.67vw;
+  height: 1.67vw;
+  border-color: #BC1622;
+}
+
+.popup-register-policy .checkbox__input:checked + .checkbox__label::before {
+  top: -0.28vw;
+  left: -2.78vw;
+  width: 1.67vw;
+  height: 1.67vw;
+  border-radius: 0.21vw;
+  background-size: 0.49vw 0.42vw;
+}
+
+.popup-register-policy .checkbox__label a {
+  color: #BC1622;
+  text-decoration: underline;
+}
+
+.popup-register-required {
+  margin: 0 0 0.56vw;
+  font-weight: 400;
+  font-size: 0.9vw;
+  line-height: 100%;
+  color: #33333399;
+}
+
+.popup-register-required span {
+  color: #BC1622;
+}
+
+.popup-btn-register-submit {
+  width: 100%;
+  margin-top: 0.56vw;
+  background-color: #BC1622;
+  color: #fff;
+}
+
+.popup-btn-register-submit:hover {
+  background: #A0151F;
+}
+
+.popup-register-login-link {
+  display: block;
+  width: 100%;
+  margin: 0.56vw 0 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 0.97vw;
+  line-height: 130%;
+  text-align: center;
+  color: #2C3439;
+  cursor: pointer;
+}
+
+.popup-register-login-link:hover {
+  color: #BC1622;
+}
+
+.popup-register-phone-field {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.popup-register-phone-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1.11vw;
+  transform: translateY(calc(-50% + 0.1vw));
+  font-weight: 400;
+  font-size: 0.9vw;
+  line-height: 100%;
+  color: #33333366;
+  pointer-events: none;
+}
+
+.popup-register-phone-required {
+  color: #BC1622;
+}
+
+.popup-register-phone:not(:placeholder-shown) + .popup-register-phone-placeholder {
+  opacity: 0;
+}
+
 /* CATALOG */
 
 .catalog__main .container {
