@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="mobile bottom-tabs">
+  <div class="mobile pt bottom-tabs">
     <div class="container">
       <div class="bottom-tab">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
             </defs>
           </svg>
         </div>
-        <div id="btn" class="mobile burger">
+        <div id="btn" class="mobile pt burger">
           <span id="btn"></span>
         </div>
       </div>
@@ -330,758 +330,769 @@
   </header>
   <main>
 
-  <div class="popup_details popup_login popup_details_opened" id="popup-login">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Авторизация</p>
-      <div class="popup-login-nav">
-        <a class="popup-login-nav-link popup-login-nav-link_active" data-tab="phone-tab">По телефону</a>
-        <a class="popup-login-nav-link" data-tab="email-tab">По E-mail</a>
-      </div>
-      <!-- ЛОГИН ПО ТЕЛЕФОНУ -->
-      <div class="popop-phone-login" id="phone-tab">
-        <input class="popup-input" type="text" placeholder="Номер телефона" />
-        <div class="popup_login-row">
-          <button class="popup_details-btn popup-btn-get-code disabled">Получить код по телефону</button>
-          <button class="popup_details-btn popup-btn-register">Зарегистрироваться</button>
+    <div class="popup_details popup_login popup_details_opened" id="popup-login">
+      <div class="popup-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
         </div>
-      </div>
-  
-      <!-- ЛОГИН ПО ПОЧТЕ -->
-      <div class="popup-email-login hidden" id="email-tab">
-        <input class="popup-input" type="text" placeholder="Email" />
-        <div class="popup-login-pass">
-          <input class="popup-input" type="password" placeholder="Пароль" />
-          <span class="popup_details-form-hide"></span>
+        <p class="popup-title">Авторизация</p>
+        <div class="popup-login-nav">
+          <a class="popup-login-nav-link popup-login-nav-link_active" data-tab="phone-tab">По телефону</a>
+          <a class="popup-login-nav-link" data-tab="email-tab">По E-mail</a>
         </div>
-        <a class="popup-forgot-pass">Забыл пароль</a>
-        <div class="popup_login-row">
-          <button class="popup_details-btn popup-btn-login disabled">Войти</button>
-          <button class="popup_details-btn popup-btn-register">Зарегистрироваться</button>
+        <!-- ЛОГИН ПО ТЕЛЕФОНУ -->
+        <div class="popop-phone-login" id="phone-tab">
+          <input class="popup-input" type="text" placeholder="Номер телефона" />
+          <div class="popup_login-row">
+            <button class="popup_details-btn popup-btn-get-code disabled">Получить код по телефону</button>
+            <button class="popup_details-btn popup-btn-register">Зарегистрироваться</button>
+          </div>
+        </div>
+
+        <!-- ЛОГИН ПО ПОЧТЕ -->
+        <div class="popup-email-login hidden" id="email-tab">
+          <input class="popup-input" type="text" placeholder="Email" />
+          <div class="popup-login-pass">
+            <input class="popup-input" type="password" placeholder="Пароль" />
+            <span class="popup_details-form-hide"></span>
+          </div>
+          <a class="popup-forgot-pass">Забыл пароль</a>
+          <div class="popup_login-row">
+            <button class="popup_details-btn popup-btn-login disabled">Войти</button>
+            <button class="popup_details-btn popup-btn-register">Зарегистрироваться</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="popup_details" id="popup-code">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+    <div class="popup_details" id="popup-code">
+      <div class="popup-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="popup-title">Введите код</p>
+        <p class="popup-desc">На номер +7 960 809 26 83 мы отправили смс с кодом</p>
+        <a class="popup-phone-edit">Изменить</a>
+        <div class="popup-code-row">
+          <input class="popup-code" placeholder="0" />
+          <input class="popup-code" placeholder="0" />
+          <input class="popup-code" placeholder="0" />
+          <input class="popup-code" placeholder="0" />
+        </div>
+        <button class="popup_details-btn popup-btn-login disabled">Войти</button>
+        <p class="popup-code-timer">Отправить код повторно можно <br>через 2:54</p>
+        <a class="popup-code-send-again hidden">Получить код повторно</a>
       </div>
-      <p class="popup-title">Введите код</p>
-      <p class="popup-desc">На номер  +7 960 809 26 83 мы отправили смс с кодом</p>
-      <a class="popup-phone-edit">Изменить</a>
-      <div class="popup-code-row">
-        <input class="popup-code" placeholder="0" />
-        <input class="popup-code" placeholder="0" />
-        <input class="popup-code" placeholder="0" />
-        <input class="popup-code" placeholder="0" />
-      </div>
-      <button class="popup_details-btn popup-btn-login disabled">Войти</button>
-      <p class="popup-code-timer">Отправить код повторно можно <br>через 2:54</p>
-      <a class="popup-code-send-again hidden">Получить код повторно</a>
     </div>
-  </div>
 
-  <div class="popup_details popup_login" id="popup-password-reset">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Восстановление пароля</p>  
+    <div class="popup_details popup_login" id="popup-password-reset">
+      <div class="popup-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="popup-title">Восстановление пароля</p>
         <input class="popup-input" type="text" placeholder="Email" />
         <button class="popup_details-btn popup-btn-login disabled">Выслать новый пароль</button>
       </div>
     </div>
-  </div>
+    </div>
 
-  <div class="popup_details popup_login popup_register" id="popup-register">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Регистрация</p>
+    <div class="popup_details popup_login popup_register" id="popup-register">
+      <div class="popup-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="popup-title">Регистрация</p>
 
-      <div class="popup-register-types">
-        <label class="popup-register-type">
-          <input type="radio" name="register-type" value="physical" checked />
-          <span>Физическое лицо</span>
-        </label>
-        <label class="popup-register-type">
-          <input type="radio" name="register-type" value="legal" />
-          <span>Юридическое лицо</span>
-        </label>
-        <label class="popup-register-type">
-          <input type="radio" name="register-type" value="professional" />
-          <span>Профессионал</span>
-        </label>
-      </div>
-
-      <div class="popup-register-form">
-        <label class="popup-register-phone-field">
-          <input class="popup-input popup-register-phone" type="text" placeholder="" />
-          <span class="popup-register-phone-placeholder">Номер телефона <span class="popup-register-phone-required">*</span></span>
-        </label>
-        <input class="popup-input" type="text" placeholder="Email" />
-        <input class="popup-input" type="text" placeholder="ФИО" />
-
-        <div class="popup-register-policy">
-          <div class="checkbox-policy">
-            <input class="checkbox__input" type="checkbox" checked />
-            <label class="checkbox__label desc">Я ознакомлен(а) <a href="../">с политикой конфиденциальности</a></label>
-          </div>
-          <div class="checkbox-policy">
-            <input class="checkbox__input" type="checkbox" checked />
-            <label class="checkbox__label desc">Я даю согласие на <a href="../">обработку персональных данных</a></label>
-          </div>
+        <div class="popup-register-types">
+          <label class="popup-register-type">
+            <input type="radio" name="register-type" value="physical" checked />
+            <span>Физическое лицо</span>
+          </label>
+          <label class="popup-register-type">
+            <input type="radio" name="register-type" value="legal" />
+            <span>Юридическое лицо</span>
+          </label>
+          <label class="popup-register-type">
+            <input type="radio" name="register-type" value="professional" />
+            <span>Профессионал</span>
+          </label>
         </div>
 
-        <p class="popup-register-required"><span>*</span> – обязательное поле</p>
+        <div class="popup-register-form">
+          <label class="popup-register-phone-field">
+            <input class="popup-input popup-register-phone" type="text" placeholder="" />
+            <span class="popup-register-phone-placeholder">Номер телефона <span
+                class="popup-register-phone-required">*</span></span>
+          </label>
+          <input class="popup-input" type="text" placeholder="Email" />
+          <input class="popup-input" type="text" placeholder="ФИО" />
 
-        <button class="popup_details-btn popup-btn-register-submit disabled" type="button">Зарегистрироваться</button>
-        <button class="popup-register-login-link" type="button">Уже есть аккаунт</button>
+          <div class="popup-register-policy">
+            <div class="checkbox-policy">
+              <input class="checkbox__input" type="checkbox" checked />
+              <label class="checkbox__label desc">Я ознакомлен(а) <a href="../">с политикой
+                  конфиденциальности</a></label>
+            </div>
+            <div class="checkbox-policy">
+              <input class="checkbox__input" type="checkbox" checked />
+              <label class="checkbox__label desc">Я даю согласие на <a href="../">обработку персональных
+                  данных</a></label>
+            </div>
+          </div>
+
+          <p class="popup-register-required"><span>*</span> – обязательное поле</p>
+
+          <button class="popup_details-btn popup-btn-register-submit disabled" type="button">Зарегистрироваться</button>
+          <button class="popup-register-login-link" type="button">Уже есть аккаунт</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.header__nav');
-    const btn = document.getElementById('btn');
-    const navBtn = document.querySelectorAll('.header__nav-link');
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.header__nav');
+      const btn = document.getElementById('btn');
+      const navBtn = document.querySelectorAll('.header__nav-link');
 
-    function openBurger() {
-      const isActive = burger.classList.toggle('burger_active');
-      nav.classList.toggle('header__nav_opened');
+      function openBurger() {
+        const isActive = burger.classList.toggle('burger_active');
+        nav.classList.toggle('header__nav_opened');
 
-      if (isActive) {
-        // Сохраняем текущую позицию прокрутки
-        const scrollY = window.scrollY;
+        if (isActive) {
+          // Сохраняем текущую позицию прокрутки
+          const scrollY = window.scrollY;
 
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.width = '100%';
-        document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
-      } else {
-        // Извлекаем сохраненную позицию из стиля top
-        const scrollY = document.body.style.top;
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${scrollY}px`;
+          document.body.style.width = '100%';
+          document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
+        } else {
+          // Извлекаем сохраненную позицию из стиля top
+          const scrollY = document.body.style.top;
 
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        document.body.style.overflowY = '';
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          document.body.style.overflowY = '';
 
-        // Возвращаем страницу к прежнему месту
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+          // Возвращаем страницу к прежнему месту
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
       }
-    }
 
-    btn.addEventListener('click', openBurger);
-    burger.addEventListener('click', openBurger);
+      btn.addEventListener('click', openBurger);
+      burger.addEventListener('click', openBurger);
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const triggers = document.querySelectorAll('[data-tab]');
+      document.addEventListener('DOMContentLoaded', function () {
+        const triggers = document.querySelectorAll('[data-tab]');
 
-      triggers.forEach(trigger => {
-        trigger.addEventListener('click', function (e) {
-          e.preventDefault();
+        triggers.forEach(trigger => {
+          trigger.addEventListener('click', function (e) {
+            e.preventDefault();
 
-          const tabId = this.getAttribute('data-tab');
-          const targetFold = document.getElementById(tabId);
+            const tabId = this.getAttribute('data-tab');
+            const targetFold = document.getElementById(tabId);
 
-          if (targetFold) {
-            targetFold.classList.toggle('header__nav-fold_active');
-          }
-        });
-      });
-    });
-
-    // HEADER
-    (function () {
-      // Собираем все элементы, которые могут участвовать в логике
-      const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
-      const blocksData = [];
-
-      elementsToTrack.forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-          blocksData.push({
-            element: el,
-            selector: selector,
-            parent: el.parentElement,
-            placeholder: createPlaceholder(el)
+            if (targetFold) {
+              targetFold.classList.toggle('header__nav-fold_active');
+            }
           });
         });
       });
 
-      function createPlaceholder(el) {
-        const placeholder = document.createElement('div');
-        placeholder.style.display = 'none';
-        placeholder.style.height = el.offsetHeight + 'px';
-        placeholder.style.width = '100%';
-        return placeholder;
-      }
+      // HEADER
+      (function () {
+        // Собираем все элементы, которые могут участвовать в логике
+        const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
+        const blocksData = [];
 
-      function handleScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const winWidth = window.innerWidth;
+        elementsToTrack.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => {
+            blocksData.push({
+              element: el,
+              selector: selector,
+              parent: el.parentElement,
+              placeholder: createPlaceholder(el)
+            });
+          });
+        });
 
-        blocksData.forEach(data => {
-          const { element, parent, placeholder, selector } = data;
-          const parentRect = parent.getBoundingClientRect();
-          const parentRelativeTop = parentRect.top + scrollTop;
+        function createPlaceholder(el) {
+          const placeholder = document.createElement('div');
+          placeholder.style.display = 'none';
+          placeholder.style.height = el.offsetHeight + 'px';
+          placeholder.style.width = '100%';
+          return placeholder;
+        }
 
-          // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
-          if (winWidth >= 1280) {
-            if (selector === '.header__main') {
-              let offsetPx, fixedStyles, resetStyles;
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const winWidth = window.innerWidth;
 
-              if (winWidth < 1440) {
-                // Условие 1: 1280px - 1440px
-                offsetPx = (winWidth * 2.35) / 100;
-                fixedStyles = {
-                  position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                  padding: '0.833vw 7.8vw'
-                };
-                resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
-              } else {
-                // Условие 2: Более 1440px
-                offsetPx = 35;
-                fixedStyles = {
-                  position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                  padding: `12px calc((100vw - 1454.5px) / 2)`
-                };
-                resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
-              }
+          blocksData.forEach(data => {
+            const { element, parent, placeholder, selector } = data;
+            const parentRect = parent.getBoundingClientRect();
+            const parentRelativeTop = parentRect.top + scrollTop;
 
-              if (scrollTop >= (parentRelativeTop + offsetPx)) {
-                if (!element.classList.contains('is-fixed')) {
-                  element.classList.add('is-fixed');
-                  parent.insertBefore(placeholder, element);
-                  placeholder.style.display = 'block';
-                  Object.assign(element.style, fixedStyles);
+            // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
+            if (winWidth >= 1280) {
+              if (selector === '.header__main') {
+                let offsetPx, fixedStyles, resetStyles;
+
+                if (winWidth < 1440) {
+                  // Условие 1: 1280px - 1440px
+                  offsetPx = (winWidth * 2.35) / 100;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: '0.833vw 7.8vw'
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
+                } else {
+                  // Условие 2: Более 1440px
+                  offsetPx = 35;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: `12px calc((100vw - 1454.5px) / 2)`
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
                 }
-              } else {
-                if (element.classList.contains('is-fixed')) {
-                  element.classList.remove('is-fixed');
-                  placeholder.style.display = 'none';
-                  Object.assign(element.style, resetStyles);
+
+                if (scrollTop >= (parentRelativeTop + offsetPx)) {
+                  if (!element.classList.contains('is-fixed')) {
+                    element.classList.add('is-fixed');
+                    parent.insertBefore(placeholder, element);
+                    placeholder.style.display = 'block';
+                    Object.assign(element.style, fixedStyles);
+                  }
+                } else {
+                  if (element.classList.contains('is-fixed')) {
+                    element.classList.remove('is-fixed');
+                    placeholder.style.display = 'none';
+                    Object.assign(element.style, resetStyles);
+                  }
                 }
               }
             }
-          }
 
-        });
-      }
-
-      window.addEventListener('resize', () => {
-        blocksData.forEach(data => {
-          // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
-          if (!data.element.classList.contains('is-fixed')) {
-            data.placeholder.style.height = data.element.offsetHeight + 'px';
-          }
-        });
-        handleScroll(); // Пересчитываем положение при ресайзе
-      });
-
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      handleScroll();
-    })();
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Получаем нужные элементы
-      const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
-      const containers = document.querySelectorAll('.personal-container');
-      const backButton = document.querySelector('.personal-container-orders-back');
-
-      // Функция для активации раздела
-      function activateSection(sectionId) {
-        containers.forEach(container => {
-          container.classList.remove('personal-container_active');
-        });
-
-        const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-        if (targetContainer) {
-          targetContainer.classList.add('personal-container_active');
+          });
         }
-      }
 
-      // Функция для скролла вверх
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+        window.addEventListener('resize', () => {
+          blocksData.forEach(data => {
+            // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
+            if (!data.element.classList.contains('is-fixed')) {
+              data.placeholder.style.height = data.element.offsetHeight + 'px';
+            }
+          });
+          handleScroll(); // Пересчитываем положение при ресайзе
         });
-      }
 
-      // Обработчик для всего блока заказа
-      ordersBoxes.forEach(box => {
-        box.addEventListener('click', function (e) {
-          // Находим ссылку "Подробнее" внутри этого блока
-          const link = this.querySelector('.personal-orders-box-link');
-          
-          // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
-          const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
-          
-          if (link && !isWidgetClick) {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+      })();
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем нужные элементы
+        const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
+        const containers = document.querySelectorAll('.personal-container');
+        const backButton = document.querySelector('.personal-container-orders-back');
+
+        // Функция для активации раздела
+        function activateSection(sectionId) {
+          containers.forEach(container => {
+            container.classList.remove('personal-container_active');
+          });
+
+          const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
+          if (targetContainer) {
+            targetContainer.classList.add('personal-container_active');
+          }
+        }
+
+        // Функция для скролла вверх
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+
+        // Обработчик для всего блока заказа
+        ordersBoxes.forEach(box => {
+          box.addEventListener('click', function (e) {
+            // Находим ссылку "Подробнее" внутри этого блока
+            const link = this.querySelector('.personal-orders-box-link');
+
+            // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
+            const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
+
+            if (link && !isWidgetClick) {
+              e.preventDefault();
+              const sectionId = link.dataset.section; // "orders-info"
+              activateSection(sectionId);
+              scrollToTop();
+            }
+          });
+        });
+
+        // Обработчик для кнопки "Назад"
+        if (backButton) {
+          backButton.addEventListener('click', function (e) {
             e.preventDefault();
-            const sectionId = link.dataset.section; // "orders-info"
+            const sectionId = this.dataset.section; // "orders"
             activateSection(sectionId);
             scrollToTop();
-          }
-        });
+          });
+        }
       });
+    </script>
 
-      // Обработчик для кнопки "Назад"
-      if (backButton) {
-        backButton.addEventListener('click', function (e) {
-          e.preventDefault();
-          const sectionId = this.dataset.section; // "orders"
-          activateSection(sectionId);
-          scrollToTop();
-        });
-      }
-    });
-  </script>
-
-  <!-- Функции авторизации -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    // ======================== Helper Functions ========================
-    function showPopup(popupId) {
-        document.querySelectorAll('.popup_details').forEach(popup => {
+    <!-- Функции авторизации -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // ======================== Helper Functions ========================
+        function showPopup(popupId) {
+          document.querySelectorAll('.popup_details').forEach(popup => {
             popup.classList.remove('popup_details_opened');
-        });
-        document.getElementById(popupId).classList.add('popup_details_opened');
-    }
+          });
+          document.getElementById(popupId).classList.add('popup_details_opened');
+        }
 
-    function hideCurrentPopup() {
-        document.querySelector('.popup_details_opened').classList.remove('popup_details_opened');
-    }
+        function hideCurrentPopup() {
+          document.querySelector('.popup_details_opened').classList.remove('popup_details_opened');
+        }
 
-    // ======================== Tab Switching ========================
-    const tabLinks = document.querySelectorAll('.popup-login-nav-link');
-    const phoneTab = document.getElementById('phone-tab');
-    const emailTab = document.getElementById('email-tab');
+        // ======================== Tab Switching ========================
+        const tabLinks = document.querySelectorAll('.popup-login-nav-link');
+        const phoneTab = document.getElementById('phone-tab');
+        const emailTab = document.getElementById('email-tab');
 
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        tabLinks.forEach(link => {
+          link.addEventListener('click', function () {
             // Remove active class from all tabs
             tabLinks.forEach(l => l.classList.remove('popup-login-nav-link_active'));
             // Add active class to clicked tab
             this.classList.add('popup-login-nav-link_active');
-            
+
             // Show/hide corresponding content
             const targetId = this.getAttribute('data-tab');
             if (targetId === 'phone-tab') {
-                phoneTab.classList.remove('hidden');
-                emailTab.classList.add('hidden');
+              phoneTab.classList.remove('hidden');
+              emailTab.classList.add('hidden');
             } else if (targetId === 'email-tab') {
-                emailTab.classList.remove('hidden');
-                phoneTab.classList.add('hidden');
+              emailTab.classList.remove('hidden');
+              phoneTab.classList.add('hidden');
             }
+          });
         });
-    });
 
-    // ======================== Phone Input Mask ========================
-    const phoneInput = document.querySelector('#phone-tab .popup-input');
-    const getCodeBtn = document.querySelector('.popup-btn-get-code');
-    
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
+        // ======================== Phone Input Mask ========================
+        const phoneInput = document.querySelector('#phone-tab .popup-input');
+        const getCodeBtn = document.querySelector('.popup-btn-get-code');
+
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function (e) {
             let value = this.value.replace(/\D/g, ''); // Remove all non-digits
             let formattedValue = '';
-            
+
             if (value.length > 0) {
-                formattedValue = '+7 ';
-                if (value.length > 1) {
-                    formattedValue += '(' + value.substring(1, 4);
-                    if (value.length >= 4) formattedValue += ') ';
-                    if (value.length > 4) {
-                        formattedValue += value.substring(4, 7);
-                        if (value.length >= 7) formattedValue += '-';
-                        if (value.length > 7) {
-                            formattedValue += value.substring(7, 9);
-                            if (value.length >= 9) formattedValue += '-';
-                            if (value.length > 9) {
-                                formattedValue += value.substring(9, 11);
-                            }
-                        }
-                    }
-                }
-            }
-            
-            this.value = formattedValue;
-            
-            // Check if phone is fully filled (11 digits total including country code)
-            const digitsCount = this.value.replace(/\D/g, '').length;
-            if (digitsCount === 11) { // +7 plus 10 digits = 11 total
-                getCodeBtn.classList.remove('disabled');
-            } else {
-                getCodeBtn.classList.add('disabled');
-            }
-        });
-    }
-
-    // ======================== Get Code Button ========================
-    if (getCodeBtn) {
-        getCodeBtn.addEventListener('click', function() {
-            if (!this.classList.contains('disabled')) {
-                showPopup('popup-code');
-                initCodePopup();
-            }
-        });
-    }
-
-    // ======================== Phone Edit Link ========================
-    const phoneEditLink = document.querySelector('.popup-phone-edit');
-    if (phoneEditLink) {
-        phoneEditLink.addEventListener('click', function() {
-            showPopup('popup-login');
-        });
-    }
-
-    // ======================== Code Inputs ========================
-    let timerInterval = null;
-    let timeLeft = 180; // 3 minutes in seconds
-
-    function checkAllCodeInputs() {
-        const codeInputs = document.querySelectorAll('#popup-code .popup-code');
-        const loginBtn = document.querySelector('#popup-code .popup-btn-login');
-        let allFilled = true;
-        
-        codeInputs.forEach(input => {
-            if (input.value.length === 0) {
-                allFilled = false;
-            }
-        });
-        
-        if (allFilled && loginBtn) {
-            loginBtn.classList.remove('disabled');
-        } else if (loginBtn) {
-            loginBtn.classList.add('disabled');
-        }
-    }
-
-    function initCodePopup() {
-        const codeInputs = document.querySelectorAll('#popup-code .popup-code');
-        const loginBtn = document.querySelector('#popup-code .popup-btn-login');
-        const timerElement = document.querySelector('.popup-code-timer');
-        const sendAgainLink = document.querySelector('.popup-code-send-again');
-        
-        // Reset and start timer
-        if (timerInterval) clearInterval(timerInterval);
-        timeLeft = 180;
-        timerElement.classList.remove('hidden');
-        sendAgainLink.classList.add('hidden');
-        startTimer();
-        
-        // Clear and focus first input
-        codeInputs.forEach(input => input.value = '');
-        if (codeInputs[0]) codeInputs[0].focus();
-        
-        // Disable login button initially
-        loginBtn.classList.add('disabled');
-        
-        // Remove existing event listeners and add new ones
-        codeInputs.forEach((input, index) => {
-            // Remove old listeners if any
-            const newInput = input.cloneNode(true);
-            input.parentNode.replaceChild(newInput, input);
-            
-            // Update the codeInputs array with the new input
-            codeInputs[index] = newInput;
-        });
-        
-        // Re-query to get fresh references
-        const freshCodeInputs = document.querySelectorAll('#popup-code .popup-code');
-        const freshLoginBtn = document.querySelector('#popup-code .popup-btn-login');
-        
-        // Add event listeners to fresh inputs
-        freshCodeInputs.forEach((input, index) => {
-            input.addEventListener('input', function(e) {
-                let value = this.value.replace(/\D/g, '');
-                if (value.length > 1) {
-                    value = value.charAt(0);
-                }
-                this.value = value;
-                
-                if (value && index < freshCodeInputs.length - 1) {
-                    freshCodeInputs[index + 1].focus();
-                }
-                
-                // Check if all inputs are filled
-                checkAllCodeInputs();
-            });
-            
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
-                    freshCodeInputs[index - 1].focus();
-                }
-            });
-            
-            input.addEventListener('paste', function(e) {
-                e.preventDefault();
-                const pasteData = (e.clipboardData || window.clipboardData).getData('text');
-                const digits = pasteData.replace(/\D/g, '').split('');
-                
-                for (let i = 0; i < Math.min(digits.length, freshCodeInputs.length); i++) {
-                    freshCodeInputs[i].value = digits[i];
-                }
-                
-                // Focus on the next empty input
-                let lastFilledIndex = -1;
-                for (let i = 0; i < freshCodeInputs.length; i++) {
-                    if (freshCodeInputs[i].value) lastFilledIndex = i;
-                }
-                if (lastFilledIndex < freshCodeInputs.length - 1) {
-                    freshCodeInputs[lastFilledIndex + 1].focus();
-                }
-                
-                // Check if all inputs are filled
-                checkAllCodeInputs();
-            });
-        });
-        
-        // Login button click handler
-        if (freshLoginBtn) {
-            // Remove old event listener by cloning
-            const newLoginBtn = freshLoginBtn.cloneNode(true);
-            freshLoginBtn.parentNode.replaceChild(newLoginBtn, freshLoginBtn);
-            
-            newLoginBtn.addEventListener('click', function() {
-                if (!this.classList.contains('disabled')) {
-                    hideCurrentPopup();
-                }
-            });
-        }
-        
-        // Send again link handler
-        if (sendAgainLink) {
-            const newSendAgainLink = sendAgainLink.cloneNode(true);
-            sendAgainLink.parentNode.replaceChild(newSendAgainLink, sendAgainLink);
-            
-            newSendAgainLink.addEventListener('click', function() {
-                if (timerInterval) clearInterval(timerInterval);
-                timeLeft = 180;
-                const timerElementFresh = document.querySelector('.popup-code-timer');
-                const sendAgainLinkFresh = document.querySelector('.popup-code-send-again');
-                
-                timerElementFresh.classList.remove('hidden');
-                sendAgainLinkFresh.classList.add('hidden');
-                startTimer();
-                
-                // Clear all code inputs
-                const codeInputsFresh = document.querySelectorAll('#popup-code .popup-code');
-                codeInputsFresh.forEach(input => input.value = '');
-                if (codeInputsFresh[0]) codeInputsFresh[0].focus();
-                
-                const loginBtnFresh = document.querySelector('#popup-code .popup-btn-login');
-                loginBtnFresh.classList.add('disabled');
-            });
-        }
-    }
-    
-    function startTimer() {
-        const timerElement = document.querySelector('.popup-code-timer');
-        const sendAgainLink = document.querySelector('.popup-code-send-again');
-        
-        timerInterval = setInterval(() => {
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                if (timerElement) timerElement.classList.add('hidden');
-                if (sendAgainLink) sendAgainLink.classList.remove('hidden');
-            } else {
-                timeLeft--;
-                const minutes = Math.floor(timeLeft / 60);
-                const seconds = timeLeft % 60;
-                if (timerElement) {
-                    timerElement.innerHTML = `Отправить код повторно можно <br>через ${minutes}:${seconds.toString().padStart(2, '0')}`;
-                }
-            }
-        }, 1000);
-    }
-
-    // ======================== Password Show/Hide ========================
-    const passwordWrapper = document.querySelector('.popup-login-pass');
-    if (passwordWrapper) {
-        const passwordInput = passwordWrapper.querySelector('input[type="password"]');
-        const toggleBtn = passwordWrapper.querySelector('.popup_details-form-hide');
-        
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', function() {
-                this.classList.toggle('popup_details-form-hide_shown');
-                if (this.classList.contains('popup_details-form-hide_shown')) {
-                    passwordInput.type = 'text';
-                } else {
-                    passwordInput.type = 'password';
-                }
-            });
-        }
-    }
-
-    // ======================== Email Login Validation ========================
-    const emailInput = document.querySelector('#email-tab input[placeholder="Email"]');
-    const emailPasswordInput = document.querySelector('#email-tab input[type="password"]');
-    const emailLoginBtn = document.querySelector('#email-tab .popup-btn-login');
-    
-    function validateEmailLogin() {
-        const email = emailInput ? emailInput.value.trim() : '';
-        const password = emailPasswordInput ? emailPasswordInput.value : '';
-        
-        if (email && password && emailLoginBtn) {
-            emailLoginBtn.classList.remove('disabled');
-        } else if (emailLoginBtn) {
-            emailLoginBtn.classList.add('disabled');
-        }
-    }
-    
-    if (emailInput) {
-        emailInput.addEventListener('input', validateEmailLogin);
-    }
-    
-    if (emailPasswordInput) {
-        emailPasswordInput.addEventListener('input', validateEmailLogin);
-    }
-    
-    if (emailLoginBtn) {
-        emailLoginBtn.addEventListener('click', function() {
-            if (!this.classList.contains('disabled')) {
-                hideCurrentPopup();
-            }
-        });
-    }
-
-    // ======================== Forgot Password ========================
-    const forgotPassLink = document.querySelector('.popup-forgot-pass');
-    if (forgotPassLink) {
-        forgotPassLink.addEventListener('click', function() {
-            showPopup('popup-password-reset');
-        });
-    }
-
-    // ======================== Password Reset ========================
-    const resetEmailInput = document.querySelector('#popup-password-reset .popup-input');
-    const resetBtn = document.querySelector('#popup-password-reset .popup-btn-login');
-    
-    if (resetEmailInput) {
-        resetEmailInput.addEventListener('input', function() {
-            const email = this.value.trim();
-            if (email && resetBtn) {
-                resetBtn.classList.remove('disabled');
-            } else if (resetBtn) {
-                resetBtn.classList.add('disabled');
-            }
-        });
-    }
-    
-    if (resetBtn) {
-        resetBtn.addEventListener('click', function() {
-            if (!this.classList.contains('disabled')) {
-                hideCurrentPopup();
-                showPopup('popup-login');
-            }
-        });
-    }
-
-    // ======================== Register Buttons ========================
-    const registerBtns = document.querySelectorAll('.popup-btn-register');
-    registerBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            showPopup('popup-register');
-        });
-    });
-
-    // ======================== Registration Popup ========================
-    const registerPhoneInput = document.querySelector('.popup-register-phone');
-    const registerSubmitBtn = document.querySelector('.popup-btn-register-submit');
-    const registerLoginLink = document.querySelector('.popup-register-login-link');
-
-    function formatPhoneInput(input) {
-        let value = input.value.replace(/\D/g, '');
-        let formattedValue = '';
-
-        if (value.length > 0) {
-            formattedValue = '+7 ';
-            if (value.length > 1) {
+              formattedValue = '+7 ';
+              if (value.length > 1) {
                 formattedValue += '(' + value.substring(1, 4);
                 if (value.length >= 4) formattedValue += ') ';
                 if (value.length > 4) {
-                    formattedValue += value.substring(4, 7);
-                    if (value.length >= 7) formattedValue += '-';
-                    if (value.length > 7) {
-                        formattedValue += value.substring(7, 9);
-                        if (value.length >= 9) formattedValue += '-';
-                        if (value.length > 9) {
-                            formattedValue += value.substring(9, 11);
-                        }
+                  formattedValue += value.substring(4, 7);
+                  if (value.length >= 7) formattedValue += '-';
+                  if (value.length > 7) {
+                    formattedValue += value.substring(7, 9);
+                    if (value.length >= 9) formattedValue += '-';
+                    if (value.length > 9) {
+                      formattedValue += value.substring(9, 11);
                     }
+                  }
                 }
+              }
             }
+
+            this.value = formattedValue;
+
+            // Check if phone is fully filled (11 digits total including country code)
+            const digitsCount = this.value.replace(/\D/g, '').length;
+            if (digitsCount === 11) { // +7 plus 10 digits = 11 total
+              getCodeBtn.classList.remove('disabled');
+            } else {
+              getCodeBtn.classList.add('disabled');
+            }
+          });
         }
 
-        input.value = formattedValue;
-    }
+        // ======================== Get Code Button ========================
+        if (getCodeBtn) {
+          getCodeBtn.addEventListener('click', function () {
+            if (!this.classList.contains('disabled')) {
+              showPopup('popup-code');
+              initCodePopup();
+            }
+          });
+        }
 
-    function validateRegisterPhone() {
-        if (!registerPhoneInput || !registerSubmitBtn) return;
+        // ======================== Phone Edit Link ========================
+        const phoneEditLink = document.querySelector('.popup-phone-edit');
+        if (phoneEditLink) {
+          phoneEditLink.addEventListener('click', function () {
+            showPopup('popup-login');
+          });
+        }
 
-        const digitsCount = registerPhoneInput.value.replace(/\D/g, '').length;
-        if (digitsCount === 11) {
+        // ======================== Code Inputs ========================
+        let timerInterval = null;
+        let timeLeft = 180; // 3 minutes in seconds
+
+        function checkAllCodeInputs() {
+          const codeInputs = document.querySelectorAll('#popup-code .popup-code');
+          const loginBtn = document.querySelector('#popup-code .popup-btn-login');
+          let allFilled = true;
+
+          codeInputs.forEach(input => {
+            if (input.value.length === 0) {
+              allFilled = false;
+            }
+          });
+
+          if (allFilled && loginBtn) {
+            loginBtn.classList.remove('disabled');
+          } else if (loginBtn) {
+            loginBtn.classList.add('disabled');
+          }
+        }
+
+        function initCodePopup() {
+          const codeInputs = document.querySelectorAll('#popup-code .popup-code');
+          const loginBtn = document.querySelector('#popup-code .popup-btn-login');
+          const timerElement = document.querySelector('.popup-code-timer');
+          const sendAgainLink = document.querySelector('.popup-code-send-again');
+
+          // Reset and start timer
+          if (timerInterval) clearInterval(timerInterval);
+          timeLeft = 180;
+          timerElement.classList.remove('hidden');
+          sendAgainLink.classList.add('hidden');
+          startTimer();
+
+          // Clear and focus first input
+          codeInputs.forEach(input => input.value = '');
+          if (codeInputs[0]) codeInputs[0].focus();
+
+          // Disable login button initially
+          loginBtn.classList.add('disabled');
+
+          // Remove existing event listeners and add new ones
+          codeInputs.forEach((input, index) => {
+            // Remove old listeners if any
+            const newInput = input.cloneNode(true);
+            input.parentNode.replaceChild(newInput, input);
+
+            // Update the codeInputs array with the new input
+            codeInputs[index] = newInput;
+          });
+
+          // Re-query to get fresh references
+          const freshCodeInputs = document.querySelectorAll('#popup-code .popup-code');
+          const freshLoginBtn = document.querySelector('#popup-code .popup-btn-login');
+
+          // Add event listeners to fresh inputs
+          freshCodeInputs.forEach((input, index) => {
+            input.addEventListener('input', function (e) {
+              let value = this.value.replace(/\D/g, '');
+              if (value.length > 1) {
+                value = value.charAt(0);
+              }
+              this.value = value;
+
+              if (value && index < freshCodeInputs.length - 1) {
+                freshCodeInputs[index + 1].focus();
+              }
+
+              // Check if all inputs are filled
+              checkAllCodeInputs();
+            });
+
+            input.addEventListener('keydown', function (e) {
+              if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                freshCodeInputs[index - 1].focus();
+              }
+            });
+
+            input.addEventListener('paste', function (e) {
+              e.preventDefault();
+              const pasteData = (e.clipboardData || window.clipboardData).getData('text');
+              const digits = pasteData.replace(/\D/g, '').split('');
+
+              for (let i = 0; i < Math.min(digits.length, freshCodeInputs.length); i++) {
+                freshCodeInputs[i].value = digits[i];
+              }
+
+              // Focus on the next empty input
+              let lastFilledIndex = -1;
+              for (let i = 0; i < freshCodeInputs.length; i++) {
+                if (freshCodeInputs[i].value) lastFilledIndex = i;
+              }
+              if (lastFilledIndex < freshCodeInputs.length - 1) {
+                freshCodeInputs[lastFilledIndex + 1].focus();
+              }
+
+              // Check if all inputs are filled
+              checkAllCodeInputs();
+            });
+          });
+
+          // Login button click handler
+          if (freshLoginBtn) {
+            // Remove old event listener by cloning
+            const newLoginBtn = freshLoginBtn.cloneNode(true);
+            freshLoginBtn.parentNode.replaceChild(newLoginBtn, freshLoginBtn);
+
+            newLoginBtn.addEventListener('click', function () {
+              if (!this.classList.contains('disabled')) {
+                hideCurrentPopup();
+              }
+            });
+          }
+
+          // Send again link handler
+          if (sendAgainLink) {
+            const newSendAgainLink = sendAgainLink.cloneNode(true);
+            sendAgainLink.parentNode.replaceChild(newSendAgainLink, sendAgainLink);
+
+            newSendAgainLink.addEventListener('click', function () {
+              if (timerInterval) clearInterval(timerInterval);
+              timeLeft = 180;
+              const timerElementFresh = document.querySelector('.popup-code-timer');
+              const sendAgainLinkFresh = document.querySelector('.popup-code-send-again');
+
+              timerElementFresh.classList.remove('hidden');
+              sendAgainLinkFresh.classList.add('hidden');
+              startTimer();
+
+              // Clear all code inputs
+              const codeInputsFresh = document.querySelectorAll('#popup-code .popup-code');
+              codeInputsFresh.forEach(input => input.value = '');
+              if (codeInputsFresh[0]) codeInputsFresh[0].focus();
+
+              const loginBtnFresh = document.querySelector('#popup-code .popup-btn-login');
+              loginBtnFresh.classList.add('disabled');
+            });
+          }
+        }
+
+        function startTimer() {
+          const timerElement = document.querySelector('.popup-code-timer');
+          const sendAgainLink = document.querySelector('.popup-code-send-again');
+
+          timerInterval = setInterval(() => {
+            if (timeLeft <= 0) {
+              clearInterval(timerInterval);
+              if (timerElement) timerElement.classList.add('hidden');
+              if (sendAgainLink) sendAgainLink.classList.remove('hidden');
+            } else {
+              timeLeft--;
+              const minutes = Math.floor(timeLeft / 60);
+              const seconds = timeLeft % 60;
+              if (timerElement) {
+                timerElement.innerHTML = `Отправить код повторно можно <br>через ${minutes}:${seconds.toString().padStart(2, '0')}`;
+              }
+            }
+          }, 1000);
+        }
+
+        // ======================== Password Show/Hide ========================
+        const passwordWrapper = document.querySelector('.popup-login-pass');
+        if (passwordWrapper) {
+          const passwordInput = passwordWrapper.querySelector('input[type="password"]');
+          const toggleBtn = passwordWrapper.querySelector('.popup_details-form-hide');
+
+          if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+              this.classList.toggle('popup_details-form-hide_shown');
+              if (this.classList.contains('popup_details-form-hide_shown')) {
+                passwordInput.type = 'text';
+              } else {
+                passwordInput.type = 'password';
+              }
+            });
+          }
+        }
+
+        // ======================== Email Login Validation ========================
+        const emailInput = document.querySelector('#email-tab input[placeholder="Email"]');
+        const emailPasswordInput = document.querySelector('#email-tab input[type="password"]');
+        const emailLoginBtn = document.querySelector('#email-tab .popup-btn-login');
+
+        function validateEmailLogin() {
+          const email = emailInput ? emailInput.value.trim() : '';
+          const password = emailPasswordInput ? emailPasswordInput.value : '';
+
+          if (email && password && emailLoginBtn) {
+            emailLoginBtn.classList.remove('disabled');
+          } else if (emailLoginBtn) {
+            emailLoginBtn.classList.add('disabled');
+          }
+        }
+
+        if (emailInput) {
+          emailInput.addEventListener('input', validateEmailLogin);
+        }
+
+        if (emailPasswordInput) {
+          emailPasswordInput.addEventListener('input', validateEmailLogin);
+        }
+
+        if (emailLoginBtn) {
+          emailLoginBtn.addEventListener('click', function () {
+            if (!this.classList.contains('disabled')) {
+              hideCurrentPopup();
+            }
+          });
+        }
+
+        // ======================== Forgot Password ========================
+        const forgotPassLink = document.querySelector('.popup-forgot-pass');
+        if (forgotPassLink) {
+          forgotPassLink.addEventListener('click', function () {
+            showPopup('popup-password-reset');
+          });
+        }
+
+        // ======================== Password Reset ========================
+        const resetEmailInput = document.querySelector('#popup-password-reset .popup-input');
+        const resetBtn = document.querySelector('#popup-password-reset .popup-btn-login');
+
+        if (resetEmailInput) {
+          resetEmailInput.addEventListener('input', function () {
+            const email = this.value.trim();
+            if (email && resetBtn) {
+              resetBtn.classList.remove('disabled');
+            } else if (resetBtn) {
+              resetBtn.classList.add('disabled');
+            }
+          });
+        }
+
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function () {
+            if (!this.classList.contains('disabled')) {
+              hideCurrentPopup();
+              showPopup('popup-login');
+            }
+          });
+        }
+
+        // ======================== Register Buttons ========================
+        const registerBtns = document.querySelectorAll('.popup-btn-register');
+        registerBtns.forEach(btn => {
+          btn.addEventListener('click', function () {
+            showPopup('popup-register');
+          });
+        });
+
+        // ======================== Registration Popup ========================
+        const registerPhoneInput = document.querySelector('.popup-register-phone');
+        const registerSubmitBtn = document.querySelector('.popup-btn-register-submit');
+        const registerLoginLink = document.querySelector('.popup-register-login-link');
+
+        function formatPhoneInput(input) {
+          let value = input.value.replace(/\D/g, '');
+          let formattedValue = '';
+
+          if (value.length > 0) {
+            formattedValue = '+7 ';
+            if (value.length > 1) {
+              formattedValue += '(' + value.substring(1, 4);
+              if (value.length >= 4) formattedValue += ') ';
+              if (value.length > 4) {
+                formattedValue += value.substring(4, 7);
+                if (value.length >= 7) formattedValue += '-';
+                if (value.length > 7) {
+                  formattedValue += value.substring(7, 9);
+                  if (value.length >= 9) formattedValue += '-';
+                  if (value.length > 9) {
+                    formattedValue += value.substring(9, 11);
+                  }
+                }
+              }
+            }
+          }
+
+          input.value = formattedValue;
+        }
+
+        function validateRegisterPhone() {
+          if (!registerPhoneInput || !registerSubmitBtn) return;
+
+          const digitsCount = registerPhoneInput.value.replace(/\D/g, '').length;
+          if (digitsCount === 11) {
             registerSubmitBtn.classList.remove('disabled');
-        } else {
+          } else {
             registerSubmitBtn.classList.add('disabled');
+          }
         }
-    }
 
-    if (registerPhoneInput) {
-        registerPhoneInput.addEventListener('input', function() {
+        if (registerPhoneInput) {
+          registerPhoneInput.addEventListener('input', function () {
             formatPhoneInput(this);
             validateRegisterPhone();
-        });
-    }
+          });
+        }
 
-    if (registerSubmitBtn) {
-        registerSubmitBtn.addEventListener('click', function() {
+        if (registerSubmitBtn) {
+          registerSubmitBtn.addEventListener('click', function () {
             if (!this.classList.contains('disabled')) {
-                hideCurrentPopup();
+              hideCurrentPopup();
             }
-        });
-    }
+          });
+        }
 
-    if (registerLoginLink) {
-        registerLoginLink.addEventListener('click', function() {
+        if (registerLoginLink) {
+          registerLoginLink.addEventListener('click', function () {
             showPopup('popup-login');
-        });
-    }
+          });
+        }
 
-    // ======================== Close Popups ========================
-    const closeButtons = document.querySelectorAll('.popup_details-close');
-    closeButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
+        // ======================== Close Popups ========================
+        const closeButtons = document.querySelectorAll('.popup_details-close');
+        closeButtons.forEach(btn => {
+          btn.addEventListener('click', function () {
             const popup = this.closest('.popup_details');
             if (popup) {
-                if (popup.id === 'popup-register') {
-                    showPopup('popup-login');
-                } else {
-                    popup.classList.remove('popup_details_opened');
-                }
+              if (popup.id === 'popup-register') {
+                showPopup('popup-login');
+              } else {
+                popup.classList.remove('popup_details_opened');
+              }
             }
+          });
         });
-    });
 
-    // Initialize first tab as active
-    document.querySelector('.popup-login-nav-link_active').click();
-});
-  </script>
+        // Initialize first tab as active
+        document.querySelector('.popup-login-nav-link_active').click();
+      });
+    </script>
 </body>
 
 </html>

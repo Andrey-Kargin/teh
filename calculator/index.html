@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="mobile bottom-tabs">
+  <div class="mobile pt bottom-tabs">
     <div class="container">
       <div class="bottom-tab">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
             </defs>
           </svg>
         </div>
-        <div id="btn" class="mobile burger">
+        <div id="btn" class="mobile pt burger">
           <span id="btn"></span>
         </div>
       </div>
@@ -330,163 +330,175 @@
   </header>
   <main class="calculator-main">
 
-  <div class="popup_details popup_calculator popup_details_opened" id="popup-calculator">
-    <div class="popup-container popup-calculator-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Рассчет количества</p>
+    <div class="popup_details popup_calculator popup_details_opened" id="popup-calculator">
+      <div class="popup-container popup-calculator-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="popup-title">Рассчет количества</p>
 
-      <div class="popup-calculator-body">
-              <p class="popup-calculator-label">Укажите размеры окрашиваемой поверхности:</p>
-      
-              <div class="popup-calculator-dimensions">
-                <label class="popup-calculator-field">
-                  <span class="popup-calculator-field-label">Длина</span>
-                  <input class="popup-calculator-field-input" type="text" value="10" />
-                  <span class="popup-calculator-field-unit">м</span>
-                </label>
-                <span class="popup-calculator-multiply">×</span>
-                <label class="popup-calculator-field">
-                  <span class="popup-calculator-field-label">Ширина (высота)</span>
-                  <input class="popup-calculator-field-input" type="text" value="4" />
-                  <span class="popup-calculator-field-unit">м</span>
-                </label>
-              </div>
-      
-              <div class="popup-calculator-counters">
-                <div class="popup-calculator-counter">
-                  <button class="popup-calculator-counter-btn" type="button">−</button>
-                  <div class="popup-calculator-counter-center">
-                    <span class="popup-calculator-counter-title">Двери</span>
-                    <span class="popup-calculator-counter-value">0 шт</span>
-                    <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#AAAAAA" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                  <button class="popup-calculator-counter-btn" type="button">+</button>
-                </div>
+        <div class="popup-calculator-body">
+          <p class="popup-calculator-label">Укажите размеры окрашиваемой поверхности:</p>
 
-                <div class="popup-calculator-counter">
-                  <button class="popup-calculator-counter-btn" type="button">−</button>
-                  <div class="popup-calculator-counter-center">
-                    <span class="popup-calculator-counter-title">Окна</span>
-                    <span class="popup-calculator-counter-value">0 шт</span>
-                    <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#AAAAAA" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                  <button class="popup-calculator-counter-btn" type="button">+</button>
-                </div>
-              </div>
-              <label class="popup-calculator-field popup-calculator-field_area">
-                <span class="popup-calculator-field-label">Площадь</span>
-                <input class="popup-calculator-field-input" type="text" value="40" readonly />
-                <span class="popup-calculator-field-unit">м²</span>
-              </label>
-      
-              <div class="popup-calculator-surface">
-                <div class="popup-calculator-surface-head">
-                  <p class="popup-calculator-surface-title">Дополнительная поверхность 1:</p>
-                  <button class="popup-calculator-remove" type="button">
-                    Удалить
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.0001 4V12C12.0001 12.7364 11.4031 13.3333 10.6667 13.3333H5.33341C4.59704 13.3333 4.00008 12.7364 4.00008 12V4M10.0001 4V3.33333C10.0001 2.59695 9.40313 2 8.66675 2H7.33341C6.59704 2 6.00008 2.59695 6.00008 3.33333V4M2.66675 4H13.3334M6.66675 6.66667V10.6667M9.33341 6.66667V10.6667" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                </div>
-      
-                <div class="popup-calculator-dimensions">
-                  <label class="popup-calculator-field">
-                    <span class="popup-calculator-field-label">Длина</span>
-                    <input class="popup-calculator-field-input" type="text" value="10" />
-                    <span class="popup-calculator-field-unit">м</span>
-                  </label>
-                  <span class="popup-calculator-multiply">×</span>
-                  <label class="popup-calculator-field">
-                    <span class="popup-calculator-field-label">Ширина (высота)</span>
-                    <input class="popup-calculator-field-input" type="text" value="4" />
-                    <span class="popup-calculator-field-unit">м</span>
-                  </label>
-                </div>
-      
-                <label class="popup-calculator-field popup-calculator-field_area">
-                  <span class="popup-calculator-field-label">Площадь</span>
-                  <input class="popup-calculator-field-input" type="text" value="40" readonly />
-                  <span class="popup-calculator-field-unit">м²</span>
-                </label>
-      
-                <button class="popup-calculator-link" type="button">
-                  Указать окна и двери
-                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="6.25" stroke="#BC1622" stroke-width="1.5" />
-                    <path d="M8 7.25V11M8 5.25V5.33333" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-      
-              <button class="popup-calculator-add" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99984 2.66699V13.3337M2.6665 8.00033L13.3332 8.00033" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
- Добавить поверхность</button>
-      
-              <p class="popup-calculator-label">Количество слоёв:</p>
-              <div class="popup-calculator-layers">
-                <button class="popup-calculator-layer popup-calculator-layer_active" type="button">1 слой</button>
-                <button class="popup-calculator-layer" type="button">2 слоя (рекомендовано)</button>
-                <button class="popup-calculator-layer" type="button">3 слоя</button>
-              </div>
-      
-              <p class="popup-calculator-label">Впитывающая способность поверхности:</p>
-              <div class="popup-calculator-absorbency">
-                <label class="popup-calculator-absorbency-item">
-                  <input type="checkbox" />
-                  <span class="popup-calculator-absorbency-text">Слабая</span>
-                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
-                    <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
-                      stroke-linecap="round" />
-                  </svg>
-                </label>
-                <label class="popup-calculator-absorbency-item">
-                  <input type="checkbox" />
-                  <span class="popup-calculator-absorbency-text">Средняя</span>
-                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
-                    <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
-                      stroke-linecap="round" />
-                  </svg>
-                </label>
-                <label class="popup-calculator-absorbency-item">
-                  <input type="checkbox" />
-                  <span class="popup-calculator-absorbency-text">Сильная</span>
-                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
-                    <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
-                      stroke-linecap="round" />
-                  </svg>
-                </label>
-              </div>
-      
-              <p class="popup-calculator-result">Вам потребуется: <span>11 л краски</span></p>
+          <div class="popup-calculator-dimensions">
+            <label class="popup-calculator-field">
+              <span class="popup-calculator-field-label">Длина</span>
+              <input class="popup-calculator-field-input" type="text" value="10" />
+              <span class="popup-calculator-field-unit">м</span>
+            </label>
+            <span class="popup-calculator-multiply">×</span>
+            <label class="popup-calculator-field">
+              <span class="popup-calculator-field-label">Ширина (высота)</span>
+              <input class="popup-calculator-field-input" type="text" value="4" />
+              <span class="popup-calculator-field-unit">м</span>
+            </label>
+          </div>
 
-              <p class="popup-calculator-note">
-                Если требуется индивидуальный проект — уточните у менеджера
-                <a href="tel:+74954305298">+7 (495) 430-52-98</a>
-              </p>
-
-              <div class="popup_details-row popup-calculator-actions">
-                <button class="popup_details-btn popup_details-btn-cancel" type="button">Отмена</button>
-                <button class="popup_details-btn popup_details-btn-accept" type="button">Продолжить покупки</button>
+          <div class="popup-calculator-counters">
+            <div class="popup-calculator-counter">
+              <button class="popup-calculator-counter-btn" type="button">−</button>
+              <div class="popup-calculator-counter-center">
+                <span class="popup-calculator-counter-title">Двери</span>
+                <span class="popup-calculator-counter-value">0 шт</span>
+                <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
+                    stroke="#AAAAAA" stroke-linecap="round" />
+                </svg>
               </div>
+              <button class="popup-calculator-counter-btn" type="button">+</button>
             </div>
+
+            <div class="popup-calculator-counter">
+              <button class="popup-calculator-counter-btn" type="button">−</button>
+              <div class="popup-calculator-counter-center">
+                <span class="popup-calculator-counter-title">Окна</span>
+                <span class="popup-calculator-counter-value">0 шт</span>
+                <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
+                    stroke="#AAAAAA" stroke-linecap="round" />
+                </svg>
+              </div>
+              <button class="popup-calculator-counter-btn" type="button">+</button>
+            </div>
+          </div>
+          <label class="popup-calculator-field popup-calculator-field_area">
+            <span class="popup-calculator-field-label">Площадь</span>
+            <input class="popup-calculator-field-input" type="text" value="40" readonly />
+            <span class="popup-calculator-field-unit">м²</span>
+          </label>
+
+          <div class="popup-calculator-surface">
+            <div class="popup-calculator-surface-head">
+              <p class="popup-calculator-surface-title">Дополнительная поверхность 1:</p>
+              <button class="popup-calculator-remove" type="button">
+                Удалить
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.0001 4V12C12.0001 12.7364 11.4031 13.3333 10.6667 13.3333H5.33341C4.59704 13.3333 4.00008 12.7364 4.00008 12V4M10.0001 4V3.33333C10.0001 2.59695 9.40313 2 8.66675 2H7.33341C6.59704 2 6.00008 2.59695 6.00008 3.33333V4M2.66675 4H13.3334M6.66675 6.66667V10.6667M9.33341 6.66667V10.6667"
+                    stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="popup-calculator-dimensions">
+              <label class="popup-calculator-field">
+                <span class="popup-calculator-field-label">Длина</span>
+                <input class="popup-calculator-field-input" type="text" value="10" />
+                <span class="popup-calculator-field-unit">м</span>
+              </label>
+              <span class="popup-calculator-multiply">×</span>
+              <label class="popup-calculator-field">
+                <span class="popup-calculator-field-label">Ширина (высота)</span>
+                <input class="popup-calculator-field-input" type="text" value="4" />
+                <span class="popup-calculator-field-unit">м</span>
+              </label>
+            </div>
+
+            <label class="popup-calculator-field popup-calculator-field_area">
+              <span class="popup-calculator-field-label">Площадь</span>
+              <input class="popup-calculator-field-input" type="text" value="40" readonly />
+              <span class="popup-calculator-field-unit">м²</span>
+            </label>
+
+            <button class="popup-calculator-link" type="button">
+              Указать окна и двери
+              <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6.25" stroke="#BC1622" stroke-width="1.5" />
+                <path d="M8 7.25V11M8 5.25V5.33333" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          <button class="popup-calculator-add" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.99984 2.66699V13.3337M2.6665 8.00033L13.3332 8.00033" stroke="#333333" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Добавить поверхность</button>
+
+          <p class="popup-calculator-label">Количество слоёв:</p>
+          <div class="popup-calculator-layers">
+            <button class="popup-calculator-layer popup-calculator-layer_active" type="button">1 слой</button>
+            <button class="popup-calculator-layer" type="button">2 слоя (рекомендовано)</button>
+            <button class="popup-calculator-layer" type="button">3 слоя</button>
+          </div>
+
+          <p class="popup-calculator-label">Впитывающая способность поверхности:</p>
+          <div class="popup-calculator-absorbency">
+            <label class="popup-calculator-absorbency-item">
+              <input type="checkbox" />
+              <span class="popup-calculator-absorbency-text">Слабая</span>
+              <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
+                <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+            </label>
+            <label class="popup-calculator-absorbency-item">
+              <input type="checkbox" />
+              <span class="popup-calculator-absorbency-text">Средняя</span>
+              <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
+                <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+            </label>
+            <label class="popup-calculator-absorbency-item">
+              <input type="checkbox" />
+              <span class="popup-calculator-absorbency-text">Сильная</span>
+              <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6.25" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5" />
+                <path d="M8 7.25V11M8 5.25V5.33333" stroke="#333333" stroke-opacity="0.4" stroke-width="1.5"
+                  stroke-linecap="round" />
+              </svg>
+            </label>
+          </div>
+
+          <p class="popup-calculator-result">Вам потребуется: <span>11 л краски</span></p>
+
+          <p class="popup-calculator-note">
+            Если требуется индивидуальный проект — уточните у менеджера
+            <a href="tel:+74954305298">+7 (495) 430-52-98</a>
+          </p>
+
+          <div class="popup_details-row popup-calculator-actions">
+            <button class="popup_details-btn popup_details-btn-cancel" type="button">Отмена</button>
+            <button class="popup_details-btn popup_details-btn-accept" type="button">Продолжить покупки</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
   </main>
 

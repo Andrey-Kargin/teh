@@ -259,6 +259,11 @@ html {
   box-sizing: border-box;
 }
 
+.header__discount p {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
 .header__discount:hover {
   background: #A0151F;
 }

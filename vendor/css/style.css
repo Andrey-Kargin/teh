@@ -10003,7 +10003,7 @@ input:checked + .slider:before {
 .offers-tasks {
   padding: 2.78vw 0;
   background-color: #F1F1F1;
-  margin-top: 2.78vw;
+  margin-top: -2.78vw;
 }
 
 .offers-tasks-container {
@@ -10086,7 +10086,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     gap: 1.39vw;
-    margin-top: 1.52vw;
+    margin-top: 0vw;
 }
 
 .offers-gift-steps-container {
@@ -15083,6 +15083,10 @@ input:checked + .slider:before {
   display: none !important;
 }
 
+.pt {
+  display: none !important;
+}
+
 .pc-1440 {
   display: none !important;
 }
@@ -15091,7 +15095,7 @@ input:checked + .slider:before {
   display: flex !important;
 }
 
-.personal-orders-info-mobile {
+.personal-orders-info-mobile pt {
   display: none;
 }
 

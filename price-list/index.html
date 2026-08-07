@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="mobile bottom-tabs">
+  <div class="mobile pt bottom-tabs">
     <div class="container">
       <div class="bottom-tab">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
             </defs>
           </svg>
         </div>
-        <div id="btn" class="mobile burger">
+        <div id="btn" class="mobile pt burger">
           <span id="btn"></span>
         </div>
       </div>
@@ -330,18 +330,20 @@
   </header>
   <main>
 
-  <div class="popup_details popup_details_opened" id="popup-price-list">
-    <div class="popup-container">
-      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      </div>
-      <p class="popup-title">Запросить прайс-лист</p>
-      <p class="popup-desc">Заполните форму и мы пришлем вам актуальный прайс</p>
-      <input class="popup-input" type="text" placeholder="Ваше имя" />
-      <input class="popup-input" type="text" placeholder="Email" />
-      <div class="popup-policy">
-        <div class="checkbox-policy">
+    <div class="popup_details popup_details_opened" id="popup-price-list">
+      <div class="popup-container">
+        <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p class="popup-title">Запросить прайс-лист</p>
+        <p class="popup-desc">Заполните форму и мы пришлем вам актуальный прайс</p>
+        <input class="popup-input" type="text" placeholder="Ваше имя" />
+        <input class="popup-input" type="text" placeholder="Email" />
+        <div class="popup-policy">
+          <div class="checkbox-policy">
             <input class="checkbox__input" type="checkbox" name="policy-checkbox" required checked />
             <label class="checkbox__label desc">Я ознакомлен(а) <a href="./">с политикой конфиденциальности</a></label>
           </div>
@@ -349,285 +351,285 @@
             <input class="checkbox__input" type="checkbox" name="policy-checkbox" required checked />
             <label class="checkbox__label desc">Я даю согласие на <a href="./">обработку персональных данных</a></label>
           </div>
-      </div>
-      <div class="popup_details-row">
-        <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
-        <button class="popup_details-btn popup_details-btn-accept disabled">Отправить</button>
+        </div>
+        <div class="popup_details-row">
+          <button class="popup_details-btn popup_details-btn-cancel">Отмена</button>
+          <button class="popup_details-btn popup_details-btn-accept disabled">Отправить</button>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.header__nav');
-    const btn = document.getElementById('btn');
-    const navBtn = document.querySelectorAll('.header__nav-link');
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.header__nav');
+      const btn = document.getElementById('btn');
+      const navBtn = document.querySelectorAll('.header__nav-link');
 
-    function openBurger() {
-      const isActive = burger.classList.toggle('burger_active');
-      nav.classList.toggle('header__nav_opened');
+      function openBurger() {
+        const isActive = burger.classList.toggle('burger_active');
+        nav.classList.toggle('header__nav_opened');
 
-      if (isActive) {
-        // Сохраняем текущую позицию прокрутки
-        const scrollY = window.scrollY;
+        if (isActive) {
+          // Сохраняем текущую позицию прокрутки
+          const scrollY = window.scrollY;
 
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.width = '100%';
-        document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
-      } else {
-        // Извлекаем сохраненную позицию из стиля top
-        const scrollY = document.body.style.top;
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${scrollY}px`;
+          document.body.style.width = '100%';
+          document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
+        } else {
+          // Извлекаем сохраненную позицию из стиля top
+          const scrollY = document.body.style.top;
 
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        document.body.style.overflowY = '';
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          document.body.style.overflowY = '';
 
-        // Возвращаем страницу к прежнему месту
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+          // Возвращаем страницу к прежнему месту
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
       }
-    }
 
-    btn.addEventListener('click', openBurger);
-    burger.addEventListener('click', openBurger);
+      btn.addEventListener('click', openBurger);
+      burger.addEventListener('click', openBurger);
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const triggers = document.querySelectorAll('[data-tab]');
+      document.addEventListener('DOMContentLoaded', function () {
+        const triggers = document.querySelectorAll('[data-tab]');
 
-      triggers.forEach(trigger => {
-        trigger.addEventListener('click', function (e) {
-          e.preventDefault();
+        triggers.forEach(trigger => {
+          trigger.addEventListener('click', function (e) {
+            e.preventDefault();
 
-          const tabId = this.getAttribute('data-tab');
-          const targetFold = document.getElementById(tabId);
+            const tabId = this.getAttribute('data-tab');
+            const targetFold = document.getElementById(tabId);
 
-          if (targetFold) {
-            targetFold.classList.toggle('header__nav-fold_active');
-          }
-        });
-      });
-    });
-
-    // HEADER
-    (function () {
-      // Собираем все элементы, которые могут участвовать в логике
-      const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
-      const blocksData = [];
-
-      elementsToTrack.forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-          blocksData.push({
-            element: el,
-            selector: selector,
-            parent: el.parentElement,
-            placeholder: createPlaceholder(el)
+            if (targetFold) {
+              targetFold.classList.toggle('header__nav-fold_active');
+            }
           });
         });
       });
 
-      function createPlaceholder(el) {
-        const placeholder = document.createElement('div');
-        placeholder.style.display = 'none';
-        placeholder.style.height = el.offsetHeight + 'px';
-        placeholder.style.width = '100%';
-        return placeholder;
-      }
+      // HEADER
+      (function () {
+        // Собираем все элементы, которые могут участвовать в логике
+        const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
+        const blocksData = [];
 
-      function handleScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const winWidth = window.innerWidth;
+        elementsToTrack.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => {
+            blocksData.push({
+              element: el,
+              selector: selector,
+              parent: el.parentElement,
+              placeholder: createPlaceholder(el)
+            });
+          });
+        });
 
-        blocksData.forEach(data => {
-          const { element, parent, placeholder, selector } = data;
-          const parentRect = parent.getBoundingClientRect();
-          const parentRelativeTop = parentRect.top + scrollTop;
+        function createPlaceholder(el) {
+          const placeholder = document.createElement('div');
+          placeholder.style.display = 'none';
+          placeholder.style.height = el.offsetHeight + 'px';
+          placeholder.style.width = '100%';
+          return placeholder;
+        }
 
-          // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
-          if (winWidth >= 1280) {
-            if (selector === '.header__main') {
-              let offsetPx, fixedStyles, resetStyles;
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const winWidth = window.innerWidth;
 
-              if (winWidth < 1440) {
-                // Условие 1: 1280px - 1440px
-                offsetPx = (winWidth * 2.35) / 100;
-                fixedStyles = {
-                  position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                  padding: '0.833vw 7.8vw'
-                };
-                resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
-              } else {
-                // Условие 2: Более 1440px
-                offsetPx = 35;
-                fixedStyles = {
-                  position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
-                  padding: `12px calc((100vw - 1454.5px) / 2)`
-                };
-                resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
-              }
+          blocksData.forEach(data => {
+            const { element, parent, placeholder, selector } = data;
+            const parentRect = parent.getBoundingClientRect();
+            const parentRelativeTop = parentRect.top + scrollTop;
 
-              if (scrollTop >= (parentRelativeTop + offsetPx)) {
-                if (!element.classList.contains('is-fixed')) {
-                  element.classList.add('is-fixed');
-                  parent.insertBefore(placeholder, element);
-                  placeholder.style.display = 'block';
-                  Object.assign(element.style, fixedStyles);
+            // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
+            if (winWidth >= 1280) {
+              if (selector === '.header__main') {
+                let offsetPx, fixedStyles, resetStyles;
+
+                if (winWidth < 1440) {
+                  // Условие 1: 1280px - 1440px
+                  offsetPx = (winWidth * 2.35) / 100;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: '0.833vw 7.8vw'
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
+                } else {
+                  // Условие 2: Более 1440px
+                  offsetPx = 35;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: `12px calc((100vw - 1454.5px) / 2)`
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
                 }
-              } else {
-                if (element.classList.contains('is-fixed')) {
-                  element.classList.remove('is-fixed');
-                  placeholder.style.display = 'none';
-                  Object.assign(element.style, resetStyles);
+
+                if (scrollTop >= (parentRelativeTop + offsetPx)) {
+                  if (!element.classList.contains('is-fixed')) {
+                    element.classList.add('is-fixed');
+                    parent.insertBefore(placeholder, element);
+                    placeholder.style.display = 'block';
+                    Object.assign(element.style, fixedStyles);
+                  }
+                } else {
+                  if (element.classList.contains('is-fixed')) {
+                    element.classList.remove('is-fixed');
+                    placeholder.style.display = 'none';
+                    Object.assign(element.style, resetStyles);
+                  }
                 }
               }
             }
-          }
 
-        });
-      }
-
-      window.addEventListener('resize', () => {
-        blocksData.forEach(data => {
-          // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
-          if (!data.element.classList.contains('is-fixed')) {
-            data.placeholder.style.height = data.element.offsetHeight + 'px';
-          }
-        });
-        handleScroll(); // Пересчитываем положение при ресайзе
-      });
-
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      handleScroll();
-    })();
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Получаем нужные элементы
-      const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
-      const containers = document.querySelectorAll('.personal-container');
-      const backButton = document.querySelector('.personal-container-orders-back');
-
-      // Функция для активации раздела
-      function activateSection(sectionId) {
-        containers.forEach(container => {
-          container.classList.remove('personal-container_active');
-        });
-
-        const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
-        if (targetContainer) {
-          targetContainer.classList.add('personal-container_active');
+          });
         }
-      }
 
-      // Функция для скролла вверх
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+        window.addEventListener('resize', () => {
+          blocksData.forEach(data => {
+            // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
+            if (!data.element.classList.contains('is-fixed')) {
+              data.placeholder.style.height = data.element.offsetHeight + 'px';
+            }
+          });
+          handleScroll(); // Пересчитываем положение при ресайзе
         });
-      }
 
-      // Обработчик для всего блока заказа
-      ordersBoxes.forEach(box => {
-        box.addEventListener('click', function (e) {
-          // Находим ссылку "Подробнее" внутри этого блока
-          const link = this.querySelector('.personal-orders-box-link');
-          
-          // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
-          const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
-          
-          if (link && !isWidgetClick) {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+      })();
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем нужные элементы
+        const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
+        const containers = document.querySelectorAll('.personal-container');
+        const backButton = document.querySelector('.personal-container-orders-back');
+
+        // Функция для активации раздела
+        function activateSection(sectionId) {
+          containers.forEach(container => {
+            container.classList.remove('personal-container_active');
+          });
+
+          const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
+          if (targetContainer) {
+            targetContainer.classList.add('personal-container_active');
+          }
+        }
+
+        // Функция для скролла вверх
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+
+        // Обработчик для всего блока заказа
+        ordersBoxes.forEach(box => {
+          box.addEventListener('click', function (e) {
+            // Находим ссылку "Подробнее" внутри этого блока
+            const link = this.querySelector('.personal-orders-box-link');
+
+            // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
+            const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
+
+            if (link && !isWidgetClick) {
+              e.preventDefault();
+              const sectionId = link.dataset.section; // "orders-info"
+              activateSection(sectionId);
+              scrollToTop();
+            }
+          });
+        });
+
+        // Обработчик для кнопки "Назад"
+        if (backButton) {
+          backButton.addEventListener('click', function (e) {
             e.preventDefault();
-            const sectionId = link.dataset.section; // "orders-info"
+            const sectionId = this.dataset.section; // "orders"
             activateSection(sectionId);
             scrollToTop();
+          });
+        }
+      });
+    </script>
+
+    <!-- ФУНКЦИИ ПОПАПА -->
+    <script>
+      // Discount Popup Specific Code
+      // Example for feedback popup
+      (function () {
+        const feedbackPopup = document.getElementById('popup-price-list');
+
+        if (!feedbackPopup) return;
+
+        // Close handlers
+        feedbackPopup.addEventListener('click', function (e) {
+          if (e.target === this) {
+            feedbackPopup.classList.remove('popup_details_opened');
           }
         });
-      });
 
-      // Обработчик для кнопки "Назад"
-      if (backButton) {
-        backButton.addEventListener('click', function (e) {
-          e.preventDefault();
-          const sectionId = this.dataset.section; // "orders"
-          activateSection(sectionId);
-          scrollToTop();
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && feedbackPopup.classList.contains('popup_details_opened')) {
+            feedbackPopup.classList.remove('popup_details_opened');
+          }
         });
-      }
-    });
-  </script>
 
-  <!-- ФУНКЦИИ ПОПАПА -->
-  <script>
-    // Discount Popup Specific Code
-// Example for feedback popup
-(function() {
-    const feedbackPopup = document.getElementById('popup-price-list');
-    
-    if (!feedbackPopup) return;
-    
-    // Close handlers
-    feedbackPopup.addEventListener('click', function(e) {
-        if (e.target === this) {
-            feedbackPopup.classList.remove('popup_details_opened');
+        const closeBtn = feedbackPopup.querySelector('.popup_details-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => feedbackPopup.classList.remove('popup_details_opened'));
         }
-    });
-    
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && feedbackPopup.classList.contains('popup_details_opened')) {
-            feedbackPopup.classList.remove('popup_details_opened');
+
+        const cancelBtn = feedbackPopup.querySelector('.popup_details-btn-cancel');
+        if (cancelBtn) {
+          cancelBtn.addEventListener('click', () => feedbackPopup.classList.remove('popup_details_opened'));
         }
-    });
-    
-    const closeBtn = feedbackPopup.querySelector('.popup_details-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => feedbackPopup.classList.remove('popup_details_opened'));
-    }
-    
-    const cancelBtn = feedbackPopup.querySelector('.popup_details-btn-cancel');
-    if (cancelBtn) {
-        cancelBtn.addEventListener('click', () => feedbackPopup.classList.remove('popup_details_opened'));
-    }
-    
-    const container = feedbackPopup.querySelector('.popup-container');
-    if (container) {
-        container.addEventListener('click', e => e.stopPropagation());
-    }
-    
-    // Form validation
-    const inputs = feedbackPopup.querySelectorAll('input[type="text"], input[type="email"], textarea');
-    const submitBtn = feedbackPopup.querySelector('.popup_details-btn-accept');
-    
-    function validateForm() {
-        let allFilled = true;
-        inputs.forEach(input => {
+
+        const container = feedbackPopup.querySelector('.popup-container');
+        if (container) {
+          container.addEventListener('click', e => e.stopPropagation());
+        }
+
+        // Form validation
+        const inputs = feedbackPopup.querySelectorAll('input[type="text"], input[type="email"], textarea');
+        const submitBtn = feedbackPopup.querySelector('.popup_details-btn-accept');
+
+        function validateForm() {
+          let allFilled = true;
+          inputs.forEach(input => {
             if (input.value.trim() === '') allFilled = false;
-        });
-        
-        if (allFilled) {
+          });
+
+          if (allFilled) {
             submitBtn.classList.remove('disabled');
-        } else {
+          } else {
             submitBtn.classList.add('disabled');
+          }
         }
-    }
-    
-    inputs.forEach(input => input.addEventListener('input', validateForm));
-    
-    if (submitBtn) {
-        submitBtn.addEventListener('click', function() {
+
+        inputs.forEach(input => input.addEventListener('input', validateForm));
+
+        if (submitBtn) {
+          submitBtn.addEventListener('click', function () {
             if (!this.classList.contains('disabled')) {
-                console.log('Форма отправлена');
-                feedbackPopup.classList.remove('popup_details_opened');
+              console.log('Форма отправлена');
+              feedbackPopup.classList.remove('popup_details_opened');
             }
-        });
-    }
-    
-    validateForm();
-})();
-  </script>
+          });
+        }
+
+        validateForm();
+      })();
+    </script>
 </body>
 
 </html>

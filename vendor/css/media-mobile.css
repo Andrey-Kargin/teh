@@ -3957,7 +3957,7 @@ ul .main-cards-link::after {
     margin-top: -0.6vw;
   }
 
-  .personal-orders-info-mobile {
+  .personal-orders-info-mobile pt {
     position: fixed;
     display: flex;
     bottom: 19.78vw;
@@ -3970,7 +3970,7 @@ ul .main-cards-link::after {
     border-top: 1px solid #E5E5E5;
   }
 
-  .personal-orders-info-mobile .container {
+  .personal-orders-info-mobile pt .container {
     display: flex;
     flex-direction: column;
     gap: 2.22vw;
@@ -3983,7 +3983,7 @@ ul .main-cards-link::after {
     align-items: center;
   }
 
-  .personal-orders-box-paid-desc-mobile {
+  .personal-orders-box-paid-desc-mobile pt {
     font-weight: 400;
     font-size: 2.77vw;
     line-height: 140%;
@@ -15954,9 +15954,9 @@ input:checked + .slider:before {
   width: 11.11vw;
 }
 
-/* CHECKOUT MOBILE */
+/* CHECKOUT mobile pt */
 
-.basket-bottom-mobile {
+.basket-bottom-mobile pt {
   position: fixed;
   bottom: 19.72vw;
   left: 0;
@@ -15967,7 +15967,7 @@ input:checked + .slider:before {
   z-index: 9999;
 }
 
-.basket-bottom-mobile .container {
+.basket-bottom-mobile pt .container {
   box-sizing: border-box;
   padding: 3.33vw 4.44vw;
   border-radius: 1.38vw;
@@ -16013,7 +16013,7 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.product-bottom-mobile {
+.product-bottom-mobile pt {
   position: fixed;
   bottom: 19.72vw;
   left: 0;
@@ -16024,7 +16024,7 @@ input:checked + .slider:before {
   z-index: 9999;
 }
 
-.product-bottom-mobile .container {
+.product-bottom-mobile pt .container {
   box-sizing: border-box;
   padding: 3.33vw 4.44vw;
   border-radius: 1.38vw;
@@ -16059,7 +16059,7 @@ input:checked + .slider:before {
   color: #333333;
 }
 
-.product-bottom-mobile .product-main-side-quantity {
+.product-bottom-mobile pt .product-main-side-quantity {
   margin: 0;
   padding: 0;
   border: none;
@@ -16067,11 +16067,11 @@ input:checked + .slider:before {
   width: fit-content;
 }
 
-.product-bottom-mobile button {
+.product-bottom-mobile pt button {
 
 }
 
-.product-bottom-mobile .count-size-input {
+.product-bottom-mobile pt .count-size-input {
   width: 22.77vw;
 }
 
