@@ -186,6 +186,53 @@
     color: #BC1622;
   }
 
+  .header__nav-link:hover svg path {
+    stroke: #BC1622;
+  }
+
+  /* Accordion submenus — override style.css display:none !important */
+  .header__nav .header__nav-fold {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 0 0 2.08vw !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    display: none !important;
+    flex-direction: column !important;
+    gap: 2.08vw !important;
+    z-index: auto !important;
+  }
+
+  .header__nav .header__nav-fold_active {
+    display: flex !important;
+  }
+
+  .header__nav .header__nav-fold .header__nav-link {
+    font-weight: 400 !important;
+    font-size: 1.69vw !important;
+    color: #333333 !important;
+    padding: 0 !important;
+    border: none !important;
+    justify-content: flex-start !important;
+  }
+
+  .header__nav-link:has(+ .header__nav-fold_active) {
+    color: #BC1622 !important;
+  }
+
+  .header__nav-link:has(+ .header__nav-fold_active) svg path {
+    stroke: #BC1622 !important;
+  }
+
+  .header__nav-link:has(+ .header__nav-fold_active) span svg {
+    transform: rotate(180deg);
+  }
+
   .header__discount {
     margin: 0;
     text-decoration: none;

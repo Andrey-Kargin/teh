@@ -1900,18 +1900,22 @@
     burger.addEventListener('click', openBurger);
 
     document.addEventListener('DOMContentLoaded', function () {
-      const triggers = document.querySelectorAll('[data-tab]');
+      const triggers = document.querySelectorAll('.header__nav [data-tab]');
 
       triggers.forEach(trigger => {
         trigger.addEventListener('click', function (e) {
-          e.preventDefault();
-
           const tabId = this.getAttribute('data-tab');
           const targetFold = document.getElementById(tabId);
 
-          if (targetFold) {
-            targetFold.classList.toggle('header__nav-fold_active');
-          }
+          if (!targetFold || !targetFold.classList.contains('header__nav-fold')) return;
+
+          e.preventDefault();
+
+          const willOpen = !targetFold.classList.contains('header__nav-fold_active');
+          document.querySelectorAll('.header__nav .header__nav-fold_active').forEach(el => {
+            el.classList.remove('header__nav-fold_active');
+          });
+          if (willOpen) targetFold.classList.add('header__nav-fold_active');
         });
       });
     });

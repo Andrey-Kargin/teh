@@ -749,6 +749,57 @@
       });
     });
   </script>
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.header__nav');
+    const btn = document.getElementById('btn');
+
+    function openBurger() {
+      if (!burger || !nav) return;
+      const isActive = burger.classList.toggle('burger_active');
+      nav.classList.toggle('header__nav_opened');
+
+      if (isActive) {
+        const scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollY + 'px';
+        document.body.style.width = '100%';
+        document.body.style.overflowY = 'scroll';
+      } else {
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflowY = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
+    }
+
+    if (btn) btn.addEventListener('click', openBurger);
+    if (burger) burger.addEventListener('click', openBurger);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const triggers = document.querySelectorAll('.header__nav [data-tab]');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function (e) {
+          const tabId = this.getAttribute('data-tab');
+          const targetFold = document.getElementById(tabId);
+
+          if (!targetFold || !targetFold.classList.contains('header__nav-fold')) return;
+
+          e.preventDefault();
+
+          const willOpen = !targetFold.classList.contains('header__nav-fold_active');
+          document.querySelectorAll('.header__nav .header__nav-fold_active').forEach(el => {
+            el.classList.remove('header__nav-fold_active');
+          });
+          if (willOpen) targetFold.classList.add('header__nav-fold_active');
+        });
+      });
+    });
+
+  </script>
 </body>
 
 </html>
