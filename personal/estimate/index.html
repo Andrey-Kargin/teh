@@ -642,6 +642,17 @@
           <!-- ВСЕ -->
           <div class="personal-orders-container personal-orders-container_opened" data-container="all">
 
+            <div class="empty-estimate-message">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#BC1622" fill-opacity="0.1"/>
+                <path d="M20 12V22M20 26.5V27" stroke="#BC1622" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="empty-estimate-message-text">
+                <p class="empty-estimate-message-title">Сметы не найдены</p>
+                <p class="empty-estimate-message-desc"><a class="empty-estimate-create" data-popup="popup-add">Создайте смету</a>, чтобы спланировать расходы на свои проекты</p>
+              </div>
+            </div>
+
             <div class="personal-orders-box">
 
               <div class="personal-orders-box-number">
@@ -2465,7 +2476,7 @@
       });
 
       // Инициализируем фильтры в зависимости от устройства
-      const ismobile pt = window.innerWidth < 1200;
+      const isMobile = window.innerWidth < 1200;
 
       if (isMobile) {
         initMobileFilters();

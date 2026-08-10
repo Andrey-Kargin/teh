@@ -161,18 +161,24 @@
     position: fixed;
     left: 200vw;
     top: 11.7vw;
+    bottom: 0;
     width: 100vw;
-    max-height: 120vh;
+    max-height: none;
+    height: auto;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     gap: 3.33vw;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
     z-index: 999;
     border-top: 0.27vw solid #0000001A;
     align-items: flex-start;
     padding: 5.55vw;
-    padding-bottom: 80vw;
+    padding-bottom: 22.22vw;
     transition: all 0.3s ease;
   }
 
@@ -16613,6 +16619,249 @@ input:checked + .slider:before {
   width: 4.44vw;
   height: 4.44vw;
 }
+
+  /* Orders filters modal — match tablet Figma 616:26777 (centered card) */
+  #popup-filters.popup_details,
+  #popup-filters.popup_details_opened {
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4.44vw !important;
+    box-sizing: border-box !important;
+  }
+
+  #popup-filters.popup_details_opened {
+    display: flex !important;
+  }
+
+  #popup-filters .popup-container {
+    width: 94.44vw !important;
+    max-width: 94.44vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 2.77vw !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #popup-filters .popup-container::after {
+    display: none !important;
+  }
+
+  #popup-filters .popup_details-close {
+    top: 5.55vw !important;
+    right: 5.55vw !important;
+    width: 5.55vw !important;
+    height: 5.55vw !important;
+  }
+
+  #popup-filters .popup-title {
+    margin: 0 !important;
+    padding: 5.55vw !important;
+    padding-right: 12vw !important;
+    font-size: 3.88vw !important;
+    font-weight: 500 !important;
+    line-height: 100% !important;
+    border-bottom: 0.27vw solid #F1F1F1 !important;
+  }
+
+  #popup-filters .popup-filters-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4.44vw !important;
+    padding: 5.55vw !important;
+    margin: 0 !important;
+  }
+
+  #popup-filters .popup-filters-field {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.39vw !important;
+  }
+
+  #popup-filters .popup-filters-label {
+    margin: 0 !important;
+    font-size: 3.33vw !important;
+    font-weight: 400 !important;
+    line-height: 140% !important;
+    color: #333 !important;
+  }
+
+  #popup-filters .popup-filters-date,
+  #popup-filters .popup-filters-select {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-height: 11.11vw !important;
+    padding: 3.33vw 4.44vw !important;
+    border: 0.27vw solid #E2E2E2 !important;
+    border-radius: 1.11vw !important;
+    box-sizing: border-box !important;
+    background: #fff !important;
+  }
+
+  #popup-filters .popup-filters-input {
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    font-size: 3.33vw !important;
+    color: #333 !important;
+  }
+
+  #popup-filters .popup-filters-date svg,
+  #popup-filters .popup-filters-select svg {
+    width: 3.88vw !important;
+    height: 3.88vw !important;
+    flex-shrink: 0 !important;
+  }
+
+  #popup-filters .popup-filters-select span {
+    font-size: 3.33vw !important;
+    color: #333 !important;
+  }
+
+  #popup-filters .popup-filters-checks,
+  #popup-filters .popup-filters-radios {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 2.22vw 4.44vw !important;
+  }
+
+  #popup-filters .popup-filters-check,
+  #popup-filters .popup-filters-radio {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 2.22vw !important;
+    margin: 0 !important;
+    font-size: 3.33vw !important;
+    color: #333 !important;
+    cursor: pointer !important;
+  }
+
+  #popup-filters .popup-filters-check input,
+  #popup-filters .popup-filters-radio input {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  #popup-filters .popup-filters-check span,
+  #popup-filters .popup-filters-radio span {
+    width: 4.44vw !important;
+    height: 4.44vw !important;
+    border: 0.27vw solid #C9C9C9 !important;
+    border-radius: 1.11vw !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+    background: #fff !important;
+  }
+
+  #popup-filters .popup-filters-radio span {
+    border-radius: 50% !important;
+  }
+
+  #popup-filters .popup-filters-check input:checked + span {
+    border: 1.39vw solid #BC1622 !important;
+    background: #BC1622 !important;
+  }
+
+  #popup-filters .popup-filters-radio input:checked + span {
+    border: 1.39vw solid #BC1622 !important;
+    background: #fff !important;
+  }
+
+  #popup-filters .popup-filters-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.22vw !important;
+    padding-top: 3.33vw !important;
+    margin: 0 !important;
+  }
+
+  #popup-filters .popup-filters-actions .popup_details-btn {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 11.11vw !important;
+    padding: 3.33vw 5.55vw !important;
+    font-size: 3.33vw !important;
+    font-weight: 500 !important;
+    border-radius: 1.39vw !important;
+  }
+
+  #popup-filters .popup-filters-actions .popup_details-btn-cancel {
+    width: 100% !important;
+    background: transparent !important;
+    color: #0E0E0E !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 400 !important;
+  }
+
+  /* Projects empty state — hidden unless no cards */
+  .empty-projects-message,
+  .empty-estimate-message,
+  .empty-orders-message {
+    display: none !important;
+  }
+
+  .personal-orders-container:not(:has(.personal-orders-box)) .empty-projects-message,
+  .personal-orders-container:not(:has(.personal-orders-box)) .empty-estimate-message,
+  .personal-orders-container:not(:has(.personal-orders-box)) .empty-orders-message {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3.33vw !important;
+    width: 100% !important;
+    padding: 4.44vw 5.55vw !important;
+    border-radius: 1.39vw !important;
+    background: #F1F1F1 !important;
+    box-sizing: border-box !important;
+  }
+
+  .empty-projects-message svg,
+  .empty-estimate-message svg,
+  .empty-orders-message svg {
+    width: 11.11vw !important;
+    height: 11.11vw !important;
+    flex-shrink: 0 !important;
+  }
+
+  .empty-projects-message-text,
+  .empty-estimate-message-text,
+  .empty-orders-message-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.11vw !important;
+  }
+
+  .empty-projects-message-title,
+  .empty-estimate-message-title,
+  .empty-orders-message-title {
+    margin: 0 !important;
+    font-size: 3.88vw !important;
+    font-weight: 500 !important;
+    color: #0E0E0E !important;
+  }
+
+  .empty-projects-message-desc,
+  .empty-estimate-message-desc,
+  .empty-orders-message-desc {
+    margin: 0 !important;
+    font-size: 3.33vw !important;
+    line-height: 140% !important;
+    color: rgba(51, 51, 51, 0.8) !important;
+  }
+
+  .empty-projects-message-desc a,
+  .empty-projects-create,
+  .empty-estimate-message-desc a,
+  .empty-estimate-create {
+    color: #BC1622 !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+  }
 
   @keyframes loadingAnimation {
   from {

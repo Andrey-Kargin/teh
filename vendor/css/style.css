@@ -6038,6 +6038,63 @@ ul .main-cards-link::after {
   width: 7.77vw;
 }
 
+/* Empty states — hidden by default; show only when the list has no cards */
+.empty-projects-message,
+.empty-estimate-message,
+.empty-orders-message {
+  display: none;
+}
+
+.personal-orders-container:not(:has(.personal-orders-box)) .empty-projects-message,
+.personal-orders-container:not(:has(.personal-orders-box)) .empty-estimate-message,
+.personal-orders-container:not(:has(.personal-orders-box)) .empty-orders-message {
+  display: flex;
+  align-items: center;
+  gap: 1.11vw;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.11vw 1.38vw;
+  border-radius: 0.35vw;
+  background: #F1F1F1;
+}
+
+.empty-projects-message-text,
+.empty-estimate-message-text,
+.empty-orders-message-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28vw;
+}
+
+.empty-projects-message-title,
+.empty-estimate-message-title,
+.empty-orders-message-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.97vw;
+  color: #0E0E0E;
+}
+
+.empty-projects-message-desc,
+.empty-estimate-message-desc,
+.empty-orders-message-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 140%;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+.empty-projects-message-desc a,
+.empty-projects-create,
+.empty-estimate-message-desc a,
+.empty-estimate-create,
+.empty-orders-message-desc a {
+  color: #BC1622;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* STAFF */
 
 .personal-staff-more {

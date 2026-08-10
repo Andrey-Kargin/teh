@@ -879,7 +879,7 @@
                 <p class="personal-orders-info-packed">Заказ создан: Victoria_stroy.shop@mail.ru (менеджер)</p>
 
                 <div class="personal-orders-info-edit">
-                  <a class="personal-orders-info-edit-el"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                  <a class="personal-orders-info-edit-el" data-popup="popup-repeat"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M1.5 1V4M1.5 4H4.5M1.5 4L2.82016 2.81533C3.51067 2.12605 4.4065 1.67982 5.37268 1.54389C6.33887 1.40797 7.32305 1.5897 8.17696 2.06172C9.03087 2.53373 9.70823 3.27046 10.107 4.16088C10.5058 5.05131 10.6043 6.04721 10.3878 6.99851C10.1713 7.94982 9.65149 8.805 8.90666 9.43521C8.16183 10.0654 7.23235 10.4365 6.25827 10.4926C5.28418 10.5486 4.31826 10.2866 3.50604 9.74602C2.69382 9.20542 2.07931 8.41552 1.75509 7.49533"
@@ -2298,7 +2298,7 @@
       initDateWidgetCancel();
 
       // Инициализируем фильтры в зависимости от устройства
-      const ismobile pt = window.innerWidth < 1200;
+      const isMobile = window.innerWidth < 1200;
 
       if (isMobile) {
         initMobileFilters();
@@ -2333,6 +2333,96 @@
     } else {
       init();
     }
+  </script>
+
+
+  <!-- POPUPS — Figma 789:50433 / 789:50686 -->
+  <div class="popup_details" id="popup-repeat">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+            stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <p class="popup-title">Заказ добавлен в корзину</p>
+      <p class="popup-desc">Все товары из заказа были добавлены в корзину</p>
+      <div class="popup_details-row">
+        <button class="popup_details-btn popup_details-btn-accept">Перейти в корзину</button>
+        <button class="popup_details-btn popup_details-btn-cancel">Вернуться назад</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup_details" id="popup-change-confirm">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+            stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <p class="popup-title">Корзина не пуста</p>
+      <p class="popup-desc">Замените текущее содержимое корзины или добавьте к нему товары из заказа</p>
+      <div class="popup_details-row">
+        <button class="popup_details-btn popup_details-btn-accept"><svg width="16" height="16" viewBox="0 0 16 16"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.9974 2.66602V13.3327M2.66406 7.99935L13.3307 7.99935" stroke="white" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Добавить товары</button>
+        <button class="popup_details-btn popup_details-btn-cancel"><svg width="16" height="16" viewBox="0 0 16 16"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2 2V6M2 6H6M2 6L3.76019 4.42045C4.68086 3.50139 5.87531 2.90643 7.16355 2.72519C8.45179 2.54396 9.76404 2.78627 10.9026 3.41562C12.0411 4.04498 12.9443 5.02727 13.476 6.21451M14 14V10M14 10L10 10M14 10L12.2398 11.5796C11.3191 12.4986 10.1247 13.0936 8.83643 13.2748C7.54819 13.4561 6.23594 13.2137 5.09739 12.5844C3.95885 11.955 3.0557 10.9727 2.52402 9.7855"
+              stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Заменить</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const popupTriggers = document.querySelectorAll('[data-popup]');
+      const popups = document.querySelectorAll('.popup_details');
+
+      function openPopup(id) {
+        const popup = document.getElementById(id);
+        if (!popup) return;
+        popup.classList.add('popup_details_opened');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePopup(popup) {
+        if (!popup) return;
+        popup.classList.remove('popup_details_opened');
+        if (!document.querySelector('.popup_details.popup_details_opened')) {
+          document.body.style.overflow = '';
+        }
+      }
+
+      popupTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = this.getAttribute('data-popup');
+          if (id) openPopup(id);
+        });
+      });
+
+      popups.forEach(popup => {
+        const closeBtn = popup.querySelector('.popup_details-close');
+        if (closeBtn) closeBtn.addEventListener('click', () => closePopup(popup));
+        popup.querySelectorAll('.popup_details-btn-cancel').forEach(btn => btn.addEventListener('click', () => closePopup(popup)));
+        popup.querySelectorAll('.popup_details-btn-accept').forEach(btn => btn.addEventListener('click', () => closePopup(popup)));
+        popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(popup); });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        document.querySelectorAll('.popup_details.popup_details_opened').forEach(closePopup);
+      });
+    });
   </script>
 
 </body>

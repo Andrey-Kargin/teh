@@ -1402,7 +1402,7 @@
             stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
-      <p class="popup-title">Удалить все товары из сравнения</p>
+      <p class="popup-title">Удалить все товары из избранного</p>
       <p class="popup-desc">Вы уверены, что хотите удалить все товары? Рекомендуем перед удалением добавить подходящие
         товары в корзину.</p>
       <div class="popup_details-row">
@@ -1765,77 +1765,73 @@
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-      // Находим кнопку "Удалить все"
       const deleteAllButton = document.querySelector('.personal-container-delete-all');
-      // Находим попап
       const popup = document.getElementById('popup-delete');
+      const productsContainer = document.querySelector('.products-favorite-container');
 
       if (!deleteAllButton || !popup) return;
 
-      // Функция открытия попапа
       function openPopup() {
         popup.classList.add('popup_details_opened');
-        document.body.style.overflow = 'hidden'; // Блокируем скролл фона
+        document.body.style.overflow = 'hidden';
       }
 
-      // Функция закрытия попапа
       function closePopup() {
         popup.classList.remove('popup_details_opened');
-        document.body.style.overflow = ''; // Восстанавливаем скролл
+        document.body.style.overflow = '';
       }
 
-      // Функция удаления всех товаров
+      function showEmptyState() {
+        if (!productsContainer) return;
+        if (productsContainer.querySelector('.empty-favorites')) return;
+        if (productsContainer.querySelectorAll('.products-box').length > 0) return;
+
+        const emptyMessage = document.createElement('div');
+        emptyMessage.className = 'empty-favorites';
+        emptyMessage.innerHTML = '<p>В избранном нет товаров</p>';
+        productsContainer.appendChild(emptyMessage);
+      }
+
       function deleteAllProducts() {
-        const compareBoxes = document.querySelectorAll('.personal-compare-box');
-        compareBoxes.forEach(box => box.remove());
-        closePopup();
-
-        // Дополнительно: проверяем, остались ли товары, и если нет, показываем сообщение
-        const remainingBoxes = document.querySelectorAll('.personal-compare-box');
-        if (remainingBoxes.length === 0) {
-          const swiperContainer = document.querySelector('.personal-compare-container.swiper');
-          if (swiperContainer) {
-            const emptyMessage = document.createElement('div');
-            emptyMessage.className = 'empty-compare-message';
-            emptyMessage.textContent = 'Нет товаров для сравнения';
-            emptyMessage.style.cssText = 'text-align: center; padding: 40px; font-size: 16px; color: #666;';
-            swiperContainer.appendChild(emptyMessage);
-          }
+        if (productsContainer) {
+          productsContainer.querySelectorAll('.products-box').forEach(box => box.remove());
+          showEmptyState();
         }
+
+        const historyContainer = document.querySelector('.personal-orders-sort-history-container');
+        if (historyContainer) {
+          historyContainer.remove();
+        }
+
+        closePopup();
       }
 
-      // Открытие попапа по клику на "Удалить все"
       deleteAllButton.addEventListener('click', function (e) {
         e.stopPropagation();
         openPopup();
       });
 
-      // Закрытие по клику на крестик
       const closeButton = popup.querySelector('.popup_details-close');
       if (closeButton) {
         closeButton.addEventListener('click', closePopup);
       }
 
-      // Закрытие по клику на кнопку "Отмена"
       const cancelButton = popup.querySelector('.popup_details-btn-cancel');
       if (cancelButton) {
         cancelButton.addEventListener('click', closePopup);
       }
 
-      // Удаление по клику на кнопку "Удалить"
       const acceptButton = popup.querySelector('.popup_details-btn-accept');
       if (acceptButton) {
         acceptButton.addEventListener('click', deleteAllProducts);
       }
 
-      // Закрытие по клику на оверлей (фон)
       popup.addEventListener('click', function (e) {
         if (e.target === popup) {
           closePopup();
         }
       });
 
-      // Закрытие по клавише ESC
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && popup.classList.contains('popup_details_opened')) {
           closePopup();
@@ -1850,7 +1846,7 @@
       const sortBoxes = document.querySelectorAll('.personal-favorite-sort-box');
       // Get the container and product boxes
       const favoriteContainer = document.querySelector('.products-favorite-container');
-      const productBoxes = document.querySelectorAll('.products-box');
+      const productBoxes = document.querySelectorAll('.products-favorite-container .products-box');
 
       // If elements don't exist, exit
       if (!sortBoxes.length || !favoriteContainer || !productBoxes.length) return;
@@ -1917,102 +1913,6 @@
           // First box (sortType === 'grid') - just remove all classes, which we already did
         });
       });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get elements
-      const deleteAllBtn = document.querySelector('.personal-container-delete-all');
-      const popup = document.getElementById('popup-delete');
-      const closePopupBtn = document.querySelector('.popup_details-close');
-      const cancelBtn = document.querySelector('.popup_details-btn-cancel');
-      const acceptBtn = document.querySelector('.popup_details-btn-accept');
-      const productsContainer = document.querySelector('.products-favorite-container');
-
-      // Function to open popup
-      function openPopup() {
-        if (popup) {
-          popup.classList.add('popup_active');
-        }
-      }
-
-      // Function to close popup
-      function closePopup() {
-        if (popup) {
-          popup.classList.remove('popup_active');
-        }
-      }
-
-      // Function to delete all product boxes and history container
-      function deleteAllProducts() {
-        // Delete all product boxes
-        if (productsContainer) {
-          const productBoxes = productsContainer.querySelectorAll('.products-box');
-          productBoxes.forEach(box => {
-            box.remove();
-          });
-
-          // Show empty state message
-          if (productBoxes.length === 0 || productsContainer.querySelectorAll('.products-box').length === 0) {
-            showEmptyState();
-          }
-        } else {
-          const allProductBoxes = document.querySelectorAll('.products-box');
-          allProductBoxes.forEach(box => {
-            box.remove();
-          });
-        }
-
-        // Delete .personal-orders-sort-history-container
-        const historyContainer = document.querySelector('.personal-orders-sort-history-container');
-        if (historyContainer) {
-          historyContainer.remove();
-        }
-
-        // Close popup after deletion
-        closePopup();
-      }
-
-      // Optional: Show empty state message
-      function showEmptyState() {
-        const container = document.querySelector('.products-favorite-container');
-        if (container && container.querySelectorAll('.products-box').length === 0) {
-          const emptyMessage = document.createElement('div');
-          emptyMessage.className = 'empty-favorites';
-          emptyMessage.innerHTML = `
-                    <p>В избранном нет товаров</p>
-                `;
-          container.appendChild(emptyMessage);
-        }
-      }
-
-      // Event Listeners
-      if (deleteAllBtn) {
-        deleteAllBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          openPopup();
-        });
-      }
-
-      if (closePopupBtn) {
-        closePopupBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          closePopup();
-        });
-      }
-
-      if (cancelBtn) {
-        cancelBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          closePopup();
-        });
-      }
-
-      if (acceptBtn) {
-        acceptBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          deleteAllProducts();
-        });
-      }
     });
   </script>
 </body>

@@ -427,7 +427,7 @@
                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
             Назад</a>
-          <p class="personal-container-title">Активные заказы</p>
+          <p class="personal-container-title">Мои заказы</p>
           <div class="personal-orders-widgets">
             <div class="personal-orders-sort">
               <p class="personal-orders-sort-desc">Смотреть по:</p>
@@ -448,7 +448,7 @@
                 </svg>
               </form>
             </div>
-            <div class="personal-filters">
+            <div class="personal-filters" data-popup="popup-filters" role="button" tabindex="0">
               <p class="personal-filters-desc">Фильтры</p>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -460,6 +460,17 @@
 
           <!-- ПО ЗАКАЗАМ -->
           <div class="personal-orders-container personal-orders-container_opened" data-container="orders">
+            <div class="empty-orders-message">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="20" fill="#BC1622" fill-opacity="0.1"/>
+                <path d="M20 12V22M20 26.5V27" stroke="#BC1622" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="empty-orders-message-text">
+                <p class="empty-orders-message-title">Заказы не найдены</p>
+                <p class="empty-orders-message-desc">Купленных товаров пока нет. Здесь будут отображаться заказы и товары, которые вы приобрели</p>
+              </div>
+            </div>
+
             <div class="personal-orders-box">
               <div class="personal-orders-box-status">Сборка</div>
 
@@ -1862,6 +1873,59 @@
     </div>
   </div>
 
+  <div class="popup_details" id="popup-filters">
+    <div class="popup-container">
+      <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+            stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <p class="popup-title">Фильтры:</p>
+      <form class="popup-filters-form">
+        <div class="popup-filters-field">
+          <label class="popup-filters-label">Дата</label>
+          <div class="popup-filters-date">
+            <input class="popup-filters-input" type="text" placeholder="dd.mm.yyyy" />
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4.66667 1.16602V2.91602M9.33333 1.16602V2.91602M1.75 5.24935H12.25M2.91667 2.33268H11.0833C11.7277 2.33268 12.25 2.85502 12.25 3.49935V11.0827C12.25 11.727 11.7277 12.2493 11.0833 12.2493H2.91667C2.27233 12.2493 1.75 11.727 1.75 11.0827V3.49935C1.75 2.85502 2.27233 2.33268 2.91667 2.33268Z" stroke="#AAAAAA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="popup-filters-field">
+          <label class="popup-filters-label">Объект</label>
+          <div class="popup-filters-select">
+            <span>Все</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#333333" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="popup-filters-field">
+          <p class="popup-filters-label">Статус:</p>
+          <div class="popup-filters-checks">
+            <label class="popup-filters-check"><input type="checkbox" /><span></span>Принят</label>
+            <label class="popup-filters-check"><input type="checkbox" /><span></span>Сборка</label>
+            <label class="popup-filters-check"><input type="checkbox" /><span></span>В пути</label>
+            <label class="popup-filters-check"><input type="checkbox" checked /><span></span>Доставлен в ПВЗ</label>
+          </div>
+        </div>
+        <div class="popup-filters-field">
+          <p class="popup-filters-label">Автор заказа:</p>
+          <div class="popup-filters-radios">
+            <label class="popup-filters-radio"><input type="radio" name="order-author" /><span></span>Все</label>
+            <label class="popup-filters-radio"><input type="radio" name="order-author" checked /><span></span>Только сотрудников</label>
+            <label class="popup-filters-radio"><input type="radio" name="order-author" /><span></span>Только мои</label>
+          </div>
+        </div>
+        <div class="popup-filters-actions">
+          <button type="button" class="popup_details-btn popup_details-btn-accept">Применить</button>
+          <button type="button" class="popup_details-btn popup_details-btn-cancel">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -2352,6 +2416,17 @@
             // Logic for canceling the order
             console.log('Отменить заказ');
             cancelOrderPopup.classList.remove('popup_details_opened');
+          });
+        }
+      }
+
+      // Filters apply closes modal
+      const filtersPopup = document.getElementById('popup-filters');
+      if (filtersPopup) {
+        const applyFiltersBtn = filtersPopup.querySelector('.popup_details-btn-accept');
+        if (applyFiltersBtn) {
+          applyFiltersBtn.addEventListener('click', function () {
+            filtersPopup.classList.remove('popup_details_opened');
           });
         }
       }
