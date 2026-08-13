@@ -2092,7 +2092,7 @@ ul .main-cards-link::after {
   }
 
   .retail-control {
-    padding: 40px 0 56px 0;
+    padding: 40px 0 80px 0;
     overflow: hidden;
   }
 
@@ -2164,15 +2164,24 @@ ul .main-cards-link::after {
   }
 
   .retail-points-box {
+    position: relative;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 24px;
     gap: 12px;
     width: 352.5px;
-    height: 233px;
+    height: 297px;
     background-color: #F1F1F1;
     border-radius: 10px;
+  }
+
+  .retail-points-box svg {
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
   }
 
   .retail-points-box-top {
@@ -8471,21 +8480,19 @@ input:checked + .slider:before {
   color: #333;
   display: flex;
   gap: 4px;
-  justify-content: flex-start;
+  justify-content: space-between;
   letter-spacing: 0;
   line-height: 130%;
-  min-height: 138px;
-  padding: 16px;
+  min-height: 48px;
+  padding: 8px 16px;
+  padding-top: 12px;
   box-sizing: border-box;
   position: relative;
 }
 
 .about-information-box svg {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  bottom: 12px;
-  right: 16px;
+  width: 32px;
+  height: 32px;
 }
 
 .about-information-box-content {

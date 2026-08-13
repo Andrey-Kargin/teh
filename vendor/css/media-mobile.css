@@ -2302,6 +2302,15 @@ ul .main-cards-link::after {
     border-radius: 2.77vw;
   }
 
+  .retail-points-box svg {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 11.11vw;
+    height: 11.11vw;
+    margin-left: auto;
+  }
+
   .retail-points-box:nth-of-type(2) .retail-points-box-top p {
     margin-top: 1.4vw;
   }

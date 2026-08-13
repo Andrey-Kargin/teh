@@ -1014,6 +1014,14 @@
     box-sizing: border-box;
   }
 
+  .retail-points-box svg {
+    position: absolute;
+    bottom: 2.08vw;
+    right: 2.6vw;
+    width: 5.2vw;
+    height: 5.2vw;
+  }
+
   .retail-points-box:nth-of-type(2) .retail-points-box-top p,
   .retail-points-box:nth-of-type(3) {
     margin-top: 0;
@@ -10195,7 +10203,8 @@ input:checked + .slider:before {
 }
 
 .contacts-information {
-  height: 183vw;
+  height: auto;
+  min-height: 35.03vw;
 }
 
 .about-information-box-icon>img {
@@ -22713,7 +22722,7 @@ input:checked + .slider:before {
   }
 
   .about-pages .about-information-inner.contacts-information {
-    min-height: 44.27vw;
+    min-height: 35.03vw;
     padding-bottom: 2.6vw;
   }
 
@@ -22729,7 +22738,7 @@ input:checked + .slider:before {
 
   .contacts-information {
     height: auto;
-    min-height: 44.27vw;
+    min-height: 35.03vw;
   }
 
   .about-information-list {
@@ -32317,6 +32326,324 @@ input:checked + .slider:before {
     height: 31.25vw;
     border-radius: 1.3vw;
     overflow: hidden;
+  }
+
+  /* Contacts info card — Figma 1253:100413 (269, image 360×188, pills wrap) */
+  .about-pages.about-contacts .about-information {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-pages.about-contacts .about-information-inner.contacts-information,
+  .about-pages.about-contacts .contacts-information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: 35.03vw;
+    min-height: 35.03vw;
+    max-height: 35.03vw;
+    padding: 2.6vw;
+    gap: 0;
+    overflow: hidden;
+    background: #f1f1f1;
+    border-radius: 1.3vw;
+    box-sizing: border-box;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 49.09vw;
+    margin: 0;
+    gap: 1.04vw;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-title > h2,
+  .about-pages.about-contacts .contacts-information .about-information-title .title {
+    margin: 0;
+    font-size: 3.13vw;
+    font-weight: 500;
+    line-height: 100%;
+    color: #0e0e0e;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 46.35vw;
+    margin: 0;
+    gap: 0;
+    font-size: 1.56vw;
+    font-weight: 400;
+    line-height: 140%;
+    color: #333;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-desc p {
+    margin: 0;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 46.88vw;
+    height: 24.48vw;
+    max-width: none;
+    max-height: none;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-picture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f1f1f1 0%, rgba(241, 241, 241, 0) 53%);
+    pointer-events: none;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.04vw;
+    width: 100%;
+    margin: auto 0 0;
+    grid-template-columns: none;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 29.17vw;
+    width: 29.17vw;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    padding: 1.04vw 2.08vw;
+    gap: 1.04vw;
+    border-radius: 1.3vw;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-box:nth-child(n + 4) {
+    flex: 1 1 calc(50% - 0.52vw);
+    width: auto;
+    min-width: calc(50% - 0.52vw);
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-box-title {
+    margin: 0;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 130%;
+    color: #0e0e0e;
+  }
+
+  .about-pages.about-contacts .contacts-information .about-information-box svg {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 3.13vw;
+    height: 3.13vw;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  /* Contacts form — Figma 1253:100294 (row, gap 60) */
+  .about-pages.about-contacts .main-form--inner-white {
+    padding: 3.91vw 0;
+    background: transparent;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 7.81vw;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-text,
+  .about-pages.about-contacts .main-form--inner-white .main-form-box {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 7.81vw) / 2);
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-text {
+    gap: 3.13vw;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-text-title,
+  .about-pages.about-contacts .main-form--inner-white .main-form-text .title {
+    margin: 0;
+    font-size: 2.34vw;
+    font-weight: 500;
+    line-height: 100%;
+    color: #0e0e0e;
+  }
+
+  /* Title↔desc gap 12px (parent gap is 24) */
+  .about-pages.about-contacts .main-form--inner-white .main-form-text .form-desc {
+    margin: -1.56vw 0 0;
+    font-size: 1.82vw;
+    font-weight: 400;
+    line-height: 140%;
+    color: #333;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.52vw;
+    margin: 0;
+    padding: 0 0 1.04vw;
+    list-style: none;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-list-el {
+    display: flex;
+    align-items: center;
+    gap: 1.04vw;
+    margin: 0;
+    font-size: 1.56vw;
+    line-height: 140%;
+    color: #333;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-list-el svg {
+    width: 2.08vw;
+    height: 2.08vw;
+    flex-shrink: 0;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .contacts-form-phone,
+  .about-pages.about-contacts .main-form--inner-white .main-form-phone {
+    margin: 0;
+    font-size: 2.08vw;
+    font-weight: 500;
+    line-height: 100%;
+    color: #ba1420;
+    text-decoration: none;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .contacts-form-links,
+  .about-pages.about-contacts .main-form--inner-white .main-form-links {
+    display: flex;
+    align-items: center;
+    gap: 1.04vw;
+    margin: 0;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-link svg {
+    width: 4.17vw;
+    height: 4.17vw;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-box {
+    gap: 1.56vw;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-input {
+    width: 100%;
+    min-height: 5.73vw;
+    margin: 0;
+    padding: 1.56vw 2.08vw;
+    border: 1px solid #e2e2e2;
+    border-radius: 0.52vw;
+    font-size: 1.56vw;
+    box-sizing: border-box;
+  }
+
+  /* Inputs stack tighter (Figma fields gap 4) */
+  .about-pages.about-contacts .main-form--inner-white .main-form-input + .main-form-input {
+    margin-top: -1.04vw;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .checkbox-policy {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.04vw;
+    margin: 0;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .checkbox-policy + .checkbox-policy {
+    margin-top: -0.52vw;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .checkbox__label,
+  .about-pages.about-contacts .main-form--inner-white .checkbox__label.desc {
+    margin: 0;
+    font-size: 1.56vw;
+    font-weight: 400;
+    line-height: 140%;
+    color: #333;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .checkbox__label a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .about-pages.about-contacts .main-form--inner-white .main-form-btn {
+    width: 100%;
+    min-height: 5.73vw;
+    margin: 0;
+    padding: 1.56vw 2.6vw;
+    border-radius: 0.65vw;
+    font-size: 1.82vw;
+    font-weight: 500;
+  }
+
+  .about-pages.about-contacts .about-banner {
+    margin-top: 3.91vw;
+  }
+
+  .about-pages.about-contacts .about-cta {
+    padding: 3.91vw 0;
   }
 
   /* ===== PARTNER DETAIL / AKZONOBEL 768px — Figma 1172:88940 ===== */
