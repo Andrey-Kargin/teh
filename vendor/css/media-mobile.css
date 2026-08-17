@@ -15110,6 +15110,24 @@ input:checked + .slider:before {
   height: 2.22vw;
 }
 
+.projects-page-box-link {
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 3.33vw;
+  line-height: 140%;
+  color: #BC1622;
+  gap: 1.11vw;
+}
+
+.projects-page-box-link svg {
+  margin-top: -2px;
+  width: 2.22vw;
+  height: 2.22vw;
+}
+
 .projects-page-btn {
   display: flex;
   align-items: center;
@@ -16629,7 +16647,7 @@ input:checked + .slider:before {
   height: 4.44vw;
 }
 
-  /* Orders filters modal — match tablet Figma 616:26777 (centered card) */
+  /* Orders filters modal — Figma tablet/mobile stacked (616:26777) */
   #popup-filters.popup_details,
   #popup-filters.popup_details_opened {
     align-items: center !important;
@@ -16643,8 +16661,8 @@ input:checked + .slider:before {
   }
 
   #popup-filters .popup-container {
-    width: 94.44vw !important;
-    max-width: 94.44vw !important;
+    width: 91.11vw !important;
+    max-width: 91.11vw !important;
     margin: 0 !important;
     padding: 0 !important;
     gap: 0 !important;
@@ -16662,6 +16680,7 @@ input:checked + .slider:before {
     right: 5.55vw !important;
     width: 5.55vw !important;
     height: 5.55vw !important;
+    z-index: 2 !important;
   }
 
   #popup-filters .popup-title {
@@ -16686,6 +16705,12 @@ input:checked + .slider:before {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.39vw !important;
+    width: 100% !important;
+  }
+
+  #popup-filters .popup-filters-field:nth-child(n + 3),
+  #popup-filters .popup-filters-actions {
+    grid-column: auto !important;
   }
 
   #popup-filters .popup-filters-label {
@@ -16708,6 +16733,7 @@ input:checked + .slider:before {
     border-radius: 1.11vw !important;
     box-sizing: border-box !important;
     background: #fff !important;
+    gap: 2.22vw !important;
   }
 
   #popup-filters .popup-filters-input {
@@ -16717,6 +16743,10 @@ input:checked + .slider:before {
     background: transparent !important;
     font-size: 3.33vw !important;
     color: #333 !important;
+  }
+
+  #popup-filters .popup-filters-input::placeholder {
+    color: rgba(51, 51, 51, 0.5) !important;
   }
 
   #popup-filters .popup-filters-date svg,
@@ -16759,6 +16789,10 @@ input:checked + .slider:before {
 
   #popup-filters .popup-filters-check span,
   #popup-filters .popup-filters-radio span {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 4.44vw !important;
     height: 4.44vw !important;
     border: 0.27vw solid #C9C9C9 !important;
@@ -16773,18 +16807,41 @@ input:checked + .slider:before {
   }
 
   #popup-filters .popup-filters-check input:checked + span {
-    border: 1.39vw solid #BC1622 !important;
+    border-color: #BC1622 !important;
     background: #BC1622 !important;
   }
 
+  #popup-filters .popup-filters-check input:checked + span::after {
+    content: "" !important;
+    width: 2.22vw !important;
+    height: 1.39vw !important;
+    border-left: 0.42vw solid #fff !important;
+    border-bottom: 0.42vw solid #fff !important;
+    transform: rotate(-45deg) translate(0.2vw, -0.2vw) !important;
+    box-sizing: border-box !important;
+  }
+
   #popup-filters .popup-filters-radio input:checked + span {
-    border: 1.39vw solid #BC1622 !important;
+    border: 0.56vw solid #BC1622 !important;
     background: #fff !important;
+  }
+
+  #popup-filters .popup-filters-radio input:checked + span::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 2.22vw !important;
+    height: 2.22vw !important;
+    border-radius: 50% !important;
+    background: #BC1622 !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   #popup-filters .popup-filters-actions {
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     gap: 2.22vw !important;
     padding-top: 3.33vw !important;
     margin: 0 !important;

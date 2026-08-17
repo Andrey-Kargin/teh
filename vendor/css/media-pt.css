@@ -16922,7 +16922,28 @@ input:checked + .slider:before {
     display: none;
   }
 
-  main.projects-listing .projects-page-box a {
+  main.projects-listing .projects-page-box-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.52vw;
+    margin-top: auto;
+    margin-bottom: 1.56vw;
+    font-size: 1.56vw;
+    font-weight: 400;
+    line-height: 140%;
+    color: #bc1622;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  main.projects-listing .projects-page-box-link svg {
+    flex-shrink: 0;
+    width: 1.04vw;
+    height: 1.04vw;
+    margin: 0;
+  }
+
+   main.projects-listing .projects-page-box a {
     display: inline-flex;
     align-items: center;
     gap: 0.52vw;
@@ -28235,7 +28256,7 @@ input:checked + .slider:before {
     padding: 0 !important;
   }
 
-  /* Orders filters modal — Figma 616:26777 */
+  /* Orders filters modal — Figma 616:26777 (tablet stacked) / desktop 647:39182 */
   #popup-filters .popup-filters-form {
     display: flex !important;
     flex-direction: column !important;
@@ -28248,6 +28269,13 @@ input:checked + .slider:before {
     display: flex !important;
     flex-direction: column !important;
     gap: 0.65vw !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #popup-filters .popup-filters-field:nth-child(n + 3),
+  #popup-filters .popup-filters-actions {
+    grid-column: auto !important;
   }
 
   #popup-filters .popup-filters-label {
@@ -28270,6 +28298,7 @@ input:checked + .slider:before {
     border-radius: 0.52vw !important;
     box-sizing: border-box !important;
     background: #fff !important;
+    gap: 1.04vw !important;
   }
 
   #popup-filters .popup-filters-select {
@@ -28331,6 +28360,10 @@ input:checked + .slider:before {
 
   #popup-filters .popup-filters-check span,
   #popup-filters .popup-filters-radio span {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 2.08vw !important;
     height: 2.08vw !important;
     border: 1px solid #C9C9C9 !important;
@@ -28345,18 +28378,41 @@ input:checked + .slider:before {
   }
 
   #popup-filters .popup-filters-check input:checked + span {
-    border: 0.65vw solid #BC1622 !important;
+    border-color: #BC1622 !important;
     background: #BC1622 !important;
   }
 
+  #popup-filters .popup-filters-check input:checked + span::after {
+    content: "" !important;
+    width: 1.04vw !important;
+    height: 0.65vw !important;
+    border-left: 0.2vw solid #fff !important;
+    border-bottom: 0.2vw solid #fff !important;
+    transform: rotate(-45deg) translate(0.1vw, -0.1vw) !important;
+    box-sizing: border-box !important;
+  }
+
   #popup-filters .popup-filters-radio input:checked + span {
-    border: 0.65vw solid #BC1622 !important;
+    border: 0.26vw solid #BC1622 !important;
     background: #fff !important;
+  }
+
+  #popup-filters .popup-filters-radio input:checked + span::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 1.04vw !important;
+    height: 1.04vw !important;
+    border-radius: 50% !important;
+    background: #BC1622 !important;
+    transform: translate(-50%, -50%) !important;
   }
 
   #popup-filters .popup-filters-actions {
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important;
     gap: 1.04vw !important;
     padding-top: 1.56vw !important;
     margin: 0 !important;
