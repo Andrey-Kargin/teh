@@ -16411,6 +16411,11 @@ input:checked + .slider:before {
   gap: 2.22vw;
 }
 
+.popup-calculator-block,
+.popup-calculator-surfaces {
+  display: contents;
+}
+
 .popup-calculator-label {
   margin-bottom: 1.11vw;
   font-size: 3.89vw;

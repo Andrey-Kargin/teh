@@ -20383,6 +20383,11 @@ input:checked + .slider:before {
     padding-top: 2.6vw;
   }
 
+  .popup_calculator .popup-calculator-block,
+  .popup_calculator .popup-calculator-surfaces {
+    display: contents;
+  }
+
   .popup_calculator .popup-calculator-label {
     margin: 0;
     font-size: 1.56vw;

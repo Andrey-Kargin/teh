@@ -1104,6 +1104,7 @@ ul .main-cards-link::after {
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0%;
+  color: #0E0E0E;
 }
 
 .projects-more {
@@ -15533,6 +15534,11 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.popup-calculator-block,
+.popup-calculator-surfaces {
+  display: contents;
 }
 
 .popup-calculator-label {

@@ -330,7 +330,7 @@
   </header>
   <main class="calculator-main">
 
-    <div class="popup_details popup_calculator popup_details_opened" id="popup-calculator">
+    <div class="popup_details popup_calculator popup_details_opened" id="popup-calculator" data-paint-rate="0.13">
       <div class="popup-container popup-calculator-container">
         <div class="popup_details-close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -343,99 +343,61 @@
         <div class="popup-calculator-body">
           <p class="popup-calculator-label">Укажите размеры окрашиваемой поверхности:</p>
 
-          <div class="popup-calculator-dimensions">
-            <label class="popup-calculator-field">
-              <span class="popup-calculator-field-label">Длина</span>
-              <input class="popup-calculator-field-input" type="text" value="10" />
-              <span class="popup-calculator-field-unit">м</span>
-            </label>
-            <span class="popup-calculator-multiply">×</span>
-            <label class="popup-calculator-field">
-              <span class="popup-calculator-field-label">Ширина (высота)</span>
-              <input class="popup-calculator-field-input" type="text" value="4" />
-              <span class="popup-calculator-field-unit">м</span>
-            </label>
-          </div>
-
-          <div class="popup-calculator-counters">
-            <div class="popup-calculator-counter">
-              <button class="popup-calculator-counter-btn" type="button">−</button>
-              <div class="popup-calculator-counter-center">
-                <span class="popup-calculator-counter-title">Двери</span>
-                <span class="popup-calculator-counter-value">0 шт</span>
-                <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
-                    stroke="#AAAAAA" stroke-linecap="round" />
-                </svg>
-              </div>
-              <button class="popup-calculator-counter-btn" type="button">+</button>
-            </div>
-
-            <div class="popup-calculator-counter">
-              <button class="popup-calculator-counter-btn" type="button">−</button>
-              <div class="popup-calculator-counter-center">
-                <span class="popup-calculator-counter-title">Окна</span>
-                <span class="popup-calculator-counter-value">0 шт</span>
-                <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
-                    stroke="#AAAAAA" stroke-linecap="round" />
-                </svg>
-              </div>
-              <button class="popup-calculator-counter-btn" type="button">+</button>
-            </div>
-          </div>
-          <label class="popup-calculator-field popup-calculator-field_area">
-            <span class="popup-calculator-field-label">Площадь</span>
-            <input class="popup-calculator-field-input" type="text" value="40" readonly />
-            <span class="popup-calculator-field-unit">м²</span>
-          </label>
-
-          <div class="popup-calculator-surface">
-            <div class="popup-calculator-surface-head">
-              <p class="popup-calculator-surface-title">Дополнительная поверхность 1:</p>
-              <button class="popup-calculator-remove" type="button">
-                Удалить
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.0001 4V12C12.0001 12.7364 11.4031 13.3333 10.6667 13.3333H5.33341C4.59704 13.3333 4.00008 12.7364 4.00008 12V4M10.0001 4V3.33333C10.0001 2.59695 9.40313 2 8.66675 2H7.33341C6.59704 2 6.00008 2.59695 6.00008 3.33333V4M2.66675 4H13.3334M6.66675 6.66667V10.6667M9.33341 6.66667V10.6667"
-                    stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </div>
-
+          <div class="popup-calculator-block" data-surface="main">
             <div class="popup-calculator-dimensions">
               <label class="popup-calculator-field">
                 <span class="popup-calculator-field-label">Длина</span>
-                <input class="popup-calculator-field-input" type="text" value="10" />
+                <input class="popup-calculator-field-input" data-field="length" type="text" inputmode="decimal" value="10" />
                 <span class="popup-calculator-field-unit">м</span>
               </label>
               <span class="popup-calculator-multiply">×</span>
               <label class="popup-calculator-field">
                 <span class="popup-calculator-field-label">Ширина (высота)</span>
-                <input class="popup-calculator-field-input" type="text" value="4" />
+                <input class="popup-calculator-field-input" data-field="width" type="text" inputmode="decimal" value="4" />
                 <span class="popup-calculator-field-unit">м</span>
               </label>
             </div>
 
+            <div class="popup-calculator-counters">
+              <div class="popup-calculator-counter" data-counter="doors">
+                <button class="popup-calculator-counter-btn" type="button" data-action="minus" aria-label="Минус">−</button>
+                <div class="popup-calculator-counter-center">
+                  <span class="popup-calculator-counter-title">Двери</span>
+                  <span class="popup-calculator-counter-value" contenteditable="true" inputmode="numeric">0 шт</span>
+                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
+                      stroke="#AAAAAA" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <button class="popup-calculator-counter-btn" type="button" data-action="plus" aria-label="Плюс">+</button>
+              </div>
+
+              <div class="popup-calculator-counter" data-counter="windows">
+                <button class="popup-calculator-counter-btn" type="button" data-action="minus" aria-label="Минус">−</button>
+                <div class="popup-calculator-counter-center">
+                  <span class="popup-calculator-counter-title">Окна</span>
+                  <span class="popup-calculator-counter-value" contenteditable="true" inputmode="numeric">0 шт</span>
+                  <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"
+                      stroke="#AAAAAA" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <button class="popup-calculator-counter-btn" type="button" data-action="plus" aria-label="Плюс">+</button>
+              </div>
+            </div>
+
             <label class="popup-calculator-field popup-calculator-field_area">
               <span class="popup-calculator-field-label">Площадь</span>
-              <input class="popup-calculator-field-input" type="text" value="40" readonly />
+              <input class="popup-calculator-field-input" data-field="area" type="text" value="40" readonly />
               <span class="popup-calculator-field-unit">м²</span>
             </label>
-
-            <button class="popup-calculator-link" type="button">
-              Указать окна и двери
-              <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <circle cx="8" cy="8" r="6.25" stroke="#BC1622" stroke-width="1.5" />
-                <path d="M8 7.25V11M8 5.25V5.33333" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-            </button>
           </div>
+
+          <div class="popup-calculator-surfaces" data-surfaces></div>
 
           <button class="popup-calculator-add" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -446,15 +408,15 @@
 
           <p class="popup-calculator-label">Количество слоёв:</p>
           <div class="popup-calculator-layers">
-            <button class="popup-calculator-layer popup-calculator-layer_active" type="button">1 слой</button>
-            <button class="popup-calculator-layer" type="button">2 слоя (рекомендовано)</button>
-            <button class="popup-calculator-layer" type="button">3 слоя</button>
+            <button class="popup-calculator-layer popup-calculator-layer_active" type="button" data-layers="1">1 слой</button>
+            <button class="popup-calculator-layer" type="button" data-layers="2">2 слоя (рекомендовано)</button>
+            <button class="popup-calculator-layer" type="button" data-layers="3">3 слоя</button>
           </div>
 
           <p class="popup-calculator-label">Впитывающая способность поверхности:</p>
           <div class="popup-calculator-absorbency">
             <label class="popup-calculator-absorbency-item">
-              <input type="checkbox" />
+              <input type="checkbox" data-vp="1" checked />
               <span class="popup-calculator-absorbency-text">Слабая</span>
               <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -464,7 +426,7 @@
               </svg>
             </label>
             <label class="popup-calculator-absorbency-item">
-              <input type="checkbox" />
+              <input type="checkbox" data-vp="1.2" />
               <span class="popup-calculator-absorbency-text">Средняя</span>
               <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -474,7 +436,7 @@
               </svg>
             </label>
             <label class="popup-calculator-absorbency-item">
-              <input type="checkbox" />
+              <input type="checkbox" data-vp="1.4" />
               <span class="popup-calculator-absorbency-text">Сильная</span>
               <svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -485,7 +447,7 @@
             </label>
           </div>
 
-          <p class="popup-calculator-result">Вам потребуется: <span>11 л краски</span></p>
+          <p class="popup-calculator-result">Вам потребуется: <span>0 л краски</span></p>
 
           <p class="popup-calculator-note">
             Если требуется индивидуальный проект — уточните у менеджера
@@ -888,6 +850,305 @@
         }
       });
     });
+  </script>
+
+  <script>
+    (function () {
+      const popup = document.getElementById('popup-calculator');
+      if (!popup) return;
+
+      const DOOR_AREA = 1.89;
+      const WINDOW_AREA = 2.25;
+      const PAINT_RATE = parseFloat(popup.dataset.paintRate || '0.13') || 0;
+
+      const body = popup.querySelector('.popup-calculator-body');
+      const surfacesWrap = popup.querySelector('[data-surfaces]');
+      const addBtn = popup.querySelector('.popup-calculator-add');
+      const resultSpan = popup.querySelector('.popup-calculator-result span');
+      const layersBox = popup.querySelector('.popup-calculator-layers');
+      const absorbencyBox = popup.querySelector('.popup-calculator-absorbency');
+
+      const HELP_SVG = `<svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.3267V11.3334M8 9.33333C8 8 10 8 10 6.60606C10 5.53496 9.12225 4.66667 8 4.66667C7.05317 4.66667 6.22557 5.28474 6 6.12121M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#AAAAAA" stroke-linecap="round"/></svg>`;
+
+      const LINK_SVG = `<svg class="popup-calculator-help" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.25" stroke="#BC1622" stroke-width="1.5"/><path d="M8 7.25V11M8 5.25V5.33333" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+
+      const REMOVE_SVG = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0001 4V12C12.0001 12.7364 11.4031 13.3333 10.6667 13.3333H5.33341C4.59704 13.3333 4.00008 12.7364 4.00008 12V4M10.0001 4V3.33333C10.0001 2.59695 9.40313 2 8.66675 2H7.33341C6.59704 2 6.00008 2.59695 6.00008 3.33333V4M2.66675 4H13.3334M6.66675 6.66667V10.6667M9.33341 6.66667V10.6667" stroke="#BC1622" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+      function parseNumber(value) {
+        if (value == null) return NaN;
+        const cleaned = String(value).replace(/\s+/g, '').replace(',', '.').replace(/[^\d.-]/g, '');
+        return parseFloat(cleaned);
+      }
+
+      function parseCount(value) {
+        const num = parseInt(String(value).replace(/[^\d]/g, ''), 10);
+        return Number.isFinite(num) ? Math.max(0, num) : 0;
+      }
+
+      function formatCount(value) {
+        return `${parseCount(value)} шт`;
+      }
+
+      function formatArea(value) {
+        const rounded = Math.round(value * 100) / 100;
+        return String(rounded).replace(/\.0$/, '').replace(/(\.\d)0$/, '$1');
+      }
+
+      function getCounterValue(block, type) {
+        const el = block.querySelector(`.popup-calculator-counter[data-counter="${type}"] .popup-calculator-counter-value`);
+        return el ? parseCount(el.textContent) : 0;
+      }
+
+      function setCounterValue(counter, value) {
+        const el = counter.querySelector('.popup-calculator-counter-value');
+        if (!el) return;
+        el.textContent = formatCount(Math.max(0, value));
+      }
+
+      function updateAreaForBlock(block) {
+        const lengthInput = block.querySelector('[data-field="length"]');
+        const widthInput = block.querySelector('[data-field="width"]');
+        const areaInput = block.querySelector('[data-field="area"]');
+        if (!lengthInput || !widthInput || !areaInput) return 0;
+
+        const lengthVal = parseNumber(lengthInput.value);
+        const widthVal = parseNumber(widthInput.value);
+        const doors = getCounterValue(block, 'doors');
+        const windows = getCounterValue(block, 'windows');
+
+        if (!Number.isFinite(lengthVal) || !Number.isFinite(widthVal) || lengthVal < 0 || widthVal < 0) {
+          areaInput.value = '';
+          return 0;
+        }
+
+        const Sf = lengthVal * widthVal;
+        const Sd = doors * DOOR_AREA;
+        const So = windows * WINDOW_AREA;
+        const S = Math.max(Sf - Sd - So, 0);
+        areaInput.value = formatArea(S);
+        return S;
+      }
+
+      function getLayersCount() {
+        const active = layersBox?.querySelector('.popup-calculator-layer_active');
+        return active ? (parseInt(active.dataset.layers, 10) || 1) : 1;
+      }
+
+      function getAbsorptionFactor() {
+        const checked = absorbencyBox?.querySelector('input[type="checkbox"]:checked');
+        if (!checked) return 1;
+        const vp = parseFloat(checked.dataset.vp);
+        return Number.isFinite(vp) ? vp : 1;
+      }
+
+      function calculateTotalArea() {
+        let total = 0;
+        popup.querySelectorAll('.popup-calculator-block, .popup-calculator-surface').forEach((block) => {
+          total += updateAreaForBlock(block);
+        });
+        return total;
+      }
+
+      function updateLitres() {
+        if (!resultSpan) return;
+        const S = calculateTotalArea();
+        const sl = getLayersCount();
+        const vp = getAbsorptionFactor();
+
+        if (PAINT_RATE <= 0 || S <= 0) {
+          resultSpan.textContent = '0 л краски';
+          return;
+        }
+
+        const litres = S * PAINT_RATE * sl * vp;
+        const rounded = Math.round(litres * 10) / 10;
+        resultSpan.textContent = `${rounded} л краски`;
+      }
+
+      function renumberSurfaces() {
+        popup.querySelectorAll('.popup-calculator-surface').forEach((surface, index) => {
+          const title = surface.querySelector('.popup-calculator-surface-title');
+          if (title) title.textContent = `Дополнительная поверхность ${index + 1}:`;
+        });
+      }
+
+      function createSurface(index) {
+        const surface = document.createElement('div');
+        surface.className = 'popup-calculator-surface';
+        surface.innerHTML = `
+          <div class="popup-calculator-surface-head">
+            <p class="popup-calculator-surface-title">Дополнительная поверхность ${index}:</p>
+            <button class="popup-calculator-remove" type="button">
+              Удалить
+              ${REMOVE_SVG}
+            </button>
+          </div>
+          <div class="popup-calculator-dimensions">
+            <label class="popup-calculator-field">
+              <span class="popup-calculator-field-label">Длина</span>
+              <input class="popup-calculator-field-input" data-field="length" type="text" inputmode="decimal" value="0" />
+              <span class="popup-calculator-field-unit">м</span>
+            </label>
+            <span class="popup-calculator-multiply">×</span>
+            <label class="popup-calculator-field">
+              <span class="popup-calculator-field-label">Ширина (высота)</span>
+              <input class="popup-calculator-field-input" data-field="width" type="text" inputmode="decimal" value="0" />
+              <span class="popup-calculator-field-unit">м</span>
+            </label>
+          </div>
+          <div class="popup-calculator-counters" hidden>
+            <div class="popup-calculator-counter" data-counter="doors">
+              <button class="popup-calculator-counter-btn" type="button" data-action="minus" aria-label="Минус">−</button>
+              <div class="popup-calculator-counter-center">
+                <span class="popup-calculator-counter-title">Двери</span>
+                <span class="popup-calculator-counter-value" contenteditable="true" inputmode="numeric">0 шт</span>
+                ${HELP_SVG}
+              </div>
+              <button class="popup-calculator-counter-btn" type="button" data-action="plus" aria-label="Плюс">+</button>
+            </div>
+            <div class="popup-calculator-counter" data-counter="windows">
+              <button class="popup-calculator-counter-btn" type="button" data-action="minus" aria-label="Минус">−</button>
+              <div class="popup-calculator-counter-center">
+                <span class="popup-calculator-counter-title">Окна</span>
+                <span class="popup-calculator-counter-value" contenteditable="true" inputmode="numeric">0 шт</span>
+                ${HELP_SVG}
+              </div>
+              <button class="popup-calculator-counter-btn" type="button" data-action="plus" aria-label="Плюс">+</button>
+            </div>
+          </div>
+          <label class="popup-calculator-field popup-calculator-field_area">
+            <span class="popup-calculator-field-label">Площадь</span>
+            <input class="popup-calculator-field-input" data-field="area" type="text" value="0" readonly />
+            <span class="popup-calculator-field-unit">м²</span>
+          </label>
+          <button class="popup-calculator-link" type="button">
+            Указать окна и двери
+            ${LINK_SVG}
+          </button>
+        `;
+        return surface;
+      }
+
+      body.addEventListener('click', (e) => {
+        const absorbencyItem = e.target.closest('.popup-calculator-absorbency-item');
+        if (absorbencyItem && absorbencyBox?.contains(absorbencyItem)) {
+          e.preventDefault();
+          const checkbox = absorbencyItem.querySelector('input[type="checkbox"]');
+          if (!checkbox) return;
+          absorbencyBox.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+            input.checked = input === checkbox;
+          });
+          checkbox.checked = true;
+          updateLitres();
+          return;
+        }
+
+        const plusMinus = e.target.closest('.popup-calculator-counter-btn');
+        if (plusMinus) {
+          e.preventDefault();
+          const counter = plusMinus.closest('.popup-calculator-counter');
+          if (!counter) return;
+          const el = counter.querySelector('.popup-calculator-counter-value');
+          const current = parseCount(el?.textContent);
+          const delta = plusMinus.dataset.action === 'plus' ? 1 : -1;
+          setCounterValue(counter, current + delta);
+          updateLitres();
+          return;
+        }
+
+        const removeBtn = e.target.closest('.popup-calculator-remove');
+        if (removeBtn) {
+          e.preventDefault();
+          const surface = removeBtn.closest('.popup-calculator-surface');
+          if (surface) {
+            surface.remove();
+            renumberSurfaces();
+            updateLitres();
+          }
+          return;
+        }
+
+        const doorsLink = e.target.closest('.popup-calculator-link');
+        if (doorsLink) {
+          e.preventDefault();
+          const surface = doorsLink.closest('.popup-calculator-surface');
+          const counters = surface?.querySelector('.popup-calculator-counters');
+          if (counters) {
+            counters.hidden = false;
+            doorsLink.remove();
+          }
+          return;
+        }
+
+        const layerBtn = e.target.closest('.popup-calculator-layer');
+        if (layerBtn && layersBox?.contains(layerBtn)) {
+          e.preventDefault();
+          layersBox.querySelectorAll('.popup-calculator-layer').forEach((btn) => {
+            btn.classList.remove('popup-calculator-layer_active');
+          });
+          layerBtn.classList.add('popup-calculator-layer_active');
+          updateLitres();
+        }
+      });
+
+      body.addEventListener('input', (e) => {
+        const counterEl = e.target.closest('.popup-calculator-counter-value');
+        if (counterEl) {
+          const digits = String(counterEl.textContent).replace(/[^\d]/g, '');
+          if (counterEl.textContent !== digits) {
+            counterEl.textContent = digits;
+            const range = document.createRange();
+            const sel = window.getSelection();
+            range.selectNodeContents(counterEl);
+            range.collapse(false);
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+          updateLitres();
+          return;
+        }
+
+        if (e.target.matches('[data-field="length"], [data-field="width"]')) {
+          updateLitres();
+        }
+      });
+
+      body.addEventListener('focusin', (e) => {
+        const counterEl = e.target.closest('.popup-calculator-counter-value');
+        if (counterEl) {
+          counterEl.textContent = String(parseCount(counterEl.textContent));
+          const range = document.createRange();
+          const sel = window.getSelection();
+          range.selectNodeContents(counterEl);
+          sel.removeAllRanges();
+          sel.addRange(range);
+          return;
+        }
+
+        if (e.target.matches('[data-field="length"], [data-field="width"]') && e.target.value === '0') {
+          e.target.value = '';
+        }
+      });
+
+      body.addEventListener('focusout', (e) => {
+        const counterEl = e.target.closest('.popup-calculator-counter-value');
+        if (counterEl) {
+          counterEl.textContent = formatCount(counterEl.textContent);
+          updateLitres();
+        }
+      });
+
+      addBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const nextIndex = (surfacesWrap?.querySelectorAll('.popup-calculator-surface').length || 0) + 1;
+        const surface = createSurface(nextIndex);
+        surfacesWrap.appendChild(surface);
+        renumberSurfaces();
+        updateLitres();
+      });
+
+      updateLitres();
+    })();
   </script>
 </body>
 

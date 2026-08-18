@@ -1177,6 +1177,7 @@ ul .main-cards-link::after {
   font-size: 0.97vw;
   line-height: 140%;
   letter-spacing: 0%;
+  color: #0E0E0E;
 }
 
 .projects-more {
@@ -15850,6 +15851,12 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 0.6vw;
+}
+
+/* Keep JS wrappers out of flex flow so body gap matches the original layout */
+.popup-calculator-block,
+.popup-calculator-surfaces {
+  display: contents;
 }
 
 .popup-calculator-label {
