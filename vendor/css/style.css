@@ -4692,6 +4692,131 @@ ul .main-cards-link::after {
   padding-right: 0;
 }
 
+/* Success popup — Figma 4059:152730 */
+#popup-success.popup_details,
+#popup-success.popup_details_opened {
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-success .popup-container {
+  width: 33.33vw;
+  max-width: 33.33vw;
+  padding: 1.39vw;
+  gap: 1.39vw;
+  border-radius: 0.69vw;
+}
+
+#popup-success .popup-container::after {
+  display: none;
+}
+
+#popup-success .popup_details-close {
+  top: 1.39vw;
+  right: 1.39vw;
+  width: 1.39vw;
+  height: 1.39vw;
+  z-index: 2;
+}
+
+#popup-success .popup-success-head {
+  display: flex;
+  align-items: center;
+  gap: 0.83vw;
+  padding-right: 2.08vw;
+  box-sizing: border-box;
+}
+
+#popup-success .popup-success-icon {
+  width: 2.22vw;
+  height: 2.22vw;
+  flex-shrink: 0;
+  display: block;
+}
+
+#popup-success .popup-success-title {
+  margin: 0;
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 120%;
+  color: #0e0e0e;
+}
+
+#popup-success .popup-success-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.56vw;
+}
+
+#popup-success .popup-success-desc {
+  margin: 0;
+  font-size: 0.97vw;
+  font-weight: 400;
+  line-height: 130%;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+#popup-success .popup-success-phone {
+  margin: 0;
+  font-size: 0.97vw;
+  font-weight: 700;
+  line-height: 130%;
+  color: #0e0e0e;
+  text-decoration: none;
+}
+
+#popup-success .popup-success-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.11vw;
+}
+
+#popup-success .popup-success-actions .popup_details-btn {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  min-height: 2.78vw;
+  padding: 0.69vw 1.39vw;
+  font-family: 'Rooftop', sans-serif;
+  font-size: 0.97vw;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 0.35vw;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#popup-success .popup-success-actions .popup_details-btn-accept {
+  background: #bc1622;
+  color: #fff;
+}
+
+#popup-success .popup-success-actions .popup_details-btn-accept:hover {
+  background: #a0151f;
+  color: #fff;
+}
+
+#popup-success .popup-success-actions .popup_details-btn-cancel {
+  background: transparent;
+  color: #0e0e0e;
+  border: none;
+  box-shadow: none;
+  font-weight: 500;
+  padding-left: 0;
+  padding-right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-success .popup-success-actions .popup_details-btn-cancel:hover {
+  background: transparent;
+  color: #bc1622;
+}
+
 .popup_details-row {
   width: 100%;
   display: flex;
@@ -11939,10 +12064,16 @@ input:checked + .slider:before {
   line-height: 130%;
   color: #333;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .article-plot-list-el svg {
   margin-top: -3px;
+}
+
+.article-info .title[id],
+.article-info [data-toc] {
+  scroll-margin-top: 6vw;
 }
 
 .article-questions {

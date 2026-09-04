@@ -16871,6 +16871,139 @@ input:checked + .slider:before {
     font-weight: 400 !important;
   }
 
+  /* Success popup — Figma 4059:152714 */
+  #popup-success.popup_details,
+  #popup-success.popup_details_opened {
+    align-items: flex-end !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  #popup-success.popup_details_opened {
+    display: flex !important;
+  }
+
+  #popup-success .popup-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 5.55vw !important;
+    gap: 5.55vw !important;
+    border-radius: 2.77vw 2.77vw 0 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #popup-success .popup-container::after {
+    display: none !important;
+  }
+
+  #popup-success .popup_details-close {
+    top: 5.55vw !important;
+    right: 5.55vw !important;
+    width: 5.55vw !important;
+    height: 5.55vw !important;
+    z-index: 2 !important;
+  }
+
+  #popup-success .popup-success-head {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3.33vw !important;
+    padding-right: 8.33vw !important;
+    box-sizing: border-box !important;
+  }
+
+  #popup-success .popup-success-icon {
+    width: 8.89vw !important;
+    height: 8.89vw !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  #popup-success .popup-success-title {
+    margin: 0 !important;
+    font-size: 4.44vw !important;
+    font-weight: 700 !important;
+    line-height: 120% !important;
+    color: #0e0e0e !important;
+  }
+
+  #popup-success .popup-success-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.22vw !important;
+  }
+
+  #popup-success .popup-success-desc {
+    margin: 0 !important;
+    font-size: 3.88vw !important;
+    font-weight: 400 !important;
+    line-height: 130% !important;
+    color: rgba(51, 51, 51, 0.8) !important;
+  }
+
+  #popup-success .popup-success-phone {
+    margin: 0 !important;
+    font-size: 3.88vw !important;
+    font-weight: 700 !important;
+    line-height: 130% !important;
+    color: #0e0e0e !important;
+    text-decoration: none !important;
+  }
+
+  #popup-success .popup-success-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 4.44vw !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn {
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 11.11vw !important;
+    padding: 2.78vw 5.55vw !important;
+    font-family: 'Rooftop', sans-serif !important;
+    font-size: 3.88vw !important;
+    font-weight: 500 !important;
+    line-height: 100% !important;
+    border-radius: 1.39vw !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-accept {
+    background: #bc1622 !important;
+    color: #fff !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-accept:hover {
+    background: #a0151f !important;
+    color: #fff !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-cancel {
+    width: auto !important;
+    background: transparent !important;
+    color: #0e0e0e !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-cancel:hover {
+    background: transparent !important;
+    color: #bc1622 !important;
+  }
+
   /* Projects empty state — hidden unless no cards */
   .empty-projects-message,
   .empty-estimate-message,

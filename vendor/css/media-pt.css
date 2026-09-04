@@ -34387,6 +34387,145 @@ input:checked + .slider:before {
     background: #a0151f;
   }
 
+  /* Success popup — Figma 4059:152674 */
+  #popup-success.popup_details,
+  #popup-success.popup_details_opened {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background-color: rgba(51, 51, 51, 0.6) !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #popup-success.popup_details_opened {
+    display: flex !important;
+  }
+
+  #popup-success .popup-container {
+    width: 55.21vw !important;
+    max-width: 55.21vw !important;
+    margin: 0 !important;
+    padding: 2.6vw !important;
+    gap: 2.6vw !important;
+    border-radius: 1.3vw !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #popup-success .popup-container::after {
+    display: none !important;
+  }
+
+  #popup-success .popup_details-close {
+    top: 2.6vw !important;
+    right: 2.6vw !important;
+    width: 2.6vw !important;
+    height: 2.6vw !important;
+    z-index: 2 !important;
+  }
+
+  #popup-success .popup-success-head {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.56vw !important;
+    padding-right: 3.91vw !important;
+    box-sizing: border-box !important;
+  }
+
+  #popup-success .popup-success-icon {
+    width: 4.17vw !important;
+    height: 4.17vw !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  #popup-success .popup-success-title {
+    margin: 0 !important;
+    font-size: 2.34vw !important;
+    font-weight: 700 !important;
+    line-height: 120% !important;
+    color: #0e0e0e !important;
+  }
+
+  #popup-success .popup-success-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.04vw !important;
+  }
+
+  #popup-success .popup-success-desc {
+    margin: 0 !important;
+    font-size: 1.82vw !important;
+    font-weight: 400 !important;
+    line-height: 130% !important;
+    color: rgba(51, 51, 51, 0.8) !important;
+  }
+
+  #popup-success .popup-success-phone {
+    margin: 0 !important;
+    font-size: 1.82vw !important;
+    font-weight: 700 !important;
+    line-height: 130% !important;
+    color: #0e0e0e !important;
+    text-decoration: none !important;
+  }
+
+  #popup-success .popup-success-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 2.08vw !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn {
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 5.21vw !important;
+    padding: 1.3vw 2.6vw !important;
+    font-family: 'Rooftop', sans-serif !important;
+    font-size: 1.82vw !important;
+    font-weight: 500 !important;
+    line-height: 100% !important;
+    border-radius: 0.65vw !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-accept {
+    background: #bc1622 !important;
+    color: #fff !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-accept:hover {
+    background: #a0151f !important;
+    color: #fff !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-cancel {
+    background: transparent !important;
+    color: #0e0e0e !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #popup-success .popup-success-actions .popup_details-btn-cancel:hover {
+    background: transparent !important;
+    color: #bc1622 !important;
+  }
+
   /* BREAKPOINTS */
 
   .pc-1440 {

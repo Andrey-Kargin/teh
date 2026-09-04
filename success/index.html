@@ -304,6 +304,7 @@
         <a href="../" class="header__nav-link">Юридическим лицам</a>
         <a href="../" class="header__nav-link">Бизнесу</a>
         <a href="../" class="header__nav-link">Профессионалам</a>
+<<<<<<< HEAD
         <a href="../" class="header__nav-link">О компании<span><svg width="9" height="9" viewBox="0 0 9 9"
               fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.5 3.375L4.5 6.375L7.5 3.375" stroke="#80878F" stroke-width="1.5" stroke-linecap="round"
@@ -311,6 +312,15 @@
             </svg></span></a>
         <a href="../" class="header__nav-link">Покупателям<span><svg width="9" height="9" viewBox="0 0 9 9"
               fill="none" xmlns="http://www.w3.org/2000/svg">
+=======
+        <a href="../" class="header__nav-link">О компании<span><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 3.375L4.5 6.375L7.5 3.375" stroke="#80878F" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span></a>
+        <a href="../" class="header__nav-link">Покупателям<span><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+>>>>>>> 66fd8fb (Статья)
               <path d="M1.5 3.375L4.5 6.375L7.5 3.375" stroke="#80878F" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg></span></a>
@@ -329,6 +339,7 @@
     </div>
   </header>
   <main>
+<<<<<<< HEAD
     <section class="personal">
       <div class="container">
         
@@ -1098,6 +1109,282 @@
       });
     });
   </script>
+=======
+
+    <div class="popup_details popup_success popup_details_opened" id="popup-success">
+      <div class="popup-container popup-success-container">
+        <div class="popup_details-close" data-success-close>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.8346 4.16602L4.16797 15.8327M4.16798 4.16602L15.8347 15.8327" stroke="#333333"
+              stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="popup-success-head">
+          <svg class="popup-success-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="16" fill="#00B162" />
+            <path d="M9.5 16.2L13.7 20.4L22.5 11.6" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <p class="popup-success-title">Заявка успешно отправлена!</p>
+        </div>
+
+        <div class="popup-success-body">
+          <p class="popup-success-desc">В ближайшее время с вами свяжется наш менеджер</p>
+          <p class="popup-success-desc">
+            Если требуется срочная консультация - свяжитесь с нами по телефону
+          </p>
+          <a class="popup-success-phone" href="tel:+74955056101">+7 (495) 505-61-01</a>
+        </div>
+
+        <div class="popup-success-actions">
+          <a class="popup_details-btn popup_details-btn-accept" href="../">Вернуться на главную</a>
+          <button class="popup_details-btn popup_details-btn-cancel" type="button" data-success-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.header__nav');
+      const btn = document.getElementById('btn');
+      const navBtn = document.querySelectorAll('.header__nav-link');
+
+      function openBurger() {
+        const isActive = burger.classList.toggle('burger_active');
+        nav.classList.toggle('header__nav_opened');
+
+        if (isActive) {
+          // Сохраняем текущую позицию прокрутки
+          const scrollY = window.scrollY;
+
+          document.body.style.position = 'fixed';
+          document.body.style.top = `-${scrollY}px`;
+          document.body.style.width = '100%';
+          document.body.style.overflowY = 'scroll'; // Опционально: оставляет полосу прокрутки, чтобы контент не прыгал
+        } else {
+          // Извлекаем сохраненную позицию из стиля top
+          const scrollY = document.body.style.top;
+
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = '';
+          document.body.style.overflowY = '';
+
+          // Возвращаем страницу к прежнему месту
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
+      }
+
+      btn.addEventListener('click', openBurger);
+      burger.addEventListener('click', openBurger);
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const triggers = document.querySelectorAll('.header__nav [data-tab]');
+
+        triggers.forEach(trigger => {
+          trigger.addEventListener('click', function (e) {
+            const tabId = this.getAttribute('data-tab');
+            const targetFold = document.getElementById(tabId);
+
+            if (!targetFold || !targetFold.classList.contains('header__nav-fold')) return;
+
+            e.preventDefault();
+
+            const willOpen = !targetFold.classList.contains('header__nav-fold_active');
+            document.querySelectorAll('.header__nav .header__nav-fold_active').forEach(el => {
+              el.classList.remove('header__nav-fold_active');
+            });
+            if (willOpen) targetFold.classList.add('header__nav-fold_active');
+          });
+        });
+      });
+
+      // HEADER
+      (function () {
+        // Собираем все элементы, которые могут участвовать в логике
+        const elementsToTrack = ['.header__main', '.header__top', '.header__search', '.header__bottom'];
+        const blocksData = [];
+
+        elementsToTrack.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => {
+            blocksData.push({
+              element: el,
+              selector: selector,
+              parent: el.parentElement,
+              placeholder: createPlaceholder(el)
+            });
+          });
+        });
+
+        function createPlaceholder(el) {
+          const placeholder = document.createElement('div');
+          placeholder.style.display = 'none';
+          placeholder.style.height = el.offsetHeight + 'px';
+          placeholder.style.width = '100%';
+          return placeholder;
+        }
+
+        function handleScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const winWidth = window.innerWidth;
+
+          blocksData.forEach(data => {
+            const { element, parent, placeholder, selector } = data;
+            const parentRect = parent.getBoundingClientRect();
+            const parentRelativeTop = parentRect.top + scrollTop;
+
+            // --- ЛОГИКА ДЛЯ ДЕСКТОПА (ОТ 1280px) ---
+            if (winWidth >= 1280) {
+              if (selector === '.header__main') {
+                let offsetPx, fixedStyles, resetStyles;
+
+                if (winWidth < 1440) {
+                  // Условие 1: 1280px - 1440px
+                  offsetPx = (winWidth * 2.35) / 100;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: '0.833vw 7.8vw'
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '0.833vw 0' };
+                } else {
+                  // Условие 2: Более 1440px
+                  offsetPx = 35;
+                  fixedStyles = {
+                    position: 'fixed', top: '0', left: '0', zIndex: '1000', width: '100%', boxSizing: 'border-box',
+                    padding: `12px calc((100vw - 1454.5px) / 2)`
+                  };
+                  resetStyles = { position: '', top: '', left: '', width: '', zIndex: '', padding: '12px 0' };
+                }
+
+                if (scrollTop >= (parentRelativeTop + offsetPx)) {
+                  if (!element.classList.contains('is-fixed')) {
+                    element.classList.add('is-fixed');
+                    parent.insertBefore(placeholder, element);
+                    placeholder.style.display = 'block';
+                    Object.assign(element.style, fixedStyles);
+                  }
+                } else {
+                  if (element.classList.contains('is-fixed')) {
+                    element.classList.remove('is-fixed');
+                    placeholder.style.display = 'none';
+                    Object.assign(element.style, resetStyles);
+                  }
+                }
+              }
+            }
+
+          });
+        }
+
+        window.addEventListener('resize', () => {
+          blocksData.forEach(data => {
+            // Обновляем высоту холдера при ресайзе, если элемент не зафиксирован
+            if (!data.element.classList.contains('is-fixed')) {
+              data.placeholder.style.height = data.element.offsetHeight + 'px';
+            }
+          });
+          handleScroll(); // Пересчитываем положение при ресайзе
+        });
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+      })();
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем нужные элементы
+        const ordersBoxes = document.querySelectorAll('.personal-orders-box'); // Все блоки заказов
+        const containers = document.querySelectorAll('.personal-container');
+        const backButton = document.querySelector('.personal-container-orders-back');
+
+        // Функция для активации раздела
+        function activateSection(sectionId) {
+          containers.forEach(container => {
+            container.classList.remove('personal-container_active');
+          });
+
+          const targetContainer = document.querySelector(`.personal-container[data-section="${sectionId}"]`);
+          if (targetContainer) {
+            targetContainer.classList.add('personal-container_active');
+          }
+        }
+
+        // Функция для скролла вверх
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+
+        // Обработчик для всего блока заказа
+        ordersBoxes.forEach(box => {
+          box.addEventListener('click', function (e) {
+            // Находим ссылку "Подробнее" внутри этого блока
+            const link = this.querySelector('.personal-orders-box-link');
+
+            // Проверяем, что клик был не по кнопкам "Удалить" или "Поделиться"
+            const isWidgetClick = e.target.closest('.personal-estimate-box-widget');
+
+            if (link && !isWidgetClick) {
+              e.preventDefault();
+              const sectionId = link.dataset.section; // "orders-info"
+              activateSection(sectionId);
+              scrollToTop();
+            }
+          });
+        });
+
+        // Обработчик для кнопки "Назад"
+        if (backButton) {
+          backButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            const sectionId = this.dataset.section; // "orders"
+            activateSection(sectionId);
+            scrollToTop();
+          });
+        }
+      });
+    </script>
+
+    <!-- ФУНКЦИИ ПОПАПА SUCCESS -->
+    <script>
+      (function () {
+        const successPopup = document.getElementById('popup-success');
+        if (!successPopup) return;
+
+        function closeSuccessPopup() {
+          successPopup.classList.remove('popup_details_opened');
+        }
+
+        successPopup.addEventListener('click', function (e) {
+          if (e.target === this) closeSuccessPopup();
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && successPopup.classList.contains('popup_details_opened')) {
+            closeSuccessPopup();
+          }
+        });
+
+        successPopup.querySelectorAll('[data-success-close]').forEach(function (el) {
+          el.addEventListener('click', closeSuccessPopup);
+        });
+
+        const container = successPopup.querySelector('.popup-container');
+        if (container) {
+          container.addEventListener('click', function (e) {
+            e.stopPropagation();
+          });
+        }
+      })();
+    </script>
+>>>>>>> 66fd8fb (Статья)
 </body>
 
 </html>
