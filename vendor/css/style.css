@@ -935,6 +935,10 @@ ul .main-cards-link::after {
   font-size: 1.11vw;
   line-height: 100%;
   letter-spacing: 0%;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .products-info {
@@ -2677,7 +2681,7 @@ ul .main-cards-link::after {
   width: 37.43vw;
 }
 
-.retail-gift-includes-box:last-of-type p {
+/* .retail-gift-includes-box:last-of-type p {
   margin-top: 0.25vw;
 }
 
@@ -2687,7 +2691,7 @@ ul .main-cards-link::after {
 
 .retail-gift-includes-box:nth-of-type(2) p {
   margin-top: 0.25vw;
-}
+} */
 
 .retail-gift-example {
   display: flex;
@@ -8038,6 +8042,7 @@ input:checked + .slider:before {
   width: 1.67vw;
   height: 1.67vw;
   flex-shrink: 0;
+  margin-top: -0.2vw;
 }
 
 .legal-gift-includes-box:nth-last-child(n+4) {
@@ -10519,7 +10524,7 @@ input:checked + .slider:before {
     box-sizing: border-box;
     width: 18.33vw;
     height: 7.99vw;
-    padding: 1.11vw 1.39vw;
+    padding: 1.45vw 1.39vw;
     border-radius: 0.69vw;
     background: #F1F1F1;
     display: flex;
@@ -13797,6 +13802,56 @@ input:checked + .slider:before {
   background: #0E0E0E;
 }
 
+.product-main-side-calc {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  align-self: flex-start;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  text-decoration: underline;
+  text-underline-offset: 0.14vw;
+  cursor: pointer;
+}
+
+.product-main-side-calc:hover {
+  color: #A0151F;
+}
+
+.product-main-side-extra {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28vw;
+}
+
+.product-main-side-extra-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.63vw;
+  padding: 0;
+  border-radius: 6.94vw;
+  border: none;
+  background: #F1F1F1;
+  font-weight: 700;
+  font-size: 0.83vw;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333333;
+  cursor: pointer;
+}
+
+.product-main-side-extra-btn:hover {
+  color: #BC1622;
+}
+
 .product-main-side-discount {
   display: flex;
   flex-direction: column;
@@ -16378,3 +16433,13 @@ input:checked + .slider:before {
   height: 1.1vw;
   cursor: pointer;
 }
+
+    .header__link-badge {
+        top: -4px;
+        right: -8px;
+        min-width: 16px;
+        height: 16px;
+        padding: 2px 4px;
+        font-size: 10px;
+        line-height: 16px;
+    }

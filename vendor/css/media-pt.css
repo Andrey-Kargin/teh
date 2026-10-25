@@ -13090,6 +13090,57 @@ input:checked + .slider:before {
   background: #0E0E0E;
 }
 
+.product-main-side-calc {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  align-self: flex-start;
+  font-weight: 400;
+  font-size: 1.82vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #BC1622;
+  text-decoration: underline;
+  text-underline-offset: 0.26vw;
+  cursor: pointer;
+}
+
+.product-main-side-calc:hover {
+  color: #A0151F;
+}
+
+.product-main-side-extra {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.52vw;
+}
+
+.product-main-side-extra-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  padding: 1.56vw 2.6vw;
+  border: 1px solid #AAAAAA;
+  border-radius: 0.65vw;
+  background: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.82vw;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #333333;
+  cursor: pointer;
+}
+
+.product-main-side-extra-btn:hover {
+  background: #F7F7F7;
+}
+
 .product-main-side-discount {
   display: flex;
   flex-direction: column;
@@ -20325,7 +20376,6 @@ input:checked + .slider:before {
 
   .popup_calculator.popup_details,
   .popup_calculator.popup_details_opened {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -20336,6 +20386,10 @@ input:checked + .slider:before {
     border-radius: 0;
     box-sizing: border-box;
     background-color: rgba(51, 51, 51, 0.6);
+  }
+
+  .popup_calculator.popup_details_opened {
+    display: flex;
   }
 
   .popup_calculator .popup-calculator-container {
@@ -24191,6 +24245,37 @@ input:checked + .slider:before {
 
   main.product-page .product-main-side-btn-qb {
     background: #333;
+  }
+
+  main.product-page .product-main-side-calc {
+    font-size: 1.56vw;
+    line-height: 140%;
+    color: #bc1622;
+    text-decoration: underline;
+    text-underline-offset: 0.26vw;
+  }
+
+  main.product-page .product-main-side-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 1.52vw;
+    width: 100%;
+  }
+
+  main.product-page .product-main-side-extra-btn {
+    width: 100%;
+    flex: none;
+    height: auto;
+    min-height: 0;
+    padding: 2.56vw 2.6vw;
+    border: none;
+    background: #F1F1F1;
+    border-radius: 12vw;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.56vw;
+    line-height: 100%;
+    box-sizing: border-box;
   }
 
   /* Discount banner */
@@ -30215,6 +30300,10 @@ input:checked + .slider:before {
     background-color: rgba(51, 51, 51, 0.6);
   }
 
+  .popup_calculator.popup_details_opened {
+    display: flex;
+  }
+
   .popup_calculator .popup-calculator-container {
     width: 46.88vw;
     max-width: 46.88vw;
@@ -30244,7 +30333,6 @@ input:checked + .slider:before {
   #popup-feedback.popup_details_opened,
   #popup-discount.popup_details_opened,
   #popup-price-list.popup_details_opened {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -30255,6 +30343,12 @@ input:checked + .slider:before {
     border-radius: 0;
     box-sizing: border-box;
     background-color: rgba(51, 51, 51, 0.6);
+  }
+
+  #popup-feedback.popup_details_opened,
+  #popup-discount.popup_details_opened,
+  #popup-price-list.popup_details_opened {
+    display: flex;
   }
 
   #popup-feedback .popup-container,
