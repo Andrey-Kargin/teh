@@ -727,11 +727,64 @@ ul .main-cards-link::after {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
 }
 
 .products-container {
   display: flex;
   gap: 10px;
+}
+
+.products .swiper-button-next-unique-products,
+.products .swiper-button-prev-unique-products {
+  display: block;
+  position: absolute;
+  top: 4px;
+  margin: 0;
+  margin-top: 0;
+  transform: none;
+  color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24px;
+  width: 24px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.products .swiper-button-next-unique-products {
+  right: 0 !important;
+  left: auto !important;
+  background-image: url(../../img/arrow-next-promo-list.svg);
+}
+
+.products .swiper-button-prev-unique-products {
+  right: 32px !important;
+  left: auto !important;
+  background-image: url(../../img/arrow-prev-promo-list.svg);
+}
+
+.products .swiper-button-next-unique-products:hover {
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
+}
+
+.products .swiper-button-prev-unique-products:hover {
+  transform: rotate(180deg);
+  background-image: url(../../img/arrow-next-promo-list-hover.svg);
+}
+
+.products .swiper-button-next-unique-products::after,
+.products .swiper-button-prev-unique-products::after {
+  content: none;
+}
+
+.products-discount-slider {
+  overflow: hidden;
+}
+
+.products-discount-slider .products-box {
+  margin-right: 10px;
 }
 
 .products-box {
@@ -2129,10 +2182,10 @@ ul .main-cards-link::after {
 
   .retail-control-img {
     position: absolute;
-    top: -38px;
+    top: -28px;
     right: -25px;
-    width: 724px;
-    height: 372px;
+    width: 783px;
+    height: 358px;
   }
 
   .retail-control-img img {

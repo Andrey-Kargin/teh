@@ -948,13 +948,13 @@
 
   .retail-control-img {
     position: absolute;
-    top: 3.39vw;
-    right: calc((100vw - 94.79vw) / -2);
+    top: 1.39vw;
+    right: calc(((100vw - 94.79vw) / -2) - 12.19vw);
     bottom: auto;
     left: auto;
     z-index: 0;
-    width: 66.41vw;
-    height: 34.11vw;
+    width: 71.48vw;
+    height: 32.68vw;
     border-radius: 1.3vw;
     overflow: hidden;
     pointer-events: none;
@@ -21337,6 +21337,11 @@ input:checked + .slider:before {
     margin: 0;
   }
 
+  main .swiper-button-next-unique-products,
+  main .swiper-button-prev-unique-products {
+    display: none;
+  }
+
   main .swipe-video {
     display: none;
     width: 0;
@@ -21377,6 +21382,25 @@ input:checked + .slider:before {
 
   main .products-box:nth-child(n+5) {
     display: flex;
+  }
+
+  main .products-discount-slider.products-container {
+    display: grid;
+    overflow: visible;
+  }
+
+  main .products-discount-slider .swiper-wrapper {
+    display: contents;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  main .products-discount-slider .products-box {
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
 
   main .products-settings {

@@ -1000,8 +1000,9 @@
         <video class="mobile pt swipe-video" autoplay muted loop playsinline>
           <source src="./video/swipe.mp4" type="video/mp4" />
         </video>
-        <div class="products-container">
-          <div class="products-box">
+        <div class="products-container products-discount-slider swiper">
+          <div class="swiper-wrapper">
+          <div class="products-box swiper-slide">
             <div class="products-discount-promo">
               -25 %
             </div>
@@ -1079,7 +1080,7 @@
             </div>
           </div>
 
-          <div class="products-box">
+          <div class="products-box swiper-slide">
             <div class="products-discount-promo">
               -25 %
             </div>
@@ -1157,7 +1158,7 @@
             </div>
           </div>
 
-          <div class="products-box">
+          <div class="products-box swiper-slide">
             <div class="products-promo">
               Акция 1+1
             </div>
@@ -1236,7 +1237,7 @@
           </div>
 
 
-          <div class="products-box">
+          <div class="products-box swiper-slide">
             <div class="products-settings">
               <div class="products-settings-box">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1306,7 +1307,7 @@
             </div>
           </div>
 
-          <div class="products-box">
+          <div class="products-box swiper-slide">
             <div class="products-promo">
               Ликвидация
             </div>
@@ -1382,7 +1383,10 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
+        <div class="swiper-button-next-unique-products"></div>
+        <div class="swiper-button-prev-unique-products"></div>
         <a class="products-more">Смотреть каталог</a>
       </div>
     </section>
@@ -2082,6 +2086,26 @@
       },
     })
 
+
+    new Swiper('.products-discount-slider', {
+      slidesPerView: 'auto',
+      loopFillGroupBlank: false,
+      spaceBetween: 0,
+      watchOverflow: false,
+      navigation: {
+        nextEl: '.swiper-button-next-unique-products',
+        prevEl: '.swiper-button-prev-unique-products',
+      },
+      loop: true,
+      breakpoints: {
+        320: {
+          enabled: false,
+        },
+        1280: {
+          enabled: true,
+        }
+      }
+    })
 
     new Swiper('.brands-slider', {
       slidesPerView: 'auto',

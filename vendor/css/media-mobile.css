@@ -735,6 +735,29 @@ ul .main-cards-link::after {
   position: relative;
 }
 
+.swiper-button-next-unique-products,
+.swiper-button-prev-unique-products {
+  display: none;
+}
+
+.products-discount-slider.products-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.products-discount-slider .swiper-wrapper {
+  display: flex;
+  gap: 2.22vw;
+  transform: none !important;
+  width: max-content !important;
+}
+
+.products-discount-slider .products-box {
+  width: 43.33vw !important;
+  margin-right: 0 !important;
+  flex-shrink: 0;
+}
+
 .swipe-video {
   position: absolute;
   top: -1.5vw;
@@ -2253,10 +2276,10 @@ ul .main-cards-link::after {
   .retail-control-img {
     position: absolute;
     top: auto;
-    bottom: 0;
-    right: calc(((100vw - 75.88vw) / -2));
-    width: 118vw;
-    height: 60.55vw;
+    bottom: 5vw;
+    right: calc(((100vw - 48.88vw) / -2));
+    width: 131.66vw;
+    height: 60.27vw;
   }
 
   .retail-control-img img {
