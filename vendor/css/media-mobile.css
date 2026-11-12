@@ -145,6 +145,45 @@
     width: 1.66vw;
     height: 1.66vw;
     margin: auto;
+    display: block;
+  }
+
+  .header__link-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.66vw;
+    height: 1.66vw;
+    margin: auto;
+  }
+
+  .header__link-badge {
+    position: absolute;
+    top: -0.28vw;
+    right: -0.55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 1.11vw;
+    width: 1.11vw;
+    height: 1.11vw;
+    padding: 0;
+    border-radius: 50%;
+    background: #BC1622;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.69vw;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .header__link-badge > span {
+    display: block;
+    line-height: 1;
+    transform: translateY(0.18em);
   }
 
   .header__link-desc {
