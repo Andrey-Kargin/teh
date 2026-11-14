@@ -6487,6 +6487,10 @@ input:checked + .slider:before {
     font-weight: 400;
     line-height: 130%;
     text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   main.catalog-step .catalog-category-link:hover .subdesc {
@@ -9390,6 +9394,7 @@ input:checked + .slider:before {
 .brands-products .about-products-more {
   align-self: flex-start;
   box-sizing: border-box;
+  margin: auto;
 }
 
 .partners-solutions {

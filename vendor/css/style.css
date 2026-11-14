@@ -7500,6 +7500,10 @@ input:checked + .slider:before {
 .catalog-category-link .subdesc {
   color: #333333;
   text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .catalog-category-link:hover .subdesc {
@@ -8384,6 +8388,7 @@ input:checked + .slider:before {
 .brands-products .about-products-more {
   align-self: flex-start;
   box-sizing: border-box;
+  margin: auto;
 }
 
 .partners-solutions {
@@ -12673,6 +12678,7 @@ input:checked + .slider:before {
   font-size: 1.25vw;
   line-height: 100%;
   letter-spacing: 0%;
+  max-width: 47.08vw;
 }
 
 .service-desc {
