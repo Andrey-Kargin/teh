@@ -7733,9 +7733,10 @@ input:checked + .slider:before {
 .catalog__filters-brands-link {
   margin: 0;
   box-sizing: border-box;
-  padding: 0.2vw 0.83vw 0 0.83vw;
-  display: flex;
-  height: 2.01vw;
+      padding: 0.5vw 0.83vw 0.5vw 0.83vw;
+    display: flex;
+    min-height: 2.01vw;
+    height: fit-content;
   align-items: center;
   color: #333333;
   border-radius: 0.34vw;
@@ -8231,7 +8232,7 @@ input:checked + .slider:before {
 }
 
 .legal-control {
-  padding: 4.58vw 0 4.65vw 0;
+  padding: 4.58vw 0 6vw 0;
   overflow: hidden;
 }
 
@@ -10531,9 +10532,9 @@ input:checked + .slider:before {
   margin-top: 2vw;
 }
 
-.offers-tasks:not(.offers-tasks-service) {
+/* .offers-tasks:not(.offers-tasks-service) {
   margin-top: -2.78vw;
-}
+} */
 
 .offers-tasks-container {
     width: 100%;
@@ -11487,15 +11488,15 @@ input:checked + .slider:before {
 
 .projects-page-box {
   width: 20.27vw;
-  height: 22.01vw;
-  box-sizing: border-box;
-  position: relative;
+  min-height: 20.76vw;
+  box-sizing: border-box;  position: relative;
   padding: 14.31vw 1.11vw 1.11vw 1.11vw;
   border-radius: 0.69vw;
   background: #F0F0F0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   gap: 0.56vw;
 }
 
@@ -11526,6 +11527,10 @@ input:checked + .slider:before {
   font-size: 0.83vw;
   line-height: 130%;
   color: #333333CC;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .projects-page-box-link {

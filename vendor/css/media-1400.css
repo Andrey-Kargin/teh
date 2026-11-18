@@ -7548,9 +7548,10 @@ input:checked + .slider:before {
 .catalog__filters-brands-link {
   margin: 0;
   box-sizing: border-box;
-  padding: 3px 12px 0 12px; /* 0.2vw * 14.4 = 2.88 -> 3px, 0.83vw * 14.4 = 11.95 -> 12px */
-  display: flex;
-  height: 29px; /* 2.01vw * 14.4 = 28.94 -> 29px */
+  padding: 10px 12px 10px 12px;
+        display: flex;
+        min-height: 32px;
+        height: auto;
   align-items: center;
   color: #333333;
   border-radius: 5px; /* 0.34vw * 14.4 = 4.89 -> 5px */
@@ -8041,7 +8042,7 @@ input:checked + .slider:before {
 }
 
 .legal-control {
-    padding: 66px 0 67px 0;
+    padding: 66px 0 87px 0;
     overflow: hidden;
 }
 
@@ -11243,7 +11244,7 @@ input:checked + .slider:before {
 
 .projects-page-box {
   width: 352px;
-  height: 333px;
+  min-height: 309px;
   box-sizing: border-box;
   position: relative;
   padding: 206px 16px 16px 16px;
@@ -11252,6 +11253,7 @@ input:checked + .slider:before {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   gap: 8px;
 }
 
@@ -11282,6 +11284,10 @@ input:checked + .slider:before {
   font-size: 12px;
   line-height: 130%;
   color: #333333CC;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .projects-page-box .projects-page-box-link {
@@ -11984,6 +11990,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding-bottom: 80px;
 }
 
 .article-info {

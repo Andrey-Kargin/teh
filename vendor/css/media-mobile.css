@@ -17209,6 +17209,24 @@
     cursor: pointer !important;
   }
 
+  .header__nav-link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin: 3vw 0;
+  }
+
+  .header__nav-link-box a {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__nav-link-box svg {
+    width: 5vw;
+    height: 5vw;
+    margin-top: -0.8vw;
+  }
+
   @keyframes loadingAnimation {
     from {
       width: 0%;
